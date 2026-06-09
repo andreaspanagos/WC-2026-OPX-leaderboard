@@ -1,9 +1,23 @@
 import json
+import os
 import openpyxl
 
 WORKBOOK = "WC 2026 Main model_vOPX.xlsx"
 SHEET = "_Setup_PowerQuery"
 OUTPUT = "leaderboard.json"
+
+# Read the previously published leaderboard (if any) so we can show how each
+# player's rank changed since the last update. Maps player name -> old rank.
+prev_ranks = {}
+if os.path.exists(OUTPUT):
+    try:
+        with open(OUTPUT, encoding="utf-8") as f:
+            old = json.load(f)
+        for r in old.get("rows", []):
+            if r.get("player") is not None:
+                prev_ranks[r["player"]] = r.get("rank")
+    except (json.JSONDecodeError, OSError):
+        prev_ranks = {}
 
 wb = openpyxl.load_workbook(WORKBOOK, data_only=True)
 ws = wb[SHEET]
@@ -24,14 +38,16 @@ while True:
     bonus  = ws.cell(row=row_num, column=5).value
     total  = ws.cell(row=row_num, column=6).value
     pct    = ws.cell(row=row_num, column=7).value
+    name   = str(player).strip()
     rows.append({
-        "rank":   rank,
-        "player": str(player).strip(),
-        "group":  group,
-        "ko":     ko,
-        "bonus":  bonus,
-        "total":  total,
-        "pctMax": round(float(pct), 4) if pct is not None else 0.0,
+        "rank":     rank,
+        "player":   name,
+        "group":    group,
+        "ko":       ko,
+        "bonus":    bonus,
+        "total":    total,
+        "pctMax":   round(float(pct), 4) if pct is not None else 0.0,
+        "prevRank": prev_ranks.get(name),  # None => new entrant (shown as NEW)
     })
     row_num += 1
 

@@ -12,7 +12,8 @@
       "ko": 135,
       "bonus": 60,
       "total": 300,
-      "pctMax": 0.4115
+      "pctMax": 0.4115,
+      "prevRank": 1
     },
     {
       "rank": 2,
@@ -21,7 +22,8 @@
       "ko": 192,
       "bonus": 15,
       "total": 283,
-      "pctMax": 0.3882
+      "pctMax": 0.3882,
+      "prevRank": 2
     },
     {
       "rank": 3,
@@ -30,7 +32,8 @@
       "ko": 138,
       "bonus": 25,
       "total": 234,
-      "pctMax": 0.321
+      "pctMax": 0.321,
+      "prevRank": 3
     }
   ]
 }
