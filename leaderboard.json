@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "lastRefresh": "2026-06-09 16:59",
+    "maxPoints": 729,
+    "participants": 3
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "player": "Johan Leijonhielm",
+      "group": 105,
+      "ko": 135,
+      "bonus": 60,
+      "total": 300,
+      "pctMax": 0.4115
+    },
+    {
+      "rank": 2,
+      "player": "Gustaf L",
+      "group": 76,
+      "ko": 192,
+      "bonus": 15,
+      "total": 283,
+      "pctMax": 0.3882
+    },
+    {
+      "rank": 3,
+      "player": "Alex J",
+      "group": 71,
+      "ko": 138,
+      "bonus": 25,
+      "total": 234,
+      "pctMax": 0.321
+    }
+  ]
+}

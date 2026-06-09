@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup 2026 — Live Leaderboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #2A398D;
+      color: #fff;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    header h1 {
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .pill {
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      white-space: nowrap;
+    }
+    .pill strong { font-weight: 600; }
+
+    /* ── Podium ── */
+    .podium {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1.5rem 1rem 0.5rem;
+    }
+    .podium-card {
+      flex: 1 1 200px;
+      max-width: 260px;
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .podium-card.gold   { background: #FFF8E1; border-top: 4px solid #FFD700; }
+    .podium-card.silver { background: #E8EAF6; border-top: 4px solid #9E9E9E; }
+    .podium-card.bronze { background: #FBE9E7; border-top: 4px solid #BF6A3F; }
+
+    .podium-medal { font-size: 2rem; line-height: 1; margin-bottom: 0.25rem; }
+    .podium-rank  { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #555; }
+    .podium-name  { font-size: 1.15rem; font-weight: 700; margin: 0.3rem 0 0.5rem; }
+    .podium-total { font-size: 1.8rem; font-weight: 800; color: #2A398D; }
+    .podium-pct   { font-size: 0.8rem; color: #666; margin-top: 0.15rem; }
+
+    /* ── Table ── */
+    .table-wrap {
+      overflow-x: auto;
+      padding: 1.25rem 1rem 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      min-width: 560px;
+    }
+    thead {
+      background: #2A398D;
+      color: #fff;
+    }
+    th {
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child { text-align: center; width: 3rem; }
+    th:last-child, td:last-child   { width: 180px; }
+
+    tbody tr { border-bottom: 1px solid #eee; transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #f0f4ff; }
+
+    td { padding: 0.65rem 0.9rem; font-size: 0.92rem; }
+
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .rank-1 { background: #FFD700; color: #333; }
+    .rank-2 { background: #C0C0C0; color: #333; }
+    .rank-3 { background: #CD7F32; color: #fff; }
+
+    .player-name { font-weight: 600; }
+
+    /* bar column */
+    .bar-cell { padding-right: 1rem; }
+    .bar-bg {
+      background: #e8ecf8;
+      border-radius: 999px;
+      height: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #2A398D, #5b6fcc);
+      border-radius: 999px;
+      transition: width 0.6s ease;
+    }
+    .pct-label { font-size: 0.75rem; color: #666; margin-top: 2px; }
+
+    /* loading / error */
+    #status {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 500px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>&#x26BD; FIFA World Cup 2026 &mdash; Live Leaderboard</h1>
+  <div class="meta-pills">
+    <span class="pill">Updated: <strong id="hdr-refresh">—</strong></span>
+    <span class="pill">Players: <strong id="hdr-participants">—</strong></span>
+    <span class="pill">Max pts: <strong id="hdr-maxpoints">—</strong></span>
+  </div>
+</header>
+
+<div id="podium-section" class="podium" hidden></div>
+
+<div id="status">Loading leaderboard…</div>
+
+<div class="table-wrap" hidden id="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Player</th>
+        <th>Group</th>
+        <th>Knockout</th>
+        <th>Bonus</th>
+        <th>Total</th>
+        <th>% Max</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<script>
+  const MEDALS = ["🥇","🥈","🥉"];
+  const MEDAL_CLASS = ["gold","silver","bronze"];
+
+  function fmt(v) {
+    if (v === null || v === undefined) return "—";
+    return Number.isInteger(v) ? v : parseFloat(v).toFixed(1);
+  }
+
+  function render(data) {
+    const { meta, rows } = data;
+    document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
+    document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
+    document.getElementById("hdr-maxpoints").textContent    = meta.maxPoints     ?? "—";
+
+    // Podium
+    const podiumEl = document.getElementById("podium-section");
+    podiumEl.innerHTML = "";
+    rows.slice(0, 3).forEach((r, i) => {
+      const card = document.createElement("div");
+      card.className = `podium-card ${MEDAL_CLASS[i]}`;
+      card.innerHTML = `
+        <div class="podium-medal">${MEDALS[i]}</div>
+        <div class="podium-rank">Rank ${r.rank}</div>
+        <div class="podium-name">${r.player}</div>
+        <div class="podium-total">${fmt(r.total)}</div>
+        <div class="podium-pct">${(r.pctMax * 100).toFixed(1)}% of max</div>
+      `;
+      podiumEl.appendChild(card);
+    });
+    podiumEl.hidden = false;
+
+    // Table
+    const tbody = document.getElementById("tbody");
+    tbody.innerHTML = "";
+    rows.forEach(r => {
+      const rankClass = r.rank <= 3 ? ` rank-${r.rank}` : "";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><span class="rank-badge${rankClass}">${r.rank}</span></td>
+        <td class="player-name">${r.player}</td>
+        <td>${fmt(r.group)}</td>
+        <td>${fmt(r.ko)}</td>
+        <td>${fmt(r.bonus)}</td>
+        <td><strong>${fmt(r.total)}</strong></td>
+        <td class="bar-cell">
+          <div class="bar-bg"><div class="bar-fill" style="width:${(r.pctMax*100).toFixed(1)}%"></div></div>
+          <div class="pct-label">${(r.pctMax*100).toFixed(1)}%</div>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    document.getElementById("status").hidden      = true;
+    document.getElementById("table-section").hidden = false;
+  }
+
+  function load() {
+    fetch("leaderboard.json?_=" + Date.now())
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(render)
+      .catch(err => {
+        document.getElementById("status").textContent =
+          "Could not load leaderboard.json — run export.py first. (" + err + ")";
+        document.getElementById("status").hidden = false;
+      });
+  }
+
+  load();
+  setInterval(load, 60_000);
+</script>
+</body>
+</html>

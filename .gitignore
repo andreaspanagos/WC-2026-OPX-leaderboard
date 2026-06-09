@@ -1,0 +1,9 @@
+# Keep the public repo to just the website + its data.
+# Everything is ignored by default, then we re-allow only what should be public.
+*
+
+!.gitignore
+!README.md
+!export.py
+!index.html
+!leaderboard.json
