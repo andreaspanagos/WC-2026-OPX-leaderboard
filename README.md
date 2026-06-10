@@ -55,12 +55,15 @@ GitHub will give you a URL like `https://<your-username>.github.io/wc2026-leader
 
 ```bash
 python export.py
-git add leaderboard.json
+git add leaderboard.json games.json
 git commit -m "Update leaderboard $(date +%Y-%m-%d)"
 git push
 ```
 
 The live site reflects the new data within ~60 seconds.
+
+> Tip: in Claude Code you can just run `/update-leaderboard-opx`, which does
+> export → local preview → push for you (with a confirmation step before publishing).
 
 ---
 
@@ -79,7 +82,17 @@ python -m http.server 8000
 
 | File | Purpose |
 |------|---------|
-| `export.py` | Reads Excel, writes `leaderboard.json` |
-| `leaderboard.json` | Data consumed by the site (commit this) |
-| `index.html` | Self-contained leaderboard UI |
-| `WC 2026 Main model_vOPX.xlsx` | Source of truth — do **not** commit (large file) |
+| `export.py` | Reads Excel + submissions, writes `leaderboard.json` and `games.json` |
+| `leaderboard.json` | Summary standings, consumed by the Leaderboard tab (commit this) |
+| `games.json` | Per-game points + everyone's predictions, for the Games tab (commit this) |
+| `index.html` | Self-contained UI: Leaderboard + Games & Predictions tabs |
+| `WC 2026 Main model_vOPX.xlsx` | Source of truth — do **not** commit |
+| `OPX submissions/` | Players' prediction files — read by export.py, **not** committed |
+
+### Games & Predictions tab
+
+`export.py` reads each player's prediction file in `OPX submissions/`, compares
+it to the actual results, and computes per-game points (exact score = 3, correct
+result = 1, wrong = 0). The site shows all group games; tap one to see every
+player's prediction and points. Predictions are always visible; the actual score
+and points show once a game has been played.

@@ -151,6 +151,98 @@
     }
     .pct-label { font-size: 0.75rem; color: #666; margin-top: 2px; }
 
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 0.25rem;
+      background: #1f2c6e;
+      padding: 0 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .tab {
+      background: none;
+      border: none;
+      color: #c7cdf0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.8rem 1.1rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab:hover { color: #fff; }
+    .tab.active { color: #fff; border-bottom-color: #FFD700; }
+
+    /* ── Games view ── */
+    .games-wrap { padding: 1rem; max-width: 900px; margin: 0 auto; }
+    .games-intro { color: #555; font-size: 0.9rem; margin: 0.25rem 0 1rem; }
+
+    .group-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .group-head {
+      background: #2A398D;
+      color: #fff;
+      padding: 0.6rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .group-winner { font-size: 0.8rem; font-weight: 600; background: rgba(255,255,255,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; }
+    .winner-picks { font-size: 0.74rem; color: #555; padding: 0.45rem 0.9rem; background: #f3f5fb; border-bottom: 1px solid #e6e9f5; }
+    .winner-picks .ok  { color: #1b8a3a; font-weight: 700; }
+    .winner-picks .no  { color: #c0392b; }
+
+    .game { border-bottom: 1px solid #eee; }
+    .game:last-child { border-bottom: none; }
+    .game-summary {
+      display: grid;
+      grid-template-columns: 3.6rem 1fr auto;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 0.9rem;
+      cursor: pointer;
+    }
+    .game-summary:hover { background: #f0f4ff; }
+    .game-date { font-size: 0.72rem; color: #888; line-height: 1.1; }
+    .game-teams { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; flex-wrap: wrap; }
+    .t-home, .t-away { font-weight: 600; }
+    .t-home { text-align: right; }
+    .game-score { font-weight: 800; color: #2A398D; background: #eef1fb; border-radius: 6px; padding: 0.05rem 0.5rem; min-width: 2.6rem; text-align: center; }
+    .vs { color: #aaa; font-weight: 600; }
+    .badge-upcoming { font-size: 0.65rem; font-weight: 700; color: #8a6d00; background: #fff3cd; border-radius: 4px; padding: 0.05rem 0.4rem; text-transform: uppercase; }
+    .chev { color: #aaa; font-size: 0.8rem; transition: transform 0.2s; }
+    .game.open .chev { transform: rotate(180deg); }
+
+    .game-detail { padding: 0.2rem 0.9rem 0.8rem; }
+    .pred-row {
+      display: grid;
+      grid-template-columns: 1fr auto 2.4rem;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.4rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.9rem;
+    }
+    .pred-row .pp { color: #444; }
+    .pred-pick { font-weight: 700; color: #333; }
+    .pts {
+      font-size: 0.78rem; font-weight: 800; text-align: center;
+      border-radius: 6px; padding: 0.1rem 0;
+    }
+    .pts-3 { background: #d6f5df; color: #1b8a3a; }
+    .pts-1 { background: #fdf0d2; color: #9a7300; }
+    .pts-0 { background: #eee; color: #999; }
+    .pts-na { color: #bbb; }
+
     /* loading / error */
     #status {
       text-align: center;
@@ -161,6 +253,7 @@
 
     @media (max-width: 500px) {
       header { flex-direction: column; align-items: flex-start; }
+      .game-teams { font-size: 0.85rem; }
     }
   </style>
 </head>
@@ -175,34 +268,82 @@
   </div>
 </header>
 
-<div id="podium-section" class="podium" hidden></div>
+<nav class="tabs">
+  <button class="tab active" id="tab-leaderboard" onclick="showView('leaderboard')">Leaderboard</button>
+  <button class="tab" id="tab-games" onclick="showView('games')">Games &amp; Predictions</button>
+</nav>
 
-<div id="status">Loading leaderboard…</div>
+<div id="status">Loading…</div>
 
-<div class="table-wrap" hidden id="table-section">
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Player</th>
-        <th>Group</th>
-        <th>Knockout</th>
-        <th>Bonus</th>
-        <th>Total</th>
-        <th>% Max</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+<!-- ── Leaderboard view ── -->
+<div id="view-leaderboard">
+  <div id="podium-section" class="podium" hidden></div>
+
+  <div class="table-wrap" hidden id="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Group</th>
+          <th>Knockout</th>
+          <th>Bonus</th>
+          <th>Total</th>
+          <th>% Max</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── Games & Predictions view ── -->
+<div id="view-games" hidden>
+  <div class="games-wrap">
+    <p class="games-intro">
+      Group-stage games. Tap any match to see what each player predicted and the points they earned.
+      Predictions are always visible; results &amp; points appear once a game has been played.
+    </p>
+    <div id="games-container"></div>
+  </div>
 </div>
 
 <script>
   const MEDALS = ["🥇","🥈","🥉"];
   const MEDAL_CLASS = ["gold","silver","bronze"];
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   function fmt(v) {
     if (v === null || v === undefined) return "—";
     return Number.isInteger(v) ? v : parseFloat(v).toFixed(1);
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  }
+
+  // "YYYY-MM-DD HH:MM" -> "Jun 11<br>21:00"
+  function shortDate(s) {
+    const m = String(s || "").match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/);
+    if (!m) return esc(s);
+    return `${MONTHS[+m[2] - 1]} ${+m[3]}<br>${m[4]}:${m[5]}`;
+  }
+
+  // ── Tab switching ──
+  function showView(name) {
+    document.getElementById("view-leaderboard").hidden = name !== "leaderboard";
+    document.getElementById("view-games").hidden = name !== "games";
+    document.getElementById("tab-leaderboard").classList.toggle("active", name === "leaderboard");
+    document.getElementById("tab-games").classList.toggle("active", name === "games");
+  }
+
+  function toggleGame(el) {
+    const game = el.parentElement;
+    const detail = game.querySelector(".game-detail");
+    const open = !detail.hidden;
+    detail.hidden = open;
+    game.classList.toggle("open", !open);
   }
 
   // Position change since the last published results.
@@ -216,7 +357,60 @@
     return `<span class="move move-same">&ndash;</span>`;
   }
 
-  function render(data) {
+  // ── Games & Predictions rendering ──
+  function predRow(p, played) {
+    const pick = (p.phg === null || p.phg === undefined)
+      ? `<span class="pts-na">no pick</span>`
+      : `${p.phg}&ndash;${p.pag}`;
+    let ptsHtml;
+    if (!played || p.pts === null || p.pts === undefined)
+      ptsHtml = `<span class="pts pts-na">—</span>`;
+    else
+      ptsHtml = `<span class="pts pts-${p.pts}">${p.pts}</span>`;
+    return `<div class="pred-row"><span class="pp">${esc(p.player)}</span>` +
+           `<span class="pred-pick">${pick}</span>${ptsHtml}</div>`;
+  }
+
+  function gameHtml(gm) {
+    const center = gm.played
+      ? `<span class="t-home">${esc(gm.home)}</span>` +
+        `<span class="game-score">${gm.actual.hg}&ndash;${gm.actual.ag}</span>` +
+        `<span class="t-away">${esc(gm.away)}</span>`
+      : `<span class="t-home">${esc(gm.home)}</span><span class="vs">vs</span>` +
+        `<span class="t-away">${esc(gm.away)}</span> <span class="badge-upcoming">upcoming</span>`;
+    const preds = gm.predictions.map(p => predRow(p, gm.played)).join("");
+    return `
+      <div class="game">
+        <div class="game-summary" onclick="toggleGame(this)">
+          <span class="game-date">${shortDate(gm.kickoff)}</span>
+          <span class="game-teams">${center}</span>
+          <span class="chev">&#9660;</span>
+        </div>
+        <div class="game-detail" hidden>${preds}</div>
+      </div>`;
+  }
+
+  function renderGames(data) {
+    const c = document.getElementById("games-container");
+    c.innerHTML = "";
+    data.groups.forEach(g => {
+      const sec = document.createElement("div");
+      sec.className = "group-section";
+      const picks = g.winners.map(w =>
+        `<span class="${w.correct ? "ok" : "no"}">${esc(w.player.split(" ")[0])}` +
+        `${w.correct ? " &#10003;" : " &#10007;"}</span>`
+      ).join(" &middot; ");
+      sec.innerHTML =
+        `<div class="group-head"><span>Group ${esc(g.group)}</span>` +
+        (g.actualWinner ? `<span class="group-winner">🏆 ${esc(g.actualWinner)}</span>` : "") +
+        `</div>` +
+        (g.actualWinner ? `<div class="winner-picks">Group-winner picks: ${picks}</div>` : "") +
+        g.games.map(gameHtml).join("");
+      c.appendChild(sec);
+    });
+  }
+
+  function renderLeaderboard(data) {
     const { meta, rows } = data;
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
@@ -269,13 +463,22 @@
   }
 
   function load() {
-    fetch("leaderboard.json?_=" + Date.now())
+    const bust = "?_=" + Date.now();
+    fetch("leaderboard.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(render)
+      .then(renderLeaderboard)
       .catch(err => {
         document.getElementById("status").textContent =
           "Could not load leaderboard.json — run export.py first. (" + err + ")";
         document.getElementById("status").hidden = false;
+      });
+
+    fetch("games.json" + bust)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(renderGames)
+      .catch(err => {
+        document.getElementById("games-container").innerHTML =
+          `<p class="games-intro">Could not load games.json — run export.py first. (${err})</p>`;
       });
   }
 

@@ -1,0 +1,2943 @@
+{
+  "meta": {
+    "lastRefresh": "2026-06-10 09:14",
+    "maxPoints": 729,
+    "participants": 4
+  },
+  "players": [
+    "Johan Leijonhielm",
+    "Oscar Hultefors",
+    "Gustaf L",
+    "Alex J"
+  ],
+  "groups": [
+    {
+      "group": "A",
+      "actualWinner": "Mexico",
+      "games": [
+        {
+          "kickoff": "2026-06-11 21:00",
+          "home": "Mexico",
+          "away": "South Africa",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-12 04:00",
+          "home": "Korea Republic",
+          "away": "Czechia",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-17 18:00",
+          "home": "Czechia",
+          "away": "South Africa",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 2
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-19 03:00",
+          "home": "Mexico",
+          "away": "Korea Republic",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 03:00",
+          "home": "Czechia",
+          "away": "Mexico",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 03:00",
+          "home": "South Africa",
+          "away": "Korea Republic",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 2
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Mexico",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Mexico",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Mexico",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Mexico",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "actualWinner": "Canada",
+      "games": [
+        {
+          "kickoff": "2026-06-12 21:00",
+          "home": "Canada",
+          "away": "Bosnia & Herzegovina",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-13 21:00",
+          "home": "Qatar",
+          "away": "Switzerland",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 2
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-18 21:00",
+          "home": "Switzerland",
+          "away": "Bosnia & Herzegovina",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-19 00:00",
+          "home": "Canada",
+          "away": "Qatar",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-24 21:00",
+          "home": "Switzerland",
+          "away": "Canada",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 2
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-24 21:00",
+          "home": "Bosnia & Herzegovina",
+          "away": "Qatar",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Switzerland",
+          "correct": false
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Switzerland",
+          "correct": false
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Switzerland",
+          "correct": false
+        },
+        {
+          "player": "Alex J",
+          "team": "Switzerland",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "actualWinner": "Scotland",
+      "games": [
+        {
+          "kickoff": "2026-06-14 00:00",
+          "home": "Brazil",
+          "away": "Morocco",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-14 03:00",
+          "home": "Haiti",
+          "away": "Scotland",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-19 21:00",
+          "home": "Scotland",
+          "away": "Morocco",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-20 03:00",
+          "home": "Brazil",
+          "away": "Haiti",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 4,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 4,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 00:00",
+          "home": "Scotland",
+          "away": "Brazil",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 00:00",
+          "home": "Morocco",
+          "away": "Haiti",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Brazil",
+          "correct": false
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Brazil",
+          "correct": false
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Brazil",
+          "correct": false
+        },
+        {
+          "player": "Alex J",
+          "team": "Brazil",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "actualWinner": "USA",
+      "games": [
+        {
+          "kickoff": "2026-06-13 03:00",
+          "home": "USA",
+          "away": "Paraguay",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-13 06:00",
+          "home": "Australia",
+          "away": "Turkey",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-19 06:00",
+          "home": "Turkey",
+          "away": "Paraguay",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-19 21:00",
+          "home": "USA",
+          "away": "Australia",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 04:00",
+          "home": "Turkey",
+          "away": "USA",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 04:00",
+          "home": "Paraguay",
+          "away": "Australia",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "USA",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "USA",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "USA",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Turkey",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "actualWinner": "Germany",
+      "games": [
+        {
+          "kickoff": "2026-06-14 19:00",
+          "home": "Germany",
+          "away": "Curaçao",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 5,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-15 01:00",
+          "home": "Côte d'Ivoire",
+          "away": "Ecuador",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-20 22:00",
+          "home": "Germany",
+          "away": "Côte d'Ivoire",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-21 01:59",
+          "home": "Ecuador",
+          "away": "Curaçao",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 22:00",
+          "home": "Curaçao",
+          "away": "Côte d'Ivoire",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 3,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-25 22:00",
+          "home": "Ecuador",
+          "away": "Germany",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Germany",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Germany",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Germany",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Germany",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "actualWinner": "Netherlands",
+      "games": [
+        {
+          "kickoff": "2026-06-14 22:00",
+          "home": "Netherlands",
+          "away": "Japan",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-15 04:00",
+          "home": "Sweden",
+          "away": "Tunisia",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-20 06:00",
+          "home": "Tunisia",
+          "away": "Japan",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-20 19:00",
+          "home": "Netherlands",
+          "away": "Sweden",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 01:00",
+          "home": "Japan",
+          "away": "Sweden",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 3
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 01:00",
+          "home": "Tunisia",
+          "away": "Netherlands",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Netherlands",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Netherlands",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Sweden",
+          "correct": false
+        },
+        {
+          "player": "Alex J",
+          "team": "Netherlands",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "actualWinner": "Belgium",
+      "games": [
+        {
+          "kickoff": "2026-06-15 21:00",
+          "home": "Belgium",
+          "away": "Egypt",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-16 03:00",
+          "home": "Iran",
+          "away": "New Zealand",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-21 21:00",
+          "home": "Belgium",
+          "away": "Iran",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-22 03:00",
+          "home": "New Zealand",
+          "away": "Egypt",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 3,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 04:59",
+          "home": "Egypt",
+          "away": "Iran",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 04:59",
+          "home": "New Zealand",
+          "away": "Belgium",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 4,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Belgium",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Belgium",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Belgium",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Belgium",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "actualWinner": "Spain",
+      "games": [
+        {
+          "kickoff": "2026-06-15 18:00",
+          "home": "Spain",
+          "away": "Cabo Verde",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-16 00:00",
+          "home": "Saudi Arabia",
+          "away": "Uruguay",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-21 18:00",
+          "home": "Spain",
+          "away": "Saudi Arabia",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-22 00:00",
+          "home": "Uruguay",
+          "away": "Cabo Verde",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 01:59",
+          "home": "Cabo Verde",
+          "away": "Saudi Arabia",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 01:59",
+          "home": "Uruguay",
+          "away": "Spain",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Spain",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Spain",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Spain",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Spain",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "actualWinner": "France",
+      "games": [
+        {
+          "kickoff": "2026-06-16 21:00",
+          "home": "France",
+          "away": "Senegal",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-17 00:00",
+          "home": "Iraq",
+          "away": "Norway",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-22 22:59",
+          "home": "France",
+          "away": "Iraq",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 5,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-23 01:59",
+          "home": "Norway",
+          "away": "Senegal",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 21:00",
+          "home": "Norway",
+          "away": "France",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-26 21:00",
+          "home": "Senegal",
+          "away": "Iraq",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "France",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "France",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "France",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "France",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "actualWinner": "Argentina",
+      "games": [
+        {
+          "kickoff": "2026-06-16 06:00",
+          "home": "Austria",
+          "away": "Jordan",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-17 03:00",
+          "home": "Argentina",
+          "away": "Algeria",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-22 19:00",
+          "home": "Argentina",
+          "away": "Austria",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-23 04:59",
+          "home": "Jordan",
+          "away": "Algeria",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 2,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-28 04:00",
+          "home": "Algeria",
+          "away": "Austria",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 1,
+              "pag": 3,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-28 04:00",
+          "home": "Jordan",
+          "away": "Argentina",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 4,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 3,
+              "pts": 0
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Argentina",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Argentina",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Argentina",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Argentina",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "actualWinner": "Portugal",
+      "games": [
+        {
+          "kickoff": "2026-06-17 19:00",
+          "home": "Portugal",
+          "away": "Congo DR",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-18 04:00",
+          "home": "Uzbekistan",
+          "away": "Colombia",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-23 19:00",
+          "home": "Portugal",
+          "away": "Uzbekistan",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-24 04:00",
+          "home": "Colombia",
+          "away": "Congo DR",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 0,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 3,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-28 01:30",
+          "home": "Colombia",
+          "away": "Portugal",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 1,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-28 01:30",
+          "home": "Congo DR",
+          "away": "Uzbekistan",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "Portugal",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "Portugal",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "Portugal",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "Portugal",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "actualWinner": "England",
+      "games": [
+        {
+          "kickoff": "2026-06-17 22:00",
+          "home": "England",
+          "away": "Croatia",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-18 01:00",
+          "home": "Ghana",
+          "away": "Panama",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 1,
+              "pag": 1,
+              "pts": 3
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 0,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-23 22:00",
+          "home": "England",
+          "away": "Ghana",
+          "played": true,
+          "actual": {
+            "hg": 3,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 3,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-24 01:00",
+          "home": "Panama",
+          "away": "Croatia",
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 22:59",
+          "home": "Panama",
+          "away": "England",
+          "played": true,
+          "actual": {
+            "hg": 2,
+            "ag": 1
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 0,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 4,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 0,
+              "pag": 4,
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "kickoff": "2026-06-27 22:59",
+          "home": "Croatia",
+          "away": "Ghana",
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 0
+          },
+          "predictions": [
+            {
+              "player": "Johan Leijonhielm",
+              "phg": 2,
+              "pag": 0,
+              "pts": 1
+            },
+            {
+              "player": "Oscar Hultefors",
+              "phg": 1,
+              "pag": 2,
+              "pts": 0
+            },
+            {
+              "player": "Gustaf L",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            },
+            {
+              "player": "Alex J",
+              "phg": 2,
+              "pag": 1,
+              "pts": 1
+            }
+          ]
+        }
+      ],
+      "winners": [
+        {
+          "player": "Johan Leijonhielm",
+          "team": "England",
+          "correct": true
+        },
+        {
+          "player": "Oscar Hultefors",
+          "team": "England",
+          "correct": true
+        },
+        {
+          "player": "Gustaf L",
+          "team": "England",
+          "correct": true
+        },
+        {
+          "player": "Alex J",
+          "team": "England",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

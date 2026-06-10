@@ -23,7 +23,7 @@
       "bonus": 20,
       "total": 284,
       "pctMax": 0.3896,
-      "prevRank": null
+      "prevRank": 2
     },
     {
       "rank": 3,
@@ -33,7 +33,7 @@
       "bonus": 15,
       "total": 283,
       "pctMax": 0.3882,
-      "prevRank": 2
+      "prevRank": 3
     },
     {
       "rank": 4,
@@ -43,7 +43,7 @@
       "bonus": 15,
       "total": 224,
       "pctMax": 0.3073,
-      "prevRank": 3
+      "prevRank": 4
     }
   ]
 }
