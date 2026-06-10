@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-10 09:14",
+    "lastRefresh": "2026-06-10 10:31",
     "maxPoints": 729,
     "participants": 4
   },
@@ -1233,7 +1233,7 @@
       "id": "B01",
       "q": "Most goals scored, team (group stage only)",
       "pts": 5,
-      "current": "Canada, England, France, Mexico, Portugal, Scotland, Sweden, USA",
+      "current": "Mexico",
       "status": "decided",
       "answers": [
         {
@@ -1278,7 +1278,7 @@
       "id": "B02",
       "q": "Most goals conceded, team (group stage only)",
       "pts": 5,
-      "current": "Austria, Côte d'Ivoire, Iran, Korea Republic, Saudi Arabia, Sweden",
+      "current": "Korea Republic",
       "status": "decided",
       "answers": [
         {
@@ -1315,8 +1315,8 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": 233,
-      "status": "decided",
+      "current": "233",
+      "status": "provisional",
       "answers": [
         {
           "answer": "229",
@@ -1325,7 +1325,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "233",
@@ -1334,7 +1334,7 @@
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": true
+          "hit": null
         },
         {
           "answer": "264",
@@ -1343,7 +1343,7 @@
           "players": [
             "Alex J"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "285",
@@ -1352,7 +1352,7 @@
           "players": [
             "Gustaf L"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1360,8 +1360,8 @@
       "id": "B04",
       "q": "Golden Ball (Player of the tournament)",
       "pts": 10,
-      "current": null,
-      "status": "tbd",
+      "current": "Kylian Mbappé",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Lamine Yamal",
@@ -1389,8 +1389,8 @@
       "id": "B05",
       "q": "Golden Boot (Most goals, player)",
       "pts": 10,
-      "current": null,
-      "status": "tbd",
+      "current": "Kylian Mbappé",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Harry Kane",
@@ -1434,8 +1434,8 @@
       "id": "B06",
       "q": "Most yellow cards, team",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "France",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Argentina",
@@ -1479,8 +1479,8 @@
       "id": "B07",
       "q": "Fastest goal, minute",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "2",
+      "status": "provisional",
       "answers": [
         {
           "answer": "6",
@@ -1516,8 +1516,8 @@
       "id": "B08",
       "q": "Highest scoring single match (goals)",
       "pts": 5,
-      "current": 5,
-      "status": "decided",
+      "current": "5",
+      "status": "provisional",
       "answers": [
         {
           "answer": "4",
@@ -1527,7 +1527,7 @@
             "Oscar Hultefors",
             "Alex J"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "5",
@@ -1537,7 +1537,7 @@
             "Johan Leijonhielm",
             "Gustaf L"
           ],
-          "hit": true
+          "hit": null
         }
       ]
     },
@@ -1545,8 +1545,8 @@
       "id": "B09",
       "q": "Number of penalty shootouts in knockout stage",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "0",
+      "status": "provisional",
       "answers": [
         {
           "answer": "1",
@@ -1582,8 +1582,8 @@
       "id": "B10",
       "q": "Final goes to extra time? (Yes/No)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "No",
+      "status": "provisional",
       "answers": [
         {
           "answer": "No",
@@ -1669,8 +1669,8 @@
       "id": "B13",
       "q": "Most yellow cards, single match",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "5",
+      "status": "provisional",
       "answers": [
         {
           "answer": "11",
@@ -1714,7 +1714,7 @@
       "id": "B15",
       "q": "How far does Sweden go? (auto from bracket picks)",
       "pts": 10,
-      "current": "R32",
+      "current": "Round of 32",
       "status": "decided",
       "answers": [
         {
@@ -1751,8 +1751,8 @@
       "id": "B16",
       "q": "Sweden's top scorer (manual)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Alexander Isak",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Viktor Gyökeres",

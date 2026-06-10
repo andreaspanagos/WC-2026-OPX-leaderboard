@@ -5,6 +5,7 @@ Reads ONLY the main model workbook (not the individual submission files):
   - `_Setup_PowerQuery` row-100 flat table (one row per player, all picks)
   - `Backend` sheet               -> fixtures, results, per-team progression
   - `Scoring` sheet               -> bonus question texts + point values
+  - `Results` sheet BO/BP cols    -> bonus answer key + status (hand-maintained)
 
 Outputs:
   leaderboard.json  summary standings (+ rank movement vs previous publish)
@@ -30,8 +31,6 @@ GAMES_OUTPUT = "games.json"
 STATS_OUTPUT = "stats.json"
 
 FLAT_HEADER_ROW = 100          # header row of the per-player flat picks table
-HOSTS = {"USA", "Mexico", "Canada"}
-DEBUTANTS = {"Curaçao", "Cabo Verde", "Uzbekistan", "Jordan"}
 STAGES = ["Group stage", "R32", "R16", "QF", "SF", "Final", "Champion"]
 
 
@@ -310,76 +309,53 @@ for row in sc.iter_rows(min_row=19, max_row=33, min_col=2, max_col=4, values_onl
     if bid and q:
         bonus_defs.append({"id": str(bid), "q": str(q), "pts": pts})
 
-# Current correct answers, derived from results where possible.
-all_groups_done = bool(group_complete) and all(group_complete.get(g, False)
-                                               for g in group_complete)
-played_group = [f for f in fixtures if f["played"]]
-ko_played = []
-for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_only=True):
-    m, rnd, home, away, hg, ag = row
-    if rnd and as_int(hg) is not None and as_int(ag) is not None:
-        ko_played.append((str(rnd), home, away, as_int(hg), as_int(ag)))
-
-# Goals scored/conceded in group stage per team (from played group games).
-gs_for, gs_against = {}, {}
-for fxx in played_group:
-    gs_for[fxx["home"]] = gs_for.get(fxx["home"], 0) + fxx["hg"]
-    gs_for[fxx["away"]] = gs_for.get(fxx["away"], 0) + fxx["ag"]
-    gs_against[fxx["home"]] = gs_against.get(fxx["home"], 0) + fxx["ag"]
-    gs_against[fxx["away"]] = gs_against.get(fxx["away"], 0) + fxx["hg"]
-
-total_goals = sum(f["hg"] + f["ag"] for f in played_group) + \
-              sum(hg + ag for _, _, _, hg, ag in ko_played)
-all_scores = [f["hg"] + f["ag"] for f in played_group] + \
-             [hg + ag for _, _, _, hg, ag in ko_played]
-sweden_now = actual_stage("Sweden") if "Sweden" in teams else None
-
-def maxima(d):
-    if not d:
-        return []
-    m = max(d.values())
-    return sorted(t for t, v in d.items() if v == m)
-
-def yes_no_reached(group_of_teams, round_set, round_size):
-    hit = bool(group_of_teams & round_set)
-    if hit:
-        return "Yes", "decided"
-    if len(round_set) >= round_size:
-        return "No", "decided"
-    return None, "tbd"
-
-b11_ans, b11_st = yes_no_reached(HOSTS, ko_round["R16"], 16)
-b12_ans, b12_st = yes_no_reached(DEBUTANTS, ko_round["R32"], 32)
-
-tournament_over = bool(champion)
-all_played = len(played_group) == 72 and len(ko_played) == 32
-
-# Sweden's run is settled once she's eliminated (next round fully drawn
-# without her) or the tournament is over.
-ROUND_SIZE = {"R32": 32, "R16": 16, "QF": 8, "SF": 4, "Final": 2}
-def sweden_settled():
-    if "Sweden" not in teams or sweden_now is None:
-        return False
-    if tournament_over or sweden_now == "Group stage":
-        return True
-    nxt = {"R32": "R16", "R16": "QF", "QF": "SF", "SF": "Final"}.get(sweden_now)
-    return (nxt is not None and len(ko_round[nxt]) >= ROUND_SIZE[nxt]
-            and "Sweden" not in ko_round[nxt])
-
-# `current` values may be a list (ties allowed); hit = membership.
-current = {
-    "B01": (maxima(gs_for) or None,
-            "decided" if all_groups_done else ("provisional" if gs_for else "tbd")),
-    "B02": (maxima(gs_against) or None,
-            "decided" if all_groups_done else ("provisional" if gs_against else "tbd")),
-    "B03": (total_goals if all_scores else None,
-            "decided" if all_played else ("provisional" if all_scores else "tbd")),
-    "B08": (max(all_scores) if all_scores else None,
-            "decided" if all_played else ("provisional" if all_scores else "tbd")),
-    "B11": (b11_ans, b11_st),
-    "B12": (b12_ans, b12_st),
-    "B15": (sweden_now, "decided" if sweden_settled() else ("provisional" if sweden_now else "tbd")),
+# Answer key maintained by hand in the Results sheet: BONUS POINTS block,
+# col BO = current correct answer, col BP = status. Ties are entered in BO as
+# a comma-separated list ("Mexico, Canada") — every listed answer counts as
+# correct. Status: "Decided" -> final (check marks shown); any other status
+# with an answer present -> provisional ("so far"); empty answer -> TBD.
+res = wb["Results"]
+KEY_COL_ANSWER, KEY_COL_STATUS = 67, 68          # BO, BP
+KEY_ROW_TO_ID = {3: "B01", 4: "B02", 5: "B03", 6: "B04", 7: "B05", 8: "B06",
+                 9: "B07", 10: "B08", 11: "B09", 12: "B10", 13: "B11",
+                 14: "B12", 15: "B13", 16: "B16", 17: "B15"}
+STAGE_NORM = {
+    "group stage": "group stage", "group": "group stage",
+    "round of 32": "r32", "r32": "r32",
+    "round of 16": "r16", "r16": "r16",
+    "quarter-final": "qf", "quarter final": "qf", "quarter-finals": "qf", "qf": "qf",
+    "semi-final": "sf", "semi final": "sf", "semi-finals": "sf", "sf": "sf",
+    "final": "final",
+    "winner": "champion", "champion": "champion",
 }
+
+def norm_answer(v):
+    """Comparable form: stage labels unified, numbers canonical, lowercased."""
+    s = str(v).strip().lower()
+    if s in STAGE_NORM:
+        return STAGE_NORM[s]
+    try:
+        return str(int(float(s.replace(",", "."))))
+    except ValueError:
+        return s
+
+answer_key = {}
+for krow, bid in KEY_ROW_TO_ID.items():
+    ans = res.cell(row=krow, column=KEY_COL_ANSWER).value
+    st = res.cell(row=krow, column=KEY_COL_STATUS).value
+    ans_str = "" if ans is None else str(ans).strip()
+    st_str = "" if st is None else str(st).strip().lower()
+    if not ans_str:
+        status = "tbd"
+    elif st_str.startswith(("decided", "final", "klar")):
+        status = "decided"
+    else:
+        status = "provisional"
+    answer_key[bid] = {
+        "current": ans_str or None,
+        "status": status,
+        "normSet": {norm_answer(a) for a in ans_str.replace(";", ",").split(",") if a.strip()},
+    }
 
 # Per-player answers per question.
 def bonus_answer(p, bid):
@@ -391,13 +367,10 @@ def bonus_answer(p, bid):
 
 bonus_json = []
 for bd in bonus_defs:
-    bid = bd["id"]
-    cur, status = current.get(bid, (None, "tbd"))
-    cur_set = {str(c) for c in cur} if isinstance(cur, list) else \
-              ({str(cur)} if cur is not None else set())
+    key = answer_key.get(bd["id"], {"current": None, "status": "tbd", "normSet": set()})
     counts = {}
     for p in players:
-        a = bonus_answer(p, bid)
+        a = bonus_answer(p, bd["id"])
         a = "—" if a is None or str(a).strip() == "" else str(a).strip()
         counts.setdefault(a, []).append(p)
     answers = [{
@@ -405,11 +378,12 @@ for bd in bonus_defs:
         "count": len(ppl),
         "pct": round(100 * len(ppl) / n_players) if n_players else 0,
         "players": ppl,
-        "hit": (a in cur_set) if (status == "decided" and cur_set) else None,
+        "hit": (norm_answer(a) in key["normSet"])
+               if (key["status"] == "decided" and key["normSet"]) else None,
     } for a, ppl in counts.items()]
     answers.sort(key=lambda x: (-x["count"], x["answer"]))
-    cur_out = ", ".join(str(c) for c in cur) if isinstance(cur, list) else cur
-    bonus_json.append({**bd, "current": cur_out, "status": status, "answers": answers})
+    bonus_json.append({**bd, "current": key["current"], "status": key["status"],
+                       "answers": answers})
 
 with open(STATS_OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": meta, "players": players, "stages": STAGES,
