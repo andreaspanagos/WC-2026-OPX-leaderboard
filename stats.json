@@ -1,0 +1,1780 @@
+{
+  "meta": {
+    "lastRefresh": "2026-06-10 09:14",
+    "maxPoints": 729,
+    "participants": 4
+  },
+  "players": [
+    "Johan Leijonhielm",
+    "Oscar Hultefors",
+    "Gustaf L",
+    "Alex J"
+  ],
+  "stages": [
+    "Group stage",
+    "R32",
+    "R16",
+    "QF",
+    "SF",
+    "Final",
+    "Champion"
+  ],
+  "teams": [
+    {
+      "team": "Czechia",
+      "group": "A",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 0,
+        "R32": 3,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 75,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Korea Republic",
+      "group": "A",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 0,
+        "R32": 3,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 75,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Mexico",
+      "group": "A",
+      "actual": "QF",
+      "dist": {
+        "Group stage": 0,
+        "R32": 1,
+        "R16": 3,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 25,
+        "R16": 75,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "South Africa",
+      "group": "A",
+      "actual": "QF",
+      "dist": {
+        "Group stage": 4,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 100,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Bosnia & Herzegovina",
+      "group": "B",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Canada",
+      "group": "B",
+      "actual": "QF",
+      "dist": {
+        "Group stage": 1,
+        "R32": 1,
+        "R16": 2,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 25,
+        "R16": 50,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Qatar",
+      "group": "B",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 2,
+        "R32": 2,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 50,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Switzerland",
+      "group": "B",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 4,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 100,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Brazil",
+      "group": "C",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 1,
+        "SF": 2,
+        "Final": 1,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 25,
+        "SF": 50,
+        "Final": 25,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Haiti",
+      "group": "C",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 4,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 100,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Morocco",
+      "group": "C",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 0,
+        "R32": 4,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 100,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Scotland",
+      "group": "C",
+      "actual": "Final",
+      "dist": {
+        "Group stage": 1,
+        "R32": 2,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 50,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Australia",
+      "group": "D",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 1,
+        "R32": 2,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 50,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Paraguay",
+      "group": "D",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Turkey",
+      "group": "D",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 2,
+        "R16": 2,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 50,
+        "R16": 50,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "USA",
+      "group": "D",
+      "actual": "QF",
+      "dist": {
+        "Group stage": 0,
+        "R32": 1,
+        "R16": 2,
+        "QF": 1,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 25,
+        "R16": 50,
+        "QF": 25,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Curaçao",
+      "group": "E",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 4,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 100,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Côte d'Ivoire",
+      "group": "E",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 0,
+        "R32": 2,
+        "R16": 2,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 50,
+        "R16": 50,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Ecuador",
+      "group": "E",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 4,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 100,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Germany",
+      "group": "E",
+      "actual": "Champion",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 3,
+        "QF": 0,
+        "SF": 1,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 75,
+        "QF": 0,
+        "SF": 25,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Japan",
+      "group": "F",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 1,
+        "R32": 3,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 75,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Netherlands",
+      "group": "F",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 1,
+        "R16": 0,
+        "QF": 3,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 25,
+        "R16": 0,
+        "QF": 75,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Sweden",
+      "group": "F",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 1,
+        "R32": 2,
+        "R16": 0,
+        "QF": 1,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 50,
+        "R16": 0,
+        "QF": 25,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Tunisia",
+      "group": "F",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 4,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 100,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Belgium",
+      "group": "G",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 1,
+        "QF": 2,
+        "SF": 1,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 25,
+        "QF": 50,
+        "SF": 25,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Egypt",
+      "group": "G",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 2,
+        "R32": 1,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 25,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Iran",
+      "group": "G",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 1,
+        "R32": 3,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 75,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "New Zealand",
+      "group": "G",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 2,
+        "R32": 2,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 50,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Cabo Verde",
+      "group": "H",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 4,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 100,
+        "R32": 0,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Saudi Arabia",
+      "group": "H",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Spain",
+      "group": "H",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 1,
+        "SF": 0,
+        "Final": 1,
+        "Champion": 2
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 25,
+        "SF": 0,
+        "Final": 25,
+        "Champion": 50
+      },
+      "championPct": 50,
+      "championBy": [
+        "Johan Leijonhielm",
+        "Oscar Hultefors"
+      ]
+    },
+    {
+      "team": "Uruguay",
+      "group": "H",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 0,
+        "R32": 4,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 100,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "France",
+      "group": "I",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 1,
+        "QF": 0,
+        "SF": 2,
+        "Final": 0,
+        "Champion": 1
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 25,
+        "QF": 0,
+        "SF": 50,
+        "Final": 0,
+        "Champion": 25
+      },
+      "championPct": 25,
+      "championBy": [
+        "Alex J"
+      ]
+    },
+    {
+      "team": "Iraq",
+      "group": "I",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 2,
+        "R32": 2,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 50,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Norway",
+      "group": "I",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 0,
+        "R32": 2,
+        "R16": 2,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 50,
+        "R16": 50,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Senegal",
+      "group": "I",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 2,
+        "R32": 1,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 25,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Algeria",
+      "group": "J",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Argentina",
+      "group": "J",
+      "actual": "SF",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 2,
+        "SF": 0,
+        "Final": 1,
+        "Champion": 1
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 50,
+        "SF": 0,
+        "Final": 25,
+        "Champion": 25
+      },
+      "championPct": 25,
+      "championBy": [
+        "Gustaf L"
+      ]
+    },
+    {
+      "team": "Austria",
+      "group": "J",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 0,
+        "R32": 4,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 100,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Jordan",
+      "group": "J",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Colombia",
+      "group": "K",
+      "actual": "SF",
+      "dist": {
+        "Group stage": 1,
+        "R32": 0,
+        "R16": 3,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 0,
+        "R16": 75,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Congo DR",
+      "group": "K",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Portugal",
+      "group": "K",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 2,
+        "SF": 1,
+        "Final": 1,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 50,
+        "SF": 25,
+        "Final": 25,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Uzbekistan",
+      "group": "K",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Croatia",
+      "group": "L",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 1,
+        "R32": 2,
+        "R16": 1,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 25,
+        "R32": 50,
+        "R16": 25,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "England",
+      "group": "L",
+      "actual": "R16",
+      "dist": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 3,
+        "SF": 1,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 0,
+        "R32": 0,
+        "R16": 0,
+        "QF": 75,
+        "SF": 25,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Ghana",
+      "group": "L",
+      "actual": "Group stage",
+      "dist": {
+        "Group stage": 2,
+        "R32": 2,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 50,
+        "R32": 50,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Panama",
+      "group": "L",
+      "actual": "R32",
+      "dist": {
+        "Group stage": 3,
+        "R32": 1,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 75,
+        "R32": 25,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    }
+  ],
+  "bonus": [
+    {
+      "id": "B01",
+      "q": "Most goals scored, team (group stage only)",
+      "pts": 5,
+      "current": "Canada, England, France, Mexico, Portugal, Scotland, Sweden, USA",
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "Brazil",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "Germany",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "Mexico",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": true
+        },
+        {
+          "answer": "Spain",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "q": "Most goals conceded, team (group stage only)",
+      "pts": 5,
+      "current": "Austria, Côte d'Ivoire, Iran, Korea Republic, Saudi Arabia, Sweden",
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "Haiti",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Johan Leijonhielm",
+            "Alex J"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "Cabo Verde",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "Curaçao",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "q": "Total number of goals (all tournament)",
+      "pts": 5,
+      "current": 233,
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "229",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "233",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": true
+        },
+        {
+          "answer": "264",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "285",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "q": "Golden Ball (Player of the tournament)",
+      "pts": 10,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "Lamine Yamal",
+          "count": 3,
+          "pct": 75,
+          "players": [
+            "Johan Leijonhielm",
+            "Oscar Hultefors",
+            "Gustaf L"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Bruno Fernandes",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "q": "Golden Boot (Most goals, player)",
+      "pts": 10,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "Harry Kane",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Julián Álvarez",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Kylian Mbappé",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Victor Gyökeres",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "q": "Most yellow cards, team",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "Argentina",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Brazil",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Frankrike",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Portugal",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B07",
+      "q": "Fastest goal, minute",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "6",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Johan Leijonhielm",
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "3",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "4",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B08",
+      "q": "Highest scoring single match (goals)",
+      "pts": 5,
+      "current": 5,
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "4",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Oscar Hultefors",
+            "Alex J"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "5",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Johan Leijonhielm",
+            "Gustaf L"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    {
+      "id": "B09",
+      "q": "Number of penalty shootouts in knockout stage",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "1",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Johan Leijonhielm",
+            "Gustaf L"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "15",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "4",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B10",
+      "q": "Final goes to extra time? (Yes/No)",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "No",
+          "count": 3,
+          "pct": 75,
+          "players": [
+            "Johan Leijonhielm",
+            "Gustaf L",
+            "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Yes",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B11",
+      "q": "Host nation reaches R16? (Yes/No)",
+      "pts": 5,
+      "current": "Yes",
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "Yes",
+          "count": 3,
+          "pct": 75,
+          "players": [
+            "Johan Leijonhielm",
+            "Oscar Hultefors",
+            "Gustaf L"
+          ],
+          "hit": true
+        },
+        {
+          "answer": "No",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "B12",
+      "q": "First-timer reaches R32? (Yes/No)",
+      "pts": 5,
+      "current": "Yes",
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "No",
+          "count": 3,
+          "pct": 75,
+          "players": [
+            "Oscar Hultefors",
+            "Gustaf L",
+            "Alex J"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "Yes",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    {
+      "id": "B13",
+      "q": "Most yellow cards, single match",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "11",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "7",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "8",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Oscar Hultefors"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "9",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": null
+        }
+      ]
+    },
+    {
+      "id": "B15",
+      "q": "How far does Sweden go? (auto from bracket picks)",
+      "pts": 10,
+      "current": "R32",
+      "status": "decided",
+      "answers": [
+        {
+          "answer": "R32",
+          "count": 2,
+          "pct": 50,
+          "players": [
+            "Oscar Hultefors",
+            "Alex J"
+          ],
+          "hit": true
+        },
+        {
+          "answer": "Group stage",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Johan Leijonhielm"
+          ],
+          "hit": false
+        },
+        {
+          "answer": "QF",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "id": "B16",
+      "q": "Sweden's top scorer (manual)",
+      "pts": 5,
+      "current": null,
+      "status": "tbd",
+      "answers": [
+        {
+          "answer": "Viktor Gyökeres",
+          "count": 3,
+          "pct": 75,
+          "players": [
+            "Johan Leijonhielm",
+            "Oscar Hultefors",
+            "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Victor Gyökeres",
+          "count": 1,
+          "pct": 25,
+          "players": [
+            "Gustaf L"
+          ],
+          "hit": null
+        }
+      ]
+    }
+  ]
+}

@@ -44,6 +44,32 @@
     }
     .pill strong { font-weight: 600; }
 
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 0.25rem;
+      background: #1f2c6e;
+      padding: 0 0.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      overflow-x: auto;
+    }
+    .tab {
+      background: none;
+      border: none;
+      color: #c7cdf0;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.8rem 0.9rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .tab:hover { color: #fff; }
+    .tab.active { color: #fff; border-bottom-color: #FFD700; }
+
     /* ── Podium ── */
     .podium {
       display: flex;
@@ -70,7 +96,7 @@
     .podium-total { font-size: 1.8rem; font-weight: 800; color: #2A398D; }
     .podium-pct   { font-size: 0.8rem; color: #666; margin-top: 0.15rem; }
 
-    /* ── Table ── */
+    /* ── Leaderboard table ── */
     .table-wrap {
       overflow-x: auto;
       padding: 1.25rem 1rem 2rem;
@@ -135,7 +161,7 @@
     .move-new  { color: #2A398D; background: #e8ecf8; border-radius: 4px; padding: 0 5px; }
     .podium-move { font-size: 0.78rem; font-weight: 700; margin-top: 0.15rem; }
 
-    /* bar column */
+    /* % bar */
     .bar-cell { padding-right: 1rem; }
     .bar-bg {
       background: #e8ecf8;
@@ -151,55 +177,46 @@
     }
     .pct-label { font-size: 0.75rem; color: #666; margin-top: 2px; }
 
-    /* ── Tabs ── */
-    .tabs {
-      display: flex;
-      gap: 0.25rem;
-      background: #1f2c6e;
-      padding: 0 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .tab {
-      background: none;
-      border: none;
-      color: #c7cdf0;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 0.8rem 1.1rem;
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .tab:hover { color: #fff; }
-    .tab.active { color: #fff; border-bottom-color: #FFD700; }
-
-    /* ── Games view ── */
-    .games-wrap { padding: 1rem; max-width: 900px; margin: 0 auto; }
-    .games-intro { color: #555; font-size: 0.9rem; margin: 0.25rem 0 1rem; }
-
-    .group-section {
+    /* ── Shared section/card layout ── */
+    .page-wrap { padding: 1rem; max-width: 920px; margin: 0 auto; }
+    .page-intro { color: #555; font-size: 0.9rem; margin: 0.25rem 0 1rem; }
+    .section {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 1px 6px rgba(0,0,0,0.08);
       margin-bottom: 1rem;
       overflow: hidden;
     }
-    .group-head {
+    .section-head {
       background: #2A398D;
       color: #fff;
       padding: 0.6rem 0.9rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.5rem;
       font-weight: 700;
       letter-spacing: 0.04em;
+      flex-wrap: wrap;
     }
-    .group-winner { font-size: 0.8rem; font-weight: 600; background: rgba(255,255,255,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; }
-    .winner-picks { font-size: 0.74rem; color: #555; padding: 0.45rem 0.9rem; background: #f3f5fb; border-bottom: 1px solid #e6e9f5; }
-    .winner-picks .ok  { color: #1b8a3a; font-weight: 700; }
-    .winner-picks .no  { color: #c0392b; }
+    .head-chip { font-size: 0.8rem; font-weight: 600; background: rgba(255,255,255,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; }
+
+    /* ── Games view ── */
+    .winner-picks {
+      font-size: 0.78rem; color: #444;
+      padding: 0.5rem 0.9rem;
+      background: #f3f5fb;
+      border-bottom: 1px solid #e6e9f5;
+      display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;
+    }
+    .wp-label { color: #777; margin-right: 0.15rem; }
+    .wp-pill {
+      background: #fff; border: 1px solid #dfe3f2; border-radius: 999px;
+      padding: 0.1rem 0.55rem; font-weight: 600; white-space: nowrap;
+    }
+    .wp-pill .pct { color: #2A398D; margin-left: 0.25rem; }
+    .wp-pill.ok { border-color: #1b8a3a; background: #ecf9f0; }
+    .wp-pill.ok::after { content: " ✓"; color: #1b8a3a; font-weight: 800; }
 
     .game { border-bottom: 1px solid #eee; }
     .game:last-child { border-bottom: none; }
@@ -215,7 +232,6 @@
     .game-date { font-size: 0.72rem; color: #888; line-height: 1.1; }
     .game-teams { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; flex-wrap: wrap; }
     .t-home, .t-away { font-weight: 600; }
-    .t-home { text-align: right; }
     .game-score { font-weight: 800; color: #2A398D; background: #eef1fb; border-radius: 6px; padding: 0.05rem 0.5rem; min-width: 2.6rem; text-align: center; }
     .vs { color: #aaa; font-weight: 600; }
     .badge-upcoming { font-size: 0.65rem; font-weight: 700; color: #8a6d00; background: #fff3cd; border-radius: 4px; padding: 0.05rem 0.4rem; text-transform: uppercase; }
@@ -223,17 +239,22 @@
     .game.open .chev { transform: rotate(180deg); }
 
     .game-detail { padding: 0.2rem 0.9rem 0.8rem; }
-    .pred-row {
+
+    /* scoreline distribution rows */
+    .sl-row {
       display: grid;
-      grid-template-columns: 1fr auto 2.4rem;
+      grid-template-columns: 3.2rem minmax(70px, 130px) 4.5rem 2.4rem;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.3rem 0.4rem;
+      gap: 0.6rem;
+      padding: 0.35rem 0.4rem 0.1rem;
       border-top: 1px solid #f0f0f0;
       font-size: 0.9rem;
     }
-    .pred-row .pp { color: #444; }
-    .pred-pick { font-weight: 700; color: #333; }
+    .sl-score { font-weight: 800; color: #2A398D; }
+    .sl-bar-bg { background: #eef1fb; border-radius: 999px; height: 8px; overflow: hidden; }
+    .sl-bar { height: 100%; background: linear-gradient(90deg, #2A398D, #5b6fcc); border-radius: 999px; }
+    .sl-pct { font-size: 0.8rem; color: #555; white-space: nowrap; }
+    .sl-names { grid-column: 1 / -1; font-size: 0.74rem; color: #888; padding: 0 0.4rem 0.3rem; }
     .pts {
       font-size: 0.78rem; font-weight: 800; text-align: center;
       border-radius: 6px; padding: 0.1rem 0;
@@ -241,7 +262,55 @@
     .pts-3 { background: #d6f5df; color: #1b8a3a; }
     .pts-1 { background: #fdf0d2; color: #9a7300; }
     .pts-0 { background: #eee; color: #999; }
-    .pts-na { color: #bbb; }
+    .pts-na { color: #bbb; text-align: center; }
+
+    /* ── Teams view ── */
+    .legend { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.72rem; color: #555; margin-bottom: 0.75rem; }
+    .legend span { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .swatch { width: 0.8rem; height: 0.8rem; border-radius: 3px; display: inline-block; }
+
+    .team-row {
+      display: grid;
+      grid-template-columns: minmax(110px, 170px) 1fr 4.2rem;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.9rem;
+      border-bottom: 1px solid #f0f0f0;
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+    .team-row:hover { background: #f0f4ff; }
+    .team-row:last-child { border-bottom: none; }
+    .team-name { font-weight: 600; }
+    .team-grp { font-size: 0.68rem; color: #999; margin-left: 0.3rem; }
+    .stack { display: flex; height: 14px; border-radius: 999px; overflow: hidden; background: #eef1fb; }
+    .stack div { height: 100%; }
+    .team-actual { font-size: 0.7rem; font-weight: 700; text-align: right; color: #2A398D; white-space: nowrap; }
+    .team-detail { grid-column: 1 / -1; font-size: 0.78rem; color: #555; padding: 0.2rem 0 0.3rem; display: none; }
+    .team-row.open .team-detail { display: block; }
+
+    /* ── Bonus view ── */
+    .bonus-card { margin-bottom: 1rem; }
+    .bq-status { font-size: 0.74rem; font-weight: 700; border-radius: 999px; padding: 0.15rem 0.6rem; }
+    .bq-decided     { background: #d6f5df; color: #1b8a3a; }
+    .bq-provisional { background: #fff3cd; color: #8a6d00; }
+    .bq-tbd         { background: rgba(255,255,255,0.25); color: #fff; }
+    .bq-body { padding: 0.4rem 0.9rem 0.8rem; }
+    .bq-current { font-size: 0.82rem; color: #444; padding: 0.45rem 0.1rem; }
+    .bq-current strong { color: #2A398D; }
+    .ans-row {
+      display: grid;
+      grid-template-columns: minmax(90px, 1fr) minmax(60px, 110px) 4.2rem 1.6rem;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.3rem 0.1rem 0.05rem;
+      border-top: 1px solid #f0f0f0;
+      font-size: 0.88rem;
+    }
+    .ans-val { font-weight: 700; }
+    .ans-names { grid-column: 1 / -1; font-size: 0.74rem; color: #888; padding-bottom: 0.25rem; }
+    .hit-y { color: #1b8a3a; font-weight: 800; }
+    .hit-n { color: #d0d0d0; font-weight: 800; }
 
     /* loading / error */
     #status {
@@ -254,6 +323,7 @@
     @media (max-width: 500px) {
       header { flex-direction: column; align-items: flex-start; }
       .game-teams { font-size: 0.85rem; }
+      .team-row { grid-template-columns: minmax(90px, 120px) 1fr 3.4rem; }
     }
   </style>
 </head>
@@ -270,7 +340,9 @@
 
 <nav class="tabs">
   <button class="tab active" id="tab-leaderboard" onclick="showView('leaderboard')">Leaderboard</button>
-  <button class="tab" id="tab-games" onclick="showView('games')">Games &amp; Predictions</button>
+  <button class="tab" id="tab-games" onclick="showView('games')">Games</button>
+  <button class="tab" id="tab-teams" onclick="showView('teams')">Team Journeys</button>
+  <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus Questions</button>
 </nav>
 
 <div id="status">Loading…</div>
@@ -297,14 +369,38 @@
   </div>
 </div>
 
-<!-- ── Games & Predictions view ── -->
+<!-- ── Games view ── -->
 <div id="view-games" hidden>
-  <div class="games-wrap">
-    <p class="games-intro">
-      Group-stage games. Tap any match to see what each player predicted and the points they earned.
-      Predictions are always visible; results &amp; points appear once a game has been played.
+  <div class="page-wrap">
+    <p class="page-intro">
+      Tap any match to see the predicted scorelines — identical predictions are grouped,
+      most popular first. Points appear once a game has been played
+      (<strong>3</strong> exact score, <strong>1</strong> correct outcome).
     </p>
     <div id="games-container"></div>
+  </div>
+</div>
+
+<!-- ── Team journeys view ── -->
+<div id="view-teams" hidden>
+  <div class="page-wrap">
+    <p class="page-intro">
+      How far is each nation predicted to go? Each bar splits the pool's predictions by
+      final stage reached. Tap a team for the numbers.
+    </p>
+    <div class="legend" id="stage-legend"></div>
+    <div class="section" id="teams-container"></div>
+  </div>
+</div>
+
+<!-- ── Bonus questions view ── -->
+<div id="view-bonus" hidden>
+  <div class="page-wrap">
+    <p class="page-intro">
+      Live status of all bonus questions: what everyone answered and the currently
+      correct answer where it can be derived from results. Official bonus points are on the leaderboard.
+    </p>
+    <div id="bonus-container"></div>
   </div>
 </div>
 
@@ -312,6 +408,14 @@
   const MEDALS = ["🥇","🥈","🥉"];
   const MEDAL_CLASS = ["gold","silver","bronze"];
   const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const STAGE_COLORS = {
+    "Group stage": "#d9dde8", "R32": "#b3bedf", "R16": "#8c9ed1",
+    "QF": "#5b6fcc", "SF": "#3950b0", "Final": "#2A398D", "Champion": "#FFD700"
+  };
+  const STAGE_LABEL = {
+    "Group stage": "Group stage exit", "R32": "Round of 32", "R16": "Round of 16",
+    "QF": "Quarter-final", "SF": "Semi-final", "Final": "Final", "Champion": "Champion"
+  };
 
   function fmt(v) {
     if (v === null || v === undefined) return "—";
@@ -323,19 +427,23 @@
       .replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   }
 
-  // "YYYY-MM-DD HH:MM" -> "Jun 11<br>21:00"
   function shortDate(s) {
     const m = String(s || "").match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/);
     if (!m) return esc(s);
     return `${MONTHS[+m[2] - 1]} ${+m[3]}<br>${m[4]}:${m[5]}`;
   }
 
+  function names(list) {
+    return esc((list || []).join(", "));
+  }
+
   // ── Tab switching ──
+  const VIEWS = ["leaderboard", "games", "teams", "bonus"];
   function showView(name) {
-    document.getElementById("view-leaderboard").hidden = name !== "leaderboard";
-    document.getElementById("view-games").hidden = name !== "games";
-    document.getElementById("tab-leaderboard").classList.toggle("active", name === "leaderboard");
-    document.getElementById("tab-games").classList.toggle("active", name === "games");
+    VIEWS.forEach(v => {
+      document.getElementById("view-" + v).hidden = v !== name;
+      document.getElementById("tab-" + v).classList.toggle("active", v === name);
+    });
   }
 
   function toggleGame(el) {
@@ -346,8 +454,7 @@
     game.classList.toggle("open", !open);
   }
 
-  // Position change since the last published results.
-  // prevRank is baked into the JSON by export.py. delta>0 = moved up.
+  // ── Leaderboard ──
   function movement(r) {
     if (r.prevRank === null || r.prevRank === undefined)
       return `<span class="move move-new">NEW</span>`;
@@ -357,66 +464,12 @@
     return `<span class="move move-same">&ndash;</span>`;
   }
 
-  // ── Games & Predictions rendering ──
-  function predRow(p, played) {
-    const pick = (p.phg === null || p.phg === undefined)
-      ? `<span class="pts-na">no pick</span>`
-      : `${p.phg}&ndash;${p.pag}`;
-    let ptsHtml;
-    if (!played || p.pts === null || p.pts === undefined)
-      ptsHtml = `<span class="pts pts-na">—</span>`;
-    else
-      ptsHtml = `<span class="pts pts-${p.pts}">${p.pts}</span>`;
-    return `<div class="pred-row"><span class="pp">${esc(p.player)}</span>` +
-           `<span class="pred-pick">${pick}</span>${ptsHtml}</div>`;
-  }
-
-  function gameHtml(gm) {
-    const center = gm.played
-      ? `<span class="t-home">${esc(gm.home)}</span>` +
-        `<span class="game-score">${gm.actual.hg}&ndash;${gm.actual.ag}</span>` +
-        `<span class="t-away">${esc(gm.away)}</span>`
-      : `<span class="t-home">${esc(gm.home)}</span><span class="vs">vs</span>` +
-        `<span class="t-away">${esc(gm.away)}</span> <span class="badge-upcoming">upcoming</span>`;
-    const preds = gm.predictions.map(p => predRow(p, gm.played)).join("");
-    return `
-      <div class="game">
-        <div class="game-summary" onclick="toggleGame(this)">
-          <span class="game-date">${shortDate(gm.kickoff)}</span>
-          <span class="game-teams">${center}</span>
-          <span class="chev">&#9660;</span>
-        </div>
-        <div class="game-detail" hidden>${preds}</div>
-      </div>`;
-  }
-
-  function renderGames(data) {
-    const c = document.getElementById("games-container");
-    c.innerHTML = "";
-    data.groups.forEach(g => {
-      const sec = document.createElement("div");
-      sec.className = "group-section";
-      const picks = g.winners.map(w =>
-        `<span class="${w.correct ? "ok" : "no"}">${esc(w.player.split(" ")[0])}` +
-        `${w.correct ? " &#10003;" : " &#10007;"}</span>`
-      ).join(" &middot; ");
-      sec.innerHTML =
-        `<div class="group-head"><span>Group ${esc(g.group)}</span>` +
-        (g.actualWinner ? `<span class="group-winner">🏆 ${esc(g.actualWinner)}</span>` : "") +
-        `</div>` +
-        (g.actualWinner ? `<div class="winner-picks">Group-winner picks: ${picks}</div>` : "") +
-        g.games.map(gameHtml).join("");
-      c.appendChild(sec);
-    });
-  }
-
   function renderLeaderboard(data) {
     const { meta, rows } = data;
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
     document.getElementById("hdr-maxpoints").textContent    = meta.maxPoints     ?? "—";
 
-    // Podium
     const podiumEl = document.getElementById("podium-section");
     podiumEl.innerHTML = "";
     rows.slice(0, 3).forEach((r, i) => {
@@ -426,7 +479,7 @@
         <div class="podium-medal">${MEDALS[i]}</div>
         <div class="podium-rank">Rank ${r.rank}</div>
         <div class="podium-move">${movement(r)}</div>
-        <div class="podium-name">${r.player}</div>
+        <div class="podium-name">${esc(r.player)}</div>
         <div class="podium-total">${fmt(r.total)}</div>
         <div class="podium-pct">${(r.pctMax * 100).toFixed(1)}% of max</div>
       `;
@@ -434,7 +487,6 @@
     });
     podiumEl.hidden = false;
 
-    // Table
     const tbody = document.getElementById("tbody");
     tbody.innerHTML = "";
     rows.forEach(r => {
@@ -445,7 +497,7 @@
           <span class="rank-badge${rankClass}">${r.rank}</span>
           <div>${movement(r)}</div>
         </td>
-        <td class="player-name">${r.player}</td>
+        <td class="player-name">${esc(r.player)}</td>
         <td>${fmt(r.group)}</td>
         <td>${fmt(r.ko)}</td>
         <td>${fmt(r.bonus)}</td>
@@ -462,6 +514,144 @@
     document.getElementById("table-section").hidden = false;
   }
 
+  // ── Games ──
+  function scorelineRows(gm) {
+    let html = gm.scorelines.map(sl => {
+      let ptsHtml;
+      if (!gm.played || sl.pts === null || sl.pts === undefined)
+        ptsHtml = `<span class="pts-na">—</span>`;
+      else
+        ptsHtml = `<span class="pts pts-${sl.pts}">${sl.pts}</span>`;
+      return `
+        <div class="sl-row">
+          <span class="sl-score">${esc(sl.score)}</span>
+          <div class="sl-bar-bg"><div class="sl-bar" style="width:${sl.pct}%"></div></div>
+          <span class="sl-pct">${sl.pct}% (${sl.count})</span>
+          ${ptsHtml}
+        </div>
+        <div class="sl-names">${names(sl.players)}</div>`;
+    }).join("");
+    if (gm.noPick > 0)
+      html += `<div class="sl-names">No pick: ${gm.noPick}</div>`;
+    return html;
+  }
+
+  function gameHtml(gm) {
+    const center = gm.played
+      ? `<span class="t-home">${esc(gm.home)}</span>` +
+        `<span class="game-score">${gm.actual.hg}&ndash;${gm.actual.ag}</span>` +
+        `<span class="t-away">${esc(gm.away)}</span>`
+      : `<span class="t-home">${esc(gm.home)}</span><span class="vs">vs</span>` +
+        `<span class="t-away">${esc(gm.away)}</span> <span class="badge-upcoming">upcoming</span>`;
+    return `
+      <div class="game">
+        <div class="game-summary" onclick="toggleGame(this)">
+          <span class="game-date">${shortDate(gm.kickoff)}</span>
+          <span class="game-teams">${center}</span>
+          <span class="chev">&#9660;</span>
+        </div>
+        <div class="game-detail" hidden>${scorelineRows(gm)}</div>
+      </div>`;
+  }
+
+  function renderGames(data) {
+    const c = document.getElementById("games-container");
+    c.innerHTML = "";
+    data.groups.forEach(g => {
+      const sec = document.createElement("div");
+      sec.className = "section";
+      const pickPills = g.winnerPicks.map(p =>
+        `<span class="wp-pill${p.correct ? " ok" : ""}" title="${names(p.players)}">` +
+        `${esc(p.team)}<span class="pct">${p.pct}%</span></span>`
+      ).join("");
+      sec.innerHTML =
+        `<div class="section-head"><span>Group ${esc(g.group)}</span>` +
+        (g.actualWinner ? `<span class="head-chip">🏆 ${esc(g.actualWinner)}</span>` : "") +
+        `</div>` +
+        `<div class="winner-picks"><span class="wp-label">Winner picks:</span>${pickPills}</div>` +
+        g.games.map(gameHtml).join("");
+      c.appendChild(sec);
+    });
+  }
+
+  // ── Team journeys ──
+  function renderTeams(data) {
+    const legend = document.getElementById("stage-legend");
+    legend.innerHTML = data.stages.map(s =>
+      `<span><span class="swatch" style="background:${STAGE_COLORS[s]}"></span>${STAGE_LABEL[s]}</span>`
+    ).join("");
+
+    const c = document.getElementById("teams-container");
+    c.innerHTML = "";
+    data.teams.forEach(t => {
+      const segs = data.stages
+        .filter(s => t.pct[s] > 0)
+        .map(s =>
+          `<div style="width:${t.pct[s]}%;background:${STAGE_COLORS[s]}" ` +
+          `title="${STAGE_LABEL[s]}: ${t.pct[s]}%"></div>`)
+        .join("");
+      const detail = data.stages
+        .filter(s => t.dist[s] > 0)
+        .map(s => `${STAGE_LABEL[s]}: <strong>${t.pct[s]}%</strong> (${t.dist[s]})`)
+        .join(" &middot; ");
+      const champNote = t.championBy.length
+        ? `<br>Picked as champion by: ${names(t.championBy)}` : "";
+      const actualTxt = t.actual === "Champion" ? "🏆 Champion"
+                      : t.actual ? (t.actual === "Group stage" ? "Out (groups)" : "→ " + t.actual)
+                      : "";
+      const row = document.createElement("div");
+      row.className = "team-row";
+      row.onclick = () => row.classList.toggle("open");
+      row.innerHTML = `
+        <span class="team-name">${esc(t.team)}<span class="team-grp">(${esc(t.group)})</span></span>
+        <div class="stack">${segs}</div>
+        <span class="team-actual">${actualTxt}</span>
+        <div class="team-detail">${detail}${champNote}</div>
+      `;
+      c.appendChild(row);
+    });
+  }
+
+  // ── Bonus questions ──
+  function renderBonus(data) {
+    const c = document.getElementById("bonus-container");
+    c.innerHTML = "";
+    data.bonus.forEach(b => {
+      const card = document.createElement("div");
+      card.className = "section bonus-card";
+      const statusChip =
+        b.status === "decided"     ? `<span class="bq-status bq-decided">decided</span>` :
+        b.status === "provisional" ? `<span class="bq-status bq-provisional">so far</span>` :
+                                     `<span class="bq-status bq-tbd">TBD</span>`;
+      const currentLine = (b.current !== null && b.current !== undefined)
+        ? `<div class="bq-current">Current correct answer: <strong>${esc(b.current)}</strong>` +
+          (b.status === "provisional" ? " <em>(may still change)</em>" : "") + `</div>`
+        : `<div class="bq-current">Correct answer not yet determinable from results.</div>`;
+      const answerRows = b.answers.map(a => {
+        const hit = a.hit === true ? `<span class="hit-y">✓</span>`
+                  : a.hit === false ? `<span class="hit-n">✗</span>` : "";
+        return `
+          <div class="ans-row">
+            <span class="ans-val">${esc(a.answer)}</span>
+            <div class="sl-bar-bg"><div class="sl-bar" style="width:${a.pct}%"></div></div>
+            <span class="sl-pct">${a.pct}% (${a.count})</span>
+            ${hit}
+          </div>
+          <div class="ans-names">${names(a.players)}</div>`;
+      }).join("");
+      card.innerHTML = `
+        <div class="section-head">
+          <span>${esc(b.id)} &middot; ${esc(b.q)}</span>
+          <span style="display:flex;gap:0.4rem;align-items:center">
+            <span class="head-chip">${b.pts} pts</span>${statusChip}
+          </span>
+        </div>
+        <div class="bq-body">${currentLine}${answerRows}</div>`;
+      c.appendChild(card);
+    });
+  }
+
+  // ── Loading ──
   function load() {
     const bust = "?_=" + Date.now();
     fetch("leaderboard.json" + bust)
@@ -478,7 +668,15 @@
       .then(renderGames)
       .catch(err => {
         document.getElementById("games-container").innerHTML =
-          `<p class="games-intro">Could not load games.json — run export.py first. (${err})</p>`;
+          `<p class="page-intro">Could not load games.json — run export.py first. (${err})</p>`;
+      });
+
+    fetch("stats.json" + bust)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d => { renderTeams(d); renderBonus(d); })
+      .catch(err => {
+        document.getElementById("teams-container").innerHTML =
+          `<p class="page-intro">Could not load stats.json — run export.py first. (${err})</p>`;
       });
   }
 

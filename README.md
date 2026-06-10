@@ -55,7 +55,7 @@ GitHub will give you a URL like `https://<your-username>.github.io/wc2026-leader
 
 ```bash
 python export.py
-git add leaderboard.json games.json
+git add leaderboard.json games.json stats.json
 git commit -m "Update leaderboard $(date +%Y-%m-%d)"
 git push
 ```
@@ -82,17 +82,31 @@ python -m http.server 8000
 
 | File | Purpose |
 |------|---------|
-| `export.py` | Reads Excel + submissions, writes `leaderboard.json` and `games.json` |
-| `leaderboard.json` | Summary standings, consumed by the Leaderboard tab (commit this) |
-| `games.json` | Per-game points + everyone's predictions, for the Games tab (commit this) |
-| `index.html` | Self-contained UI: Leaderboard + Games & Predictions tabs |
+| `export.py` | Reads the main model, writes `leaderboard.json`, `games.json`, `stats.json` |
+| `leaderboard.json` | Summary standings — Leaderboard tab (commit this) |
+| `games.json` | Per-game predicted-scoreline distributions + points — Games tab (commit this) |
+| `stats.json` | Team progression predictions + bonus question status — Team Journeys & Bonus tabs (commit this) |
+| `index.html` | Self-contained UI with all four tabs |
 | `WC 2026 Main model_vOPX.xlsx` | Source of truth — do **not** commit |
-| `OPX submissions/` | Players' prediction files — read by export.py, **not** committed |
+| `OPX submissions/` | Players' original files — **not** committed, **not** read by export.py |
 
-### Games & Predictions tab
+### How the site views work
 
-`export.py` reads each player's prediction file in `OPX submissions/`, compares
-it to the actual results, and computes per-game points (exact score = 3, correct
-result = 1, wrong = 0). The site shows all group games; tap one to see every
-player's prediction and points. Predictions are always visible; the actual score
-and points show once a game has been played.
+`export.py` reads everything from the main model only (the flat per-player
+picks table in `_Setup_PowerQuery` + results in `Backend`), so new players
+appear automatically once they're added to the model — no extra steps.
+
+- **Games** — every group game with the pool's predicted scorelines grouped
+  and sorted by popularity, plus points per scoreline once the game is played
+  (exact = 3, correct outcome = 1). Group headers show winner-pick percentages.
+- **Team Journeys** — for each nation, the share of the pool predicting it to
+  exit at each stage (group / R32 / R16 / QF / SF / Final / Champion), plus how
+  far the team has actually come.
+- **Bonus Questions** — everyone's answers per question and the currently
+  correct answer where it can be derived from results ("so far" = may change,
+  "TBD" = needs manual facts like top scorer or cards). Official bonus points
+  remain whatever the model says on the leaderboard.
+
+At tournament start the Results sheet is empty: all games show as *upcoming*,
+no winners or points are shown, and bonus answers are TBD. As results are
+entered, everything fills in automatically on the next export.
