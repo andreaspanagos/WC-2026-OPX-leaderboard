@@ -1,14 +1,14 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-10 10:31",
+    "lastRefresh": "2026-06-11 09:27",
     "maxPoints": 729,
     "participants": 4
   },
   "players": [
-    "Johan Leijonhielm",
-    "Oscar Hultefors",
+    "Alex J",
     "Gustaf L",
-    "Alex J"
+    "Johan Leijonhielm",
+    "Oscar Hultefors"
   ],
   "stages": [
     "Group stage",
@@ -23,7 +23,7 @@
     {
       "team": "Czechia",
       "group": "A",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 3,
@@ -48,7 +48,7 @@
     {
       "team": "Korea Republic",
       "group": "A",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 3,
@@ -73,7 +73,7 @@
     {
       "team": "Mexico",
       "group": "A",
-      "actual": "QF",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 1,
@@ -98,7 +98,7 @@
     {
       "team": "South Africa",
       "group": "A",
-      "actual": "QF",
+      "actual": null,
       "dist": {
         "Group stage": 4,
         "R32": 0,
@@ -123,7 +123,7 @@
     {
       "team": "Bosnia & Herzegovina",
       "group": "B",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -148,7 +148,7 @@
     {
       "team": "Canada",
       "group": "B",
-      "actual": "QF",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 1,
@@ -173,7 +173,7 @@
     {
       "team": "Qatar",
       "group": "B",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 2,
@@ -198,7 +198,7 @@
     {
       "team": "Switzerland",
       "group": "B",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -223,7 +223,7 @@
     {
       "team": "Brazil",
       "group": "C",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -248,7 +248,7 @@
     {
       "team": "Haiti",
       "group": "C",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 4,
         "R32": 0,
@@ -273,7 +273,7 @@
     {
       "team": "Morocco",
       "group": "C",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 4,
@@ -298,7 +298,7 @@
     {
       "team": "Scotland",
       "group": "C",
-      "actual": "Final",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 2,
@@ -323,7 +323,7 @@
     {
       "team": "Australia",
       "group": "D",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 2,
@@ -348,7 +348,7 @@
     {
       "team": "Paraguay",
       "group": "D",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -373,7 +373,7 @@
     {
       "team": "Turkey",
       "group": "D",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 2,
@@ -398,7 +398,7 @@
     {
       "team": "USA",
       "group": "D",
-      "actual": "QF",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 1,
@@ -423,7 +423,7 @@
     {
       "team": "Curaçao",
       "group": "E",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 4,
         "R32": 0,
@@ -448,7 +448,7 @@
     {
       "team": "Côte d'Ivoire",
       "group": "E",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 2,
@@ -473,7 +473,7 @@
     {
       "team": "Ecuador",
       "group": "E",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 4,
@@ -498,7 +498,7 @@
     {
       "team": "Germany",
       "group": "E",
-      "actual": "Champion",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -523,7 +523,7 @@
     {
       "team": "Japan",
       "group": "F",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 3,
@@ -548,7 +548,7 @@
     {
       "team": "Netherlands",
       "group": "F",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 1,
@@ -573,7 +573,7 @@
     {
       "team": "Sweden",
       "group": "F",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 2,
@@ -598,7 +598,7 @@
     {
       "team": "Tunisia",
       "group": "F",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 4,
         "R32": 0,
@@ -623,7 +623,7 @@
     {
       "team": "Belgium",
       "group": "G",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -648,7 +648,7 @@
     {
       "team": "Egypt",
       "group": "G",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 1,
@@ -673,7 +673,7 @@
     {
       "team": "Iran",
       "group": "G",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 3,
@@ -698,7 +698,7 @@
     {
       "team": "New Zealand",
       "group": "G",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 2,
@@ -723,7 +723,7 @@
     {
       "team": "Cabo Verde",
       "group": "H",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 4,
         "R32": 0,
@@ -748,7 +748,7 @@
     {
       "team": "Saudi Arabia",
       "group": "H",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -773,7 +773,7 @@
     {
       "team": "Spain",
       "group": "H",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -801,7 +801,7 @@
     {
       "team": "Uruguay",
       "group": "H",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 4,
@@ -826,7 +826,7 @@
     {
       "team": "France",
       "group": "I",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -853,7 +853,7 @@
     {
       "team": "Iraq",
       "group": "I",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 2,
@@ -878,7 +878,7 @@
     {
       "team": "Norway",
       "group": "I",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 2,
@@ -903,7 +903,7 @@
     {
       "team": "Senegal",
       "group": "I",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 1,
@@ -928,7 +928,7 @@
     {
       "team": "Algeria",
       "group": "J",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -953,7 +953,7 @@
     {
       "team": "Argentina",
       "group": "J",
-      "actual": "SF",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -980,7 +980,7 @@
     {
       "team": "Austria",
       "group": "J",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 4,
@@ -1005,7 +1005,7 @@
     {
       "team": "Jordan",
       "group": "J",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -1030,7 +1030,7 @@
     {
       "team": "Colombia",
       "group": "K",
-      "actual": "SF",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 0,
@@ -1055,7 +1055,7 @@
     {
       "team": "Congo DR",
       "group": "K",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -1080,7 +1080,7 @@
     {
       "team": "Portugal",
       "group": "K",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -1105,7 +1105,7 @@
     {
       "team": "Uzbekistan",
       "group": "K",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -1130,7 +1130,7 @@
     {
       "team": "Croatia",
       "group": "L",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 1,
         "R32": 2,
@@ -1155,7 +1155,7 @@
     {
       "team": "England",
       "group": "L",
-      "actual": "R16",
+      "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -1180,7 +1180,7 @@
     {
       "team": "Ghana",
       "group": "L",
-      "actual": "Group stage",
+      "actual": null,
       "dist": {
         "Group stage": 2,
         "R32": 2,
@@ -1205,7 +1205,7 @@
     {
       "team": "Panama",
       "group": "L",
-      "actual": "R32",
+      "actual": null,
       "dist": {
         "Group stage": 3,
         "R32": 1,
@@ -1233,8 +1233,8 @@
       "id": "B01",
       "q": "Most goals scored, team (group stage only)",
       "pts": 5,
-      "current": "Mexico",
-      "status": "decided",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Brazil",
@@ -1243,7 +1243,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Germany",
@@ -1252,7 +1252,7 @@
           "players": [
             "Gustaf L"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Mexico",
@@ -1261,7 +1261,7 @@
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": true
+          "hit": null
         },
         {
           "answer": "Spain",
@@ -1270,7 +1270,7 @@
           "players": [
             "Alex J"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1278,18 +1278,18 @@
       "id": "B02",
       "q": "Most goals conceded, team (group stage only)",
       "pts": 5,
-      "current": "Korea Republic",
-      "status": "decided",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Haiti",
           "count": 2,
           "pct": 50,
           "players": [
-            "Johan Leijonhielm",
-            "Alex J"
+            "Alex J",
+            "Johan Leijonhielm"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Cabo Verde",
@@ -1298,7 +1298,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Curaçao",
@@ -1307,7 +1307,7 @@
           "players": [
             "Gustaf L"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1315,7 +1315,7 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": "233",
+      "current": "0",
       "status": "provisional",
       "answers": [
         {
@@ -1360,17 +1360,17 @@
       "id": "B04",
       "q": "Golden Ball (Player of the tournament)",
       "pts": 10,
-      "current": "Kylian Mbappé",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Lamine Yamal",
           "count": 3,
           "pct": 75,
           "players": [
+            "Gustaf L",
             "Johan Leijonhielm",
-            "Oscar Hultefors",
-            "Gustaf L"
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -1389,8 +1389,8 @@
       "id": "B05",
       "q": "Golden Boot (Most goals, player)",
       "pts": 10,
-      "current": "Kylian Mbappé",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Harry Kane",
@@ -1434,8 +1434,8 @@
       "id": "B06",
       "q": "Most yellow cards, team",
       "pts": 5,
-      "current": "France",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Argentina",
@@ -1479,8 +1479,8 @@
       "id": "B07",
       "q": "Fastest goal, minute",
       "pts": 5,
-      "current": "2",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "6",
@@ -1516,7 +1516,7 @@
       "id": "B08",
       "q": "Highest scoring single match (goals)",
       "pts": 5,
-      "current": "5",
+      "current": "TBD",
       "status": "provisional",
       "answers": [
         {
@@ -1524,8 +1524,8 @@
           "count": 2,
           "pct": 50,
           "players": [
-            "Oscar Hultefors",
-            "Alex J"
+            "Alex J",
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -1534,8 +1534,8 @@
           "count": 2,
           "pct": 50,
           "players": [
-            "Johan Leijonhielm",
-            "Gustaf L"
+            "Gustaf L",
+            "Johan Leijonhielm"
           ],
           "hit": null
         }
@@ -1553,8 +1553,8 @@
           "count": 2,
           "pct": 50,
           "players": [
-            "Johan Leijonhielm",
-            "Gustaf L"
+            "Gustaf L",
+            "Johan Leijonhielm"
           ],
           "hit": null
         },
@@ -1582,17 +1582,17 @@
       "id": "B10",
       "q": "Final goes to extra time? (Yes/No)",
       "pts": 5,
-      "current": "No",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "No",
           "count": 3,
           "pct": 75,
           "players": [
-            "Johan Leijonhielm",
+            "Alex J",
             "Gustaf L",
-            "Alex J"
+            "Johan Leijonhielm"
           ],
           "hit": null
         },
@@ -1611,7 +1611,7 @@
       "id": "B11",
       "q": "Host nation reaches R16? (Yes/No)",
       "pts": 5,
-      "current": "Yes",
+      "current": "TBD",
       "status": "decided",
       "answers": [
         {
@@ -1619,11 +1619,11 @@
           "count": 3,
           "pct": 75,
           "players": [
+            "Gustaf L",
             "Johan Leijonhielm",
-            "Oscar Hultefors",
-            "Gustaf L"
+            "Oscar Hultefors"
           ],
-          "hit": true
+          "hit": false
         },
         {
           "answer": "No",
@@ -1640,7 +1640,7 @@
       "id": "B12",
       "q": "First-timer reaches R32? (Yes/No)",
       "pts": 5,
-      "current": "Yes",
+      "current": "TBD",
       "status": "decided",
       "answers": [
         {
@@ -1648,9 +1648,9 @@
           "count": 3,
           "pct": 75,
           "players": [
-            "Oscar Hultefors",
+            "Alex J",
             "Gustaf L",
-            "Alex J"
+            "Oscar Hultefors"
           ],
           "hit": false
         },
@@ -1661,7 +1661,7 @@
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": true
+          "hit": false
         }
       ]
     },
@@ -1669,8 +1669,8 @@
       "id": "B13",
       "q": "Most yellow cards, single match",
       "pts": 5,
-      "current": "5",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "11",
@@ -1714,7 +1714,7 @@
       "id": "B15",
       "q": "How far does Sweden go? (auto from bracket picks)",
       "pts": 10,
-      "current": "Round of 32",
+      "current": "Group stage",
       "status": "decided",
       "answers": [
         {
@@ -1722,10 +1722,10 @@
           "count": 2,
           "pct": 50,
           "players": [
-            "Oscar Hultefors",
-            "Alex J"
+            "Alex J",
+            "Oscar Hultefors"
           ],
-          "hit": true
+          "hit": false
         },
         {
           "answer": "Group stage",
@@ -1734,7 +1734,7 @@
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": false
+          "hit": true
         },
         {
           "answer": "QF",
@@ -1751,17 +1751,17 @@
       "id": "B16",
       "q": "Sweden's top scorer (manual)",
       "pts": 5,
-      "current": "Alexander Isak",
-      "status": "provisional",
+      "current": null,
+      "status": "tbd",
       "answers": [
         {
           "answer": "Viktor Gyökeres",
           "count": 3,
           "pct": 75,
           "players": [
+            "Alex J",
             "Johan Leijonhielm",
-            "Oscar Hultefors",
-            "Alex J"
+            "Oscar Hultefors"
           ],
           "hit": null
         },

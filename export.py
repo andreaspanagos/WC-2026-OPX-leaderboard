@@ -129,12 +129,35 @@ players += [n for n in flat if n not in players]
 
 # ───────────────── Backend: fixtures, results, progression ─────────────────
 
-# Group fixtures in GS01..GS72 order (Backend rows 3-74, cols B-F).
+# Authoritative scores + played-status come from the Results sheet input cells.
+# (Backend coerces a blank result to 0, which would look like a played 0-0 draw;
+# the Results F/H cells stay genuinely blank until a game is actually played.)
+_rs = wb["Results"]
+_GROUP_HDR = {3: "A", 12: "B", 21: "C", 30: "D", 39: "E", 48: "F",
+              57: "G", 66: "H", 75: "I", 84: "J", 93: "K", 102: "L"}
+results_scores = {}            # (group, frozenset({home, away})) -> (results_home, hg, ag)
+for _hdr, _g in _GROUP_HDR.items():
+    for _r in range(_hdr + 2, _hdr + 8):
+        _h = _rs.cell(row=_r, column=3).value   # C
+        _a = _rs.cell(row=_r, column=5).value   # E
+        if _h and _a:
+            key = (_g, frozenset({str(_h).strip(), str(_a).strip()}))
+            results_scores[key] = (str(_h).strip(),
+                                   as_int(_rs.cell(row=_r, column=6).value),   # F
+                                   as_int(_rs.cell(row=_r, column=8).value))   # H
+
+# Group fixtures in GS01..GS72 order (Backend rows 3-74, cols B-F) — order matters
+# because it aligns positionally with the player picks GS01..GS72.
 fixtures = []                  # [{group, home, away, hg, ag, played}]
 for row in bk.iter_rows(min_row=3, max_row=74, min_col=2, max_col=6, values_only=True):
     grp, home, away, hg, ag = row
     if grp and home and away and len(str(grp)) == 1:
-        hg, ag = as_int(hg), as_int(ag)
+        rsc = results_scores.get((str(grp), frozenset({str(home).strip(), str(away).strip()})))
+        if rsc is not None:
+            rhome, rf, rh = rsc
+            hg, ag = (rf, rh) if str(home).strip() == rhome else (rh, rf)
+        else:
+            hg, ag = as_int(hg), as_int(ag)
         fixtures.append({"group": str(grp), "home": home, "away": away,
                          "hg": hg, "ag": ag, "played": hg is not None and ag is not None})
 
@@ -339,6 +362,24 @@ def norm_answer(v):
     except ValueError:
         return s
 
+# Numeric questions scored with a tolerance (per the READ ME rules):
+# B03 total tournament goals counts as correct within +/- 5.
+NUMERIC_TOLERANCE = {"B03": 5}
+
+def answer_hit(bid, ans, key):
+    """True if a player's answer matches the key (membership for ties,
+    +/- tolerance for the numeric questions that allow a margin)."""
+    na = norm_answer(ans)
+    tol = NUMERIC_TOLERANCE.get(bid, 0)
+    if tol:
+        try:
+            av = int(na)
+            return any(abs(av - int(k)) <= tol for k in key["normSet"]
+                       if k.lstrip("-").isdigit())
+        except ValueError:
+            pass
+    return na in key["normSet"]
+
 answer_key = {}
 for krow, bid in KEY_ROW_TO_ID.items():
     ans = res.cell(row=krow, column=KEY_COL_ANSWER).value
@@ -378,7 +419,7 @@ for bd in bonus_defs:
         "count": len(ppl),
         "pct": round(100 * len(ppl) / n_players) if n_players else 0,
         "players": ppl,
-        "hit": (norm_answer(a) in key["normSet"])
+        "hit": answer_hit(bd["id"], a, key)
                if (key["status"] == "decided" and key["normSet"]) else None,
     } for a, ppl in counts.items()]
     answers.sort(key=lambda x: (-x["count"], x["answer"]))

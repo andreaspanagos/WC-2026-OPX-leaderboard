@@ -343,6 +343,7 @@
   <button class="tab" id="tab-games" onclick="showView('games')">Games</button>
   <button class="tab" id="tab-teams" onclick="showView('teams')">Team Journeys</button>
   <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus Questions</button>
+  <button class="tab" id="tab-autoresults" onclick="showView('autoresults')">Auto-results</button>
 </nav>
 
 <div id="status">Loading…</div>
@@ -406,6 +407,17 @@
   </div>
 </div>
 
+<div id="view-autoresults" hidden>
+  <div class="page-wrap">
+    <p class="page-intro">
+      Match scores are pulled automatically from real-world results and written
+      into the model. This page shows what was applied and flags anything the
+      feed reported that couldn't be matched to a team in the model.
+    </p>
+    <div id="autoresults-container"></div>
+  </div>
+</div>
+
 <script>
   const MEDALS = ["🥇","🥈","🥉"];
   const MEDAL_CLASS = ["gold","silver","bronze"];
@@ -440,7 +452,7 @@
   }
 
   // ── Tab switching ──
-  const VIEWS = ["leaderboard", "games", "teams", "bonus"];
+  const VIEWS = ["leaderboard", "games", "teams", "bonus", "autoresults"];
   function showView(name) {
     VIEWS.forEach(v => {
       document.getElementById("view-" + v).hidden = v !== name;
@@ -653,6 +665,48 @@
     });
   }
 
+  // ── Auto-results ──
+  function renderAutoResults(data) {
+    const c = document.getElementById("autoresults-container");
+    const applied = data.applied || [];
+    const attn = data.needsAttention || [];
+    let html = "";
+
+    if (data.lastRun) {
+      html += `<p class="page-intro" style="margin-top:0">Last sync:
+        <strong>${esc(data.lastRun.replace("T", " "))}</strong></p>`;
+    } else {
+      html += `<p class="page-intro" style="margin-top:0">No automatic sync has
+        run yet. Results will appear here once the tournament is underway.</p>`;
+    }
+
+    if (attn.length) {
+      html += `<div style="background:#fff4e0;border:1px solid #e0a800;
+        border-radius:8px;padding:12px 16px;margin:12px 0">
+        <strong>⚠ Needs attention</strong><br>
+        The feed reported these names but they couldn't be matched to a team in
+        the model (no score was written for them). Usually a spelling the map
+        doesn't know yet:<ul style="margin:6px 0 0 18px">
+        ${attn.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>`;
+    }
+
+    if (applied.length) {
+      const rows = applied.map(a => `<tr>
+        <td style="padding:6px 10px;color:#667">Group ${esc(a.group)}</td>
+        <td style="padding:6px 10px;text-align:right">${esc(a.home)}</td>
+        <td style="padding:6px 10px;text-align:center;font-weight:600;white-space:nowrap">
+          ${esc(a.hg)} – ${esc(a.ag)}</td>
+        <td style="padding:6px 10px">${esc(a.away)}</td>
+      </tr>`).join("");
+      html += `<h3 style="margin:18px 0 6px">Auto-applied results
+        (${applied.length})</h3>
+        <table style="border-collapse:collapse;width:100%">${rows}</table>`;
+    } else if (data.lastRun) {
+      html += `<p class="page-intro">No finished matches have been applied yet.</p>`;
+    }
+    c.innerHTML = html;
+  }
+
   // ── Loading ──
   function load() {
     const bust = "?_=" + Date.now();
@@ -679,6 +733,14 @@
       .catch(err => {
         document.getElementById("teams-container").innerHTML =
           `<p class="page-intro">Could not load stats.json — run export.py first. (${err})</p>`;
+      });
+
+    fetch("results_log.json" + bust)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(renderAutoResults)
+      .catch(err => {
+        document.getElementById("autoresults-container").innerHTML =
+          `<p class="page-intro">Could not load results_log.json. (${err})</p>`;
       });
   }
 

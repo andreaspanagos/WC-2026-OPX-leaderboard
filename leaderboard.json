@@ -1,48 +1,48 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-10 10:31",
+    "lastRefresh": "2026-06-11 09:27",
     "maxPoints": 729,
     "participants": 4
   },
   "rows": [
     {
       "rank": 1,
-      "player": "Johan Leijonhielm",
-      "group": 105,
-      "ko": 135,
-      "bonus": 50,
-      "total": 290,
-      "pctMax": 0.3978,
+      "player": "Alex J",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
       "prevRank": 1
     },
     {
       "rank": 2,
-      "player": "Oscar Hultefors",
-      "group": 93,
-      "ko": 171,
-      "bonus": 20,
-      "total": 284,
-      "pctMax": 0.3896,
+      "player": "Gustaf L",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
       "prevRank": 2
     },
     {
       "rank": 3,
-      "player": "Gustaf L",
-      "group": 76,
-      "ko": 192,
-      "bonus": 15,
-      "total": 283,
-      "pctMax": 0.3882,
+      "player": "Johan Leijonhielm",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
       "prevRank": 3
     },
     {
       "rank": 4,
-      "player": "Alex J",
-      "group": 71,
-      "ko": 138,
-      "bonus": 15,
-      "total": 224,
-      "pctMax": 0.3073,
+      "player": "Oscar Hultefors",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
       "prevRank": 4
     }
   ]
