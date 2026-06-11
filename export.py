@@ -700,3 +700,48 @@ for lbrow in rows:
         print(f"WARNING: {p} computed group pts {gpts} != leaderboard {lbrow['group']}")
     if lbrow["ko"] is not None and kpts != lbrow["ko"]:
         print(f"WARNING: {p} computed KO pts {kpts} != leaderboard {lbrow['ko']}")
+
+# ── OG social-preview image (og-image.png) ───────────────────────────────────
+OG_OUTPUT = "og-image.png"
+try:
+    from PIL import Image, ImageDraw, ImageFont as _IF
+    _W, _H = 1200, 630
+    img = Image.new("RGB", (_W, _H))
+    draw = ImageDraw.Draw(img)
+    # Navy-blue gradient background
+    for _y in range(_H):
+        _t = _y / _H
+        draw.rectangle([0, _y, _W, _y + 1], fill=(
+            int(26  + _t * (20  - 26)),
+            int(37  + _t * (42  - 37)),
+            int(96  + _t * (108 - 96)),
+        ))
+    # Gold accent bar at top
+    draw.rectangle([0, 0, _W, 10], fill=(255, 215, 0))
+    try:
+        _fp = "C:/Windows/Fonts/"
+        _big   = _IF.truetype(_fp + "arialbd.ttf", 72)
+        _med   = _IF.truetype(_fp + "arialbd.ttf", 44)
+        _reg   = _IF.truetype(_fp + "arial.ttf",   30)
+        _small = _IF.truetype(_fp + "arial.ttf",   22)
+    except OSError:
+        _big = _med = _reg = _small = _IF.load_default()
+    draw.text((80,  38), "FIFA World Cup 2026",   font=_reg,  fill=(180, 200, 255))
+    draw.text((80,  78), "OPX Live Leaderboard",  font=_big,  fill=(255, 215, 0))
+    draw.rectangle([80, 178, _W - 80, 181],        fill=(55, 72, 130))
+    draw.text((80, 192), f"Updated: {today}",      font=_small, fill=(140, 165, 220))
+    for _i, _r in enumerate(rows[:3]):
+        _col = [(255, 215, 0), (200, 200, 200), (200, 135, 65)][_i]
+        _y2  = 258 + _i * 108
+        draw.text((80,  _y2), f"#{_i + 1}", font=_med, fill=_col)
+        draw.text((168, _y2), str(_r.get("player", ""))[:22], font=_med, fill=(255, 255, 255))
+        draw.text((168, _y2 + 50), f"{_r.get('total', 0)} pts", font=_reg, fill=(155, 185, 235))
+    draw.rectangle([0, 600, _W, 630], fill=(12, 18, 55))
+    draw.text((80, 607), "andreaspanagos.github.io/WC-2026-OPX-leaderboard",
+              font=_small, fill=(110, 145, 200))
+    img.save(OG_OUTPUT, "PNG")
+    print(f"Generated {OG_OUTPUT}")
+except ImportError:
+    print(f"Pillow not found — skipping {OG_OUTPUT}  (pip install Pillow to enable)")
+except Exception as _og_err:
+    print(f"OG image skipped: {_og_err}")
