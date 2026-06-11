@@ -770,7 +770,12 @@
   // ── Leaderboard ──
   // prevRank / pointsToday are measured against the start-of-today baseline,
   // so movement and points reflect the current calendar day.
+  // Movement indicators (arrows, movers section, sparklines) are only shown
+  // from 2026-06-13 onwards — the first day with a meaningful baseline.
+  const SHOW_MOVEMENT = new Date() >= new Date('2026-06-13T00:00:00');
+
   function movement(r) {
+    if (!SHOW_MOVEMENT) return '';
     if (r.prevRank === null || r.prevRank === undefined)
       return `<span class="move move-new">NEW</span>`;
     const delta = r.prevRank - r.rank;
@@ -878,6 +883,7 @@
   // prevRank / pointsToday (see export.py). No history needed for this summary.
   function renderMovers(rows) {
     const el = document.getElementById("movers-section");
+    if (!SHOW_MOVEMENT) { el.hidden = true; return; }
     const movers = [];
     rows.forEach(r => {
       if (r.prevRank == null || r.rank == null) return;
@@ -939,7 +945,7 @@
   }
 
   function renderHistory() {
-    if (!lbData || !historyData) return;
+    if (!lbData || !historyData || !SHOW_MOVEMENT) return;
     const totalPlayers = lbData.rows.length;
     for (const player in trendCells) {
       trendCells[player].innerHTML = sparklineSvg(player, totalPlayers);
