@@ -192,6 +192,49 @@
     .tb-soon { color: #9fe0a6; }
     .tb-empty { font-size: 0.85rem; color: #d7ddf4; }
 
+    /* biggest movers this week */
+    #movers-section {
+      background: #fff; border-radius: 12px; padding: 0.75rem 0.9rem;
+      margin: 0 0 1rem; box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+    .mv-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 0.6rem; margin-bottom: 0.55rem; flex-wrap: wrap;
+    }
+    .mv-title { font-weight: 800; font-size: 0.95rem; color: #2A398D; }
+    .mv-since { font-size: 0.74rem; color: #888; }
+    .mv-cols { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    .mv-col { flex: 1 1 220px; min-width: 200px; }
+    .mv-col h4 {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #888; margin-bottom: 0.4rem; font-weight: 700;
+    }
+    .mv-chip {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.3rem 0.1rem; border-top: 1px solid #f0f0f0; font-size: 0.88rem;
+    }
+    .mv-chip:first-of-type { border-top: none; }
+    .mv-name { font-weight: 600; flex: 1; cursor: pointer; }
+    .mv-name:hover { color: #2A398D; text-decoration: underline; }
+    .mv-delta { font-weight: 800; font-size: 0.82rem; white-space: nowrap; }
+    .mv-delta.up { color: #1b8a3a; }
+    .mv-delta.down { color: #d32f2f; }
+    .mv-ranks { font-size: 0.74rem; color: #999; white-space: nowrap; }
+    .mv-none { font-size: 0.82rem; color: #aaa; }
+
+    /* rank-trajectory sparkline */
+    .trend-cell { width: 84px; }
+    th.trend-col { width: 84px; }
+    .spark { display: block; }
+    .spark path { fill: none; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+    .spark .sp-up   { stroke: #1b8a3a; }
+    .spark .sp-down { stroke: #d32f2f; }
+    .spark .sp-flat { stroke: #aaa; }
+    .spark .sp-dot-up   { fill: #1b8a3a; }
+    .spark .sp-dot-down { fill: #d32f2f; }
+    .spark .sp-dot-flat { fill: #aaa; }
+    .trend-na { color: #ccc; font-size: 0.8rem; }
+
     /* % bar */
     .bar-cell { padding-right: 1rem; }
     .bar-bg {
@@ -479,6 +522,7 @@
 <div id="view-leaderboard">
   <div id="today-banner" hidden></div>
   <div id="podium-section" class="podium" hidden></div>
+  <div id="movers-section" hidden></div>
 
   <div class="table-wrap" hidden id="table-section">
     <table>
@@ -488,6 +532,7 @@
           <th>Player</th>
           <th>Total</th>
           <th>Today</th>
+          <th class="trend-col">Trend</th>
           <th>% Max</th>
         </tr>
       </thead>
@@ -621,7 +666,12 @@
     return `<span class="pts-today pt-flat">&ndash;</span>`;
   }
 
+  let lbData = null;             // leaderboard.json, once loaded
+  let historyData = null;        // history.json, once loaded
+  const trendCells = {};         // player name -> the row's sparkline <td>
+
   function renderLeaderboard(data) {
+    lbData = data;
     const { meta, rows } = data;
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
@@ -648,6 +698,7 @@
 
     const tbody = document.getElementById("tbody");
     tbody.innerHTML = "";
+    for (const k in trendCells) delete trendCells[k];
     rows.forEach(r => {
       const rankClass = r.rank <= 3 ? ` rank-${r.rank}` : "";
       const tr = document.createElement("tr");
@@ -662,6 +713,7 @@
         </td>
         <td><strong>${fmt(r.total)}</strong></td>
         <td>${ptsToday(r)}</td>
+        <td class="trend-cell"></td>
         <td class="bar-cell">
           <div class="bar-bg"><div class="bar-fill" style="width:${(r.pctMax*100).toFixed(1)}%"></div></div>
           <div class="pct-label">${(r.pctMax*100).toFixed(1)}%</div>
@@ -672,7 +724,7 @@
       detail.hidden = true;
       detail.innerHTML = `
         <td></td>
-        <td colspan="4">
+        <td colspan="5">
           <div class="lb-breakdown">
             <span><label>Group</label><strong>${fmt(r.group)}</strong></span>
             <span><label>Knockout</label><strong>${fmt(r.ko)}</strong></span>
@@ -685,12 +737,99 @@
         tr.classList.toggle("open", !detail.hidden);
       };
       tr.querySelector(".player-name").onclick = (e) => { e.stopPropagation(); showPlayer(r.player); };
+      trendCells[r.player] = tr.querySelector(".trend-cell");
       tbody.appendChild(tr);
       tbody.appendChild(detail);
     });
 
     document.getElementById("status").hidden      = true;
     document.getElementById("table-section").hidden = false;
+    renderHistory();
+  }
+
+  // ── Rank-over-time: sparklines + biggest movers this week ──
+  // Both leaderboard.json and history.json load in parallel; renderHistory runs
+  // when each arrives and no-ops until both are present.
+  function dayMinus(dateStr, n) {
+    const d = new Date(dateStr + "T00:00:00");
+    d.setDate(d.getDate() - n);
+    return localDateStr(d);
+  }
+
+  function sparklineSvg(player, totalPlayers) {
+    const win = (historyData.days || []).slice(-14);
+    const n = win.length;
+    const N = Math.max(2, totalPlayers);
+    const W = 76, H = 22, pad = 3;
+    const xs = i => pad + (n <= 1 ? 0 : (i / (n - 1)) * (W - 2 * pad));
+    const ys = rank => pad + ((rank - 1) / (N - 1)) * (H - 2 * pad);
+    const pts = [];
+    win.forEach((d, i) => {
+      const s = d.standings[player];
+      if (s && s.rank != null) pts.push([xs(i), ys(s.rank), s.rank]);
+    });
+    if (pts.length < 2) return `<span class="trend-na" title="Not enough history yet">—</span>`;
+    const path = pts.map((p, k) => (k ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    const first = pts[0][2], last = pts[pts.length - 1][2];
+    // Lower rank number = better, so a falling rank number is an upward trend.
+    const dir = last < first ? "up" : last > first ? "down" : "flat";
+    const lp = pts[pts.length - 1];
+    return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">` +
+      `<title>Rank ${first} → ${last} (last ${pts.length} days)</title>` +
+      `<path class="sp-${dir}" d="${path}"/>` +
+      `<circle class="sp-dot-${dir}" cx="${lp[0].toFixed(1)}" cy="${lp[1].toFixed(1)}" r="2"/></svg>`;
+  }
+
+  function renderMovers(days) {
+    const el = document.getElementById("movers-section");
+    if (days.length < 2) { el.hidden = true; return; }
+    const cur = days[days.length - 1];
+    const sinceStr = dayMinus(cur.date, 7);
+    // Closest snapshot on or before a week ago; else the earliest we have.
+    let past = days[0];
+    for (const d of days) { if (d.date <= sinceStr) past = d; else break; }
+    if (past.date === cur.date) { el.hidden = true; return; }
+
+    const movers = [];
+    for (const name in cur.standings) {
+      const c = cur.standings[name], p = past.standings[name];
+      if (!p || c.rank == null || p.rank == null) continue;
+      const delta = p.rank - c.rank;        // positive = climbed
+      if (delta !== 0) movers.push({ name, delta, from: p.rank, to: c.rank });
+    }
+    const up = movers.filter(m => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 5);
+    const down = movers.filter(m => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 5);
+
+    const chip = (m, cls) => `<div class="mv-chip">
+        <span class="mv-name" data-player="${esc(m.name)}">${esc(m.name)}</span>
+        <span class="mv-delta ${cls}">${cls === "up" ? "▲ +" + m.delta : "▼ " + m.delta}</span>
+        <span class="mv-ranks">#${m.from}→#${m.to}</span>
+      </div>`;
+    const col = (title, list, cls) => `<div class="mv-col"><h4>${title}</h4>` +
+      (list.length ? list.map(m => chip(m, cls)).join("")
+                   : `<div class="mv-none">No movement</div>`) + `</div>`;
+
+    el.innerHTML = `<div class="mv-head">
+        <span class="mv-title">📈 Biggest movers this week</span>
+        <span class="mv-since">vs ${esc(past.date)}</span>
+      </div>
+      <div class="mv-cols">
+        ${col("Climbing ▲", up, "up")}
+        ${col("Falling ▼", down, "down")}
+      </div>`;
+    el.querySelectorAll(".mv-name").forEach(s =>
+      s.onclick = () => showPlayer(s.getAttribute("data-player")));
+    el.hidden = false;
+  }
+
+  function renderHistory() {
+    if (!lbData || !historyData) return;
+    const days = historyData.days || [];
+    const totalPlayers = lbData.rows.length;
+    for (const player in trendCells) {
+      trendCells[player].innerHTML = sparklineSvg(player, totalPlayers);
+    }
+    renderMovers(days);
   }
 
   // ── Games ──
@@ -1118,6 +1257,11 @@
     fetch("players.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(d => { playersData = d; })
+      .catch(() => {});
+
+    fetch("history.json" + bust)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d => { historyData = d; renderHistory(); })
       .catch(() => {});
 
     fetch("results_log.json" + bust)

@@ -3,7 +3,7 @@
     "lastRefresh": "2026-06-11 10:19",
     "maxPoints": 729,
     "participants": 8,
-    "maxAvailable": 35
+    "maxAvailable": 0
   },
   "players": [
     "Jacob Cederberg",
@@ -18,11 +18,11 @@
   "detail": {
     "Jacob Cederberg": {
       "rank": 1,
-      "total": 5,
+      "total": 0,
       "group": 0,
       "ko": 0,
-      "bonus": 5,
-      "pctMax": 0.1429,
+      "bonus": 0,
+      "pctMax": 0.0,
       "pointsToday": 0,
       "games": [
         {
@@ -1321,7 +1321,7 @@
       ]
     },
     "Alex J": {
-      "rank": 2,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -2625,7 +2625,7 @@
       ]
     },
     "Dani": {
-      "rank": 3,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -3929,7 +3929,7 @@
       ]
     },
     "Ebba Wikström": {
-      "rank": 4,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -5233,7 +5233,7 @@
       ]
     },
     "Gustaf L": {
-      "rank": 5,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -6537,7 +6537,7 @@
       ]
     },
     "Jakob Hägglund": {
-      "rank": 6,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -7841,7 +7841,7 @@
       ]
     },
     "Johan Leijonhielm": {
-      "rank": 7,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,
@@ -9145,7 +9145,7 @@
       ]
     },
     "Oscar Hultefors": {
-      "rank": 8,
+      "rank": 1,
       "total": 0,
       "group": 0,
       "ko": 0,

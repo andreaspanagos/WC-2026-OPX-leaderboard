@@ -32,6 +32,7 @@ BASELINE_FILE = "daily_baseline.json"
 GAMES_OUTPUT = "games.json"
 STATS_OUTPUT = "stats.json"
 PLAYERS_OUTPUT = "players.json"
+HISTORY_OUTPUT = "history.json"
 
 FLAT_HEADER_ROW = 100          # header row of the per-player flat picks table
 STAGES = ["Group stage", "R32", "R16", "QF", "SF", "Final", "Champion"]
@@ -447,14 +448,43 @@ for krow, bid in KEY_ROW_TO_ID.items():
     }
 
 # ───────────── finalise leaderboard.json (now that scoring is known) ─────────────
+# Bonus points don't count until the knockout stage begins. The model credits a
+# filled bonus answer immediately (see the bonus scoring quirk), which would leak
+# bonus points into the group-stage standings, so until the R32 draw exists we
+# strip every player's bonus from their total, re-rank on the bonus-free totals,
+# and exclude the bonus pool from "available". ko_round["R32"] is populated only
+# once the knockout bracket has been set.
+ko_started = any(ko_round[k] for k in ko_round)
+if not ko_started:
+    for r in rows:
+        b = r.get("bonus") or 0
+        if b and r.get("total") is not None:
+            r["total"] = r["total"] - b
+        r["bonus"] = 0
+    # Re-rank (standard competition ranking — ties share a rank) and re-sort so
+    # the array order matches the bonus-free standings.
+    rows.sort(key=lambda x: (x["total"] is None, -(x["total"] or 0), str(x["player"])))
+    last_total, last_rank = object(), 0
+    for i, r in enumerate(rows, start=1):
+        if r["total"] != last_total:
+            last_rank, last_total = i, r["total"]
+        r["rank"] = last_rank
+    # Re-measure the day's movement against the (bonus-free) daily baseline.
+    for r in rows:
+        bse = base.get(r["player"])
+        r["pointsToday"] = (r["total"] - bse["total"]) \
+            if (bse and bse.get("total") is not None and r["total"] is not None) else 0
+
 # "Available" points = the max anyone could have earned from results decided so
 # far, so % Max reflects share of what was actually up for grabs (not the full
 # 729-point tournament). Group games are worth 3 each once played; a bonus
 # question's max counts once its answer is filled (the model credits filled
-# answers immediately, decided or not). Knockouts are added in Phase 2.
+# answers immediately, decided or not) — but only from the knockout stage on.
+# Knockouts are added in Phase 2.
 games_played = sum(1 for fx in fixtures if fx["played"])
-bonus_open = sum((bd["pts"] or 0) for bd in bonus_defs
-                 if answer_key.get(bd["id"], {}).get("status", "tbd") != "tbd")
+bonus_open = 0 if not ko_started else sum(
+    (bd["pts"] or 0) for bd in bonus_defs
+    if answer_key.get(bd["id"], {}).get("status", "tbd") != "tbd")
 available = 3 * games_played + bonus_open
 if isinstance(available, float) and available.is_integer():
     available = int(available)
@@ -466,6 +496,38 @@ for r in rows:
 with open(OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": meta, "rows": rows}, f, ensure_ascii=False, indent=2)
 print(f"Exported {len(rows)} players -> {OUTPUT} (available so far: {available})")
+
+# ───────────────── history.json: daily standings (rank-over-time) ─────────────────
+# One snapshot per calendar day, upserted on every export — so the latest run of
+# a day overwrites that day's entry and, once the day is over, it holds that day's
+# FINAL standings. Feeds the rank-trajectory sparklines and the "biggest movers
+# this week" summary on the site. rank/total here are the same finalised values
+# baked into leaderboard.json above (bonus-free re-rank applied pre-knockouts).
+history = {"days": []}
+if os.path.exists(HISTORY_OUTPUT):
+    try:
+        with open(HISTORY_OUTPUT, encoding="utf-8") as f:
+            loaded = json.load(f)
+        if isinstance(loaded, dict) and isinstance(loaded.get("days"), list):
+            history = loaded
+    except (json.JSONDecodeError, OSError):
+        history = {"days": []}
+
+snapshot = {
+    "date": today,
+    "standings": {
+        r["player"]: {"rank": r["rank"], "total": r["total"]}
+        for r in rows if r.get("player") is not None
+    },
+}
+days = [d for d in history["days"] if d.get("date") != today]
+days.append(snapshot)
+days.sort(key=lambda d: d.get("date") or "")
+history["days"] = days[-60:]          # ~2 months; the tournament runs ~6 weeks
+
+with open(HISTORY_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump(history, f, ensure_ascii=False, indent=2)
+print(f"Exported {len(history['days'])} day(s) of standings -> {HISTORY_OUTPUT}")
 
 
 # Per-player answers per question.
