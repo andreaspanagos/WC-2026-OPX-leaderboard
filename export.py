@@ -31,6 +31,7 @@ OUTPUT = "leaderboard.json"
 BASELINE_FILE = "daily_baseline.json"
 GAMES_OUTPUT = "games.json"
 STATS_OUTPUT = "stats.json"
+PLAYERS_OUTPUT = "players.json"
 
 FLAT_HEADER_ROW = 100          # header row of the per-player flat picks table
 STAGES = ["Group stage", "R32", "R16", "QF", "SF", "Final", "Champion"]
@@ -508,9 +509,91 @@ with open(STATS_OUTPUT, "w", encoding="utf-8") as f:
               f, ensure_ascii=False, indent=2)
 print(f"Exported {len(teams_json)} teams, {len(bonus_json)} bonus questions -> {STATS_OUTPUT}")
 
-# ───────────────── self-check vs official leaderboard ─────────────────
+# ───────────────── players.json: per-player detail view ─────────────────
+# One record per player: their leaderboard standing plus every individual pick
+# (group scorelines with points earned, group-winner picks, the knockout bracket,
+# and bonus answers). Feeds the clickable player-detail panel on the site.
 
 ko_pts_map = {"R32": 3, "R16": 6, "QF": 9, "SF": 12, "Final": 15}
+lb_by_player = {r["player"]: r for r in rows}
+groups_present = sorted(groups_out)
+
+def bracket_picks(rs, key, actual_set, ptsval):
+    """A player's picks for one KO round: team, whether it actually reached the
+    round, and the points that pick is worth (0 until the team gets there)."""
+    out = []
+    for t in rs[key]:
+        if not t:
+            continue
+        hit = t in actual_set
+        out.append({"team": t, "hit": hit, "pts": ptsval if hit else 0})
+    return sorted(out, key=lambda x: x["team"])
+
+players_detail = {}
+for p in players:
+    d = flat[p]
+    lb = lb_by_player.get(p, {})
+
+    games = []
+    for gi, fx in enumerate(fixtures):
+        gs = f"GS{gi + 1:02d}"
+        ph, pa = as_int(d.get(gs + "_H")), as_int(d.get(gs + "_A"))
+        pts = (game_points(ph, pa, fx["hg"], fx["ag"])
+               if fx["played"] and ph is not None and pa is not None else None)
+        games.append({
+            "group": fx["group"], "home": fx["home"], "away": fx["away"],
+            "ph": ph, "pa": pa,
+            "played": fx["played"],
+            "hg": fx["hg"] if fx["played"] else None,
+            "ag": fx["ag"] if fx["played"] else None,
+            "pts": pts,
+        })
+
+    gw = []
+    for g in groups_present:
+        t = d.get(f"GW_{g}")
+        if t:
+            gw.append({"group": g, "team": t,
+                       "correct": (actual_winner.get(g) == t) if g in actual_winner else None})
+
+    rs = rounds_by_player[p]
+    bracket = {
+        "R32":   bracket_picks(rs, "R32", ko_round["R32"], 3),
+        "R16":   bracket_picks(rs, "R16", ko_round["R16"], 6),
+        "QF":    bracket_picks(rs, "QF", ko_round["QF"], 9),
+        "SF":    bracket_picks(rs, "SF", ko_round["SF"], 12),
+        "Final": bracket_picks(rs, "Final", ko_round["Final"], 15),
+    }
+    win, third = rs["Winner"], rs["Third"]
+    bracket["winner"] = ({"team": win, "hit": win in champion,
+                          "pts": 30 if win in champion else 0} if win else None)
+    bracket["third"] = ({"team": third, "hit": third in third_team,
+                         "pts": 15 if third in third_team else 0} if third else None)
+
+    bonus_ans = []
+    for bd in bonus_defs:
+        key = answer_key.get(bd["id"], {"status": "tbd", "normSet": set()})
+        a = bonus_answer(p, bd["id"])
+        a = None if a is None or str(a).strip() == "" else str(a).strip()
+        hit = (answer_hit(bd["id"], a, key)
+               if (a and key["status"] == "decided" and key["normSet"]) else None)
+        bonus_ans.append({"id": bd["id"], "q": bd["q"], "answer": a,
+                          "hit": hit, "pts": bd["pts"]})
+
+    players_detail[p] = {
+        "rank": lb.get("rank"), "total": lb.get("total"),
+        "group": lb.get("group"), "ko": lb.get("ko"), "bonus": lb.get("bonus"),
+        "pctMax": lb.get("pctMax"), "pointsToday": lb.get("pointsToday"),
+        "games": games, "gw": gw, "bracket": bracket, "bonusAns": bonus_ans,
+    }
+
+with open(PLAYERS_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump({"meta": meta, "players": players, "detail": players_detail},
+              f, ensure_ascii=False, indent=2)
+print(f"Exported detail for {len(players_detail)} players -> {PLAYERS_OUTPUT}")
+
+# ───────────────── self-check vs official leaderboard ─────────────────
+
 for lbrow in rows:
     p = lbrow["player"]
     if p not in flat:

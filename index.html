@@ -343,6 +343,87 @@
     .hit-y { color: #1b8a3a; font-weight: 800; }
     .hit-n { color: #d0d0d0; font-weight: 800; }
 
+    /* ── Player detail view ── */
+    .player-name { cursor: pointer; }
+    .player-name:hover { color: #2A398D; text-decoration: underline; }
+    .podium-name { cursor: pointer; }
+    .podium-name:hover { text-decoration: underline; }
+
+    .pd-back {
+      background: #fff; border: 1px solid #dfe3f2; border-radius: 999px;
+      color: #2A398D; font-weight: 700; font-size: 0.85rem;
+      padding: 0.35rem 0.9rem; cursor: pointer; margin-bottom: 0.9rem;
+    }
+    .pd-back:hover { background: #f0f4ff; }
+
+    .pd-header {
+      background: linear-gradient(180deg, #2A398D, #232f73);
+      color: #fff; border-radius: 12px; padding: 1rem 1.1rem; margin-bottom: 1rem;
+    }
+    .pd-top { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
+    .pd-rankbadge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2.4rem; height: 2.4rem; border-radius: 50%;
+      background: rgba(255,255,255,0.18); font-weight: 800; font-size: 1.1rem;
+    }
+    .pd-rankbadge.rank-1 { background: #FFD700; color: #333; }
+    .pd-rankbadge.rank-2 { background: #C0C0C0; color: #333; }
+    .pd-rankbadge.rank-3 { background: #CD7F32; color: #fff; }
+    .pd-name { font-size: 1.35rem; font-weight: 800; line-height: 1.1; }
+    .pd-sub { font-size: 0.8rem; color: #c7cef0; }
+    .pd-today { margin-left: auto; font-size: 0.82rem; font-weight: 700; color: #9fe0a6; white-space: nowrap; }
+    .pd-stats { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+    .pd-stat {
+      background: rgba(255,255,255,0.1); border-radius: 9px;
+      padding: 0.4rem 0.7rem; min-width: 4.5rem;
+    }
+    .pd-stat .lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: #c7cef0; }
+    .pd-stat .val { font-size: 1.1rem; font-weight: 800; }
+
+    .pd-game {
+      display: grid;
+      grid-template-columns: 1fr 4.6rem 1fr 2.4rem;
+      align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.9rem; border-bottom: 1px solid #f0f0f0; font-size: 0.88rem;
+    }
+    .pd-game:last-child { border-bottom: none; }
+    .pd-ghome { text-align: right; font-weight: 600; }
+    .pd-gaway { text-align: left; font-weight: 600; }
+    .pd-pick {
+      text-align: center; font-weight: 800; color: #2A398D;
+      background: #eef1fb; border-radius: 6px; padding: 0.05rem 0;
+    }
+    .pd-actual { font-size: 0.68rem; color: #888; text-align: center; }
+    .pd-nopick { color: #bbb; font-weight: 600; }
+
+    .pd-round { padding: 0.55rem 0.9rem; border-bottom: 1px solid #f0f0f0; }
+    .pd-round:last-child { border-bottom: none; }
+    .pd-round-head {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.4rem;
+    }
+    .pd-round-title { font-weight: 700; font-size: 0.85rem; }
+    .pd-round-pts { font-size: 0.72rem; font-weight: 700; color: #1b8a3a; margin-left: auto; }
+    .pd-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .pd-pill {
+      background: #fff; border: 1px solid #dfe3f2; border-radius: 999px;
+      padding: 0.1rem 0.6rem; font-size: 0.8rem; font-weight: 600; white-space: nowrap;
+    }
+    .pd-pill.hit { border-color: #1b8a3a; background: #ecf9f0; color: #1b8a3a; }
+    .pd-pill.hit::after { content: " ✓"; font-weight: 800; }
+    .pd-empty { color: #bbb; font-size: 0.8rem; }
+
+    .pd-bonus {
+      display: grid;
+      grid-template-columns: 1fr auto 1.6rem;
+      align-items: center; gap: 0.6rem;
+      padding: 0.45rem 0.9rem; border-bottom: 1px solid #f0f0f0; font-size: 0.85rem;
+    }
+    .pd-bonus:last-child { border-bottom: none; }
+    .pd-bq { color: #444; }
+    .pd-bq .pd-bid { color: #999; font-size: 0.72rem; margin-right: 0.35rem; }
+    .pd-bans { font-weight: 700; color: #2A398D; white-space: nowrap; }
+    .pd-bans.none { color: #bbb; font-weight: 600; }
+
     /* loading / error */
     #status {
       text-align: center;
@@ -451,6 +532,14 @@
   </div>
 </div>
 
+<!-- ── Player detail view (opened by clicking a name; not a tab) ── -->
+<div id="view-player" hidden>
+  <div class="page-wrap">
+    <button class="pd-back" onclick="closePlayer()">&larr; Back to leaderboard</button>
+    <div id="player-container"></div>
+  </div>
+</div>
+
 <script>
   const MEDALS = ["🥇","🥈","🥉"];
   const MEDAL_CLASS = ["gold","silver","bronze"];
@@ -487,6 +576,7 @@
   // ── Tab switching ──
   const VIEWS = ["leaderboard", "games", "teams", "bonus", "autoresults"];
   function showView(name) {
+    document.getElementById("view-player").hidden = true;
     VIEWS.forEach(v => {
       document.getElementById("view-" + v).hidden = v !== name;
       document.getElementById("tab-" + v).classList.toggle("active", v === name);
@@ -539,6 +629,7 @@
         <div class="podium-today">${ptsToday(r)} today</div>
         <div class="podium-pct">${(r.pctMax * 100).toFixed(1)}% of max</div>
       `;
+      card.querySelector(".podium-name").onclick = () => showPlayer(r.player);
       podiumEl.appendChild(card);
     });
     podiumEl.hidden = false;
@@ -564,6 +655,7 @@
           <div class="pct-label">${(r.pctMax*100).toFixed(1)}%</div>
         </td>
       `;
+      tr.querySelector(".player-name").onclick = () => showPlayer(r.player);
       tbody.appendChild(tr);
     });
 
@@ -750,6 +842,140 @@
     c.innerHTML = html;
   }
 
+  // ── Player detail ──
+  let playersData = null;        // players.json, once loaded
+  const KO_ROUNDS = [
+    { key: "R32",    label: "Round of 32",  pts: 3  },
+    { key: "R16",    label: "Round of 16",  pts: 6  },
+    { key: "QF",     label: "Quarter-final", pts: 9  },
+    { key: "SF",     label: "Semi-final",   pts: 12 },
+    { key: "Final",  label: "Final",        pts: 15 },
+  ];
+
+  function showPlayer(name) {
+    if (!playersData || !playersData.detail[name]) return;
+    renderPlayer(name, playersData.detail[name]);
+    VIEWS.forEach(v => {
+      document.getElementById("view-" + v).hidden = true;
+      document.getElementById("tab-" + v).classList.remove("active");
+    });
+    document.getElementById("view-player").hidden = false;
+    window.scrollTo(0, 0);
+  }
+
+  function closePlayer() {
+    document.getElementById("view-player").hidden = true;
+    showView("leaderboard");
+  }
+
+  function ptsBadge(pts) {
+    if (pts === null || pts === undefined) return `<span class="pts-na">—</span>`;
+    return `<span class="pts pts-${pts}">${pts}</span>`;
+  }
+
+  function renderPlayer(name, p) {
+    const rankClass = p.rank >= 1 && p.rank <= 3 ? ` rank-${p.rank}` : "";
+    const today = (p.pointsToday || 0) > 0 ? `+${p.pointsToday} today` : "no points today";
+
+    // Group predictions, grouped by group letter.
+    const byGroup = {};
+    (p.games || []).forEach(g => (byGroup[g.group] = byGroup[g.group] || []).push(g));
+    const gwByGroup = {};
+    (p.gw || []).forEach(w => gwByGroup[w.group] = w);
+
+    let groupsHtml = "";
+    Object.keys(byGroup).sort().forEach(g => {
+      const gw = gwByGroup[g];
+      const gwChip = gw
+        ? `<span class="head-chip">Winner: ${esc(gw.team)}` +
+          (gw.correct === true ? " ✓" : gw.correct === false ? " ✗" : "") + `</span>`
+        : "";
+      const rows = byGroup[g].map(gm => {
+        const pick = (gm.ph !== null && gm.pa !== null)
+          ? `${gm.ph}–${gm.pa}` : `<span class="pd-nopick">no pick</span>`;
+        const actual = gm.played
+          ? `<div class="pd-actual">FT ${gm.hg}–${gm.ag}</div>` : "";
+        return `<div class="pd-game">
+            <span class="pd-ghome">${esc(gm.home)}</span>
+            <div><div class="pd-pick">${pick}</div>${actual}</div>
+            <span class="pd-gaway">${esc(gm.away)}</span>
+            ${ptsBadge(gm.pts)}
+          </div>`;
+      }).join("");
+      groupsHtml += `<div class="section">
+        <div class="section-head"><span>Group ${esc(g)}</span>${gwChip}</div>
+        ${rows}</div>`;
+    });
+
+    // Knockout bracket.
+    const b = p.bracket || {};
+    let koHtml = "";
+    KO_ROUNDS.forEach(r => {
+      const picks = b[r.key] || [];
+      const earned = picks.reduce((s, x) => s + (x.pts || 0), 0);
+      const pills = picks.length
+        ? picks.map(x => `<span class="pd-pill${x.hit ? " hit" : ""}">${esc(x.team)}</span>`).join("")
+        : `<span class="pd-empty">No picks</span>`;
+      koHtml += `<div class="pd-round">
+        <div class="pd-round-head">
+          <span class="pd-round-title">${r.label}</span>
+          <span class="pd-sub" style="color:#888">${r.pts} pts each</span>
+          ${earned ? `<span class="pd-round-pts">+${earned}</span>` : ""}
+        </div>
+        <div class="pd-pills">${pills}</div></div>`;
+    });
+    const special = [
+      { o: b.winner, label: "Champion 🏆", pts: 30 },
+      { o: b.third,  label: "3rd place",   pts: 15 },
+    ];
+    special.forEach(s => {
+      if (!s.o) return;
+      koHtml += `<div class="pd-round">
+        <div class="pd-round-head">
+          <span class="pd-round-title">${s.label}</span>
+          <span class="pd-sub" style="color:#888">${s.pts} pts</span>
+          ${s.o.pts ? `<span class="pd-round-pts">+${s.o.pts}</span>` : ""}
+        </div>
+        <div class="pd-pills">
+          <span class="pd-pill${s.o.hit ? " hit" : ""}">${esc(s.o.team)}</span></div></div>`;
+    });
+
+    // Bonus answers.
+    const bonusHtml = (p.bonusAns || []).map(ba => {
+      const ans = ba.answer
+        ? `<span class="pd-bans">${esc(ba.answer)}</span>`
+        : `<span class="pd-bans none">—</span>`;
+      const hit = ba.hit === true ? `<span class="hit-y">✓</span>`
+                : ba.hit === false ? `<span class="hit-n">✗</span>` : "";
+      return `<div class="pd-bonus">
+        <span class="pd-bq"><span class="pd-bid">${esc(ba.id)}</span>${esc(ba.q)}</span>
+        ${ans}${hit}</div>`;
+    }).join("");
+
+    document.getElementById("player-container").innerHTML = `
+      <div class="pd-header">
+        <div class="pd-top">
+          <span class="pd-rankbadge${rankClass}">${p.rank ?? "—"}</span>
+          <div>
+            <div class="pd-name">${esc(name)}</div>
+            <div class="pd-sub">Rank ${p.rank ?? "—"} · ${((p.pctMax || 0) * 100).toFixed(1)}% of max</div>
+          </div>
+          <span class="pd-today">${today}</span>
+        </div>
+        <div class="pd-stats">
+          <div class="pd-stat"><div class="lbl">Total</div><div class="val">${fmt(p.total)}</div></div>
+          <div class="pd-stat"><div class="lbl">Group</div><div class="val">${fmt(p.group)}</div></div>
+          <div class="pd-stat"><div class="lbl">Knockout</div><div class="val">${fmt(p.ko)}</div></div>
+          <div class="pd-stat"><div class="lbl">Bonus</div><div class="val">${fmt(p.bonus)}</div></div>
+        </div>
+      </div>
+      <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
+      <h3 style="margin:1.2rem 0 0.5rem;color:#2A398D">Group-stage predictions</h3>
+      ${groupsHtml}
+      <div class="section" style="margin-top:1rem">
+        <div class="section-head"><span>Bonus answers</span></div>${bonusHtml}</div>`;
+  }
+
   // ── Today's matches banner ──
   let bannerNextKO = null;   // Date of next upcoming kickoff, for the countdown
 
@@ -858,6 +1084,11 @@
         document.getElementById("teams-container").innerHTML =
           `<p class="page-intro">Could not load stats.json — run export.py first. (${err})</p>`;
       });
+
+    fetch("players.json" + bust)
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d => { playersData = d; })
+      .catch(() => {});
 
     fetch("results_log.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
