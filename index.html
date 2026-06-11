@@ -1312,37 +1312,33 @@
 
     const now = new Date();
     const todayStr = localDateStr(now);
-    const todays = all.filter(x => localDateStr(x.ko) === todayStr).sort((a, b) => a.ko - b.ko);
+    // Next 5 fixtures: anything not yet finished (upcoming or kicked-off-awaiting-result), soonest first.
+    const next5 = all.filter(x => !(x.played && x.actual)).sort((a, b) => a.ko - b.ko).slice(0, 5);
     const upcoming = all.filter(x => !x.played && x.ko > now).sort((a, b) => a.ko - b.ko);
     bannerNextKO = upcoming.length ? upcoming[0].ko : null;
     const cdSpan = ko => `<span class="tb-cd" data-ko="${ko.getTime()}"></span>`;
+    const dayLabel = ko => localDateStr(ko) === todayStr
+      ? "Today"
+      : ko.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
 
     let html;
-    if (todays.length) {
-      const games = todays.map(gm => {
+    if (next5.length) {
+      const games = next5.map(gm => {
         let status;
-        if (gm.played && gm.actual)
-          status = `<span class="tb-status tb-ft">FT ${gm.actual.hg}–${gm.actual.ag}</span>`;
-        else if (gm.ko <= now)
+        if (gm.ko <= now)
           status = `<span class="tb-status tb-live">awaiting result</span>`;
         else
           status = `<span class="tb-status tb-soon">kicks off ${hhmm(gm.ko)}</span>`;
         return `<div class="tb-game">
-          <div class="tb-time">Grp ${esc(gm.group)} · ${hhmm(gm.ko)}</div>
+          <div class="tb-time">Grp ${esc(gm.group)} · ${dayLabel(gm.ko)} ${hhmm(gm.ko)}</div>
           <div class="tb-teams">${esc(gm.home)}<br>v ${esc(gm.away)}</div>
           ${status}
         </div>`;
       }).join("");
-      const cd = (bannerNextKO && localDateStr(bannerNextKO) === todayStr)
+      const cd = bannerNextKO
         ? `<span class="tb-count">next kickoff in ${cdSpan(bannerNextKO)}</span>` : "";
-      html = `<div class="tb-head"><span class="tb-title">⚽ Today's matches</span>${cd}</div>
+      html = `<div class="tb-head"><span class="tb-title">⚽ Next 5 fixtures</span>${cd}</div>
               <div class="tb-games">${games}</div>`;
-    } else if (bannerNextKO) {
-      const nx = upcoming[0];
-      html = `<div class="tb-head"><span class="tb-title">⚽ No matches today</span>
-              <span class="tb-count">next in ${cdSpan(bannerNextKO)}</span></div>
-              <div class="tb-empty">Next: ${esc(nx.home)} v ${esc(nx.away)} ·
-              ${localDateStr(nx.ko)} ${hhmm(nx.ko)}</div>`;
     } else {
       el.hidden = true; return;
     }
