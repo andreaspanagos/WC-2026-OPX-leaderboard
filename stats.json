@@ -1,12 +1,16 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-11 09:27",
+    "lastRefresh": "2026-06-11 09:54",
     "maxPoints": 729,
-    "participants": 4
+    "participants": 8
   },
   "players": [
+    "Jacob Cederberg",
     "Alex J",
+    "Dani",
+    "Ebba Wikström",
     "Gustaf L",
+    "Jakob Hägglund",
     "Johan Leijonhielm",
     "Oscar Hultefors"
   ],
@@ -26,8 +30,8 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 3,
-        "R16": 1,
+        "R32": 5,
+        "R16": 3,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -35,8 +39,8 @@
       },
       "pct": {
         "Group stage": 0,
-        "R32": 75,
-        "R16": 25,
+        "R32": 62,
+        "R16": 38,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -51,8 +55,8 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 3,
-        "R16": 1,
+        "R32": 6,
+        "R16": 2,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -77,7 +81,7 @@
       "dist": {
         "Group stage": 0,
         "R32": 1,
-        "R16": 3,
+        "R16": 7,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -85,8 +89,8 @@
       },
       "pct": {
         "Group stage": 0,
-        "R32": 25,
-        "R16": 75,
+        "R32": 12,
+        "R16": 88,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -100,7 +104,7 @@
       "group": "A",
       "actual": null,
       "dist": {
-        "Group stage": 4,
+        "Group stage": 8,
         "R32": 0,
         "R16": 0,
         "QF": 0,
@@ -126,7 +130,57 @@
       "actual": null,
       "dist": {
         "Group stage": 3,
-        "R32": 1,
+        "R32": 5,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 38,
+        "R32": 62,
+        "R16": 0,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Canada",
+      "group": "B",
+      "actual": null,
+      "dist": {
+        "Group stage": 1,
+        "R32": 4,
+        "R16": 3,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "pct": {
+        "Group stage": 12,
+        "R32": 50,
+        "R16": 38,
+        "QF": 0,
+        "SF": 0,
+        "Final": 0,
+        "Champion": 0
+      },
+      "championPct": 0,
+      "championBy": []
+    },
+    {
+      "team": "Qatar",
+      "group": "B",
+      "actual": null,
+      "dist": {
+        "Group stage": 6,
+        "R32": 2,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -146,63 +200,13 @@
       "championBy": []
     },
     {
-      "team": "Canada",
-      "group": "B",
-      "actual": null,
-      "dist": {
-        "Group stage": 1,
-        "R32": 1,
-        "R16": 2,
-        "QF": 0,
-        "SF": 0,
-        "Final": 0,
-        "Champion": 0
-      },
-      "pct": {
-        "Group stage": 25,
-        "R32": 25,
-        "R16": 50,
-        "QF": 0,
-        "SF": 0,
-        "Final": 0,
-        "Champion": 0
-      },
-      "championPct": 0,
-      "championBy": []
-    },
-    {
-      "team": "Qatar",
-      "group": "B",
-      "actual": null,
-      "dist": {
-        "Group stage": 2,
-        "R32": 2,
-        "R16": 0,
-        "QF": 0,
-        "SF": 0,
-        "Final": 0,
-        "Champion": 0
-      },
-      "pct": {
-        "Group stage": 50,
-        "R32": 50,
-        "R16": 0,
-        "QF": 0,
-        "SF": 0,
-        "Final": 0,
-        "Champion": 0
-      },
-      "championPct": 0,
-      "championBy": []
-    },
-    {
       "team": "Switzerland",
       "group": "B",
       "actual": null,
       "dist": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 4,
+        "R16": 8,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -227,18 +231,18 @@
       "dist": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 0,
+        "R16": 2,
         "QF": 1,
-        "SF": 2,
-        "Final": 1,
+        "SF": 3,
+        "Final": 2,
         "Champion": 0
       },
       "pct": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 0,
-        "QF": 25,
-        "SF": 50,
+        "R16": 25,
+        "QF": 12,
+        "SF": 38,
         "Final": 25,
         "Champion": 0
       },
@@ -250,7 +254,7 @@
       "group": "C",
       "actual": null,
       "dist": {
-        "Group stage": 4,
+        "Group stage": 8,
         "R32": 0,
         "R16": 0,
         "QF": 0,
@@ -276,18 +280,18 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 4,
+        "R32": 7,
         "R16": 0,
-        "QF": 0,
+        "QF": 1,
         "SF": 0,
         "Final": 0,
         "Champion": 0
       },
       "pct": {
         "Group stage": 0,
-        "R32": 100,
+        "R32": 88,
         "R16": 0,
-        "QF": 0,
+        "QF": 12,
         "SF": 0,
         "Final": 0,
         "Champion": 0
@@ -300,8 +304,8 @@
       "group": "C",
       "actual": null,
       "dist": {
-        "Group stage": 1,
-        "R32": 2,
+        "Group stage": 2,
+        "R32": 5,
         "R16": 1,
         "QF": 0,
         "SF": 0,
@@ -310,8 +314,8 @@
       },
       "pct": {
         "Group stage": 25,
-        "R32": 50,
-        "R16": 25,
+        "R32": 62,
+        "R16": 12,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -325,8 +329,8 @@
       "group": "D",
       "actual": null,
       "dist": {
-        "Group stage": 1,
-        "R32": 2,
+        "Group stage": 4,
+        "R32": 3,
         "R16": 1,
         "QF": 0,
         "SF": 0,
@@ -334,9 +338,9 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 25,
-        "R32": 50,
-        "R16": 25,
+        "Group stage": 50,
+        "R32": 38,
+        "R16": 12,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -350,8 +354,8 @@
       "group": "D",
       "actual": null,
       "dist": {
-        "Group stage": 3,
-        "R32": 1,
+        "Group stage": 6,
+        "R32": 2,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -377,7 +381,7 @@
       "dist": {
         "Group stage": 0,
         "R32": 2,
-        "R16": 2,
+        "R16": 6,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -385,8 +389,8 @@
       },
       "pct": {
         "Group stage": 0,
-        "R32": 50,
-        "R16": 50,
+        "R32": 25,
+        "R16": 75,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -402,7 +406,7 @@
       "dist": {
         "Group stage": 0,
         "R32": 1,
-        "R16": 2,
+        "R16": 6,
         "QF": 1,
         "SF": 0,
         "Final": 0,
@@ -410,9 +414,9 @@
       },
       "pct": {
         "Group stage": 0,
-        "R32": 25,
-        "R16": 50,
-        "QF": 25,
+        "R32": 12,
+        "R16": 75,
+        "QF": 12,
         "SF": 0,
         "Final": 0,
         "Champion": 0
@@ -425,7 +429,7 @@
       "group": "E",
       "actual": null,
       "dist": {
-        "Group stage": 4,
+        "Group stage": 8,
         "R32": 0,
         "R16": 0,
         "QF": 0,
@@ -451,7 +455,7 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 2,
+        "R32": 6,
         "R16": 2,
         "QF": 0,
         "SF": 0,
@@ -460,8 +464,8 @@
       },
       "pct": {
         "Group stage": 0,
-        "R32": 50,
-        "R16": 50,
+        "R32": 75,
+        "R16": 25,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -476,7 +480,7 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 4,
+        "R32": 8,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -502,7 +506,7 @@
       "dist": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 3,
+        "R16": 7,
         "QF": 0,
         "SF": 1,
         "Final": 0,
@@ -511,9 +515,9 @@
       "pct": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 75,
+        "R16": 88,
         "QF": 0,
-        "SF": 25,
+        "SF": 12,
         "Final": 0,
         "Champion": 0
       },
@@ -526,7 +530,7 @@
       "actual": null,
       "dist": {
         "Group stage": 1,
-        "R32": 3,
+        "R32": 7,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -534,8 +538,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 25,
-        "R32": 75,
+        "Group stage": 12,
+        "R32": 88,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -551,9 +555,9 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 1,
+        "R32": 2,
         "R16": 0,
-        "QF": 3,
+        "QF": 6,
         "SF": 0,
         "Final": 0,
         "Champion": 0
@@ -576,7 +580,7 @@
       "actual": null,
       "dist": {
         "Group stage": 1,
-        "R32": 2,
+        "R32": 6,
         "R16": 0,
         "QF": 1,
         "SF": 0,
@@ -584,10 +588,10 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 25,
-        "R32": 50,
+        "Group stage": 12,
+        "R32": 75,
         "R16": 0,
-        "QF": 25,
+        "QF": 12,
         "SF": 0,
         "Final": 0,
         "Champion": 0
@@ -600,7 +604,7 @@
       "group": "F",
       "actual": null,
       "dist": {
-        "Group stage": 4,
+        "Group stage": 8,
         "R32": 0,
         "R16": 0,
         "QF": 0,
@@ -628,7 +632,7 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 1,
-        "QF": 2,
+        "QF": 6,
         "SF": 1,
         "Final": 0,
         "Champion": 0
@@ -636,9 +640,9 @@
       "pct": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 25,
-        "QF": 50,
-        "SF": 25,
+        "R16": 12,
+        "QF": 75,
+        "SF": 12,
         "Final": 0,
         "Champion": 0
       },
@@ -651,7 +655,7 @@
       "actual": null,
       "dist": {
         "Group stage": 2,
-        "R32": 1,
+        "R32": 5,
         "R16": 1,
         "QF": 0,
         "SF": 0,
@@ -659,9 +663,9 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 50,
-        "R32": 25,
-        "R16": 25,
+        "Group stage": 25,
+        "R32": 62,
+        "R16": 12,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -675,8 +679,8 @@
       "group": "G",
       "actual": null,
       "dist": {
-        "Group stage": 1,
-        "R32": 3,
+        "Group stage": 2,
+        "R32": 6,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -700,7 +704,7 @@
       "group": "G",
       "actual": null,
       "dist": {
-        "Group stage": 2,
+        "Group stage": 6,
         "R32": 2,
         "R16": 0,
         "QF": 0,
@@ -709,8 +713,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 50,
-        "R32": 50,
+        "Group stage": 75,
+        "R32": 25,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -725,7 +729,7 @@
       "group": "H",
       "actual": null,
       "dist": {
-        "Group stage": 4,
+        "Group stage": 8,
         "R32": 0,
         "R16": 0,
         "QF": 0,
@@ -750,7 +754,7 @@
       "group": "H",
       "actual": null,
       "dist": {
-        "Group stage": 3,
+        "Group stage": 7,
         "R32": 1,
         "R16": 0,
         "QF": 0,
@@ -759,8 +763,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 75,
-        "R32": 25,
+        "Group stage": 88,
+        "R32": 12,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -781,19 +785,23 @@
         "QF": 1,
         "SF": 0,
         "Final": 1,
-        "Champion": 2
+        "Champion": 6
       },
       "pct": {
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 25,
+        "QF": 12,
         "SF": 0,
-        "Final": 25,
-        "Champion": 50
+        "Final": 12,
+        "Champion": 75
       },
-      "championPct": 50,
+      "championPct": 75,
       "championBy": [
+        "Jacob Cederberg",
+        "Dani",
+        "Ebba Wikström",
+        "Jakob Hägglund",
         "Johan Leijonhielm",
         "Oscar Hultefors"
       ]
@@ -804,7 +812,7 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 4,
+        "R32": 8,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -832,20 +840,20 @@
         "R32": 0,
         "R16": 1,
         "QF": 0,
-        "SF": 2,
+        "SF": 6,
         "Final": 0,
         "Champion": 1
       },
       "pct": {
         "Group stage": 0,
         "R32": 0,
-        "R16": 25,
+        "R16": 12,
         "QF": 0,
-        "SF": 50,
+        "SF": 75,
         "Final": 0,
-        "Champion": 25
+        "Champion": 12
       },
-      "championPct": 25,
+      "championPct": 12,
       "championBy": [
         "Alex J"
       ]
@@ -855,7 +863,7 @@
       "group": "I",
       "actual": null,
       "dist": {
-        "Group stage": 2,
+        "Group stage": 6,
         "R32": 2,
         "R16": 0,
         "QF": 0,
@@ -864,8 +872,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 50,
-        "R32": 50,
+        "Group stage": 75,
+        "R32": 25,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -881,18 +889,18 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 2,
-        "R16": 2,
-        "QF": 0,
+        "R32": 3,
+        "R16": 3,
+        "QF": 2,
         "SF": 0,
         "Final": 0,
         "Champion": 0
       },
       "pct": {
         "Group stage": 0,
-        "R32": 50,
-        "R16": 50,
-        "QF": 0,
+        "R32": 38,
+        "R16": 38,
+        "QF": 25,
         "SF": 0,
         "Final": 0,
         "Champion": 0
@@ -906,16 +914,16 @@
       "actual": null,
       "dist": {
         "Group stage": 2,
-        "R32": 1,
-        "R16": 1,
+        "R32": 4,
+        "R16": 2,
         "QF": 0,
         "SF": 0,
         "Final": 0,
         "Champion": 0
       },
       "pct": {
-        "Group stage": 50,
-        "R32": 25,
+        "Group stage": 25,
+        "R32": 50,
         "R16": 25,
         "QF": 0,
         "SF": 0,
@@ -930,8 +938,8 @@
       "group": "J",
       "actual": null,
       "dist": {
-        "Group stage": 3,
-        "R32": 1,
+        "Group stage": 6,
+        "R32": 2,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -958,21 +966,21 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 2,
+        "QF": 3,
         "SF": 0,
-        "Final": 1,
+        "Final": 4,
         "Champion": 1
       },
       "pct": {
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 50,
+        "QF": 38,
         "SF": 0,
-        "Final": 25,
-        "Champion": 25
+        "Final": 50,
+        "Champion": 12
       },
-      "championPct": 25,
+      "championPct": 12,
       "championBy": [
         "Gustaf L"
       ]
@@ -983,7 +991,7 @@
       "actual": null,
       "dist": {
         "Group stage": 0,
-        "R32": 4,
+        "R32": 8,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1007,7 +1015,7 @@
       "group": "J",
       "actual": null,
       "dist": {
-        "Group stage": 3,
+        "Group stage": 7,
         "R32": 1,
         "R16": 0,
         "QF": 0,
@@ -1016,8 +1024,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 75,
-        "R32": 25,
+        "Group stage": 88,
+        "R32": 12,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1033,17 +1041,17 @@
       "actual": null,
       "dist": {
         "Group stage": 1,
-        "R32": 0,
-        "R16": 3,
+        "R32": 2,
+        "R16": 5,
         "QF": 0,
         "SF": 0,
         "Final": 0,
         "Champion": 0
       },
       "pct": {
-        "Group stage": 25,
-        "R32": 0,
-        "R16": 75,
+        "Group stage": 12,
+        "R32": 25,
+        "R16": 62,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -1057,7 +1065,7 @@
       "group": "K",
       "actual": null,
       "dist": {
-        "Group stage": 3,
+        "Group stage": 7,
         "R32": 1,
         "R16": 0,
         "QF": 0,
@@ -1066,8 +1074,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 75,
-        "R32": 25,
+        "Group stage": 88,
+        "R32": 12,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1085,8 +1093,8 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 2,
-        "SF": 1,
+        "QF": 5,
+        "SF": 2,
         "Final": 1,
         "Champion": 0
       },
@@ -1094,9 +1102,9 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 50,
+        "QF": 62,
         "SF": 25,
-        "Final": 25,
+        "Final": 12,
         "Champion": 0
       },
       "championPct": 0,
@@ -1107,7 +1115,7 @@
       "group": "K",
       "actual": null,
       "dist": {
-        "Group stage": 3,
+        "Group stage": 7,
         "R32": 1,
         "R16": 0,
         "QF": 0,
@@ -1116,8 +1124,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 75,
-        "R32": 25,
+        "Group stage": 88,
+        "R32": 12,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1133,17 +1141,17 @@
       "actual": null,
       "dist": {
         "Group stage": 1,
-        "R32": 2,
-        "R16": 1,
+        "R32": 4,
+        "R16": 3,
         "QF": 0,
         "SF": 0,
         "Final": 0,
         "Champion": 0
       },
       "pct": {
-        "Group stage": 25,
+        "Group stage": 12,
         "R32": 50,
-        "R16": 25,
+        "R16": 38,
         "QF": 0,
         "SF": 0,
         "Final": 0,
@@ -1160,8 +1168,8 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 3,
-        "SF": 1,
+        "QF": 5,
+        "SF": 3,
         "Final": 0,
         "Champion": 0
       },
@@ -1169,8 +1177,8 @@
         "Group stage": 0,
         "R32": 0,
         "R16": 0,
-        "QF": 75,
-        "SF": 25,
+        "QF": 62,
+        "SF": 38,
         "Final": 0,
         "Champion": 0
       },
@@ -1182,8 +1190,8 @@
       "group": "L",
       "actual": null,
       "dist": {
-        "Group stage": 2,
-        "R32": 2,
+        "Group stage": 3,
+        "R32": 5,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1191,8 +1199,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 50,
-        "R32": 50,
+        "Group stage": 38,
+        "R32": 62,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1207,7 +1215,7 @@
       "group": "L",
       "actual": null,
       "dist": {
-        "Group stage": 3,
+        "Group stage": 7,
         "R32": 1,
         "R16": 0,
         "QF": 0,
@@ -1216,8 +1224,8 @@
         "Champion": 0
       },
       "pct": {
-        "Group stage": 75,
-        "R32": 25,
+        "Group stage": 88,
+        "R32": 12,
         "R16": 0,
         "QF": 0,
         "SF": 0,
@@ -1238,37 +1246,41 @@
       "answers": [
         {
           "answer": "Brazil",
-          "count": 1,
-          "pct": 25,
+          "count": 3,
+          "pct": 38,
           "players": [
+            "Jacob Cederberg",
+            "Dani",
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
           "answer": "Germany",
-          "count": 1,
+          "count": 2,
           "pct": 25,
           "players": [
-            "Gustaf L"
+            "Gustaf L",
+            "Jakob Hägglund"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Spain",
+          "count": 2,
+          "pct": 25,
+          "players": [
+            "Alex J",
+            "Ebba Wikström"
           ],
           "hit": null
         },
         {
           "answer": "Mexico",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Johan Leijonhielm"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Spain",
-          "count": 1,
-          "pct": 25,
-          "players": [
-            "Alex J"
           ],
           "hit": null
         }
@@ -1283,29 +1295,33 @@
       "answers": [
         {
           "answer": "Haiti",
-          "count": 2,
+          "count": 4,
           "pct": 50,
           "players": [
             "Alex J",
+            "Dani",
+            "Ebba Wikström",
             "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Curaçao",
+          "count": 3,
+          "pct": 38,
+          "players": [
+            "Jacob Cederberg",
+            "Gustaf L",
+            "Jakob Hägglund"
           ],
           "hit": null
         },
         {
           "answer": "Cabo Verde",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Curaçao",
-          "count": 1,
-          "pct": 25,
-          "players": [
-            "Gustaf L"
           ],
           "hit": null
         }
@@ -1321,16 +1337,25 @@
         {
           "answer": "229",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
+          "answer": "231",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Jacob Cederberg"
+          ],
+          "hit": null
+        },
+        {
           "answer": "233",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Johan Leijonhielm"
           ],
@@ -1339,18 +1364,45 @@
         {
           "answer": "264",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
           ],
           "hit": null
         },
         {
+          "answer": "271",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Dani"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "275",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Jakob Hägglund"
+          ],
+          "hit": null
+        },
+        {
           "answer": "285",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "294",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Ebba Wikström"
           ],
           "hit": null
         }
@@ -1365,9 +1417,12 @@
       "answers": [
         {
           "answer": "Lamine Yamal",
-          "count": 3,
+          "count": 6,
           "pct": 75,
           "players": [
+            "Jacob Cederberg",
+            "Dani",
+            "Ebba Wikström",
             "Gustaf L",
             "Johan Leijonhielm",
             "Oscar Hultefors"
@@ -1377,9 +1432,18 @@
         {
           "answer": "Bruno Fernandes",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Kylian Mbappé",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Jakob Hägglund"
           ],
           "hit": null
         }
@@ -1393,9 +1457,22 @@
       "status": "tbd",
       "answers": [
         {
+          "answer": "Kylian Mbappé",
+          "count": 5,
+          "pct": 62,
+          "players": [
+            "Jacob Cederberg",
+            "Dani",
+            "Ebba Wikström",
+            "Jakob Hägglund",
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
           "answer": "Harry Kane",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
           ],
@@ -1404,25 +1481,16 @@
         {
           "answer": "Julián Álvarez",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
-          "answer": "Kylian Mbappé",
-          "count": 1,
-          "pct": 25,
-          "players": [
-            "Johan Leijonhielm"
-          ],
-          "hit": null
-        },
-        {
           "answer": "Victor Gyökeres",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
           ],
@@ -1439,18 +1507,21 @@
       "answers": [
         {
           "answer": "Argentina",
-          "count": 1,
-          "pct": 25,
+          "count": 3,
+          "pct": 38,
           "players": [
+            "Jacob Cederberg",
+            "Dani",
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
           "answer": "Brazil",
-          "count": 1,
+          "count": 2,
           "pct": 25,
           "players": [
+            "Jakob Hägglund",
             "Johan Leijonhielm"
           ],
           "hit": null
@@ -1458,7 +1529,7 @@
         {
           "answer": "Frankrike",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
           ],
@@ -1467,9 +1538,18 @@
         {
           "answer": "Portugal",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "Turkiet",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Ebba Wikström"
           ],
           "hit": null
         }
@@ -1484,27 +1564,39 @@
       "answers": [
         {
           "answer": "6",
-          "count": 2,
-          "pct": 50,
+          "count": 3,
+          "pct": 38,
           "players": [
+            "Jakob Hägglund",
             "Johan Leijonhielm",
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
-          "answer": "3",
-          "count": 1,
+          "answer": "2",
+          "count": 2,
           "pct": 25,
           "players": [
-            "Alex J"
+            "Jacob Cederberg",
+            "Dani"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "3",
+          "count": 2,
+          "pct": 25,
+          "players": [
+            "Alex J",
+            "Ebba Wikström"
           ],
           "hit": null
         },
         {
           "answer": "4",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
           ],
@@ -1520,9 +1612,21 @@
       "status": "provisional",
       "answers": [
         {
+          "answer": "5",
+          "count": 4,
+          "pct": 50,
+          "players": [
+            "Dani",
+            "Gustaf L",
+            "Jakob Hägglund",
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
           "answer": "4",
           "count": 2,
-          "pct": 50,
+          "pct": 25,
           "players": [
             "Alex J",
             "Oscar Hultefors"
@@ -1530,12 +1634,20 @@
           "hit": null
         },
         {
-          "answer": "5",
-          "count": 2,
-          "pct": 50,
+          "answer": "3",
+          "count": 1,
+          "pct": 12,
           "players": [
-            "Gustaf L",
-            "Johan Leijonhielm"
+            "Jacob Cederberg"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "6",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Ebba Wikström"
           ],
           "hit": null
         }
@@ -1551,7 +1663,7 @@
         {
           "answer": "1",
           "count": 2,
-          "pct": 50,
+          "pct": 25,
           "players": [
             "Gustaf L",
             "Johan Leijonhielm"
@@ -1559,20 +1671,48 @@
           "hit": null
         },
         {
+          "answer": "4",
+          "count": 2,
+          "pct": 25,
+          "players": [
+            "Alex J",
+            "Ebba Wikström"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "0",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Jacob Cederberg"
+          ],
+          "hit": null
+        },
+        {
           "answer": "15",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
-          "answer": "4",
+          "answer": "3",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
-            "Alex J"
+            "Dani"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "5",
+          "count": 1,
+          "pct": 12,
+          "players": [
+            "Jakob Hägglund"
           ],
           "hit": null
         }
@@ -1587,11 +1727,15 @@
       "answers": [
         {
           "answer": "No",
-          "count": 3,
-          "pct": 75,
+          "count": 7,
+          "pct": 88,
           "players": [
+            "Jacob Cederberg",
             "Alex J",
+            "Dani",
+            "Ebba Wikström",
             "Gustaf L",
+            "Jakob Hägglund",
             "Johan Leijonhielm"
           ],
           "hit": null
@@ -1599,7 +1743,7 @@
         {
           "answer": "Yes",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
           ],
@@ -1612,27 +1756,31 @@
       "q": "Host nation reaches R16? (Yes/No)",
       "pts": 5,
       "current": "TBD",
-      "status": "decided",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Yes",
-          "count": 3,
-          "pct": 75,
+          "count": 7,
+          "pct": 88,
           "players": [
+            "Jacob Cederberg",
+            "Dani",
+            "Ebba Wikström",
             "Gustaf L",
+            "Jakob Hägglund",
             "Johan Leijonhielm",
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "No",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1641,27 +1789,31 @@
       "q": "First-timer reaches R32? (Yes/No)",
       "pts": 5,
       "current": "TBD",
-      "status": "decided",
+      "status": "provisional",
       "answers": [
         {
           "answer": "No",
-          "count": 3,
-          "pct": 75,
+          "count": 7,
+          "pct": 88,
           "players": [
+            "Jacob Cederberg",
             "Alex J",
+            "Dani",
+            "Ebba Wikström",
             "Gustaf L",
+            "Jakob Hägglund",
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Yes",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1673,38 +1825,50 @@
       "status": "tbd",
       "answers": [
         {
+          "answer": "7",
+          "count": 3,
+          "pct": 38,
+          "players": [
+            "Ebba Wikström",
+            "Jakob Hägglund",
+            "Johan Leijonhielm"
+          ],
+          "hit": null
+        },
+        {
+          "answer": "9",
+          "count": 2,
+          "pct": 25,
+          "players": [
+            "Jacob Cederberg",
+            "Gustaf L"
+          ],
+          "hit": null
+        },
+        {
           "answer": "11",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Alex J"
           ],
           "hit": null
         },
         {
-          "answer": "7",
+          "answer": "12",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
-            "Johan Leijonhielm"
+            "Dani"
           ],
           "hit": null
         },
         {
           "answer": "8",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Oscar Hultefors"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "9",
-          "count": 1,
-          "pct": 25,
-          "players": [
-            "Gustaf L"
           ],
           "hit": null
         }
@@ -1715,35 +1879,39 @@
       "q": "How far does Sweden go? (auto from bracket picks)",
       "pts": 10,
       "current": "Group stage",
-      "status": "decided",
+      "status": "provisional",
       "answers": [
         {
           "answer": "R32",
-          "count": 2,
-          "pct": 50,
+          "count": 6,
+          "pct": 75,
           "players": [
+            "Jacob Cederberg",
             "Alex J",
+            "Dani",
+            "Ebba Wikström",
+            "Jakob Hägglund",
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": null
         },
         {
           "answer": "Group stage",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": true
+          "hit": null
         },
         {
           "answer": "QF",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
           ],
-          "hit": false
+          "hit": null
         }
       ]
     },
@@ -1756,19 +1924,31 @@
       "answers": [
         {
           "answer": "Viktor Gyökeres",
-          "count": 3,
-          "pct": 75,
+          "count": 5,
+          "pct": 62,
           "players": [
             "Alex J",
+            "Ebba Wikström",
+            "Jakob Hägglund",
             "Johan Leijonhielm",
             "Oscar Hultefors"
           ],
           "hit": null
         },
         {
+          "answer": "Alexander Isak",
+          "count": 2,
+          "pct": 25,
+          "players": [
+            "Jacob Cederberg",
+            "Dani"
+          ],
+          "hit": null
+        },
+        {
           "answer": "Victor Gyökeres",
           "count": 1,
-          "pct": 25,
+          "pct": 12,
           "players": [
             "Gustaf L"
           ],

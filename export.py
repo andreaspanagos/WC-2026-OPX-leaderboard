@@ -20,6 +20,7 @@ All readers are defensive about missing results: at tournament start the
 Results sheet is empty -> games show as upcoming, no winners, bonus mostly TBD.
 """
 
+import datetime
 import json
 import os
 import openpyxl
@@ -27,6 +28,7 @@ import openpyxl
 WORKBOOK = "WC 2026 Main model_vOPX.xlsx"
 SHEET = "_Setup_PowerQuery"
 OUTPUT = "leaderboard.json"
+BASELINE_FILE = "daily_baseline.json"
 GAMES_OUTPUT = "games.json"
 STATS_OUTPUT = "stats.json"
 
@@ -59,21 +61,28 @@ def as_int(v):
     return None
 
 
-wb = openpyxl.load_workbook(WORKBOOK, data_only=True)
+# Read from a temp copy so this works even while the model is open in Excel
+# (a direct open would hit a PermissionError on the locked file). The copy
+# reflects the last SAVED state, which is exactly what we want to export.
+import shutil
+import tempfile
+_tmp_model = shutil.copy(WORKBOOK, tempfile.mktemp(suffix=".xlsx"))
+wb = openpyxl.load_workbook(_tmp_model, data_only=True)
 ws = wb[SHEET]
 bk = wb["Backend"]
 
 # ───────────────────────── leaderboard.json ─────────────────────────
 
-prev_ranks = {}
+# Previous export (most recent prior state) — used to seed a new day's baseline.
+prev_state = {}                # name -> {"rank":, "total":}
 if os.path.exists(OUTPUT):
     try:
         with open(OUTPUT, encoding="utf-8") as f:
             for r in json.load(f).get("rows", []):
                 if r.get("player") is not None:
-                    prev_ranks[r["player"]] = r.get("rank")
+                    prev_state[r["player"]] = {"rank": r.get("rank"), "total": r.get("total")}
     except (json.JSONDecodeError, OSError):
-        prev_ranks = {}
+        prev_state = {}
 
 meta = {
     "lastRefresh": str(ws["B3"].value) if ws["B3"].value else "",
@@ -97,9 +106,34 @@ while True:
         "bonus":    ws.cell(row=row_num, column=5).value,
         "total":    ws.cell(row=row_num, column=6).value,
         "pctMax":   round(float(pct), 4) if pct is not None else 0.0,
-        "prevRank": prev_ranks.get(name),
     })
     row_num += 1
+
+# Daily baseline = standings at the start of today. Movement arrows and points
+# gained are measured against it, so they reflect the calendar day rather than
+# each 30-min auto-sync. The baseline rolls over on the first export of a new day,
+# seeded from the previous day's final standings (prev_state).
+today = datetime.date.today().isoformat()
+baseline = None
+if os.path.exists(BASELINE_FILE):
+    try:
+        with open(BASELINE_FILE, encoding="utf-8") as f:
+            baseline = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        baseline = None
+
+if not baseline or baseline.get("date") != today:
+    seed = prev_state or {r["player"]: {"rank": r["rank"], "total": r["total"]} for r in rows}
+    baseline = {"date": today, "players": seed}
+    with open(BASELINE_FILE, "w", encoding="utf-8") as f:
+        json.dump(baseline, f, ensure_ascii=False, indent=2)
+
+base = baseline.get("players") or {}
+for r in rows:
+    b = base.get(r["player"])
+    r["prevRank"] = b["rank"] if b else None
+    r["pointsToday"] = (r["total"] - b["total"]) \
+        if (b and b.get("total") is not None and r["total"] is not None) else 0
 
 with open(OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": meta, "rows": rows}, f, ensure_ascii=False, indent=2)

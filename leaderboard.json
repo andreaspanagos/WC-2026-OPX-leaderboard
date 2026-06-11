@@ -1,49 +1,97 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-11 09:27",
+    "lastRefresh": "2026-06-11 09:54",
     "maxPoints": 729,
-    "participants": 4
+    "participants": 8
   },
   "rows": [
     {
       "rank": 1,
+      "player": "Jacob Cederberg",
+      "group": 0,
+      "ko": 0,
+      "bonus": 5,
+      "total": 5,
+      "pctMax": 0.0069,
+      "prevRank": 1,
+      "pointsToday": 0
+    },
+    {
+      "rank": 2,
       "player": "Alex J",
       "group": 0,
       "ko": 0,
       "bonus": 0,
       "total": 0,
       "pctMax": 0.0,
-      "prevRank": 1
+      "prevRank": 2,
+      "pointsToday": 0
     },
     {
-      "rank": 2,
+      "rank": 3,
+      "player": "Dani",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
+      "prevRank": 3,
+      "pointsToday": 0
+    },
+    {
+      "rank": 4,
+      "player": "Ebba Wikström",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
+      "prevRank": 4,
+      "pointsToday": 0
+    },
+    {
+      "rank": 5,
       "player": "Gustaf L",
       "group": 0,
       "ko": 0,
       "bonus": 0,
       "total": 0,
       "pctMax": 0.0,
-      "prevRank": 2
+      "prevRank": 5,
+      "pointsToday": 0
     },
     {
-      "rank": 3,
+      "rank": 6,
+      "player": "Jakob Hägglund",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "pctMax": 0.0,
+      "prevRank": 6,
+      "pointsToday": 0
+    },
+    {
+      "rank": 7,
       "player": "Johan Leijonhielm",
       "group": 0,
       "ko": 0,
       "bonus": 0,
       "total": 0,
       "pctMax": 0.0,
-      "prevRank": 3
+      "prevRank": 7,
+      "pointsToday": 0
     },
     {
-      "rank": 4,
+      "rank": 8,
       "player": "Oscar Hultefors",
       "group": 0,
       "ko": 0,
       "bonus": 0,
       "total": 0,
       "pctMax": 0.0,
-      "prevRank": 4
+      "prevRank": 8,
+      "pointsToday": 0
     }
   ]
 }
