@@ -1,5 +1,15 @@
 {
-  "lastRun": "2026-06-11T23:55:50",
-  "applied": [],
+  "lastRun": "2026-06-11T23:59:52",
+  "applied": [
+    {
+      "group": "A",
+      "row": 5,
+      "home": "Mexico",
+      "away": "South Africa",
+      "hg": 2,
+      "ag": 0,
+      "when": "2026-06-11T23:59:52"
+    }
+  ],
   "needsAttention": []
 }
