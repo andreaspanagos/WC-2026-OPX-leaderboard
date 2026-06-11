@@ -2,7 +2,8 @@
   "meta": {
     "lastRefresh": "2026-06-11 10:19",
     "maxPoints": 729,
-    "participants": 8
+    "participants": 8,
+    "maxAvailable": 35
   },
   "players": [
     "Jacob Cederberg",
@@ -21,7 +22,7 @@
       "group": 0,
       "ko": 0,
       "bonus": 5,
-      "pctMax": 0.0069,
+      "pctMax": 0.1429,
       "pointsToday": 0,
       "games": [
         {

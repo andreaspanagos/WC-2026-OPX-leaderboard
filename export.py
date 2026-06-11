@@ -98,7 +98,6 @@ while True:
     if player is None or str(player).strip() == "":
         break
     name = str(player).strip()
-    pct = ws.cell(row=row_num, column=7).value
     rows.append({
         "rank":     ws.cell(row=row_num, column=1).value,
         "player":   name,
@@ -106,7 +105,7 @@ while True:
         "ko":       ws.cell(row=row_num, column=4).value,
         "bonus":    ws.cell(row=row_num, column=5).value,
         "total":    ws.cell(row=row_num, column=6).value,
-        "pctMax":   round(float(pct), 4) if pct is not None else 0.0,
+        # "pctMax" is added later, once we know how many points are winnable so far.
     })
     row_num += 1
 
@@ -136,9 +135,9 @@ for r in rows:
     r["pointsToday"] = (r["total"] - b["total"]) \
         if (b and b.get("total") is not None and r["total"] is not None) else 0
 
-with open(OUTPUT, "w", encoding="utf-8") as f:
-    json.dump({"meta": meta, "rows": rows}, f, ensure_ascii=False, indent=2)
-print(f"Exported {len(rows)} players -> {OUTPUT}")
+# leaderboard.json is written further down (see "finalise leaderboard.json"),
+# once fixtures and the bonus answer key are known — we need them to compute how
+# many points have actually been winnable so far for the % Max column.
 
 # ───────────────── flat per-player picks table (row 100+) ─────────────────
 
@@ -446,6 +445,28 @@ for krow, bid in KEY_ROW_TO_ID.items():
         "status": status,
         "normSet": {norm_answer(a) for a in ans_str.replace(";", ",").split(",") if a.strip()},
     }
+
+# ───────────── finalise leaderboard.json (now that scoring is known) ─────────────
+# "Available" points = the max anyone could have earned from results decided so
+# far, so % Max reflects share of what was actually up for grabs (not the full
+# 729-point tournament). Group games are worth 3 each once played; a bonus
+# question's max counts once its answer is filled (the model credits filled
+# answers immediately, decided or not). Knockouts are added in Phase 2.
+games_played = sum(1 for fx in fixtures if fx["played"])
+bonus_open = sum((bd["pts"] or 0) for bd in bonus_defs
+                 if answer_key.get(bd["id"], {}).get("status", "tbd") != "tbd")
+available = 3 * games_played + bonus_open
+if isinstance(available, float) and available.is_integer():
+    available = int(available)
+meta["maxAvailable"] = available
+for r in rows:
+    t = r.get("total")
+    r["pctMax"] = round(t / available, 4) if (available and t is not None) else 0.0
+
+with open(OUTPUT, "w", encoding="utf-8") as f:
+    json.dump({"meta": meta, "rows": rows}, f, ensure_ascii=False, indent=2)
+print(f"Exported {len(rows)} players -> {OUTPUT} (available so far: {available})")
+
 
 # Per-player answers per question.
 def bonus_answer(p, bid):

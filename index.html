@@ -208,6 +208,20 @@
     }
     .pct-label { font-size: 0.75rem; color: #666; margin-top: 2px; }
 
+    /* ── Expandable leaderboard rows (Group/Knockout/Bonus breakdown) ── */
+    .lb-row { cursor: pointer; }
+    .lb-row:hover { background: #f3f5fc; }
+    .lb-chev {
+      display: inline-block; margin-right: 0.45rem; color: #98a0c4;
+      font-size: 0.7rem; transition: transform 0.15s ease;
+    }
+    .lb-row.open .lb-chev { transform: rotate(90deg); color: #2A398D; }
+    .lb-detail > td { padding-top: 0; padding-bottom: 0.7rem; }
+    .lb-breakdown { display: flex; gap: 1.8rem; padding-left: 0.2rem; }
+    .lb-breakdown span { display: flex; flex-direction: column; gap: 1px; }
+    .lb-breakdown label { font-size: 0.68rem; color: #888; text-transform: uppercase; letter-spacing: 0.03em; }
+    .lb-breakdown strong { font-size: 0.95rem; color: #2A398D; }
+
     /* ── Shared section/card layout ── */
     .page-wrap { padding: 1rem; max-width: 920px; margin: 0 auto; }
     .page-intro { color: #555; font-size: 0.9rem; margin: 0.25rem 0 1rem; }
@@ -447,7 +461,7 @@
     <span class="pill">Data as of: <strong id="hdr-refresh">—</strong></span>
     <span class="pill">Last checked: <strong id="hdr-checked">—</strong></span>
     <span class="pill">Players: <strong id="hdr-participants">—</strong></span>
-    <span class="pill">Max pts: <strong id="hdr-maxpoints">—</strong></span>
+    <span class="pill" title="Maximum points winnable from results decided so far">Max points so far: <strong id="hdr-maxpoints">—</strong></span>
   </div>
 </header>
 
@@ -473,9 +487,6 @@
           <th>#</th>
           <th>Player</th>
           <th>Total</th>
-          <th>Group</th>
-          <th>Knockout</th>
-          <th>Bonus</th>
           <th>Today</th>
           <th>% Max</th>
         </tr>
@@ -614,7 +625,7 @@
     const { meta, rows } = data;
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
-    document.getElementById("hdr-maxpoints").textContent    = meta.maxPoints     ?? "—";
+    document.getElementById("hdr-maxpoints").textContent    = meta.maxAvailable ?? meta.maxPoints ?? "—";
 
     const podiumEl = document.getElementById("podium-section");
     podiumEl.innerHTML = "";
@@ -640,24 +651,42 @@
     rows.forEach(r => {
       const rankClass = r.rank <= 3 ? ` rank-${r.rank}` : "";
       const tr = document.createElement("tr");
+      tr.className = "lb-row";
       tr.innerHTML = `
         <td>
           <span class="rank-badge${rankClass}">${r.rank}</span>
           <div>${movement(r)}</div>
         </td>
-        <td class="player-name">${esc(r.player)}</td>
+        <td class="player-cell">
+          <span class="lb-chev">&#9656;</span><span class="player-name">${esc(r.player)}</span>
+        </td>
         <td><strong>${fmt(r.total)}</strong></td>
-        <td>${fmt(r.group)}</td>
-        <td>${fmt(r.ko)}</td>
-        <td>${fmt(r.bonus)}</td>
         <td>${ptsToday(r)}</td>
         <td class="bar-cell">
           <div class="bar-bg"><div class="bar-fill" style="width:${(r.pctMax*100).toFixed(1)}%"></div></div>
           <div class="pct-label">${(r.pctMax*100).toFixed(1)}%</div>
         </td>
       `;
-      tr.querySelector(".player-name").onclick = () => showPlayer(r.player);
+      const detail = document.createElement("tr");
+      detail.className = "lb-detail";
+      detail.hidden = true;
+      detail.innerHTML = `
+        <td></td>
+        <td colspan="4">
+          <div class="lb-breakdown">
+            <span><label>Group</label><strong>${fmt(r.group)}</strong></span>
+            <span><label>Knockout</label><strong>${fmt(r.ko)}</strong></span>
+            <span><label>Bonus</label><strong>${fmt(r.bonus)}</strong></span>
+          </div>
+        </td>
+      `;
+      tr.onclick = () => {
+        detail.hidden = !detail.hidden;
+        tr.classList.toggle("open", !detail.hidden);
+      };
+      tr.querySelector(".player-name").onclick = (e) => { e.stopPropagation(); showPlayer(r.player); };
       tbody.appendChild(tr);
+      tbody.appendChild(detail);
     });
 
     document.getElementById("status").hidden      = true;
