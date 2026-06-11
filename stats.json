@@ -1335,7 +1335,7 @@
       "status": "provisional",
       "answers": [
         {
-          "answer": "229",
+          "answer": "220–229",
           "count": 1,
           "pct": 12,
           "players": [
@@ -1344,25 +1344,17 @@
           "hit": null
         },
         {
-          "answer": "231",
-          "count": 1,
-          "pct": 12,
+          "answer": "230–239",
+          "count": 2,
+          "pct": 25,
           "players": [
-            "Jacob Cederberg"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "233",
-          "count": 1,
-          "pct": 12,
-          "players": [
+            "Jacob Cederberg",
             "Johan Leijonhielm"
           ],
           "hit": null
         },
         {
-          "answer": "264",
+          "answer": "260–269",
           "count": 1,
           "pct": 12,
           "players": [
@@ -1371,25 +1363,17 @@
           "hit": null
         },
         {
-          "answer": "271",
-          "count": 1,
-          "pct": 12,
+          "answer": "270–279",
+          "count": 2,
+          "pct": 25,
           "players": [
-            "Dani"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "275",
-          "count": 1,
-          "pct": 12,
-          "players": [
+            "Dani",
             "Jakob Hägglund"
           ],
           "hit": null
         },
         {
-          "answer": "285",
+          "answer": "280–289",
           "count": 1,
           "pct": 12,
           "players": [
@@ -1398,7 +1382,7 @@
           "hit": null
         },
         {
-          "answer": "294",
+          "answer": "290–299",
           "count": 1,
           "pct": 12,
           "players": [

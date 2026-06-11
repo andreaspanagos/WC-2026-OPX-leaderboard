@@ -414,6 +414,20 @@ def answer_hit(bid, ans, key):
             pass
     return na in key["normSet"]
 
+# Questions whose answers are bucketed into ranges for display (id -> bucket size),
+# e.g. B03 total goals shown as 230-239, 240-249, … instead of every unique value.
+NUMERIC_BUCKET = {"B03": 10}
+
+def bucket_hit(lo, size, key, bid):
+    """Decided-state: True if the range [lo, lo+size-1] overlaps the correct
+    answer ± tolerance — i.e. a player in this bucket could be scored correct."""
+    tol = NUMERIC_TOLERANCE.get(bid, 0)
+    hi = lo + size - 1
+    for k in key["normSet"]:
+        if k.lstrip("-").isdigit() and (lo - tol) <= int(k) <= (hi + tol):
+            return True
+    return False
+
 answer_key = {}
 for krow, bid in KEY_ROW_TO_ID.items():
     ans = res.cell(row=krow, column=KEY_COL_ANSWER).value
@@ -448,15 +462,43 @@ for bd in bonus_defs:
         a = bonus_answer(p, bd["id"])
         a = "—" if a is None or str(a).strip() == "" else str(a).strip()
         counts.setdefault(a, []).append(p)
-    answers = [{
-        "answer": a,
-        "count": len(ppl),
-        "pct": round(100 * len(ppl) / n_players) if n_players else 0,
-        "players": ppl,
-        "hit": answer_hit(bd["id"], a, key)
-               if (key["status"] == "decided" and key["normSet"]) else None,
-    } for a, ppl in counts.items()]
-    answers.sort(key=lambda x: (-x["count"], x["answer"]))
+    size = NUMERIC_BUCKET.get(bd["id"])
+    if size:
+        # Group answers into numeric ranges (e.g. 230-239) for readability.
+        groups = {}                # label -> {"lo": int|None, "players": [...]}
+        for a, ppl in counts.items():
+            try:
+                v = int(float(str(a).replace(",", ".")))
+                lo = (v // size) * size
+                lbl = f"{lo}–{lo + size - 1}"
+            except (ValueError, TypeError):
+                lo, lbl = None, str(a)        # e.g. "—" (no pick) kept as-is
+            g = groups.setdefault(lbl, {"lo": lo, "players": []})
+            g["players"].extend(ppl)
+        tmp = []
+        for lbl, g in groups.items():
+            ppl = g["players"]
+            tmp.append((g["lo"], {
+                "answer": lbl,
+                "count": len(ppl),
+                "pct": round(100 * len(ppl) / n_players) if n_players else 0,
+                "players": ppl,
+                "hit": (bucket_hit(g["lo"], size, key, bd["id"])
+                        if g["lo"] is not None and key["status"] == "decided"
+                        and key["normSet"] else None),
+            }))
+        tmp.sort(key=lambda t: (t[0] is None, t[0] if t[0] is not None else 0))
+        answers = [d for _, d in tmp]
+    else:
+        answers = [{
+            "answer": a,
+            "count": len(ppl),
+            "pct": round(100 * len(ppl) / n_players) if n_players else 0,
+            "players": ppl,
+            "hit": answer_hit(bd["id"], a, key)
+                   if (key["status"] == "decided" and key["normSet"]) else None,
+        } for a, ppl in counts.items()]
+        answers.sort(key=lambda x: (-x["count"], x["answer"]))
     bonus_json.append({**bd, "current": key["current"], "status": key["status"],
                        "answers": answers})
 
