@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-11 09:54",
+    "lastRefresh": "2026-06-11 10:19",
     "maxPoints": 729,
     "participants": 8
   },
@@ -1639,7 +1639,7 @@
     },
     {
       "id": "B09",
-      "q": "Number of penalty shootouts in knockout stage",
+      "q": "Number of extra-time or penalty shoot-outs in knockout stage",
       "pts": 5,
       "current": "0",
       "status": "provisional",

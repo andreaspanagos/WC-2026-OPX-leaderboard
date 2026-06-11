@@ -165,6 +165,33 @@
     .pts-today.pt-flat { color: #bbb; }
     .podium-today { font-size: 0.72rem; font-weight: 700; margin-top: 0.1rem; }
 
+    /* today's matches banner */
+    #today-banner {
+      background: linear-gradient(180deg, #2A398D, #232f73);
+      color: #fff; border-radius: 12px; padding: 0.7rem 0.9rem;
+      margin: 0 0 1rem;
+    }
+    .tb-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 0.6rem; margin-bottom: 0.55rem; flex-wrap: wrap;
+    }
+    .tb-title { font-weight: 800; font-size: 0.95rem; letter-spacing: .2px; }
+    .tb-count { font-size: 0.8rem; font-weight: 700; color: #ffd700; white-space: nowrap; }
+    .tb-count .tb-mono { font-variant-numeric: tabular-nums; }
+    .tb-games { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 2px; }
+    .tb-game {
+      flex: 0 0 auto; background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.14); border-radius: 9px;
+      padding: 0.45rem 0.6rem; min-width: 140px;
+    }
+    .tb-time { font-size: 0.72rem; color: #c7cef0; font-weight: 700; }
+    .tb-teams { font-size: 0.86rem; font-weight: 700; margin: 0.12rem 0; line-height: 1.2; }
+    .tb-status { font-size: 0.74rem; font-weight: 800; }
+    .tb-ft   { color: #ffd700; }
+    .tb-live { color: #ff6b6b; }
+    .tb-soon { color: #9fe0a6; }
+    .tb-empty { font-size: 0.85rem; color: #d7ddf4; }
+
     /* % bar */
     .bar-cell { padding-right: 1rem; }
     .bar-bg {
@@ -354,6 +381,7 @@
 
 <!-- ── Leaderboard view ── -->
 <div id="view-leaderboard">
+  <div id="today-banner" hidden></div>
   <div id="podium-section" class="podium" hidden></div>
 
   <div class="table-wrap" hidden id="table-section">
@@ -722,6 +750,87 @@
     c.innerHTML = html;
   }
 
+  // ── Today's matches banner ──
+  let bannerNextKO = null;   // Date of next upcoming kickoff, for the countdown
+
+  function parseKO(s) {
+    const m = String(s || "").match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/);
+    return m ? new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) : null;
+  }
+  function localDateStr(d) {
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  }
+  function hhmm(d) {
+    return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+  }
+  function fmtCountdown(ms) {
+    if (ms <= 0) return "now";
+    const s = Math.floor(ms / 1000);
+    const d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600),
+          m = Math.floor((s % 3600) / 60), sec = s % 60;
+    if (d > 0) return `${d}d ${h}h`;
+    const p = n => String(n).padStart(2, "0");
+    return `<span class="tb-mono">${p(h)}:${p(m)}:${p(sec)}</span>`;
+  }
+
+  function renderTodayBanner(data) {
+    const el = document.getElementById("today-banner");
+    if (!el) return;
+    const all = [];
+    (data.groups || []).forEach(g => (g.games || []).forEach(gm => {
+      const ko = parseKO(gm.kickoff);
+      if (ko) all.push({ ...gm, group: g.group, ko });
+    }));
+    if (!all.length) { el.hidden = true; return; }
+
+    const now = new Date();
+    const todayStr = localDateStr(now);
+    const todays = all.filter(x => localDateStr(x.ko) === todayStr).sort((a, b) => a.ko - b.ko);
+    const upcoming = all.filter(x => !x.played && x.ko > now).sort((a, b) => a.ko - b.ko);
+    bannerNextKO = upcoming.length ? upcoming[0].ko : null;
+    const cdSpan = ko => `<span class="tb-cd" data-ko="${ko.getTime()}"></span>`;
+
+    let html;
+    if (todays.length) {
+      const games = todays.map(gm => {
+        let status;
+        if (gm.played && gm.actual)
+          status = `<span class="tb-status tb-ft">FT ${gm.actual.hg}–${gm.actual.ag}</span>`;
+        else if (gm.ko <= now)
+          status = `<span class="tb-status tb-live">awaiting result</span>`;
+        else
+          status = `<span class="tb-status tb-soon">kicks off ${hhmm(gm.ko)}</span>`;
+        return `<div class="tb-game">
+          <div class="tb-time">Grp ${esc(gm.group)} · ${hhmm(gm.ko)}</div>
+          <div class="tb-teams">${esc(gm.home)}<br>v ${esc(gm.away)}</div>
+          ${status}
+        </div>`;
+      }).join("");
+      const cd = (bannerNextKO && localDateStr(bannerNextKO) === todayStr)
+        ? `<span class="tb-count">next kickoff in ${cdSpan(bannerNextKO)}</span>` : "";
+      html = `<div class="tb-head"><span class="tb-title">⚽ Today's matches</span>${cd}</div>
+              <div class="tb-games">${games}</div>`;
+    } else if (bannerNextKO) {
+      const nx = upcoming[0];
+      html = `<div class="tb-head"><span class="tb-title">⚽ No matches today</span>
+              <span class="tb-count">next in ${cdSpan(bannerNextKO)}</span></div>
+              <div class="tb-empty">Next: ${esc(nx.home)} v ${esc(nx.away)} ·
+              ${localDateStr(nx.ko)} ${hhmm(nx.ko)}</div>`;
+    } else {
+      el.hidden = true; return;
+    }
+    el.innerHTML = html;
+    el.hidden = false;
+    tickCountdown();
+  }
+
+  function tickCountdown() {
+    document.querySelectorAll(".tb-cd").forEach(span => {
+      span.innerHTML = fmtCountdown(+span.getAttribute("data-ko") - Date.now());
+    });
+  }
+  setInterval(tickCountdown, 1000);
+
   // ── Loading ──
   function load() {
     const bust = "?_=" + Date.now();
@@ -736,7 +845,7 @@
 
     fetch("games.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(renderGames)
+      .then(d => { renderGames(d); renderTodayBanner(d); })
       .catch(err => {
         document.getElementById("games-container").innerHTML =
           `<p class="page-intro">Could not load games.json — run export.py first. (${err})</p>`;
