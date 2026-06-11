@@ -534,24 +534,6 @@
     }
     .nvb-dismiss:hover { color: #1b5e20; }
 
-    /* ── Share-my-rank button ── */
-    .share-btn {
-      background: #FFD700;
-      color: #1a2560;
-      border: none;
-      border-radius: 999px;
-      padding: 0.4rem 0.95rem;
-      font-weight: 700;
-      font-size: 0.82rem;
-      cursor: pointer;
-      letter-spacing: 0.02em;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .share-btn:hover { background: #ffe033; }
-    .share-btn:active { background: #ffd000; }
-
     /* ── Mobile improvements ── */
     @media (max-width: 600px) {
       /* Hide sparkline and % Max columns to let table fit without scrolling */
@@ -746,130 +728,6 @@
     "Group stage": "Group stage exit", "R32": "Round of 32", "R16": "Round of 16",
     "QF": "Quarter-final", "SF": "Semi-final", "Final": "Final", "Champion": "Champion"
   };
-
-  // ── Share-my-rank card ──
-  let currentShareTarget = null;   // { name, p } set when player detail opens
-
-  function shareCard() {
-    if (!currentShareTarget) return;
-    const { name, p } = currentShareTarget;
-    const SCALE = 2;               // retina
-    const CW = 600, CH = 315;      // logical pixels (Twitter card ratio)
-    const canvas = document.createElement("canvas");
-    canvas.width  = CW * SCALE;
-    canvas.height = CH * SCALE;
-    const ctx = canvas.getContext("2d");
-    ctx.scale(SCALE, SCALE);
-
-    const FONT = "'Segoe UI', Arial, sans-serif";
-
-    // Background gradient
-    const bg = ctx.createLinearGradient(0, 0, CW, CH);
-    bg.addColorStop(0, "#1a2560");
-    bg.addColorStop(1, "#2A398D");
-    ctx.fillStyle = bg;
-    ctx.fillRect(0, 0, CW, CH);
-
-    // Gold top stripe
-    ctx.fillStyle = "#FFD700";
-    ctx.fillRect(0, 0, CW, 5);
-
-    // Subtitle
-    ctx.font = `500 14px ${FONT}`;
-    ctx.fillStyle = "rgba(180,200,255,0.85)";
-    ctx.textAlign = "left";
-    ctx.fillText("FIFA World Cup 2026 · OPX Pool", 24, 30);
-
-    // Divider
-    ctx.fillStyle = "rgba(255,255,255,0.15)";
-    ctx.fillRect(24, 40, CW - 48, 1);
-
-    // Medal / rank badge
-    const medals = ["🥇", "🥈", "🥉"];
-    const medalColors = ["#FFD700", "#C0C0C0", "#CD7F32"];
-    if (p.rank >= 1 && p.rank <= 3) {
-      ctx.font = `60px ${FONT}`;
-      ctx.textAlign = "center";
-      ctx.fillText(medals[p.rank - 1], 66, 118);
-    } else {
-      // Circular badge
-      ctx.beginPath();
-      ctx.arc(66, 95, 36, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(255,255,255,0.15)";
-      ctx.fill();
-      ctx.font = `bold 26px ${FONT}`;
-      ctx.textAlign = "center";
-      ctx.fillStyle = "#FFD700";
-      ctx.fillText(`#${p.rank}`, 66, 103);
-    }
-
-    // Player name
-    ctx.font = `bold 28px ${FONT}`;
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#ffffff";
-    // Truncate long names
-    let displayName = name;
-    while (ctx.measureText(displayName).width > CW - 148 && displayName.length > 4)
-      displayName = displayName.slice(0, -1);
-    if (displayName !== name) displayName += "…";
-    ctx.fillText(displayName, 118, 83);
-
-    // Rank subtitle
-    const total = lbData ? lbData.rows.length : "?";
-    ctx.font = `15px ${FONT}`;
-    ctx.fillStyle = "rgba(200,215,255,0.7)";
-    ctx.fillText(`Rank ${p.rank} of ${total}`, 118, 105);
-
-    // Big points number
-    ctx.font = `bold 72px ${FONT}`;
-    ctx.fillStyle = "#FFD700";
-    const ptsStr = String(p.total ?? 0);
-    ctx.fillText(ptsStr, 118, 195);
-    const ptsW = ctx.measureText(ptsStr).width;
-    ctx.font = `bold 20px ${FONT}`;
-    ctx.fillStyle = "rgba(255,255,255,0.65)";
-    ctx.fillText("pts", 118 + ptsW + 6, 193);
-
-    // % of max
-    ctx.font = `14px ${FONT}`;
-    ctx.fillStyle = "rgba(200,215,255,0.6)";
-    ctx.fillText(`${((p.pctMax || 0) * 100).toFixed(1)}% of available max`, 118, 218);
-
-    // Points today (if any)
-    if ((p.pointsToday || 0) > 0) {
-      ctx.font = `bold 13px ${FONT}`;
-      ctx.fillStyle = "#9fe0a6";
-      ctx.fillText(`+${p.pointsToday} today`, 118, 238);
-    }
-
-    // Bottom footer bar
-    ctx.fillStyle = "rgba(0,0,0,0.35)";
-    ctx.fillRect(0, CH - 28, CW, 28);
-    ctx.font = `12px ${FONT}`;
-    ctx.textAlign = "center";
-    ctx.fillStyle = "rgba(160,180,230,0.7)";
-    ctx.fillText("andreaspanagos.github.io/WC-2026-OPX-leaderboard", CW / 2, CH - 10);
-
-    canvas.toBlob(blob => {
-      const safeName = name.replace(/[^a-zA-Z0-9]/g, "-");
-      const file = new File([blob], `wc2026-rank-${safeName}.png`, { type: "image/png" });
-      const url  = URL.createObjectURL(blob);
-      const fallback = () => {
-        const a = document.createElement("a");
-        a.href = url; a.download = file.name; a.click();
-      };
-      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        navigator.share({
-          title: `${name} — WC 2026 OPX · Rank #${p.rank}`,
-          text: `I’m ranked #${p.rank} with ${p.total} points in the OPX World Cup 2026 pool!`,
-          url: "https://andreaspanagos.github.io/WC-2026-OPX-leaderboard/",
-          files: [file],
-        }).catch(fallback);
-      } else {
-        fallback();
-      }
-    }, "image/png");
-  }
 
   function fmt(v) {
     if (v === null || v === undefined) return "—";
@@ -1291,7 +1149,6 @@
 
   function showPlayer(name) {
     if (!playersData || !playersData.detail[name]) return;
-    currentShareTarget = { name, p: playersData.detail[name] };
     renderPlayer(name, playersData.detail[name]);
     VIEWS.forEach(v => {
       document.getElementById("view-" + v).hidden = true;
@@ -1405,9 +1262,6 @@
           <div class="pd-stat"><div class="lbl">Group</div><div class="val">${fmt(p.group)}</div></div>
           <div class="pd-stat"><div class="lbl">Knockout</div><div class="val">${fmt(p.ko)}</div></div>
           <div class="pd-stat"><div class="lbl">Bonus</div><div class="val">${fmt(p.bonus)}</div></div>
-        </div>
-        <div style="margin-top:0.7rem">
-          <button class="share-btn" onclick="shareCard()">&#x1F4E4; Share my rank</button>
         </div>
       </div>
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
