@@ -494,6 +494,31 @@
       .game-teams { font-size: 0.85rem; }
       .team-row { grid-template-columns: minmax(90px, 120px) 1fr 3.4rem; }
     }
+
+    /* ── Last-visit new-results highlight ── */
+    tbody tr.row-new { background: #edfbf0 !important; }
+    tbody tr.row-new:hover { background: #d9f5e0 !important; }
+    .game-new > .game-summary { background: #f0faf2; }
+    .game-new > .game-summary:hover { background: #e4f7e8 !important; }
+    .game-new-label {
+      font-size: 0.63rem; font-weight: 800; color: #fff;
+      background: #1b8a3a; border-radius: 4px;
+      padding: 0.05rem 0.35rem; text-transform: uppercase; vertical-align: middle;
+    }
+    #new-visit-banner {
+      margin: 0.5rem 1rem 0;
+      background: #e8f5e9; border: 1px solid #a5d6a7;
+      color: #1b5e20; border-radius: 9px;
+      padding: 0.5rem 0.9rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.84rem; font-weight: 600;
+    }
+    .nvb-dismiss {
+      margin-left: auto; background: none; border: none;
+      cursor: pointer; color: #81c784; font-size: 1.2rem;
+      font-weight: 700; line-height: 1; padding: 0 0.1rem;
+    }
+    .nvb-dismiss:hover { color: #1b5e20; }
   </style>
 </head>
 <body>
@@ -523,6 +548,7 @@
   <div id="today-banner" hidden></div>
   <div id="podium-section" class="podium" hidden></div>
   <div id="movers-section" hidden></div>
+  <div id="new-visit-banner" hidden></div>
 
   <div class="table-wrap" hidden id="table-section">
     <table>
@@ -598,6 +624,54 @@
 </div>
 
 <script>
+  // ── Last-visit tracking ──
+  const LS_SNAP = "wc2026_snapshot";
+  const SS_KEY  = "wc2026_visit_session";
+  let prevSnap       = null;   // snapshot loaded from the previous visit
+  let isNewVisit     = false;  // true only on the first page-open of a browser session
+  let cachedGamesData = null;  // held so maybeSaveSnapshot can access both datasets
+  let newGamesCount  = 0;      // how many games became played since last visit
+
+  function gameKey(gm) { return gm.home + "__" + gm.away; }
+
+  function initVisitTracking() {
+    isNewVisit = !sessionStorage.getItem(SS_KEY);
+    sessionStorage.setItem(SS_KEY, "1");
+    if (isNewVisit) {
+      try {
+        const raw = localStorage.getItem(LS_SNAP);
+        if (raw) prevSnap = JSON.parse(raw);
+      } catch(e) {}
+    }
+  }
+
+  function maybeSaveSnapshot() {
+    if (!lbData || !cachedGamesData) return;
+    const scores = {};
+    lbData.rows.forEach(r => { scores[r.player] = r.total; });
+    const playedGames = {};
+    cachedGamesData.groups.forEach(g =>
+      g.games.forEach(gm => { if (gm.played) playedGames[gameKey(gm)] = true; })
+    );
+    try {
+      localStorage.setItem(LS_SNAP, JSON.stringify({
+        time: new Date().toISOString(), scores, playedGames
+      }));
+    } catch(e) {}
+  }
+
+  function showNewVisitBadge() {
+    if (!isNewVisit || !prevSnap || newGamesCount === 0) return;
+    const el = document.getElementById("new-visit-banner");
+    if (!el || !el.hidden) return;
+    const when = new Date(prevSnap.time);
+    const sinceStr = `${MONTHS[when.getMonth()]} ${when.getDate()}, ` +
+      `${String(when.getHours()).padStart(2, "0")}:${String(when.getMinutes()).padStart(2, "0")}`;
+    el.innerHTML = `<span>&#9989; ${newGamesCount} new result${newGamesCount > 1 ? "s" : ""} since your last visit (${sinceStr})</span>` +
+      `<button class="nvb-dismiss" onclick="this.parentElement.hidden=true" title="Dismiss">&times;</button>`;
+    el.hidden = false;
+  }
+
   const MEDALS = ["🥇","🥈","🥉"];
   const MEDAL_CLASS = ["gold","silver","bronze"];
   const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -732,6 +806,10 @@
           </div>
         </td>
       `;
+      if (isNewVisit && prevSnap && prevSnap.scores) {
+        const prevScore = prevSnap.scores[r.player];
+        if (prevScore !== undefined && r.total > prevScore) tr.classList.add("row-new");
+      }
       tr.onclick = () => {
         detail.hidden = !detail.hidden;
         tr.classList.toggle("open", !detail.hidden);
@@ -742,20 +820,55 @@
       tbody.appendChild(detail);
     });
 
+    renderMovers(rows);
     document.getElementById("status").hidden      = true;
     document.getElementById("table-section").hidden = false;
     renderHistory();
+    maybeSaveSnapshot();
+    showNewVisitBadge();
   }
 
-  // ── Rank-over-time: sparklines + biggest movers this week ──
-  // Both leaderboard.json and history.json load in parallel; renderHistory runs
-  // when each arrives and no-ops until both are present.
-  function dayMinus(dateStr, n) {
-    const d = new Date(dateStr + "T00:00:00");
-    d.setDate(d.getDate() - n);
-    return localDateStr(d);
+  // ── Biggest movers today ──
+  // Rank movement vs the start-of-today baseline, already baked into each row as
+  // prevRank / pointsToday (see export.py). No history needed for this summary.
+  function renderMovers(rows) {
+    const el = document.getElementById("movers-section");
+    const movers = [];
+    rows.forEach(r => {
+      if (r.prevRank == null || r.rank == null) return;
+      const delta = r.prevRank - r.rank;        // positive = climbed today
+      if (delta !== 0)
+        movers.push({ name: r.player, delta, from: r.prevRank, to: r.rank, pts: r.pointsToday || 0 });
+    });
+    if (!movers.length) { el.hidden = true; return; }
+    const up = movers.filter(m => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 5);
+    const down = movers.filter(m => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 5);
+
+    const chip = (m, cls) => `<div class="mv-chip">
+        <span class="mv-name" data-player="${esc(m.name)}">${esc(m.name)}</span>
+        <span class="mv-delta ${cls}">${cls === "up" ? "▲ +" + m.delta : "▼ " + m.delta}</span>
+        <span class="mv-ranks">#${m.from}→#${m.to}${m.pts ? " · +" + m.pts + " pts" : ""}</span>
+      </div>`;
+    const col = (title, list, cls) => `<div class="mv-col"><h4>${title}</h4>` +
+      (list.length ? list.map(m => chip(m, cls)).join("")
+                   : `<div class="mv-none">No movement</div>`) + `</div>`;
+
+    el.innerHTML = `<div class="mv-head">
+        <span class="mv-title">📈 Biggest movers today</span>
+        <span class="mv-since">vs start of today</span>
+      </div>
+      <div class="mv-cols">
+        ${col("Climbing ▲", up, "up")}
+        ${col("Falling ▼", down, "down")}
+      </div>`;
+    el.querySelectorAll(".mv-name").forEach(s =>
+      s.onclick = () => showPlayer(s.getAttribute("data-player")));
+    el.hidden = false;
   }
 
+  // ── Rank-over-time sparklines ──
+  // leaderboard.json and history.json load in parallel; renderHistory runs when
+  // each arrives and no-ops until both are present.
   function sparklineSvg(player, totalPlayers) {
     const win = (historyData.days || []).slice(-14);
     const n = win.length;
@@ -780,56 +893,12 @@
       `<circle class="sp-dot-${dir}" cx="${lp[0].toFixed(1)}" cy="${lp[1].toFixed(1)}" r="2"/></svg>`;
   }
 
-  function renderMovers(days) {
-    const el = document.getElementById("movers-section");
-    if (days.length < 2) { el.hidden = true; return; }
-    const cur = days[days.length - 1];
-    const sinceStr = dayMinus(cur.date, 7);
-    // Closest snapshot on or before a week ago; else the earliest we have.
-    let past = days[0];
-    for (const d of days) { if (d.date <= sinceStr) past = d; else break; }
-    if (past.date === cur.date) { el.hidden = true; return; }
-
-    const movers = [];
-    for (const name in cur.standings) {
-      const c = cur.standings[name], p = past.standings[name];
-      if (!p || c.rank == null || p.rank == null) continue;
-      const delta = p.rank - c.rank;        // positive = climbed
-      if (delta !== 0) movers.push({ name, delta, from: p.rank, to: c.rank });
-    }
-    const up = movers.filter(m => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 5);
-    const down = movers.filter(m => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 5);
-
-    const chip = (m, cls) => `<div class="mv-chip">
-        <span class="mv-name" data-player="${esc(m.name)}">${esc(m.name)}</span>
-        <span class="mv-delta ${cls}">${cls === "up" ? "▲ +" + m.delta : "▼ " + m.delta}</span>
-        <span class="mv-ranks">#${m.from}→#${m.to}</span>
-      </div>`;
-    const col = (title, list, cls) => `<div class="mv-col"><h4>${title}</h4>` +
-      (list.length ? list.map(m => chip(m, cls)).join("")
-                   : `<div class="mv-none">No movement</div>`) + `</div>`;
-
-    el.innerHTML = `<div class="mv-head">
-        <span class="mv-title">📈 Biggest movers this week</span>
-        <span class="mv-since">vs ${esc(past.date)}</span>
-      </div>
-      <div class="mv-cols">
-        ${col("Climbing ▲", up, "up")}
-        ${col("Falling ▼", down, "down")}
-      </div>`;
-    el.querySelectorAll(".mv-name").forEach(s =>
-      s.onclick = () => showPlayer(s.getAttribute("data-player")));
-    el.hidden = false;
-  }
-
   function renderHistory() {
     if (!lbData || !historyData) return;
-    const days = historyData.days || [];
     const totalPlayers = lbData.rows.length;
     for (const player in trendCells) {
       trendCells[player].innerHTML = sparklineSvg(player, totalPlayers);
     }
-    renderMovers(days);
   }
 
   // ── Games ──
@@ -854,15 +923,16 @@
     return html;
   }
 
-  function gameHtml(gm) {
+  function gameHtml(gm, isNew) {
+    const newLabel = isNew ? ` <span class="game-new-label">new</span>` : "";
     const center = gm.played
       ? `<span class="t-home">${esc(gm.home)}</span>` +
         `<span class="game-score">${gm.actual.hg}&ndash;${gm.actual.ag}</span>` +
-        `<span class="t-away">${esc(gm.away)}</span>`
+        `<span class="t-away">${esc(gm.away)}</span>` + newLabel
       : `<span class="t-home">${esc(gm.home)}</span><span class="vs">vs</span>` +
         `<span class="t-away">${esc(gm.away)}</span> <span class="badge-upcoming">upcoming</span>`;
     return `
-      <div class="game">
+      <div class="game${isNew ? " game-new" : ""}">
         <div class="game-summary" onclick="toggleGame(this)">
           <span class="game-date">${shortDate(gm.kickoff)}</span>
           <span class="game-teams">${center}</span>
@@ -873,6 +943,15 @@
   }
 
   function renderGames(data) {
+    cachedGamesData = data;
+    const newGames = new Set();
+    if (isNewVisit && prevSnap && prevSnap.playedGames) {
+      data.groups.forEach(g => g.games.forEach(gm => {
+        if (gm.played && !prevSnap.playedGames[gameKey(gm)]) newGames.add(gameKey(gm));
+      }));
+    }
+    newGamesCount = newGames.size;
+
     const c = document.getElementById("games-container");
     c.innerHTML = "";
     data.groups.forEach(g => {
@@ -887,9 +966,11 @@
         (g.actualWinner ? `<span class="head-chip">🏆 ${esc(g.actualWinner)}</span>` : "") +
         `</div>` +
         `<div class="winner-picks"><span class="wp-label">Winner picks:</span>${pickPills}</div>` +
-        g.games.map(gameHtml).join("");
+        g.games.map(gm => gameHtml(gm, newGames.has(gameKey(gm)))).join("");
       c.appendChild(sec);
     });
+    maybeSaveSnapshot();
+    showNewVisitBadge();
   }
 
   // ── Team journeys ──
@@ -1277,6 +1358,7 @@
       });
   }
 
+  initVisitTracking();
   load();
   setInterval(load, 60_000);
 </script>
