@@ -1,18 +1,33 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-11 10:19",
+    "lastRefresh": "2026-06-11 17:32",
     "maxPoints": 729,
-    "participants": 8
+    "participants": 23
   },
   "players": [
+    "Filippa Rosell",
     "Jacob Cederberg",
+    "Lukas Källén",
+    "Solveig",
     "Alex J",
+    "Andreas Panagos",
+    "Anna",
+    "Boris",
+    "Christoffer",
     "Dani",
+    "Daniel",
+    "David",
+    "Ebba Lindström",
     "Ebba Wikström",
+    "Ebba Örtenblad",
+    "Elin",
     "Gustaf L",
     "Jakob Hägglund",
     "Johan Leijonhielm",
-    "Oscar Hultefors"
+    "Tim",
+    "Oscar Hultefors",
+    "Petra",
+    "Rickard"
   ],
   "groups": [
     {
@@ -22,17 +37,40 @@
       "winnerPicks": [
         {
           "team": "Mexico",
-          "count": 8,
-          "pct": 100,
+          "count": 20,
+          "pct": 87,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Korea Republic",
+          "count": 3,
+          "pct": 13,
+          "players": [
+            "Andreas Panagos",
+            "Ebba Örtenblad",
+            "Elin"
           ],
           "correct": null
         }
@@ -47,18 +85,57 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 8,
-              "pct": 100,
+              "count": 18,
+              "pct": 78,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Daniel",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "David",
+                "Ebba Örtenblad",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Petra"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -73,26 +150,81 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 7,
-              "pct": 88,
+              "count": 13,
+              "pct": 57,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Christoffer",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
                 "Gustaf L",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Anna",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Boris",
+                "Ebba Örtenblad",
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
               ]
             },
             {
               "score": "2–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -106,43 +238,74 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "2–1",
+              "count": 7,
+              "pct": 30,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Anna",
+                "Dani",
+                "Daniel",
+                "Jakob Hägglund",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Lukas Källén",
+                "Alex J",
+                "Andreas Panagos",
+                "Christoffer",
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Elin",
+                "Johan Leijonhielm"
+              ]
+            },
+            {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Boris",
                 "Gustaf L",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "1–1",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Ebba Wikström",
-                "Johan Leijonhielm"
-              ]
-            },
-            {
-              "score": "2–1",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Dani",
-                "Jakob Hägglund"
-              ]
-            },
-            {
-              "score": "1–0",
+              "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Alex J"
+                "Tim"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "David"
               ]
             }
           ],
@@ -157,37 +320,85 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Solveig",
+                "Anna",
                 "Dani",
+                "David",
+                "Ebba Lindström",
                 "Gustaf L",
-                "Jakob Hägglund"
-              ]
-            },
-            {
-              "score": "1–0",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg"
+                "Jakob Hägglund",
+                "Petra",
+                "Rickard"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Andreas Panagos",
+                "Boris",
+                "Daniel",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "0–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
               ]
             },
             {
               "score": "2–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Johan Leijonhielm"
@@ -196,19 +407,10 @@
             {
               "score": "2–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
-              ]
-            },
-            {
-              "score": "3–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Ebba Wikström"
               ]
             }
           ],
@@ -222,51 +424,66 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–1",
+              "count": 8,
+              "pct": 35,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Christoffer",
+                "David",
+                "Ebba Lindström",
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Tim",
+                "Petra"
+              ]
+            },
+            {
               "score": "1–2",
-              "count": 4,
-              "pct": 50,
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "Elin",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "score": "0–2",
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Filippa Rosell",
+                "Lukas Källén",
+                "Andreas Panagos",
+                "Johan Leijonhielm"
               ]
             },
             {
-              "score": "0–2",
-              "count": 1,
-              "pct": 12,
+              "score": "1–1",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Johan Leijonhielm"
+                "Jakob Hägglund",
+                "Rickard"
               ]
             },
             {
               "score": "0–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
-              ]
-            },
-            {
-              "score": "1–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Jakob Hägglund"
               ]
             }
           ],
@@ -280,43 +497,74 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–2",
+              "count": 9,
+              "pct": 39,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Boris",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Gustaf L",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Jacob Cederberg",
+                "Christoffer",
+                "Elin",
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Alex J",
+                "Anna",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–1",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg",
-                "Jakob Hägglund"
-              ]
-            },
-            {
-              "score": "0–2",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Ebba Wikström",
-                "Gustaf L"
-              ]
-            },
-            {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Lukas Källén",
                 "Dani"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -331,25 +579,48 @@
       "winnerPicks": [
         {
           "team": "Switzerland",
-          "count": 7,
-          "pct": 88,
+          "count": 19,
+          "pct": 83,
           "players": [
             "Jacob Cederberg",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         },
         {
           "team": "Canada",
-          "count": 1,
-          "pct": 12,
+          "count": 3,
+          "pct": 13,
           "players": [
-            "Dani"
+            "Filippa Rosell",
+            "Dani",
+            "Daniel"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Qatar",
+          "count": 1,
+          "pct": 4,
+          "players": [
+            "Lukas Källén"
           ],
           "correct": null
         }
@@ -363,43 +634,82 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "1–1",
-              "count": 3,
-              "pct": 38,
-              "pts": null,
-              "players": [
-                "Jakob Hägglund",
-                "Johan Leijonhielm",
-                "Oscar Hultefors"
-              ]
-            },
-            {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Anna",
+                "Daniel",
+                "David",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Gustaf L"
               ]
             },
             {
-              "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "score": "1–1",
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Solveig",
+                "Jakob Hägglund",
+                "Johan Leijonhielm",
+                "Oscar Hultefors",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
-                "Dani"
+                "Boris",
+                "Dani",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Ebba Lindström",
+                "Tim"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Lukas Källén",
                 "Alex J"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -413,35 +723,74 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–2",
+              "count": 9,
+              "pct": 39,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Dani",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
+                "Johan Leijonhielm",
+                "Petra"
+              ]
+            },
+            {
               "score": "0–3",
-              "count": 4,
-              "pct": 50,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Alex J",
+                "Christoffer",
+                "David",
                 "Ebba Wikström",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
-              "score": "0–2",
+              "score": "0–1",
               "count": 3,
-              "pct": 38,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jacob Cederberg",
-                "Dani",
-                "Johan Leijonhielm"
+                "Filippa Rosell",
+                "Andreas Panagos",
+                "Tim"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Daniel",
+                "Elin",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -455,35 +804,82 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "2–0",
+              "count": 9,
+              "pct": 39,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Solveig",
+                "Boris",
+                "Christoffer",
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Elin",
+                "Johan Leijonhielm",
+                "Petra"
+              ]
+            },
+            {
               "score": "2–1",
-              "count": 4,
-              "pct": 50,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Alex J",
                 "Dani",
+                "Daniel",
                 "Gustaf L",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "2–0",
+              "score": "1–0",
               "count": 3,
-              "pct": 38,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jacob Cederberg",
-                "Ebba Wikström",
-                "Johan Leijonhielm"
+                "Ebba Lindström",
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
-              "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "score": "1–1",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Filippa Rosell",
+                "Lukas Källén",
+                "David"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Anna"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -498,55 +894,78 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Boris",
+                "Christoffer",
                 "Ebba Wikström",
                 "Jakob Hägglund"
               ]
             },
             {
-              "score": "1–0",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Alex J"
-              ]
-            },
-            {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
-                "Johan Leijonhielm"
+                "Lukas Källén",
+                "Anna",
+                "Elin",
+                "Johan Leijonhielm",
+                "Petra"
               ]
             },
             {
               "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Andreas Panagos",
+                "Daniel",
+                "Ebba Örtenblad",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "3–0",
-              "count": 1,
-              "pct": 12,
+              "score": "1–0",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Dani"
+                "Filippa Rosell",
+                "Alex J",
+                "Tim"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Dani",
+                "David",
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             },
             {
               "score": "3–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
@@ -564,42 +983,65 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Andreas Panagos",
+                "Anna",
+                "Christoffer",
+                "David",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
-              "score": "1–1",
-              "count": 2,
-              "pct": 25,
+              "score": "1–0",
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Jacob Cederberg",
+                "Solveig",
+                "Elin",
+                "Tim",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Boris",
                 "Dani",
+                "Daniel",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
                 "Alex J",
-                "Johan Leijonhielm"
+                "Johan Leijonhielm",
+                "Rickard"
               ]
             },
             {
-              "score": "1–0",
+              "score": "2–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Jacob Cederberg"
+                "Lukas Källén"
               ]
             }
           ],
@@ -614,47 +1056,94 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Andreas Panagos",
+                "Boris",
                 "Gustaf L",
-                "Johan Leijonhielm"
-              ]
-            },
-            {
-              "score": "2–0",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Dani",
-                "Jakob Hägglund"
+                "Johan Leijonhielm",
+                "Rickard"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Christoffer",
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Daniel",
+                "David",
+                "Petra"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Dani",
+                "Ebba Lindström",
+                "Jakob Hägglund"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Anna",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             },
             {
               "score": "3–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
@@ -672,17 +1161,32 @@
       "winnerPicks": [
         {
           "team": "Brazil",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -696,51 +1200,82 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "2–0",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg",
-                "Gustaf L"
-              ]
-            },
-            {
               "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Daniel",
                 "Ebba Wikström",
-                "Jakob Hägglund"
+                "Elin",
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
               "score": "3–1",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Alex J",
-                "Dani"
+                "Christoffer",
+                "Dani",
+                "David",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Ebba Örtenblad",
+                "Gustaf L"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Ebba Lindström",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "4–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -755,20 +1290,38 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 4,
-              "pct": 50,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
+                "Solveig",
                 "Alex J",
+                "Anna",
                 "Dani",
+                "Daniel",
+                "Ebba Lindström",
+                "Elin",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Ebba Wikström",
+                "Rickard"
               ]
             },
             {
               "score": "1–1",
               "count": 3,
-              "pct": 38,
+              "pct": 13,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
@@ -777,12 +1330,33 @@
               ]
             },
             {
-              "score": "0–3",
-              "count": 1,
-              "pct": 12,
+              "score": "1–2",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Boris",
+                "David",
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -796,43 +1370,74 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "score": "1–2",
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Anna",
+                "Christoffer",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Ebba Wikström",
+                "Elin",
+                "Jakob Hägglund",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Lukas Källén",
+                "Gustaf L",
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Solveig",
                 "Alex J",
                 "Dani",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–1",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg",
-                "Gustaf L"
-              ]
-            },
-            {
-              "score": "1–2",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Ebba Wikström",
-                "Jakob Hägglund"
-              ]
-            },
-            {
               "score": "0–2",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Johan Leijonhielm"
+                "Boris",
+                "Johan Leijonhielm",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
               ]
             }
           ],
@@ -847,26 +1452,89 @@
           "scorelines": [
             {
               "score": "4–0",
-              "count": 5,
-              "pct": 62,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Alex J",
+                "Christoffer",
                 "Dani",
+                "David",
                 "Ebba Wikström",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
+              "score": "3–0",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Daniel",
+                "Ebba Örtenblad"
+              ]
+            },
+            {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
+              "score": "5–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "5–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "7–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -881,34 +1549,73 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 6,
-              "pct": 75,
+              "count": 14,
+              "pct": 61,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
                 "Ebba Wikström",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Tim"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Rickard"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Elin",
                 "Gustaf L"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -923,34 +1630,73 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "Ebba Örtenblad",
                 "Jakob Hägglund",
-                "Johan Leijonhielm"
+                "Johan Leijonhielm",
+                "Tim",
+                "Petra"
               ]
             },
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Alex J",
+                "Andreas Panagos",
+                "David",
+                "Ebba Lindström",
                 "Ebba Wikström",
                 "Gustaf L"
               ]
             },
             {
               "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Elin",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -965,25 +1711,48 @@
       "winnerPicks": [
         {
           "team": "USA",
-          "count": 5,
-          "pct": 62,
+          "count": 13,
+          "pct": 57,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Solveig",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "David",
             "Gustaf L",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra"
           ],
           "correct": null
         },
         {
           "team": "Turkey",
-          "count": 3,
-          "pct": 38,
+          "count": 9,
+          "pct": 39,
           "players": [
             "Alex J",
+            "Andreas Panagos",
+            "Daniel",
+            "Ebba Lindström",
             "Ebba Wikström",
-            "Jakob Hägglund"
+            "Ebba Örtenblad",
+            "Elin",
+            "Jakob Hägglund",
+            "Rickard"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Australia",
+          "count": 1,
+          "pct": 4,
+          "players": [
+            "Lukas Källén"
           ],
           "correct": null
         }
@@ -998,47 +1767,78 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Christoffer",
+                "Daniel",
+                "Elin",
                 "Gustaf L",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
+              "score": "2–1",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Boris",
+                "Dani",
+                "David",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Ebba Lindström",
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Ebba Örtenblad",
+                "Rickard"
+              ]
+            },
+            {
               "score": "0–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
               ]
             },
             {
-              "score": "1–0",
+              "score": "1–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
-              ]
-            },
-            {
-              "score": "2–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Dani"
+                "Lukas Källén"
               ]
             },
             {
               "score": "3–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
@@ -1055,43 +1855,82 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "score": "1–2",
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
+                "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
+                "Anna",
+                "Christoffer",
+                "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Elin",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Alex J",
+                "Boris",
+                "Ebba Örtenblad",
+                "Jakob Hägglund"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
                 "Gustaf L",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–2",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Alex J",
-                "Jakob Hägglund"
-              ]
-            },
-            {
-              "score": "1–2",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg",
-                "Dani"
-              ]
-            },
-            {
               "score": "0–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "0–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -1106,34 +1945,73 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Andreas Panagos",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
                 "Ebba Wikström",
-                "Johan Leijonhielm"
+                "Johan Leijonhielm",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Alex J",
+                "Ebba Lindström",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Daniel",
+                "Ebba Örtenblad",
+                "Elin",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "David"
               ]
             }
           ],
@@ -1147,43 +2025,90 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "2–1",
+              "count": 11,
+              "pct": 48,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Daniel",
+                "David",
+                "Ebba Örtenblad",
+                "Elin",
+                "Gustaf L",
+                "Jakob Hägglund",
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
                 "Dani",
-                "Ebba Wikström"
-              ]
-            },
-            {
-              "score": "2–1",
-              "count": 3,
-              "pct": 38,
-              "pts": null,
-              "players": [
-                "Gustaf L",
-                "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Ebba Wikström",
+                "Rickard"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Christoffer",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "0–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -1198,29 +2123,39 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Elin",
                 "Jakob Hägglund"
               ]
             },
             {
               "score": "1–2",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Lukas Källén",
                 "Gustaf L",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "2–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Alex J",
@@ -1228,12 +2163,49 @@
               ]
             },
             {
+              "score": "2–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
               "score": "0–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
               ]
             }
           ],
@@ -1248,42 +2220,73 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 5,
-              "pct": 62,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
                 "Dani",
+                "Daniel",
+                "Ebba Lindström",
                 "Ebba Wikström",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Boris",
+                "Ebba Örtenblad",
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Lukas Källén",
+                "Elin",
                 "Gustaf L"
               ]
             },
             {
-              "score": "2–0",
-              "count": 1,
-              "pct": 12,
+              "score": "2–1",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Alex J"
+                "Anna",
+                "David",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Alex J",
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -1298,17 +2301,32 @@
       "winnerPicks": [
         {
           "team": "Germany",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -1323,42 +2341,73 @@
           "scorelines": [
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
+                "Lukas Källén",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Dani",
-                "Oscar Hultefors"
+                "Daniel",
+                "Ebba Örtenblad",
+                "Tim",
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Elin",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "5–0",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "David",
+                "Ebba Lindström",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
               "score": "4–0",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Andreas Panagos",
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "6–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "7–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -1373,34 +2422,81 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 6,
-              "pct": 75,
+              "count": 16,
+              "pct": 70,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Tim"
               ]
             },
             {
               "score": "0–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
               ]
             },
             {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -1415,34 +2511,65 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 4,
-              "pct": 50,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "Elin",
                 "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Andreas Panagos",
+                "David",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "score": "1–0",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Tim"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Christoffer",
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Rickard"
               ]
             }
           ],
@@ -1457,21 +2584,31 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
                 "Alex J",
-                "Dani"
+                "Anna",
+                "Boris",
+                "Dani",
+                "Tim",
+                "Petra"
               ]
             },
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Andreas Panagos",
+                "Christoffer",
+                "Daniel",
+                "David",
                 "Ebba Wikström",
                 "Gustaf L",
                 "Jakob Hägglund"
@@ -1479,20 +2616,49 @@
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Ebba Örtenblad",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Elin"
               ]
             },
             {
               "score": "1–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "5–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -1507,39 +2673,70 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 5,
-              "pct": 62,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Boris",
                 "Dani",
+                "Daniel",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
-              "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "score": "0–3",
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
-                "Oscar Hultefors"
+                "Christoffer",
+                "David",
+                "Ebba Lindström",
+                "Tim",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Anna",
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             },
             {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
@@ -1557,50 +2754,89 @@
           "scorelines": [
             {
               "score": "1–2",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "Ebba Lindström",
                 "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "0–2",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Christoffer",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Andreas Panagos",
+                "David",
+                "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "1–4",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Rickard"
               ]
             },
             {
               "score": "0–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
               ]
             },
             {
-              "score": "1–1",
+              "score": "0–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Tim"
               ]
             },
             {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
               ]
             }
           ],
@@ -1615,23 +2851,46 @@
       "winnerPicks": [
         {
           "team": "Netherlands",
-          "count": 7,
-          "pct": 88,
+          "count": 20,
+          "pct": 87,
           "players": [
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Japan",
+          "count": 2,
+          "pct": 9,
+          "players": [
+            "Filippa Rosell",
+            "Andreas Panagos"
           ],
           "correct": null
         },
         {
           "team": "Sweden",
           "count": 1,
-          "pct": 12,
+          "pct": 4,
           "players": [
             "Gustaf L"
           ],
@@ -1648,42 +2907,81 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 5,
-              "pct": 62,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Ebba Örtenblad",
+                "Elin",
                 "Gustaf L",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Christoffer",
+                "David",
+                "Ebba Lindström",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "2–0",
-              "count": 1,
-              "pct": 12,
+              "score": "3–1",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Daniel",
+                "Ebba Wikström",
+                "Rickard"
               ]
             },
             {
-              "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "score": "2–0",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Jakob Hägglund",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -1697,48 +2995,63 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "2–1",
-              "count": 3,
-              "pct": 38,
-              "pts": null,
-              "players": [
-                "Ebba Wikström",
-                "Gustaf L",
-                "Jakob Hägglund"
-              ]
-            },
-            {
               "score": "1–0",
-              "count": 2,
-              "pct": 25,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
-                "Alex J"
+                "Lukas Källén",
+                "Alex J",
+                "Andreas Panagos",
+                "Ebba Lindström",
+                "Tim"
               ]
             },
             {
-              "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "score": "2–1",
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
-                "Johan Leijonhielm"
+                "Christoffer",
+                "David",
+                "Ebba Wikström",
+                "Elin",
+                "Gustaf L",
+                "Jakob Hägglund",
+                "Petra"
               ]
             },
             {
               "score": "2–0",
-              "count": 1,
-              "pct": 12,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Daniel",
+                "Ebba Örtenblad",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Johan Leijonhielm",
+                "Rickard"
               ]
             },
             {
               "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Dani"
@@ -1755,59 +3068,82 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "2–1",
+              "count": 8,
+              "pct": 35,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Boris",
+                "Christoffer",
+                "Dani",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
                 "Ebba Wikström",
+                "Elin",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "1–0",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Jakob Hägglund"
-              ]
-            },
-            {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Solveig",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "score": "3–1",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Dani"
+                "Alex J",
+                "Andreas Panagos",
+                "David"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Daniel"
               ]
             },
             {
               "score": "2–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
-              ]
-            },
-            {
-              "score": "3–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Alex J"
               ]
             }
           ],
@@ -1821,35 +3157,82 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–1",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Boris",
+                "Christoffer",
+                "Ebba Lindström",
+                "Ebba Wikström",
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
               "score": "0–2",
-              "count": 5,
-              "pct": 62,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
                 "Alex J",
                 "Dani",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "0–1",
-              "count": 2,
-              "pct": 25,
+              "score": "1–1",
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
-                "Ebba Wikström",
-                "Jakob Hägglund"
+                "Solveig",
+                "Anna",
+                "Daniel",
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
-              "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "score": "0–3",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Oscar Hultefors"
+                "David",
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -1864,42 +3247,89 @@
           "scorelines": [
             {
               "score": "1–2",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Anna",
                 "Dani",
+                "Daniel",
                 "Gustaf L",
-                "Oscar Hultefors"
-              ]
-            },
-            {
-              "score": "1–1",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Ebba Wikström",
-                "Jakob Hägglund"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
-                "Alex J"
+                "Alex J",
+                "Andreas Panagos",
+                "David",
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Boris",
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Jakob Hägglund"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Tim"
               ]
             },
             {
               "score": "2–0",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Elin",
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Solveig"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -1914,26 +3344,65 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 4,
-              "pct": 50,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Christoffer",
+                "Daniel",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "0–3",
-              "count": 4,
-              "pct": 50,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Andreas Panagos",
                 "Dani",
                 "Ebba Wikström",
                 "Gustaf L",
                 "Jakob Hägglund"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "David",
+                "Elin",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -1948,17 +3417,32 @@
       "winnerPicks": [
         {
           "team": "Belgium",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -1973,20 +3457,41 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Andreas Panagos",
+                "Boris",
+                "Daniel",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 8,
+              "pct": 35,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Anna",
+                "Dani",
+                "David",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
+                "Elin",
+                "Rickard"
               ]
             },
             {
               "score": "3–0",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Ebba Wikström",
@@ -1994,21 +3499,31 @@
               ]
             },
             {
-              "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "score": "3–1",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Dani"
+                "Alex J",
+                "Christoffer"
               ]
             },
             {
-              "score": "3–1",
+              "score": "1–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Alex J"
+                "Tim"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2023,34 +3538,73 @@
           "scorelines": [
             {
               "score": "1–0",
-              "count": 4,
-              "pct": 50,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Ebba Lindström",
                 "Ebba Wikström",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim",
+                "Petra",
+                "Rickard"
               ]
             },
             {
               "score": "1–1",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "David",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Christoffer",
                 "Dani",
+                "Ebba Örtenblad",
                 "Gustaf L"
+              ]
+            },
+            {
+              "score": "0–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Daniel"
               ]
             }
           ],
@@ -2065,13 +3619,17 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 6,
-              "pct": 75,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Ebba Wikström",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund",
                 "Johan Leijonhielm"
@@ -2079,12 +3637,31 @@
             },
             {
               "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Solveig",
                 "Dani",
-                "Oscar Hultefors"
+                "Daniel",
+                "Ebba Lindström",
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Christoffer",
+                "David",
+                "Ebba Örtenblad",
+                "Tim",
+                "Rickard"
               ]
             }
           ],
@@ -2099,42 +3676,81 @@
           "scorelines": [
             {
               "score": "0–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Andreas Panagos",
+                "Boris",
+                "Ebba Lindström",
                 "Ebba Wikström",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Christoffer",
+                "Daniel",
+                "David",
+                "Ebba Örtenblad",
+                "Elin"
               ]
             },
             {
               "score": "1–1",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Solveig",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "1–2",
-              "count": 2,
-              "pct": 25,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Dani",
                 "Gustaf L"
               ]
             },
             {
+              "score": "0–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2149,12 +3765,15 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 6,
-              "pct": 75,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Daniel",
                 "Ebba Wikström",
                 "Gustaf L",
                 "Johan Leijonhielm",
@@ -2163,12 +3782,64 @@
             },
             {
               "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Alex J",
-                "Jakob Hägglund"
+                "Andreas Panagos",
+                "Anna",
+                "Elin",
+                "Jakob Hägglund",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "David",
+                "Ebba Lindström",
+                "Tim"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Solveig"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2182,35 +3853,90 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "0–2",
-              "count": 4,
-              "pct": 50,
+              "score": "0–3",
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Solveig",
+                "Boris",
+                "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Jakob Hägglund",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
                 "Alex J",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–3",
-              "count": 2,
-              "pct": 25,
+              "score": "0–4",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Dani",
-                "Jakob Hägglund"
+                "Andreas Panagos",
+                "Ebba Wikström",
+                "Gustaf L"
               ]
             },
             {
-              "score": "0–4",
-              "count": 2,
-              "pct": 25,
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Ebba Wikström",
-                "Gustaf L"
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Anna"
+              ]
+            },
+            {
+              "score": "1–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2225,17 +3951,32 @@
       "winnerPicks": [
         {
           "team": "Spain",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -2250,42 +3991,81 @@
           "scorelines": [
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Örtenblad",
                 "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Alex J",
+                "Christoffer",
+                "Ebba Lindström",
+                "Gustaf L",
+                "Tim"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "4–0",
+              "score": "4–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J",
-                "Gustaf L"
+                "Lukas Källén",
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Elin"
               ]
             },
             {
               "score": "5–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "7–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -2300,34 +4080,73 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 4,
-              "pct": 50,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Christoffer",
+                "Daniel",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "0–1",
-              "count": 3,
-              "pct": 38,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Alex J",
                 "Dani",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim",
+                "Petra"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Ebba Lindström",
+                "Elin",
                 "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "David",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -2342,26 +4161,65 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 5,
-              "pct": 62,
+              "count": 15,
+              "pct": 65,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
+                "Anna",
                 "Dani",
+                "Daniel",
+                "David",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
+                "Elin",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Tim",
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Alex J",
+                "Andreas Panagos",
+                "Boris",
                 "Ebba Wikström",
                 "Gustaf L"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Christoffer"
               ]
             }
           ],
@@ -2376,34 +4234,81 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 6,
-              "pct": 75,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Andreas Panagos",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "David",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "score": "1–0",
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Ebba Lindström",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Daniel",
+                "Ebba Örtenblad",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Anna",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "4–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -2418,26 +4323,89 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 7,
-              "pct": 88,
+              "count": 14,
+              "pct": 61,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Daniel",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Elin",
                 "Gustaf L",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "David",
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "0–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "0–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Anna"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2452,42 +4420,89 @@
           "scorelines": [
             {
               "score": "1–2",
-              "count": 4,
-              "pct": 50,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Christoffer",
+                "Daniel",
+                "David",
+                "Ebba Örtenblad",
+                "Elin",
                 "Jakob Hägglund",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "0–2",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
+                "Boris",
                 "Dani",
-                "Johan Leijonhielm"
+                "Johan Leijonhielm",
+                "Petra"
               ]
             },
             {
               "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Gustaf L"
+                "Gustaf L",
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             },
             {
               "score": "2–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "2–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             }
           ],
@@ -2502,17 +4517,40 @@
       "winnerPicks": [
         {
           "team": "France",
-          "count": 8,
-          "pct": 100,
+          "count": 21,
+          "pct": 91,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Norway",
+          "count": 2,
+          "pct": 9,
+          "players": [
+            "Andreas Panagos",
+            "Tim"
           ],
           "correct": null
         }
@@ -2527,42 +4565,73 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 4,
-              "pct": 50,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Anna",
+                "Boris",
                 "Dani",
+                "Ebba Örtenblad",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Petra"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Daniel",
+                "David",
                 "Ebba Wikström",
-                "Johan Leijonhielm"
-              ]
-            },
-            {
-              "score": "3–0",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Oscar Hultefors"
+                "Johan Leijonhielm",
+                "Tim"
               ]
             },
             {
               "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Christoffer",
+                "Elin"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
               ]
             }
           ],
@@ -2577,34 +4646,89 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 4,
-              "pct": 50,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Dani",
-                "Jakob Hägglund"
+                "Daniel",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
+                "Elin",
+                "Jakob Hägglund",
+                "Rickard"
               ]
             },
             {
               "score": "0–3",
-              "count": 2,
-              "pct": 25,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Christoffer",
                 "Ebba Wikström",
                 "Gustaf L"
               ]
             },
             {
+              "score": "0–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Tim",
+                "Petra"
+              ]
+            },
+            {
               "score": "1–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "0–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "David"
               ]
             }
           ],
@@ -2619,47 +4743,70 @@
           "scorelines": [
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Jakob Hägglund"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
-                "Johan Leijonhielm"
+                "Lukas Källén",
+                "Andreas Panagos",
+                "Johan Leijonhielm",
+                "Petra"
               ]
             },
             {
               "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Daniel",
+                "Elin",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "4–0",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "David",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
               ]
             },
             {
               "score": "5–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
@@ -2677,42 +4824,89 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Ebba Örtenblad",
+                "Elin",
                 "Jakob Hägglund",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "2–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Christoffer",
                 "Dani",
+                "Daniel",
                 "Gustaf L"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
+                "Ebba Lindström",
+                "Tim",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "David"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Petra"
               ]
             },
             {
               "score": "2–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2727,19 +4921,38 @@
           "scorelines": [
             {
               "score": "1–2",
-              "count": 3,
-              "pct": 38,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Daniel",
+                "Elin",
                 "Gustaf L"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Ebba Örtenblad",
+                "Johan Leijonhielm",
+                "Petra",
+                "Rickard"
               ]
             },
             {
               "score": "0–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Jakob Hägglund",
@@ -2747,30 +4960,50 @@
               ]
             },
             {
-              "score": "0–2",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Johan Leijonhielm"
-              ]
-            },
-            {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Ebba Lindström"
               ]
             },
             {
               "score": "2–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Andreas Panagos",
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "David"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2785,34 +5018,81 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 6,
-              "pct": 75,
+              "count": 14,
+              "pct": 61,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "David",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Petra"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Daniel",
+                "Elin"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Rickard"
               ]
             },
             {
               "score": "0–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "1–1",
+              "score": "1–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Johan Leijonhielm"
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2827,17 +5107,32 @@
       "winnerPicks": [
         {
           "team": "Argentina",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -2851,35 +5146,74 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "3–0",
+              "count": 10,
+              "pct": 43,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Alex J",
+                "Andreas Panagos",
+                "Anna",
+                "Christoffer",
+                "Daniel",
+                "David",
+                "Gustaf L",
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Boris",
                 "Dani",
+                "Ebba Örtenblad",
                 "Jakob Hägglund",
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "score": "1–0",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J",
-                "Gustaf L",
-                "Oscar Hultefors"
+                "Ebba Lindström",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Elin",
+                "Rickard"
               ]
             },
             {
               "score": "3–1",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -2894,20 +5228,52 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
+                "Andreas Panagos",
+                "Boris",
+                "Christoffer",
+                "David",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund"
               ]
             },
             {
+              "score": "1–0",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Lukas Källén",
+                "Ebba Lindström",
+                "Tim",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Dani",
+                "Daniel",
+                "Petra"
+              ]
+            },
+            {
               "score": "1–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Johan Leijonhielm",
@@ -2915,18 +5281,9 @@
               ]
             },
             {
-              "score": "2–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Dani"
-              ]
-            },
-            {
               "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
@@ -2944,34 +5301,65 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 4,
-              "pct": 50,
+              "count": 13,
+              "pct": 57,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Solveig",
                 "Alex J",
+                "Andreas Panagos",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Daniel",
+                "David",
                 "Gustaf L",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Ebba Wikström",
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
+              ]
+            },
+            {
+              "score": "3–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -2986,42 +5374,97 @@
           "scorelines": [
             {
               "score": "0–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Boris",
+                "Ebba Lindström",
                 "Ebba Wikström",
+                "Elin",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
                 "Dani",
-                "Johan Leijonhielm"
+                "Daniel",
+                "Johan Leijonhielm",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad",
+                "Rickard"
               ]
             },
             {
               "score": "1–2",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Anna",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "David"
               ]
             },
             {
               "score": "2–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3035,51 +5478,98 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "1–2",
-              "count": 3,
-              "pct": 38,
-              "pts": null,
-              "players": [
-                "Dani",
-                "Gustaf L",
-                "Jakob Hägglund"
-              ]
-            },
-            {
               "score": "1–1",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
-                "Jacob Cederberg"
+                "Jacob Cederberg",
+                "Solveig",
+                "David",
+                "Ebba Lindström",
+                "Elin"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Dani",
+                "Daniel",
+                "Gustaf L",
+                "Jakob Hägglund"
               ]
             },
             {
               "score": "0–2",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Ebba Wikström",
+                "Ebba Örtenblad",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
               ]
             },
             {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3093,35 +5583,90 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–3",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Alex J",
+                "Anna",
+                "Dani",
+                "David",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–4",
+              "count": 6,
+              "pct": 26,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Christoffer",
+                "Ebba Wikström",
+                "Gustaf L",
+                "Jakob Hägglund",
+                "Rickard"
+              ]
+            },
+            {
               "score": "0–2",
-              "count": 3,
-              "pct": 38,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Daniel",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–4",
-              "count": 3,
-              "pct": 38,
+              "score": "1–2",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Ebba Wikström",
-                "Gustaf L",
-                "Jakob Hägglund"
+                "Filippa Rosell",
+                "Elin"
               ]
             },
             {
-              "score": "0–3",
-              "count": 2,
-              "pct": 25,
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Alex J",
-                "Dani"
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–4",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
+              ]
+            },
+            {
+              "score": "1–6",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Boris"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3136,17 +5681,40 @@
       "winnerPicks": [
         {
           "team": "Portugal",
-          "count": 8,
-          "pct": 100,
+          "count": 22,
+          "pct": 96,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
+          ],
+          "correct": null
+        },
+        {
+          "team": "Colombia",
+          "count": 1,
+          "pct": 4,
+          "players": [
+            "Ebba Örtenblad"
           ],
           "correct": null
         }
@@ -3161,26 +5729,65 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 6,
-              "pct": 75,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Boris",
                 "Dani",
+                "Daniel",
+                "Ebba Örtenblad",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "3–0",
-              "count": 2,
-              "pct": 25,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
+                "Anna",
+                "David",
                 "Ebba Wikström",
-                "Gustaf L"
+                "Gustaf L",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Ebba Lindström",
+                "Elin",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Lukas Källén",
+                "Christoffer"
               ]
             }
           ],
@@ -3195,21 +5802,51 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 5,
-              "pct": 62,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "David",
+                "Ebba Lindström",
                 "Gustaf L",
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 5,
+              "pct": 22,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Anna",
+                "Daniel",
+                "Ebba Wikström",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad",
+                "Elin",
+                "Tim"
               ]
             },
             {
               "score": "1–1",
               "count": 2,
-              "pct": 25,
+              "pct": 9,
               "pts": null,
               "players": [
                 "Johan Leijonhielm",
@@ -3217,12 +5854,21 @@
               ]
             },
             {
-              "score": "1–2",
+              "score": "0–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Ebba Wikström"
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3237,34 +5883,65 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 3,
-              "pct": 38,
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "3–0",
-              "count": 3,
-              "pct": 38,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "David",
                 "Ebba Wikström",
                 "Jakob Hägglund"
               ]
             },
             {
+              "score": "2–1",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Anna",
+                "Daniel",
+                "Elin",
+                "Petra"
+              ]
+            },
+            {
               "score": "4–0",
-              "count": 2,
-              "pct": 25,
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
                 "Alex J",
-                "Gustaf L"
+                "Andreas Panagos",
+                "Gustaf L",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Tim"
               ]
             }
           ],
@@ -3278,51 +5955,74 @@
           "actual": null,
           "scorelines": [
             {
-              "score": "1–0",
-              "count": 2,
-              "pct": 25,
+              "score": "2–1",
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
-                "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Solveig",
+                "Andreas Panagos",
+                "Dani",
+                "Daniel",
+                "Elin",
+                "Gustaf L",
+                "Petra",
+                "Rickard"
               ]
             },
             {
               "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
-                "Ebba Wikström"
+                "Anna",
+                "Boris",
+                "David",
+                "Ebba Wikström",
+                "Ebba Örtenblad"
               ]
             },
             {
-              "score": "2–1",
-              "count": 2,
-              "pct": 25,
+              "score": "1–0",
+              "count": 4,
+              "pct": 17,
               "pts": null,
               "players": [
-                "Dani",
-                "Gustaf L"
+                "Ebba Lindström",
+                "Jakob Hägglund",
+                "Tim",
+                "Oscar Hultefors"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Johan Leijonhielm"
               ]
             },
             {
               "score": "3–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3337,50 +6037,81 @@
           "scorelines": [
             {
               "score": "1–2",
-              "count": 4,
-              "pct": 50,
+              "count": 9,
+              "pct": 39,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Anna",
                 "Dani",
+                "Daniel",
+                "David",
                 "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 8,
+              "pct": 35,
+              "pts": null,
+              "players": [
+                "Filippa Rosell",
+                "Solveig",
+                "Andreas Panagos",
+                "Boris",
+                "Christoffer",
+                "Ebba Lindström",
+                "Elin",
+                "Gustaf L"
               ]
             },
             {
               "score": "0–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Tim"
               ]
             },
             {
               "score": "0–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Johan Leijonhielm"
               ]
             },
             {
-              "score": "1–1",
-              "count": 1,
-              "pct": 12,
-              "pts": null,
-              "players": [
-                "Gustaf L"
-              ]
-            },
-            {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3395,34 +6126,81 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 6,
-              "pct": 75,
+              "count": 12,
+              "pct": 52,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Solveig",
+                "Boris",
                 "Dani",
+                "Daniel",
                 "Ebba Wikström",
+                "Ebba Örtenblad",
                 "Gustaf L",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 3,
+              "pct": 13,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Ebba Lindström",
+                "Jakob Hägglund",
+                "Tim"
               ]
             },
             {
               "score": "2–0",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Alex J"
+                "Alex J",
+                "Christoffer"
+              ]
+            },
+            {
+              "score": "2–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "David"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Elin",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Anna"
+              ]
+            },
+            {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3437,17 +6215,32 @@
       "winnerPicks": [
         {
           "team": "England",
-          "count": 8,
+          "count": 23,
           "pct": 100,
           "players": [
+            "Filippa Rosell",
             "Jacob Cederberg",
+            "Lukas Källén",
+            "Solveig",
             "Alex J",
+            "Andreas Panagos",
+            "Anna",
+            "Boris",
+            "Christoffer",
             "Dani",
+            "Daniel",
+            "David",
+            "Ebba Lindström",
             "Ebba Wikström",
+            "Ebba Örtenblad",
+            "Elin",
             "Gustaf L",
             "Jakob Hägglund",
             "Johan Leijonhielm",
-            "Oscar Hultefors"
+            "Tim",
+            "Oscar Hultefors",
+            "Petra",
+            "Rickard"
           ],
           "correct": null
         }
@@ -3461,43 +6254,82 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "2–0",
+              "count": 7,
+              "pct": 30,
+              "pts": null,
+              "players": [
+                "Andreas Panagos",
+                "Daniel",
+                "David",
+                "Ebba Örtenblad",
+                "Jakob Hägglund",
+                "Oscar Hultefors",
+                "Petra"
+              ]
+            },
+            {
               "score": "2–1",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Gustaf L"
               ]
             },
             {
               "score": "1–1",
-              "count": 2,
-              "pct": 25,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
                 "Dani",
-                "Johan Leijonhielm"
+                "Ebba Lindström",
+                "Elin",
+                "Johan Leijonhielm",
+                "Tim"
               ]
             },
             {
-              "score": "2–0",
-              "count": 2,
-              "pct": 25,
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
               "pts": null,
               "players": [
-                "Jakob Hägglund",
-                "Oscar Hultefors"
+                "Filippa Rosell"
+              ]
+            },
+            {
+              "score": "2–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             },
             {
               "score": "3–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3512,50 +6344,81 @@
           "scorelines": [
             {
               "score": "1–1",
-              "count": 3,
-              "pct": 38,
+              "count": 8,
+              "pct": 35,
               "pts": null,
               "players": [
+                "Filippa Rosell",
+                "Boris",
+                "Daniel",
+                "David",
                 "Gustaf L",
                 "Johan Leijonhielm",
-                "Oscar Hultefors"
-              ]
-            },
-            {
-              "score": "2–0",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Alex J",
-                "Jakob Hägglund"
+                "Oscar Hultefors",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
-                "Jacob Cederberg"
+                "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
+                "Christoffer",
+                "Elin",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 4,
+              "pct": 17,
+              "pts": null,
+              "players": [
+                "Alex J",
+                "Andreas Panagos",
+                "Ebba Örtenblad",
+                "Jakob Hägglund"
               ]
             },
             {
               "score": "2–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Anna",
                 "Dani"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
               ]
             },
             {
               "score": "2–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "3–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             }
           ],
@@ -3570,42 +6433,81 @@
           "scorelines": [
             {
               "score": "2–0",
-              "count": 4,
-              "pct": 50,
+              "count": 11,
+              "pct": 48,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Jacob Cederberg",
+                "Lukas Källén",
+                "Solveig",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "Ebba Örtenblad",
+                "Elin",
                 "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
             {
               "score": "3–0",
-              "count": 2,
-              "pct": 25,
+              "count": 6,
+              "pct": 26,
               "pts": null,
               "players": [
+                "Anna",
+                "Daniel",
+                "David",
                 "Ebba Wikström",
-                "Gustaf L"
+                "Gustaf L",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
               ]
             },
             {
               "score": "2–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
+              ]
+            },
+            {
+              "score": "4–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "5–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Lindström"
               ]
             }
           ],
@@ -3620,34 +6522,89 @@
           "scorelines": [
             {
               "score": "0–2",
-              "count": 6,
-              "pct": 75,
+              "count": 13,
+              "pct": 57,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
+                "Christoffer",
                 "Dani",
+                "David",
+                "Elin",
                 "Gustaf L",
                 "Jakob Hägglund",
-                "Johan Leijonhielm"
+                "Johan Leijonhielm",
+                "Petra"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Ebba Lindström",
+                "Tim"
               ]
             },
             {
               "score": "1–1",
-              "count": 1,
-              "pct": 12,
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
+                "Filippa Rosell",
                 "Oscar Hultefors"
+              ]
+            },
+            {
+              "score": "1–2",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Daniel",
+                "Rickard"
+              ]
+            },
+            {
+              "score": "0–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
+              ]
+            },
+            {
+              "score": "1–0",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Ebba Örtenblad"
               ]
             },
             {
               "score": "1–3",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
               ]
             }
           ],
@@ -3661,40 +6618,87 @@
           "actual": null,
           "scorelines": [
             {
+              "score": "0–3",
+              "count": 9,
+              "pct": 39,
+              "pts": null,
+              "players": [
+                "Solveig",
+                "Anna",
+                "Boris",
+                "Christoffer",
+                "Dani",
+                "David",
+                "Ebba Wikström",
+                "Jakob Hägglund",
+                "Petra"
+              ]
+            },
+            {
               "score": "0–2",
-              "count": 3,
-              "pct": 38,
+              "count": 7,
+              "pct": 30,
               "pts": null,
               "players": [
                 "Jacob Cederberg",
+                "Daniel",
+                "Ebba Lindström",
+                "Ebba Örtenblad",
                 "Johan Leijonhielm",
+                "Tim",
                 "Oscar Hultefors"
               ]
             },
             {
-              "score": "0–3",
-              "count": 3,
-              "pct": 38,
+              "score": "1–2",
+              "count": 2,
+              "pct": 9,
               "pts": null,
               "players": [
-                "Dani",
-                "Ebba Wikström",
-                "Jakob Hägglund"
+                "Filippa Rosell",
+                "Elin"
+              ]
+            },
+            {
+              "score": "0–1",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Andreas Panagos"
               ]
             },
             {
               "score": "0–4",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Alex J"
               ]
             },
             {
+              "score": "1–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Rickard"
+              ]
+            },
+            {
+              "score": "3–2",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
               "score": "4–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Gustaf L"
@@ -3712,47 +6716,78 @@
           "scorelines": [
             {
               "score": "2–1",
-              "count": 3,
-              "pct": 38,
+              "count": 10,
+              "pct": 43,
               "pts": null,
               "players": [
+                "Solveig",
                 "Alex J",
+                "Anna",
+                "Boris",
                 "Dani",
-                "Gustaf L"
-              ]
-            },
-            {
-              "score": "2–0",
-              "count": 2,
-              "pct": 25,
-              "pts": null,
-              "players": [
-                "Jacob Cederberg",
-                "Johan Leijonhielm"
+                "Daniel",
+                "Ebba Lindström",
+                "Elin",
+                "Gustaf L",
+                "Petra"
               ]
             },
             {
               "score": "1–0",
-              "count": 1,
-              "pct": 12,
+              "count": 5,
+              "pct": 22,
               "pts": null,
               "players": [
-                "Jakob Hägglund"
+                "Filippa Rosell",
+                "David",
+                "Ebba Örtenblad",
+                "Jakob Hägglund",
+                "Tim"
+              ]
+            },
+            {
+              "score": "2–0",
+              "count": 3,
+              "pct": 13,
+              "pts": null,
+              "players": [
+                "Jacob Cederberg",
+                "Andreas Panagos",
+                "Johan Leijonhielm"
+              ]
+            },
+            {
+              "score": "1–1",
+              "count": 2,
+              "pct": 9,
+              "pts": null,
+              "players": [
+                "Christoffer",
+                "Rickard"
               ]
             },
             {
               "score": "1–2",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Oscar Hultefors"
               ]
             },
             {
+              "score": "2–3",
+              "count": 1,
+              "pct": 4,
+              "pts": null,
+              "players": [
+                "Lukas Källén"
+              ]
+            },
+            {
               "score": "3–0",
               "count": 1,
-              "pct": 12,
+              "pct": 4,
               "pts": null,
               "players": [
                 "Ebba Wikström"
