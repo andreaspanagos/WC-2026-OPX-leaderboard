@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-11 17:32",
+    "lastRefresh": "2026-06-11 23:55",
     "maxPoints": 729,
-    "participants": 23,
+    "participants": 29,
     "maxAvailable": 0
   },
   "rows": [
@@ -140,7 +140,40 @@
     },
     {
       "rank": 1,
+      "player": "Erik Engberg",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
+      "player": "Felice Gelin",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
       "player": "Filippa Rosell",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
+      "player": "Frida Björning Lundqvist",
       "group": 0,
       "ko": 0,
       "bonus": 0,
@@ -195,7 +228,29 @@
     },
     {
       "rank": 1,
+      "player": "Klas",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
       "player": "Lukas Källén",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
+      "player": "Matilda",
       "group": 0,
       "ko": 0,
       "bonus": 0,
@@ -229,6 +284,17 @@
     {
       "rank": 1,
       "player": "Rickard",
+      "group": 0,
+      "ko": 0,
+      "bonus": 0,
+      "total": 0,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.0
+    },
+    {
+      "rank": 1,
+      "player": "Simon",
       "group": 0,
       "ko": 0,
       "bonus": 0,
