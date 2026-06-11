@@ -444,7 +444,8 @@
 <header>
   <h1>&#x26BD; FIFA World Cup 2026 &mdash; OPX Live Leaderboard</h1>
   <div class="meta-pills">
-    <span class="pill">Updated: <strong id="hdr-refresh">—</strong></span>
+    <span class="pill">Data as of: <strong id="hdr-refresh">—</strong></span>
+    <span class="pill">Last checked: <strong id="hdr-checked">—</strong></span>
     <span class="pill">Players: <strong id="hdr-participants">—</strong></span>
     <span class="pill">Max pts: <strong id="hdr-maxpoints">—</strong></span>
   </div>
@@ -1092,7 +1093,11 @@
 
     fetch("results_log.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(renderAutoResults)
+      .then(d => {
+        renderAutoResults(d);
+        if (d.lastRun) document.getElementById("hdr-checked").textContent =
+          d.lastRun.replace("T", " ").slice(0, 16);
+      })
       .catch(err => {
         document.getElementById("autoresults-container").innerHTML =
           `<p class="page-intro">Could not load results_log.json. (${err})</p>`;
