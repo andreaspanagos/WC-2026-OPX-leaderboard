@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-06-12T00:08:17",
+  "lastRun": "2026-06-12T07:05:16",
   "applied": [
     {
       "group": "A",
@@ -8,7 +8,16 @@
       "away": "South Africa",
       "hg": 2,
       "ag": 0,
-      "when": "2026-06-11T23:59:52"
+      "when": "2026-06-12T07:05:16"
+    },
+    {
+      "group": "A",
+      "row": 6,
+      "home": "Korea Republic",
+      "away": "Czechia",
+      "hg": 2,
+      "ag": 1,
+      "when": "2026-06-12T07:05:16"
     }
   ],
   "needsAttention": []
