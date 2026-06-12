@@ -805,9 +805,11 @@
     podiumEl.innerHTML = "";
     rows.slice(0, 3).forEach((r, i) => {
       const card = document.createElement("div");
-      card.className = `podium-card ${MEDAL_CLASS[i]}`;
+      // Colour and medal follow the player's actual rank, so tied players share them.
+      const ri = Math.min(Math.max((r.rank || i + 1) - 1, 0), 2);
+      card.className = `podium-card ${MEDAL_CLASS[ri]}`;
       card.innerHTML = `
-        <div class="podium-medal">${MEDALS[i]}</div>
+        <div class="podium-medal">${MEDALS[ri]}</div>
         <div class="podium-rank">Rank ${r.rank}</div>
         <div class="podium-move">${movement(r)}</div>
         <div class="podium-name">${esc(r.player)}</div>
