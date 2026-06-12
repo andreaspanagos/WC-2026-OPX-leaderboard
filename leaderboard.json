@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-12 07:05",
+    "lastRefresh": "2026-06-12 14:15",
     "maxPoints": 729,
-    "participants": 29,
+    "participants": 30,
     "maxAvailable": 6
   },
   "rows": [
@@ -290,6 +290,17 @@
       "total": 1,
       "prevRank": 1,
       "pointsToday": 1,
+      "pctMax": 0.1667
+    },
+    {
+      "rank": 24,
+      "player": "Ludvig Völcker",
+      "group": 1,
+      "ko": 0,
+      "bonus": 0,
+      "total": 1,
+      "prevRank": null,
+      "pointsToday": 0,
       "pctMax": 0.1667
     },
     {
