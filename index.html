@@ -604,14 +604,14 @@
       table thead th:nth-child(6), table tbody td.bar-cell { display: none; }
       table { min-width: 0; }
 
-      /* Compact 3-up podium — shrink cards so all three sit in one row */
-      .podium { gap: 0.4rem; padding: 0.75rem 0.75rem 0; }
-      .podium-card { flex: 1 1 90px; max-width: none; padding: 0.7rem 0.4rem; }
-      .podium-medal { font-size: 1.4rem; }
-      .podium-name  { font-size: 0.92rem; margin: 0.2rem 0 0.3rem; }
-      .podium-total { font-size: 1.45rem; }
-      .podium-pct   { font-size: 0.72rem; }
-      .podium-move  { font-size: 0.7rem; }
+      /* Wide podium — stack cards vertically, each spanning full width */
+      .podium { flex-direction: column; flex-wrap: nowrap; gap: 0.6rem; padding: 0.75rem 0.75rem 0; }
+      .podium-card { flex: 1 1 auto; width: 100%; min-width: 0; max-width: none; padding: 0.9rem 1rem; }
+      .podium-medal { font-size: 1.6rem; }
+      .podium-name  { font-size: 1rem; margin: 0.2rem 0 0.3rem; }
+      .podium-total { font-size: 1.6rem; }
+      .podium-pct   { font-size: 0.75rem; }
+      .podium-move  { font-size: 0.72rem; }
 
       .shame-list { padding: 0.75rem 0.75rem 0; }
       .shame-card { width: 160px; padding: 0.3rem 0.45rem; }
