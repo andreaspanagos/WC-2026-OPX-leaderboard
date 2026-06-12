@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-06-12T22:40:04",
+  "lastRun": "2026-06-12T23:10:04",
   "applied": [
     {
       "group": "A",
@@ -8,7 +8,7 @@
       "away": "South Africa",
       "hg": 2,
       "ag": 0,
-      "when": "2026-06-12T22:40:04"
+      "when": "2026-06-12T23:10:04"
     },
     {
       "group": "A",
@@ -17,7 +17,16 @@
       "away": "Czechia",
       "hg": 2,
       "ag": 1,
-      "when": "2026-06-12T22:40:04"
+      "when": "2026-06-12T23:10:04"
+    },
+    {
+      "group": "B",
+      "row": 14,
+      "home": "Canada",
+      "away": "Bosnia & Herzegovina",
+      "hg": 1,
+      "ag": 1,
+      "when": "2026-06-12T23:10:04"
     }
   ],
   "needsAttention": []
