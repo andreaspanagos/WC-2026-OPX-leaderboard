@@ -604,6 +604,10 @@
       table thead th:nth-child(6), table tbody td.bar-cell { display: none; }
       table { min-width: 0; }
 
+      /* Stack the hall of shame below the podium instead of beside it */
+      .podium-row { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0.75rem; }
+      .podium-row > .podium { max-width: none; }
+
       /* Wide podium — stack cards vertically, each spanning full width */
       .podium { flex-direction: column; flex-wrap: nowrap; gap: 0.6rem; padding: 0.75rem 0.75rem 0; }
       .podium-card { flex: 1 1 auto; width: 100%; min-width: 0; max-width: none; padding: 0.9rem 1rem; }
