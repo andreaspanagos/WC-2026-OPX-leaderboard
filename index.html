@@ -1011,7 +1011,13 @@
     shameEl.appendChild(shameCards);
     document.getElementById("podium-row").hidden = false;
 
+    // FLIP – Step 1: record each row's position before the DOM wipe
     const tbody = document.getElementById("tbody");
+    const flipFirst = {};
+    tbody.querySelectorAll("tr.lb-row").forEach(tr => {
+      const n = tr.querySelector(".player-name");
+      if (n) flipFirst[n.textContent] = tr.getBoundingClientRect().top;
+    });
     tbody.innerHTML = "";
     for (const k in trendCells) delete trendCells[k];
     rows.forEach(r => {
@@ -1059,6 +1065,26 @@
       trendCells[r.player] = tr.querySelector(".trend-cell");
       tbody.appendChild(tr);
       tbody.appendChild(detail);
+    });
+
+    // FLIP – Steps 2-4: invert positions then animate each row to its final place
+    tbody.querySelectorAll("tr.lb-row").forEach(tr => {
+      const n = tr.querySelector(".player-name");
+      if (!n) return;
+      const first = flipFirst[n.textContent];
+      if (first === undefined) return;
+      const last = tr.getBoundingClientRect().top;
+      const dy = first - last;
+      if (!dy) return;
+      tr.style.transform = `translateY(${dy}px)`;
+      tr.style.transition = "none";
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          tr.style.transition = "transform 800ms ease-out";
+          tr.style.transform = "";
+          tr.addEventListener("transitionend", () => { tr.style.transition = ""; }, { once: true });
+        });
+      });
     });
 
     renderMovers(rows);
