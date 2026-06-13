@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-13 09:14",
+    "lastRefresh": "2026-06-14 01:10",
     "maxPoints": 729,
     "participants": 30,
-    "maxAvailable": 12
+    "maxAvailable": 15
   },
   "players": [
     "Jakob Hägglund",
@@ -1477,7 +1477,7 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": "12",
+      "current": "14",
       "status": "provisional",
       "answers": [
         {

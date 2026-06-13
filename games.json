@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-13 09:14",
+    "lastRefresh": "2026-06-14 01:10",
     "maxPoints": 729,
     "participants": 30
   },
@@ -830,14 +830,17 @@
           "kickoff": "2026-06-13 21:00",
           "home": "Qatar",
           "away": "Switzerland",
-          "played": false,
-          "actual": null,
+          "played": true,
+          "actual": {
+            "hg": 1,
+            "ag": 1
+          },
           "scorelines": [
             {
               "score": "0–2",
               "count": 14,
               "pct": 47,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Johan Leijonhielm",
                 "Solveig",
@@ -859,7 +862,7 @@
               "score": "0–3",
               "count": 6,
               "pct": 20,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Jakob Hägglund",
                 "Gustaf L",
@@ -873,7 +876,7 @@
               "score": "0–1",
               "count": 3,
               "pct": 10,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Filippa Rosell",
                 "Tim",
@@ -884,7 +887,7 @@
               "score": "1–2",
               "count": 3,
               "pct": 10,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Elin",
                 "Oscar Hultefors",
@@ -895,7 +898,7 @@
               "score": "0–4",
               "count": 2,
               "pct": 7,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Matilda",
                 "Frida Björning Lundqvist"
@@ -905,7 +908,7 @@
               "score": "1–3",
               "count": 1,
               "pct": 3,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Rickard"
               ]
@@ -914,7 +917,7 @@
               "score": "2–1",
               "count": 1,
               "pct": 3,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Lukas Källén"
               ]
