@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-06-14T01:10:33",
+  "lastRun": "2026-06-14T09:33:48",
   "applied": [
     {
       "group": "A",
@@ -8,7 +8,7 @@
       "away": "South Africa",
       "hg": 2,
       "ag": 0,
-      "when": "2026-06-14T01:10:33"
+      "when": "2026-06-14T09:33:48"
     },
     {
       "group": "A",
@@ -17,7 +17,7 @@
       "away": "Czechia",
       "hg": 2,
       "ag": 1,
-      "when": "2026-06-14T01:10:33"
+      "when": "2026-06-14T09:33:48"
     },
     {
       "group": "B",
@@ -26,7 +26,7 @@
       "away": "Bosnia & Herzegovina",
       "hg": 1,
       "ag": 1,
-      "when": "2026-06-14T01:10:33"
+      "when": "2026-06-14T09:33:48"
     },
     {
       "group": "D",
@@ -35,7 +35,7 @@
       "away": "Paraguay",
       "hg": 4,
       "ag": 1,
-      "when": "2026-06-14T01:10:33"
+      "when": "2026-06-14T09:33:48"
     },
     {
       "group": "B",
@@ -44,7 +44,34 @@
       "away": "Switzerland",
       "hg": 1,
       "ag": 1,
-      "when": "2026-06-14T01:10:33"
+      "when": "2026-06-14T09:33:48"
+    },
+    {
+      "group": "C",
+      "row": 23,
+      "home": "Brazil",
+      "away": "Morocco",
+      "hg": 1,
+      "ag": 1,
+      "when": "2026-06-14T09:33:48"
+    },
+    {
+      "group": "C",
+      "row": 24,
+      "home": "Haiti",
+      "away": "Scotland",
+      "hg": 0,
+      "ag": 1,
+      "when": "2026-06-14T09:33:48"
+    },
+    {
+      "group": "D",
+      "row": 33,
+      "home": "Australia",
+      "away": "Turkey",
+      "hg": 2,
+      "ag": 0,
+      "when": "2026-06-14T09:33:48"
     }
   ],
   "needsAttention": []
