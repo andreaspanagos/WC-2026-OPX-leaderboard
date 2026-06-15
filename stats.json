@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-15 05:27",
+    "lastRefresh": "2026-06-15 09:31",
     "maxPoints": 729,
     "participants": 30,
-    "maxAvailable": 33
+    "maxAvailable": 36
   },
   "players": [
     "Filippa Rosell",
@@ -17,10 +17,10 @@
     "Jakob Hägglund",
     "Matilda",
     "Oscar Hultefors",
-    "Rickard",
     "Christoffer",
     "Ebba Wikström",
     "Erik Engberg",
+    "Rickard",
     "Andreas Panagos",
     "Anna",
     "Dani",
@@ -33,9 +33,9 @@
     "Alex J",
     "David",
     "Frida Björning Lundqvist",
-    "Klas",
     "Ludvig Völcker",
-    "Petra"
+    "Petra",
+    "Klas"
   ],
   "stages": [
     "Group stage",
@@ -830,9 +830,9 @@
         "Jakob Hägglund",
         "Matilda",
         "Oscar Hultefors",
-        "Rickard",
         "Ebba Wikström",
         "Erik Engberg",
+        "Rickard",
         "Anna",
         "Dani",
         "Daniel",
@@ -1333,8 +1333,8 @@
           "players": [
             "Ebba Lindström",
             "Jakob Hägglund",
-            "Rickard",
             "Christoffer",
+            "Rickard",
             "Gustaf L"
           ],
           "hit": null
@@ -1407,8 +1407,8 @@
             "Jacob Cederberg",
             "Jakob Hägglund",
             "Matilda",
-            "Rickard",
             "Christoffer",
+            "Rickard",
             "Daniel",
             "Gustaf L",
             "Tim",
@@ -1477,7 +1477,7 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": "32",
+      "current": "38",
       "status": "provisional",
       "answers": [
         {
@@ -1877,9 +1877,9 @@
             "Felice Gelin",
             "Simon",
             "David",
-            "Klas",
             "Ludvig Völcker",
-            "Petra"
+            "Petra",
+            "Klas"
           ],
           "hit": null
         },
@@ -1990,8 +1990,8 @@
             "Jacob Cederberg",
             "Boris",
             "Matilda",
-            "Rickard",
             "Christoffer",
+            "Rickard",
             "Andreas Panagos",
             "Anna",
             "Dani",
@@ -2000,8 +2000,8 @@
             "Felice Gelin",
             "Tim",
             "David",
-            "Klas",
-            "Petra"
+            "Petra",
+            "Klas"
           ],
           "hit": null
         },
@@ -2293,9 +2293,9 @@
             "Boris",
             "Jakob Hägglund",
             "Matilda",
-            "Rickard",
             "Christoffer",
             "Ebba Wikström",
+            "Rickard",
             "Andreas Panagos",
             "Anna",
             "Dani",
@@ -2306,9 +2306,9 @@
             "Tim",
             "Alex J",
             "David",
-            "Klas",
             "Ludvig Völcker",
-            "Petra"
+            "Petra",
+            "Klas"
           ],
           "hit": null
         },
@@ -2373,9 +2373,9 @@
             "Simon",
             "David",
             "Frida Björning Lundqvist",
-            "Klas",
             "Ludvig Völcker",
-            "Petra"
+            "Petra",
+            "Klas"
           ],
           "hit": null
         },
@@ -2413,9 +2413,9 @@
             "Jakob Hägglund",
             "Matilda",
             "Oscar Hultefors",
-            "Rickard",
             "Christoffer",
             "Ebba Wikström",
+            "Rickard",
             "Andreas Panagos",
             "Dani",
             "Gustaf L",
@@ -2424,8 +2424,8 @@
             "Alex J",
             "David",
             "Frida Björning Lundqvist",
-            "Klas",
-            "Ludvig Völcker"
+            "Ludvig Völcker",
+            "Klas"
           ],
           "hit": null
         },
@@ -2478,8 +2478,8 @@
             "Boris",
             "Rickard",
             "Gustaf L",
-            "Klas",
-            "Petra"
+            "Petra",
+            "Klas"
           ],
           "hit": null
         },
@@ -2646,14 +2646,14 @@
             "Elin",
             "Jakob Hägglund",
             "Oscar Hultefors",
-            "Rickard",
             "Ebba Wikström",
+            "Rickard",
             "Daniel",
             "Simon",
             "Alex J",
             "David",
-            "Klas",
-            "Ludvig Völcker"
+            "Ludvig Völcker",
+            "Klas"
           ],
           "hit": null
         },
