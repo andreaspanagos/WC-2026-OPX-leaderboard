@@ -495,6 +495,131 @@
           "total": 2
         }
       }
+    },
+    {
+      "date": "2026-06-15",
+      "standings": {
+        "Johan Leijonhielm": {
+          "rank": 1,
+          "total": 12
+        },
+        "Ebba Lindström": {
+          "rank": 2,
+          "total": 10
+        },
+        "Elin": {
+          "rank": 2,
+          "total": 10
+        },
+        "Boris": {
+          "rank": 4,
+          "total": 9
+        },
+        "Filippa Rosell": {
+          "rank": 4,
+          "total": 9
+        },
+        "Jakob Hägglund": {
+          "rank": 4,
+          "total": 9
+        },
+        "Solveig": {
+          "rank": 4,
+          "total": 9
+        },
+        "Oscar Hultefors": {
+          "rank": 8,
+          "total": 8
+        },
+        "Rickard": {
+          "rank": 8,
+          "total": 8
+        },
+        "Christoffer": {
+          "rank": 10,
+          "total": 7
+        },
+        "Ebba Wikström": {
+          "rank": 10,
+          "total": 7
+        },
+        "Erik Engberg": {
+          "rank": 10,
+          "total": 7
+        },
+        "Andreas Panagos": {
+          "rank": 13,
+          "total": 6
+        },
+        "Anna": {
+          "rank": 13,
+          "total": 6
+        },
+        "Dani": {
+          "rank": 13,
+          "total": 6
+        },
+        "Daniel": {
+          "rank": 13,
+          "total": 6
+        },
+        "Ebba Örtenblad": {
+          "rank": 13,
+          "total": 6
+        },
+        "Felice Gelin": {
+          "rank": 13,
+          "total": 6
+        },
+        "Gustaf L": {
+          "rank": 13,
+          "total": 6
+        },
+        "Simon": {
+          "rank": 13,
+          "total": 6
+        },
+        "Tim": {
+          "rank": 13,
+          "total": 6
+        },
+        "Alex J": {
+          "rank": 22,
+          "total": 5
+        },
+        "David": {
+          "rank": 22,
+          "total": 5
+        },
+        "Jacob Cederberg": {
+          "rank": 22,
+          "total": 5
+        },
+        "Lukas Källén": {
+          "rank": 22,
+          "total": 5
+        },
+        "Frida Björning Lundqvist": {
+          "rank": 26,
+          "total": 4
+        },
+        "Klas": {
+          "rank": 26,
+          "total": 4
+        },
+        "Ludvig Völcker": {
+          "rank": 26,
+          "total": 4
+        },
+        "Matilda": {
+          "rank": 26,
+          "total": 4
+        },
+        "Petra": {
+          "rank": 26,
+          "total": 4
+        }
+      }
     }
   ]
 }
