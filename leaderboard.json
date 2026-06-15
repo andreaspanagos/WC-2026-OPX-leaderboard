@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-15 09:31",
+    "lastRefresh": "2026-06-15 10:03",
     "maxPoints": 729,
-    "participants": 30,
+    "participants": 31,
     "maxAvailable": 36
   },
   "rows": [
@@ -217,6 +217,17 @@
     },
     {
       "rank": 13,
+      "player": "Maximilian",
+      "group": 7,
+      "ko": 0,
+      "bonus": 0,
+      "total": 7,
+      "prevRank": null,
+      "pointsToday": 0,
+      "pctMax": 0.1944
+    },
+    {
+      "rank": 13,
       "player": "Simon",
       "group": 7,
       "ko": 0,
@@ -238,7 +249,7 @@
       "pctMax": 0.1944
     },
     {
-      "rank": 22,
+      "rank": 23,
       "player": "Alex J",
       "group": 6,
       "ko": 0,
@@ -249,7 +260,7 @@
       "pctMax": 0.1667
     },
     {
-      "rank": 22,
+      "rank": 23,
       "player": "David",
       "group": 6,
       "ko": 0,
@@ -260,7 +271,7 @@
       "pctMax": 0.1667
     },
     {
-      "rank": 22,
+      "rank": 23,
       "player": "Jacob Cederberg",
       "group": 6,
       "ko": 0,
@@ -271,7 +282,7 @@
       "pctMax": 0.1667
     },
     {
-      "rank": 22,
+      "rank": 23,
       "player": "Lukas Källén",
       "group": 6,
       "ko": 0,
@@ -282,7 +293,7 @@
       "pctMax": 0.1667
     },
     {
-      "rank": 26,
+      "rank": 27,
       "player": "Frida Björning Lundqvist",
       "group": 5,
       "ko": 0,
@@ -293,7 +304,7 @@
       "pctMax": 0.1389
     },
     {
-      "rank": 26,
+      "rank": 27,
       "player": "Ludvig Völcker",
       "group": 5,
       "ko": 0,
@@ -304,7 +315,7 @@
       "pctMax": 0.1389
     },
     {
-      "rank": 26,
+      "rank": 27,
       "player": "Matilda",
       "group": 5,
       "ko": 0,
@@ -315,7 +326,7 @@
       "pctMax": 0.1389
     },
     {
-      "rank": 26,
+      "rank": 27,
       "player": "Petra",
       "group": 5,
       "ko": 0,
@@ -326,7 +337,7 @@
       "pctMax": 0.1389
     },
     {
-      "rank": 30,
+      "rank": 31,
       "player": "Klas",
       "group": 4,
       "ko": 0,
