@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-15 10:03",
+    "lastRefresh": "2026-06-15 21:51",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 36
+    "maxAvailable": 39
   },
   "players": [
     "Filippa Rosell",
@@ -45,7 +45,7 @@
       "group": 10,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2778,
+      "pctMax": 0.2564,
       "pointsToday": 3,
       "games": [
         {
@@ -516,10 +516,10 @@
           "away": "Cabo Verde",
           "ph": 2,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -1349,7 +1349,7 @@
       "group": 10,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2778,
+      "pctMax": 0.2564,
       "pointsToday": 2,
       "games": [
         {
@@ -1820,10 +1820,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -2653,7 +2653,7 @@
       "group": 12,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.3333,
+      "pctMax": 0.3077,
       "pointsToday": 2,
       "games": [
         {
@@ -3124,10 +3124,10 @@
           "away": "Cabo Verde",
           "ph": 2,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -3957,7 +3957,7 @@
       "group": 11,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.3056,
+      "pctMax": 0.2821,
       "pointsToday": 3,
       "games": [
         {
@@ -4428,10 +4428,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -5261,7 +5261,7 @@
       "group": 11,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.3056,
+      "pctMax": 0.2821,
       "pointsToday": 3,
       "games": [
         {
@@ -5732,10 +5732,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 1,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -6565,7 +6565,7 @@
       "group": 6,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1667,
+      "pctMax": 0.1538,
       "pointsToday": 2,
       "games": [
         {
@@ -7036,10 +7036,10 @@
           "away": "Cabo Verde",
           "ph": 2,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -7869,7 +7869,7 @@
       "group": 6,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1667,
+      "pctMax": 0.1538,
       "pointsToday": 2,
       "games": [
         {
@@ -8340,10 +8340,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 1,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -9173,7 +9173,7 @@
       "group": 10,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2778,
+      "pctMax": 0.2564,
       "pointsToday": 2,
       "games": [
         {
@@ -9644,10 +9644,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -10477,7 +10477,7 @@
       "group": 10,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2778,
+      "pctMax": 0.2564,
       "pointsToday": 2,
       "games": [
         {
@@ -10948,10 +10948,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -11781,7 +11781,7 @@
       "group": 5,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1389,
+      "pctMax": 0.1282,
       "pointsToday": 3,
       "games": [
         {
@@ -12252,10 +12252,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -13085,7 +13085,7 @@
       "group": 9,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.25,
+      "pctMax": 0.2308,
       "pointsToday": 2,
       "games": [
         {
@@ -13556,10 +13556,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -14389,7 +14389,7 @@
       "group": 8,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2222,
+      "pctMax": 0.2051,
       "pointsToday": 3,
       "games": [
         {
@@ -14860,10 +14860,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -15693,7 +15693,7 @@
       "group": 8,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2222,
+      "pctMax": 0.2051,
       "pointsToday": 2,
       "games": [
         {
@@ -16164,10 +16164,10 @@
           "away": "Cabo Verde",
           "ph": 5,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -16997,7 +16997,7 @@
       "group": 8,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2222,
+      "pctMax": 0.2051,
       "pointsToday": 2,
       "games": [
         {
@@ -17468,10 +17468,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -18301,7 +18301,7 @@
       "group": 8,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.2222,
+      "pctMax": 0.2051,
       "pointsToday": 1,
       "games": [
         {
@@ -18772,10 +18772,10 @@
           "away": "Cabo Verde",
           "ph": 7,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -19605,7 +19605,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -20076,10 +20076,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 1,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -20909,7 +20909,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -21380,10 +21380,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -22213,7 +22213,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -22684,10 +22684,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -23517,7 +23517,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -23988,10 +23988,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -24821,7 +24821,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -25292,10 +25292,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -26125,7 +26125,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -26596,10 +26596,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -27429,7 +27429,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -27900,10 +27900,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -28733,7 +28733,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 0,
       "games": [
         {
@@ -29204,10 +29204,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -30037,7 +30037,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -30508,10 +30508,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -31341,7 +31341,7 @@
       "group": 7,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1944,
+      "pctMax": 0.1795,
       "pointsToday": 2,
       "games": [
         {
@@ -31812,10 +31812,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -32645,7 +32645,7 @@
       "group": 6,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1667,
+      "pctMax": 0.1538,
       "pointsToday": 2,
       "games": [
         {
@@ -33116,10 +33116,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -33949,7 +33949,7 @@
       "group": 6,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1667,
+      "pctMax": 0.1538,
       "pointsToday": 3,
       "games": [
         {
@@ -34420,10 +34420,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -35253,7 +35253,7 @@
       "group": 5,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1389,
+      "pctMax": 0.1282,
       "pointsToday": 2,
       "games": [
         {
@@ -35724,10 +35724,10 @@
           "away": "Cabo Verde",
           "ph": 5,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -36557,7 +36557,7 @@
       "group": 5,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1389,
+      "pctMax": 0.1282,
       "pointsToday": 2,
       "games": [
         {
@@ -37028,10 +37028,10 @@
           "away": "Cabo Verde",
           "ph": 4,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -37861,7 +37861,7 @@
       "group": 5,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1389,
+      "pctMax": 0.1282,
       "pointsToday": 2,
       "games": [
         {
@@ -38332,10 +38332,10 @@
           "away": "Cabo Verde",
           "ph": 3,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",
@@ -39165,7 +39165,7 @@
       "group": 4,
       "ko": 0,
       "bonus": 0,
-      "pctMax": 0.1111,
+      "pctMax": 0.1026,
       "pointsToday": 1,
       "games": [
         {
@@ -39636,10 +39636,10 @@
           "away": "Cabo Verde",
           "ph": 6,
           "pa": 0,
-          "played": false,
-          "hg": null,
-          "ag": null,
-          "pts": null
+          "played": true,
+          "hg": 0,
+          "ag": 0,
+          "pts": 0
         },
         {
           "group": "H",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-15 10:03",
+    "lastRefresh": "2026-06-15 21:51",
     "maxPoints": 729,
     "participants": 31
   },
@@ -89,6 +89,56 @@
             "Felice Gelin"
           ],
           "correct": null
+        }
+      ],
+      "standings": [
+        {
+          "team": "Mexico",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 2,
+          "GA": 0,
+          "GD": 2,
+          "Pts": 3,
+          "pos": 1
+        },
+        {
+          "team": "Korea Republic",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 2,
+          "GA": 1,
+          "GD": 1,
+          "Pts": 3,
+          "pos": 2
+        },
+        {
+          "team": "Czechia",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 1,
+          "GA": 2,
+          "GD": -1,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "South Africa",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 0,
+          "GA": 2,
+          "GD": -2,
+          "Pts": 0,
+          "pos": 4
         }
       ],
       "games": [
@@ -725,6 +775,56 @@
             "Lukas Källén"
           ],
           "correct": null
+        }
+      ],
+      "standings": [
+        {
+          "team": "Bosnia & Herzegovina",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 1
+        },
+        {
+          "team": "Canada",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 2
+        },
+        {
+          "team": "Qatar",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 3
+        },
+        {
+          "team": "Switzerland",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 4
         }
       ],
       "games": [
@@ -1387,6 +1487,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Scotland",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 1,
+          "GA": 0,
+          "GD": 1,
+          "Pts": 3,
+          "pos": 1
+        },
+        {
+          "team": "Brazil",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 2
+        },
+        {
+          "team": "Morocco",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 1,
+          "GA": 1,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 3
+        },
+        {
+          "team": "Haiti",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 0,
+          "GA": 1,
+          "GD": -1,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-14 00:00",
@@ -2021,6 +2171,56 @@
             "Lukas Källén"
           ],
           "correct": null
+        }
+      ],
+      "standings": [
+        {
+          "team": "USA",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 4,
+          "GA": 1,
+          "GD": 3,
+          "Pts": 3,
+          "pos": 1
+        },
+        {
+          "team": "Australia",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 2,
+          "GA": 0,
+          "GD": 2,
+          "Pts": 3,
+          "pos": 2
+        },
+        {
+          "team": "Turkey",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 0,
+          "GA": 2,
+          "GD": -2,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Paraguay",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 1,
+          "GA": 4,
+          "GD": -3,
+          "Pts": 0,
+          "pos": 4
         }
       ],
       "games": [
@@ -2691,6 +2891,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Germany",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 7,
+          "GA": 1,
+          "GD": 6,
+          "Pts": 3,
+          "pos": 1
+        },
+        {
+          "team": "Côte d'Ivoire",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 1,
+          "GA": 0,
+          "GD": 1,
+          "Pts": 3,
+          "pos": 2
+        },
+        {
+          "team": "Ecuador",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 0,
+          "GA": 1,
+          "GD": -1,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Curaçao",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 1,
+          "GA": 7,
+          "GD": -6,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-14 19:00",
@@ -3335,6 +3585,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Sweden",
+          "P": 1,
+          "W": 1,
+          "D": 0,
+          "L": 0,
+          "GF": 5,
+          "GA": 1,
+          "GD": 4,
+          "Pts": 3,
+          "pos": 1
+        },
+        {
+          "team": "Japan",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 2,
+          "GA": 2,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 2
+        },
+        {
+          "team": "Netherlands",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 2,
+          "GA": 2,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 3
+        },
+        {
+          "team": "Tunisia",
+          "P": 1,
+          "W": 0,
+          "D": 0,
+          "L": 1,
+          "GF": 1,
+          "GA": 5,
+          "GD": -4,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-14 22:00",
@@ -3971,6 +4271,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Belgium",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 1
+        },
+        {
+          "team": "Egypt",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 2
+        },
+        {
+          "team": "Iran",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "New Zealand",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-15 21:00",
@@ -4561,19 +4911,72 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Cabo Verde",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 1
+        },
+        {
+          "team": "Spain",
+          "P": 1,
+          "W": 0,
+          "D": 1,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 1,
+          "pos": 2
+        },
+        {
+          "team": "Saudi Arabia",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Uruguay",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-15 18:00",
           "home": "Spain",
           "away": "Cabo Verde",
-          "played": false,
-          "actual": null,
+          "played": true,
+          "actual": {
+            "hg": 0,
+            "ag": 0
+          },
           "scorelines": [
             {
               "score": "3–0",
               "count": 13,
               "pct": 42,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Solveig",
                 "Boris",
@@ -4594,7 +4997,7 @@
               "score": "4–0",
               "count": 8,
               "pct": 26,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Ebba Lindström",
                 "Matilda",
@@ -4610,7 +5013,7 @@
               "score": "2–0",
               "count": 3,
               "pct": 10,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Filippa Rosell",
                 "Johan Leijonhielm",
@@ -4621,7 +5024,7 @@
               "score": "4–1",
               "count": 2,
               "pct": 6,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Lukas Källén",
                 "Andreas Panagos"
@@ -4631,7 +5034,7 @@
               "score": "5–0",
               "count": 2,
               "pct": 6,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Ebba Wikström",
                 "Frida Björning Lundqvist"
@@ -4641,7 +5044,7 @@
               "score": "3–1",
               "count": 1,
               "pct": 3,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Elin"
               ]
@@ -4650,7 +5053,7 @@
               "score": "6–0",
               "count": 1,
               "pct": 3,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Klas"
               ]
@@ -4659,7 +5062,7 @@
               "score": "7–0",
               "count": 1,
               "pct": 3,
-              "pts": null,
+              "pts": 0,
               "players": [
                 "Rickard"
               ]
@@ -5229,6 +5632,56 @@
             "Tim"
           ],
           "correct": null
+        }
+      ],
+      "standings": [
+        {
+          "team": "France",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 1
+        },
+        {
+          "team": "Iraq",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 2
+        },
+        {
+          "team": "Norway",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Senegal",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
         }
       ],
       "games": [
@@ -5893,6 +6346,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Algeria",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 1
+        },
+        {
+          "team": "Argentina",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 2
+        },
+        {
+          "team": "Austria",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Jordan",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-17 03:00",
@@ -6555,6 +7058,56 @@
           "correct": null
         }
       ],
+      "standings": [
+        {
+          "team": "Colombia",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 1
+        },
+        {
+          "team": "Congo DR",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 2
+        },
+        {
+          "team": "Portugal",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Uzbekistan",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
+        }
+      ],
       "games": [
         {
           "kickoff": "2026-06-17 19:00",
@@ -7167,6 +7720,56 @@
             "Klas"
           ],
           "correct": null
+        }
+      ],
+      "standings": [
+        {
+          "team": "Croatia",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 1
+        },
+        {
+          "team": "England",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 2
+        },
+        {
+          "team": "Ghana",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 3
+        },
+        {
+          "team": "Panama",
+          "P": 0,
+          "W": 0,
+          "D": 0,
+          "L": 0,
+          "GF": 0,
+          "GA": 0,
+          "GD": 0,
+          "Pts": 0,
+          "pos": 4
         }
       ],
       "games": [
