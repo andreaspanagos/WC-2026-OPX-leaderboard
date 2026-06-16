@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-15 21:51",
+    "lastRefresh": "2026-06-16 07:59",
     "maxPoints": 729,
     "participants": 31,
     "maxAvailable": 39
@@ -1622,8 +1622,8 @@
       "answers": [
         {
           "answer": "Lamine Yamal",
-          "count": 13,
-          "pct": 42,
+          "count": 14,
+          "pct": 45,
           "players": [
             "Solveig",
             "Johan Leijonhielm",
@@ -1637,31 +1637,24 @@
             "Gustaf L",
             "Maximilian",
             "Simon",
-            "Ludvig Völcker"
+            "Ludvig Völcker",
+            "Klas"
           ],
           "hit": null
         },
         {
           "answer": "Kylian Mbappé",
-          "count": 5,
-          "pct": 16,
+          "count": 8,
+          "pct": 26,
           "players": [
             "Ebba Lindström",
+            "Boris",
             "Jakob Hägglund",
             "Matilda",
-            "Andreas Panagos",
-            "David"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Mbappe",
-          "count": 3,
-          "pct": 10,
-          "players": [
-            "Boris",
             "Christoffer",
-            "Tim"
+            "Andreas Panagos",
+            "Tim",
+            "David"
           ],
           "hit": null
         },
@@ -1714,15 +1707,6 @@
           "hit": null
         },
         {
-          "answer": "Lamin Yamal",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Klas"
-          ],
-          "hit": null
-        },
-        {
           "answer": "Pedri",
           "count": 1,
           "pct": 3,
@@ -1742,20 +1726,27 @@
       "answers": [
         {
           "answer": "Kylian Mbappé",
-          "count": 12,
-          "pct": 39,
+          "count": 19,
+          "pct": 61,
           "players": [
             "Solveig",
             "Johan Leijonhielm",
+            "Elin",
             "Jacob Cederberg",
+            "Boris",
             "Jakob Hägglund",
             "Matilda",
+            "Christoffer",
             "Ebba Wikström",
             "Erik Engberg",
             "Anna",
             "Dani",
             "Daniel",
+            "Ebba Örtenblad",
+            "Felice Gelin",
             "Maximilian",
+            "Tim",
+            "Simon",
             "David"
           ],
           "hit": null
@@ -1773,17 +1764,6 @@
           "hit": null
         },
         {
-          "answer": "Mbappe",
-          "count": 3,
-          "pct": 10,
-          "players": [
-            "Boris",
-            "Christoffer",
-            "Tim"
-          ],
-          "hit": null
-        },
-        {
           "answer": "0",
           "count": 2,
           "pct": 6,
@@ -1794,22 +1774,12 @@
           "hit": null
         },
         {
-          "answer": "Kylian Mbappe",
+          "answer": "Erling Haaland",
           "count": 2,
           "pct": 6,
           "players": [
-            "Elin",
-            "Simon"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Mbappé",
-          "count": 2,
-          "pct": 6,
-          "players": [
-            "Ebba Örtenblad",
-            "Felice Gelin"
+            "Andreas Panagos",
+            "Klas"
           ],
           "hit": null
         },
@@ -1823,24 +1793,6 @@
           "hit": null
         },
         {
-          "answer": "Erlin Haaland",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Andreas Panagos"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Erling Haaland (Norway)",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Klas"
-          ],
-          "hit": null
-        },
-        {
           "answer": "Julián Álvarez",
           "count": 1,
           "pct": 3,
@@ -1850,7 +1802,7 @@
           "hit": null
         },
         {
-          "answer": "Victor Gyökeres",
+          "answer": "Viktor Gyökeres",
           "count": 1,
           "pct": 3,
           "players": [
@@ -1942,7 +1894,7 @@
           "hit": null
         },
         {
-          "answer": "Egypten",
+          "answer": "Egypt",
           "count": 1,
           "pct": 3,
           "players": [
@@ -1960,7 +1912,7 @@
           "hit": null
         },
         {
-          "answer": "Frankrike",
+          "answer": "France",
           "count": 1,
           "pct": 3,
           "players": [
@@ -1987,7 +1939,7 @@
           "hit": null
         },
         {
-          "answer": "Turkiet",
+          "answer": "Turkey",
           "count": 1,
           "pct": 3,
           "players": [
@@ -2670,21 +2622,28 @@
       "answers": [
         {
           "answer": "Viktor Gyökeres",
-          "count": 14,
-          "pct": 45,
+          "count": 21,
+          "pct": 68,
           "players": [
             "Johan Leijonhielm",
             "Ebba Lindström",
             "Elin",
+            "Boris",
             "Jakob Hägglund",
             "Oscar Hultefors",
+            "Christoffer",
             "Ebba Wikström",
+            "Erik Engberg",
             "Rickard",
             "Daniel",
+            "Ebba Örtenblad",
+            "Felice Gelin",
+            "Gustaf L",
             "Maximilian",
             "Simon",
             "Alex J",
             "David",
+            "Frida Björning Lundqvist",
             "Ludvig Völcker",
             "Klas"
           ],
@@ -2692,8 +2651,8 @@
         },
         {
           "answer": "Alexander Isak",
-          "count": 7,
-          "pct": 23,
+          "count": 8,
+          "pct": 26,
           "players": [
             "Solveig",
             "Jacob Cederberg",
@@ -2701,19 +2660,8 @@
             "Andreas Panagos",
             "Anna",
             "Dani",
+            "Tim",
             "Petra"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Gyökeres",
-          "count": 4,
-          "pct": 13,
-          "players": [
-            "Boris",
-            "Christoffer",
-            "Ebba Örtenblad",
-            "Felice Gelin"
           ],
           "hit": null
         },
@@ -2724,42 +2672,6 @@
           "players": [
             "Filippa Rosell",
             "Lukas Källén"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Isak",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Tim"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Victor Gyökeres",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Gustaf L"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Viktor Gyökeres\nAllt\nBilder\nNyheter\nVideor\nKorta videor\nWebb\nFler\nVerktyg\nViktor Gyökeres\nAllt\nBilder\nNyheter\nVideor\nKorta videor\nWebb\nFler\nVerktyg\nViktor Gyökeres",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Frida Björning Lundqvist"
-          ],
-          "hit": null
-        },
-        {
-          "answer": "Viktor gyökeres",
-          "count": 1,
-          "pct": 3,
-          "players": [
-            "Erik Engberg"
           ],
           "hit": null
         }
