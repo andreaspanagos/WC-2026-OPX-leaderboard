@@ -992,7 +992,7 @@
     .page-note { color:var(--text-faint); font-size:.78rem; margin:.5rem 0 1.5rem; }
     .groups-grid {
       display:grid; gap:1rem;
-      grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
     }
     .group-card { background:var(--surface); border-radius:10px; overflow:hidden;
       box-shadow:var(--shadow-2); }
@@ -1005,9 +1005,10 @@
     table.gc-table { width:100%; border-collapse:collapse; font-size:.82rem; }
     table.gc-table th { background:var(--surface-2); color:var(--text-muted); font-weight:600;
       font-size:.68rem; text-transform:uppercase; letter-spacing:.03em;
-      padding:.35rem .25rem; text-align:center; }
+      padding:.35rem .45rem; text-align:center; }
     table.gc-table th.gc-team-h, table.gc-table td.gc-team { text-align:left; padding-left:.6rem; }
-    table.gc-table td { padding:.4rem .25rem; text-align:center; border-top:1px solid var(--border); }
+    table.gc-table td { padding:.4rem .45rem; text-align:center; border-top:1px solid var(--border); }
+    table.gc-table th:not(.gc-team-h), table.gc-table td:not(.gc-team):not(.gc-pos) { min-width:1.3rem; }
     table.gc-table td.gc-pts { font-weight:800; color:var(--brand-text); }
     table.gc-table td.gc-pos { color:var(--text-faint); font-weight:700; width:1.4rem; }
     .gc-table tr.q1 td, .gc-table tr.q2 td { background:#eafaf0; }
@@ -1018,6 +1019,34 @@
     [data-theme="dark"] .gc-table tr.q3 td { background:rgba(154,115,0,0.18); }
     .gc-team .gc-flag { color:#1f9d57; font-size:.7rem; margin-left:.3rem; }
     .gc-team .gc-win  { margin-left:.3rem; }
+
+    /* ── Group winner picks (who picked whom) ── */
+    .gp-body { padding:.5rem .8rem .7rem; }
+    .gp-row { padding:.45rem 0; border-top:1px solid var(--border); }
+    .gp-row:first-child { border-top:none; }
+    .gp-line { display:flex; align-items:baseline; justify-content:space-between; gap:.5rem; }
+    .gp-team { font-weight:700; color:var(--text); font-size:.9rem; }
+    .gp-team .gc-flag { font-size:.66rem; }
+    .gp-mark { margin-left:.35rem; font-weight:800; }
+    .gp-mark.ok { color:#1f9d57; }
+    .gp-mark.no { color:#c0392b; }
+    .gp-count { font-size:.72rem; font-weight:700; color:var(--text-muted); white-space:nowrap; }
+    .gp-bar { height:4px; border-radius:999px; background:var(--surface-2); margin:.3rem 0; overflow:hidden; }
+    .gp-bar span { display:block; height:100%; background:var(--brand); border-radius:999px; }
+    .gp-row.gp-hit .gp-bar span { background:#1f9d57; }
+    .gp-row.gp-miss .gp-bar span { background:#c0392b; opacity:.55; }
+    .gp-players { font-size:.74rem; color:var(--text-muted); line-height:1.4; }
+
+    /* ── Player profile: compact group-winner summary ── */
+    .gw-summary { display:flex; flex-wrap:wrap; gap:.4rem; padding:.6rem .2rem .2rem; }
+    .gw-chip { font-size:.78rem; padding:.3rem .6rem; border-radius:999px;
+      background:var(--surface-2); color:var(--text); border:1px solid var(--border); white-space:nowrap; }
+    .gw-chip b { color:var(--text-faint); margin-right:.25rem; font-weight:800; }
+    .gw-chip.ok { background:#eafaf0; border-color:#b7e4c7; color:#1f7a47; }
+    .gw-chip.no { background:#fdecea; border-color:#f5c6cb; color:#a93226; }
+    .gw-chip.ok b, .gw-chip.no b { color:inherit; opacity:.7; }
+    [data-theme="dark"] .gw-chip.ok { background:rgba(31,157,87,0.16); border-color:rgba(31,157,87,0.4); color:#5fd99a; }
+    [data-theme="dark"] .gw-chip.no { background:rgba(192,57,43,0.16); border-color:rgba(192,57,43,0.4); color:#e98b80; }
 
     /* ── Knockout bracket ── */
     #view-bracket .page-wrap { max-width:1500px; }
@@ -1163,20 +1192,36 @@
   </div>
 </div>
 
-<!-- ── Group standings view ── -->
+<!-- ── Group standings view (Results / Picks sub-tabs) ── -->
 <div id="view-groups" hidden>
   <div class="page-wrap">
-    <p class="page-intro">
-      Live group tables from actual results. <strong>Top 2</strong> in each group
-      qualify (green); <strong>3rd</strong> (amber) is in the running for one of the
-      8 best-third-place spots. The ◆ marks the pool's consensus group-winner pick;
-      🏆 shows the confirmed winner once a group is decided.
-    </p>
-    <div id="groups-container" class="groups-grid"></div>
-    <p class="page-note">
-      Ranked by points, then goal difference, then goals for. Head-to-head and
-      fair-play tiebreakers are not applied.
-    </p>
+    <div class="view-toggle">
+      <button class="vt-btn active" id="vt-gresults" onclick="setGroupsView('results')">Results</button>
+      <button class="vt-btn" id="vt-gpicks" onclick="setGroupsView('picks')">Picks</button>
+    </div>
+
+    <div id="groups-sub-results">
+      <p class="page-intro">
+        Live group tables from actual results. <strong>Top 2</strong> in each group
+        qualify (green); <strong>3rd</strong> (amber) is in the running for one of the
+        8 best-third-place spots. The ◆ marks the pool's consensus group-winner pick;
+        🏆 shows the confirmed winner once a group is decided.
+      </p>
+      <div id="groups-container" class="groups-grid"></div>
+      <p class="page-note">
+        Ranked by points, then goal difference, then goals for. Head-to-head and
+        fair-play tiebreakers are not applied.
+      </p>
+    </div>
+
+    <div id="groups-sub-picks" hidden>
+      <p class="page-intro">
+        Who backed whom to win each group. Picks are grouped by team, most popular
+        first; the bar shows the share of the pool. The ◆ marks the pool's consensus
+        pick; 🏆 the confirmed winner. ✓ / ✗ appear once a group is decided.
+      </p>
+      <div id="grouppicks-container" class="groups-grid"></div>
+    </div>
   </div>
 </div>
 
@@ -2050,6 +2095,14 @@
     if (cachedGamesData) renderGames(cachedGamesData);
   }
 
+  // Groups view has two sub-tabs: live Results (standings) and Picks (winner picks).
+  function setGroupsView(mode) {
+    document.getElementById('vt-gresults').classList.toggle('active', mode === 'results');
+    document.getElementById('vt-gpicks').classList.toggle('active', mode === 'picks');
+    document.getElementById('groups-sub-results').hidden = mode !== 'results';
+    document.getElementById('groups-sub-picks').hidden = mode !== 'picks';
+  }
+
   function renderGames(data) {
     cachedGamesData = data;
     const newGames = new Set();
@@ -2105,6 +2158,42 @@
 
     maybeSaveSnapshot();
     showNewVisitBadge();
+  }
+
+  // ── Group winner picks (who backed whom, grouped by team) ──
+  function renderGroupPicks(data) {
+    const c = document.getElementById("grouppicks-container");
+    if (!c) return;
+    c.innerHTML = "";
+    (data.groups || []).forEach(g => {
+      const picks = (g.winnerPicks || []);
+      const consensus = picks[0] ? picks[0].team : null;
+      const head = g.actualWinner
+        ? `<span class="gc-pick">🏆 ${esc(g.actualWinner)}</span>`
+        : (consensus ? `<span class="gc-pick">◆ ${esc(consensus)}</span>` : "");
+      const rows = picks.map(wp => {
+        const mark = wp.correct === true ? `<span class="gp-mark ok">✓</span>`
+                   : wp.correct === false ? `<span class="gp-mark no">✗</span>`
+                   : (!g.actualWinner && wp.team === consensus ? `<span class="gc-flag">◆</span>` : "");
+        const players = (wp.players || []).map(esc).join(", ");
+        const rowCls = wp.correct === true ? "gp-row gp-hit"
+                     : wp.correct === false ? "gp-row gp-miss" : "gp-row";
+        return `<div class="${rowCls}">
+            <div class="gp-line">
+              <span class="gp-team">${esc(wp.team)}${mark}</span>
+              <span class="gp-count">${wp.count} · ${wp.pct}%</span>
+            </div>
+            <div class="gp-bar"><span style="width:${wp.pct}%"></span></div>
+            <div class="gp-players">${players}</div>
+          </div>`;
+      }).join("");
+      const card = document.createElement("div");
+      card.className = "group-card";
+      card.innerHTML = `
+        <div class="gc-head"><span>Group ${esc(g.group)}</span>${head}</div>
+        <div class="gp-body">${rows || '<div class="gp-players">No picks yet</div>'}</div>`;
+      c.appendChild(card);
+    });
   }
 
   // ── Group standings (computed feed lives in games.json) ──
@@ -2565,6 +2654,19 @@
         ${rows}</div>`;
     });
 
+    // Compact at-a-glance summary of all 12 group-winner picks.
+    const gwChips = (p.gw || []).slice()
+      .sort((a, b) => String(a.group).localeCompare(String(b.group)))
+      .map(w => {
+        const cls = w.correct === true ? "gw-chip ok" : w.correct === false ? "gw-chip no" : "gw-chip";
+        const mk = w.correct === true ? " ✓" : w.correct === false ? " ✗" : "";
+        return `<span class="${cls}"><b>${esc(w.group)}</b> ${esc(w.team)}${mk}</span>`;
+      }).join("");
+    const gwSummaryHtml = gwChips
+      ? `<div class="section"><div class="section-head"><span>Group winners</span></div>
+           <div class="gw-summary">${gwChips}</div></div>`
+      : "";
+
     // Knockout bracket.
     const b = p.bracket || {};
     let koHtml = "";
@@ -2653,6 +2755,7 @@
       ${achHtml}
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
       <h3 style="margin:1.2rem 0 0.5rem;color:var(--brand)">Group-stage predictions</h3>
+      ${gwSummaryHtml}
       ${groupsHtml}
       <div class="section" style="margin-top:1rem">
         <div class="section-head"><span>Bonus answers</span></div>${bonusHtml}</div>`;
@@ -2774,7 +2877,7 @@
 
     fetch("games.json" + bust)
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(d => { renderGames(d); renderTodayBanner(d); renderGroups(d); })
+      .then(d => { renderGames(d); renderTodayBanner(d); renderGroups(d); renderGroupPicks(d); })
       .catch(err => {
         document.getElementById("games-container").innerHTML =
           `<p class="page-intro">Could not load games.json — run export.py first. (${err})</p>`;
