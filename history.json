@@ -1146,126 +1146,126 @@
       "standings": {
         "Christoffer": {
           "rank": 1,
-          "total": 31
+          "total": 32
         },
         "Elin": {
           "rank": 1,
-          "total": 31
-        },
-        "Filippa Rosell": {
-          "rank": 3,
-          "total": 28
+          "total": 32
         },
         "Johan Leijonhielm": {
           "rank": 3,
-          "total": 28
+          "total": 29
         },
         "Erik Engberg": {
-          "rank": 5,
-          "total": 27
+          "rank": 4,
+          "total": 28
+        },
+        "Filippa Rosell": {
+          "rank": 4,
+          "total": 28
         },
         "Jacob Cederberg": {
-          "rank": 5,
-          "total": 27
+          "rank": 4,
+          "total": 28
+        },
+        "Anna": {
+          "rank": 7,
+          "total": 26
+        },
+        "Boris": {
+          "rank": 7,
+          "total": 26
+        },
+        "Ebba Lindström": {
+          "rank": 7,
+          "total": 26
+        },
+        "Ebba Wikström": {
+          "rank": 7,
+          "total": 26
+        },
+        "Maximilian": {
+          "rank": 7,
+          "total": 26
         },
         "Solveig": {
           "rank": 7,
           "total": 26
         },
-        "Anna": {
-          "rank": 8,
-          "total": 25
-        },
-        "Boris": {
-          "rank": 8,
-          "total": 25
-        },
-        "Ebba Lindström": {
-          "rank": 8,
-          "total": 25
-        },
-        "Ebba Wikström": {
-          "rank": 8,
-          "total": 25
-        },
-        "Maximilian": {
-          "rank": 8,
-          "total": 25
-        },
         "Tim": {
-          "rank": 8,
-          "total": 25
+          "rank": 7,
+          "total": 26
         },
         "Simon": {
           "rank": 14,
-          "total": 24
+          "total": 25
         },
         "Andreas Panagos": {
           "rank": 15,
-          "total": 23
-        },
-        "Gustaf L": {
-          "rank": 15,
-          "total": 23
+          "total": 24
         },
         "Jakob Hägglund": {
           "rank": 15,
-          "total": 23
+          "total": 24
         },
         "Klas": {
           "rank": 15,
-          "total": 23
+          "total": 24
         },
         "Ebba Örtenblad": {
-          "rank": 19,
-          "total": 22
+          "rank": 18,
+          "total": 23
         },
         "Felice Gelin": {
-          "rank": 19,
-          "total": 22
+          "rank": 18,
+          "total": 23
+        },
+        "Gustaf L": {
+          "rank": 18,
+          "total": 23
         },
         "Alex J": {
           "rank": 21,
+          "total": 22
+        },
+        "Dani": {
+          "rank": 22,
           "total": 21
         },
         "Daniel": {
-          "rank": 21,
+          "rank": 22,
+          "total": 21
+        },
+        "David": {
+          "rank": 22,
           "total": 21
         },
         "Frida Björning Lundqvist": {
-          "rank": 21,
+          "rank": 22,
           "total": 21
         },
-        "Dani": {
-          "rank": 24,
-          "total": 20
-        },
-        "David": {
-          "rank": 24,
-          "total": 20
-        },
         "Petra": {
-          "rank": 24,
-          "total": 20
+          "rank": 22,
+          "total": 21
         },
         "Lukas Källén": {
           "rank": 27,
-          "total": 19
+          "total": 20
         },
         "Matilda": {
           "rank": 27,
-          "total": 19
+          "total": 20
         },
         "Ludvig Völcker": {
           "rank": 29,
-          "total": 18
-        },
-        "Oscar Hultefors": {
-          "rank": 29,
-          "total": 18
+          "total": 19
         },
         "Rickard": {
           "rank": 29,
+          "total": 19
+        },
+        "Oscar Hultefors": {
+          "rank": 31,
           "total": 18
         }
       }
