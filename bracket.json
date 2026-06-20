@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "lastRefresh": "2026-06-20 09:12",
+    "maxPoints": 729,
+    "participants": 31,
+    "maxAvailable": 96,
+    "drawn": false
+  },
+  "matches": [
+    {
+      "id": "M73",
+      "no": 73,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M74",
+      "no": 74,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M75",
+      "no": 75,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M76",
+      "no": 76,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M77",
+      "no": 77,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M78",
+      "no": 78,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M79",
+      "no": 79,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M80",
+      "no": 80,
+      "round": "R32",
+      "side": "L",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M81",
+      "no": 81,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M82",
+      "no": 82,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M83",
+      "no": 83,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M84",
+      "no": 84,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M85",
+      "no": 85,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M86",
+      "no": 86,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M87",
+      "no": 87,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M88",
+      "no": 88,
+      "round": "R32",
+      "side": "R",
+      "feeders": [],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M89",
+      "no": 89,
+      "round": "R16",
+      "side": "L",
+      "feeders": [
+        "M73",
+        "M74"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M90",
+      "no": 90,
+      "round": "R16",
+      "side": "L",
+      "feeders": [
+        "M75",
+        "M76"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M91",
+      "no": 91,
+      "round": "R16",
+      "side": "L",
+      "feeders": [
+        "M77",
+        "M78"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M92",
+      "no": 92,
+      "round": "R16",
+      "side": "L",
+      "feeders": [
+        "M79",
+        "M80"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M93",
+      "no": 93,
+      "round": "R16",
+      "side": "R",
+      "feeders": [
+        "M81",
+        "M82"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M94",
+      "no": 94,
+      "round": "R16",
+      "side": "R",
+      "feeders": [
+        "M83",
+        "M84"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M95",
+      "no": 95,
+      "round": "R16",
+      "side": "R",
+      "feeders": [
+        "M85",
+        "M86"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M96",
+      "no": 96,
+      "round": "R16",
+      "side": "R",
+      "feeders": [
+        "M87",
+        "M88"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M97",
+      "no": 97,
+      "round": "QF",
+      "side": "L",
+      "feeders": [
+        "M89",
+        "M90"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M98",
+      "no": 98,
+      "round": "QF",
+      "side": "L",
+      "feeders": [
+        "M91",
+        "M92"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M99",
+      "no": 99,
+      "round": "QF",
+      "side": "R",
+      "feeders": [
+        "M93",
+        "M94"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M100",
+      "no": 100,
+      "round": "QF",
+      "side": "R",
+      "feeders": [
+        "M95",
+        "M96"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M101",
+      "no": 101,
+      "round": "SF",
+      "side": "L",
+      "feeders": [
+        "M97",
+        "M98"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M102",
+      "no": 102,
+      "round": "SF",
+      "side": "R",
+      "feeders": [
+        "M99",
+        "M100"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M103",
+      "no": 103,
+      "round": "Bronze",
+      "side": "C",
+      "feeders": [
+        "M101",
+        "M102"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    },
+    {
+      "id": "M104",
+      "no": 104,
+      "round": "Final",
+      "side": "C",
+      "feeders": [
+        "M101",
+        "M102"
+      ],
+      "home": null,
+      "away": null,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null
+    }
+  ]
+}
