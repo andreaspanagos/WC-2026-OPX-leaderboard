@@ -1085,16 +1085,36 @@ for lbrow in rows:
 OG_OUTPUT = "og-image.png"
 try:
     from PIL import Image, ImageDraw, ImageFont as _IF
+    # Brand the share image from config.json so each pool gets its own name,
+    # colours and URL (falls back to OPX navy if config is missing). Keeps a
+    # single export.py syncable across all 4 pools — only WORKBOOK differs.
+    def _hex_rgb(_h, _default):
+        try:
+            _h = _h.lstrip("#")
+            return (int(_h[0:2], 16), int(_h[2:4], 16), int(_h[4:6], 16))
+        except Exception:
+            return _default
+    _cfg = {}
+    try:
+        with open("config.json", encoding="utf-8") as _cf:
+            _cfg = json.load(_cf)
+    except Exception:
+        pass
+    _pool  = _cfg.get("poolName", "OPX")
+    _c_top = _hex_rgb(_cfg.get("brandColor", ""),     (26, 37, 96))
+    _c_bot = _hex_rgb(_cfg.get("brandColorDark", ""), (20, 42, 108))
+    _url   = (_cfg.get("siteUrl", "https://andreaspanagos.github.io/WC-2026-OPX-leaderboard/")
+              .replace("https://", "").replace("http://", "").rstrip("/"))
     _W, _H = 1200, 630
     img = Image.new("RGB", (_W, _H))
     draw = ImageDraw.Draw(img)
-    # Navy-blue gradient background
+    # Brand-colour vertical gradient (brandColor -> brandColorDark)
     for _y in range(_H):
         _t = _y / _H
         draw.rectangle([0, _y, _W, _y + 1], fill=(
-            int(26  + _t * (20  - 26)),
-            int(37  + _t * (42  - 37)),
-            int(96  + _t * (108 - 96)),
+            int(_c_top[0] + _t * (_c_bot[0] - _c_top[0])),
+            int(_c_top[1] + _t * (_c_bot[1] - _c_top[1])),
+            int(_c_top[2] + _t * (_c_bot[2] - _c_top[2])),
         ))
     # Gold accent bar at top
     draw.rectangle([0, 0, _W, 10], fill=(255, 215, 0))
@@ -1107,7 +1127,7 @@ try:
     except OSError:
         _big = _med = _reg = _small = _IF.load_default()
     draw.text((80,  38), "FIFA World Cup 2026",   font=_reg,  fill=(180, 200, 255))
-    draw.text((80,  78), "OPX Live Leaderboard",  font=_big,  fill=(255, 215, 0))
+    draw.text((80,  78), f"{_pool} Live Leaderboard",  font=_big,  fill=(255, 215, 0))
     draw.rectangle([80, 178, _W - 80, 181],        fill=(55, 72, 130))
     draw.text((80, 192), f"Updated: {today}",      font=_small, fill=(140, 165, 220))
     for _i, _r in enumerate(rows[:3]):
@@ -1117,7 +1137,7 @@ try:
         draw.text((168, _y2), str(_r.get("player", ""))[:22], font=_med, fill=(255, 255, 255))
         draw.text((168, _y2 + 50), f"{_r.get('total', 0)} pts", font=_reg, fill=(155, 185, 235))
     draw.rectangle([0, 600, _W, 630], fill=(12, 18, 55))
-    draw.text((80, 607), "andreaspanagos.github.io/WC-2026-OPX-leaderboard",
+    draw.text((80, 607), _url,
               font=_small, fill=(110, 145, 200))
     img.save(OG_OUTPUT, "PNG")
     print(f"Generated {OG_OUTPUT}")
