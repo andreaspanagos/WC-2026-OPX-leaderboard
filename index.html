@@ -1424,9 +1424,10 @@
   // Fill the top-3 podium cards' badge clusters. Called from both renderLeaderboard
   // and renderAchievements since the two JSON files load in parallel (either may win).
   function decoratePodiumBadges() {
+    const admin = document.body.classList.contains("admin");   // badges are admin-only
     document.querySelectorAll(".podium-badges[data-player]").forEach(div => {
       const p = div.getAttribute("data-player");
-      div.innerHTML = badgeStrip(achData && achData.byPlayer ? achData.byPlayer[p] : []);
+      div.innerHTML = admin ? badgeStrip(achData && achData.byPlayer ? achData.byPlayer[p] : []) : "";
     });
   }
 
@@ -1641,6 +1642,10 @@
     const promptEl = document.getElementById("me-prompt");
     const heroEl = document.getElementById("me-hero");
     if (!promptEl || !heroEl || !lbData) return;
+    // "This is you" (picker + hero) is admin-only — public never sees it.
+    if (!document.body.classList.contains("admin")) {
+      promptEl.hidden = true; heroEl.hidden = true; return;
+    }
     const rows = lbData.rows;
     const me = getMe();
 
@@ -1883,6 +1888,7 @@
   // dashboard hero/row highlight). getMe() validates it against the current
   // standings so a stale stored name never highlights a missing player.
   function getMe() {
+    if (!document.body.classList.contains("admin")) return "";   // "This is you" is admin-only
     if (trendMe && lbData && !lbData.rows.some(r => r.player === trendMe)) return "";
     return trendMe;
   }
@@ -2593,8 +2599,9 @@
     });
 
     // Achievements / badges earned by this player (+ a collapsed locked remainder).
+    // Admin-only — the public player view omits the Badges section entirely.
     let achHtml = "";
-    if (achData) {
+    if (achData && document.body.classList.contains("admin")) {
       const earned = (achData.byPlayer && achData.byPlayer[name]) || [];
       const earnedSet = new Set(earned.map(b => b.id));
       const catalog = achData.catalog || [];
