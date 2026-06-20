@@ -33,6 +33,8 @@ GAMES_OUTPUT = "games.json"
 STATS_OUTPUT = "stats.json"
 PLAYERS_OUTPUT = "players.json"
 HISTORY_OUTPUT = "history.json"
+BRACKET_OUTPUT = "bracket.json"
+ACH_OUTPUT = "achievements.json"
 
 FLAT_HEADER_ROW = 100          # header row of the per-player flat picks table
 STAGES = ["Group stage", "R32", "R16", "QF", "SF", "Final", "Champion"]
@@ -276,10 +278,53 @@ def predicted_stage(p, team):
             return key
     return "Group stage"
 
+# ───────────────── group standings (from authoritative fixtures) ─────────────────
+# Computed from the merged Backend/Results scores already in `fixtures`, so the
+# table matches the official results. Tiebreak: Pts -> GD -> GF -> team name.
+# (FIFA's head-to-head / fair-play tiebreakers are NOT applied — the feed lacks
+# the data for them; flagged in the UI footnote.)
+
+def compute_standings(group):
+    tbl = {}   # team -> stat dict
+    def row(t):
+        return tbl.setdefault(t, {"team": t, "P": 0, "W": 0, "D": 0, "L": 0,
+                                  "GF": 0, "GA": 0, "GD": 0, "Pts": 0})
+    for fx in fixtures:
+        if fx["group"] != group:
+            continue
+        h, a = row(fx["home"]), row(fx["away"])
+        h["team"], a["team"]  # ensure both teams listed even if unplayed
+        if not fx["played"]:
+            continue
+        hg, ag = fx["hg"], fx["ag"]
+        h["P"] += 1; a["P"] += 1
+        h["GF"] += hg; h["GA"] += ag
+        a["GF"] += ag; a["GA"] += hg
+        if hg > ag:
+            h["W"] += 1; a["L"] += 1; h["Pts"] += 3
+        elif hg < ag:
+            a["W"] += 1; h["L"] += 1; a["Pts"] += 3
+        else:
+            h["D"] += 1; a["D"] += 1; h["Pts"] += 1; a["Pts"] += 1
+    for r in tbl.values():
+        r["GD"] = r["GF"] - r["GA"]
+    standings = sorted(tbl.values(),
+                       key=lambda r: (-r["Pts"], -r["GD"], -r["GF"], r["team"]))
+    for i, r in enumerate(standings):
+        r["pos"] = i + 1
+    return standings
+
+
 # ───────────────── games.json: scoreline distributions ─────────────────
 
 n_players = len(players)
 groups_out = {}
+# Per-fixture pick popularity, keyed by fixture index, reused below to tag each
+# player's own scoreline with its pool %, how many players shared it, and whether it
+# was the most-picked scoreline — the substrate for the contrarian/crowd badges.
+# game_scorers[gi] = how many players earned any points on that game (Giant Slayer).
+game_pick_meta = {}
+game_scorers = {}
 for gi, fx in enumerate(fixtures):
     gs = f"GS{gi + 1:02d}"
     by_score = {}
@@ -300,6 +345,18 @@ for gi, fx in enumerate(fixtures):
             "players": ppl,
         })
     scorelines.sort(key=lambda s: (-s["count"], s["score"]))
+    max_count = max((len(ppl) for ppl in by_score.values()), default=0)
+    game_pick_meta[gi] = {
+        (ph, pa): {
+            "pct": round(100 * len(ppl) / n_players) if n_players else 0,
+            "top": len(ppl) == max_count and max_count > 0,
+            "count": len(ppl),
+        }
+        for (ph, pa), ppl in by_score.items()
+    }
+    game_scorers[gi] = (sum(len(ppl) for (ph, pa), ppl in by_score.items()
+                            if game_points(ph, pa, fx["hg"], fx["ag"]) >= 1)
+                        if fx["played"] else None)
     groups_out.setdefault(fx["group"], []).append({
         "kickoff": kickoffs.get((fx["home"], fx["away"]), ""),
         "home": fx["home"], "away": fx["away"],
@@ -329,6 +386,7 @@ for g in sorted(groups_out):
         "complete": group_complete.get(g, False),
         "actualWinner": actual_winner.get(g),
         "winnerPicks": picks,
+        "standings": compute_standings(g),
         "games": groups_out[g],
     })
 
@@ -623,6 +681,8 @@ for p in players:
         ph, pa = as_int(d.get(gs + "_H")), as_int(d.get(gs + "_A"))
         pts = (game_points(ph, pa, fx["hg"], fx["ag"])
                if fx["played"] and ph is not None and pa is not None else None)
+        pm = (game_pick_meta.get(gi, {}).get((ph, pa))
+              if ph is not None and pa is not None else None)
         games.append({
             "group": fx["group"], "home": fx["home"], "away": fx["away"],
             "ph": ph, "pa": pa,
@@ -630,6 +690,11 @@ for p in players:
             "hg": fx["hg"] if fx["played"] else None,
             "ag": fx["ag"] if fx["played"] else None,
             "pts": pts,
+            "kickoff": kickoffs.get((fx["home"], fx["away"]), ""),
+            "pct": pm["pct"] if pm else None,
+            "isTopPick": pm["top"] if pm else None,
+            "sameCount": pm["count"] if pm else None,
+            "gameScorers": game_scorers.get(gi),
         })
 
     gw = []
@@ -674,6 +739,321 @@ with open(PLAYERS_OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": meta, "players": players, "detail": players_detail},
               f, ensure_ascii=False, indent=2)
 print(f"Exported detail for {len(players_detail)} players -> {PLAYERS_OUTPUT}")
+
+# ───────────────── achievements.json: gamification badges ─────────────────
+# Tongue-in-cheek group-stage badges, computed entirely from data already built
+# above: per-player games (with pts + pick popularity), the leaderboard rows, and
+# the daily rank history. Output is a static catalog (all 20, for the locked/earned
+# gallery), an earners-count per badge, and the unlocked ids per player.
+ACHIEVEMENTS = [
+    {"id": "crystal-ball", "name": "Crystal Ball", "emoji": "🔮", "rarity": "Legendary",
+     "desc": "The only player to nail a match's exact scoreline."},
+    {"id": "untouchable", "name": "Untouchable", "emoji": "👑", "rarity": "Legendary",
+     "desc": "Held rank #1 three update days in a row."},
+    {"id": "the-sweep", "name": "The Sweep", "emoji": "🧹", "rarity": "Legendary",
+     "desc": "Got the result right on every match of a full group."},
+    {"id": "perfect-day", "name": "Perfect Day", "emoji": "💯", "rarity": "Legendary",
+     "desc": "Scored on every match you picked on a matchday."},
+    {"id": "giant-slayer", "name": "Giant Slayer", "emoji": "🗡️", "rarity": "Rare",
+     "desc": "Scored on a game only 3 or fewer players read right."},
+    {"id": "hot-streak", "name": "Hot Streak", "emoji": "🔥", "rarity": "Rare",
+     "desc": "Scored points in five matches running."},
+    {"id": "the-comeback", "name": "The Comeback", "emoji": "📈", "rarity": "Rare",
+     "desc": "Climbed 8+ ranks in a single day."},
+    {"id": "day-winner", "name": "Day Winner", "emoji": "⏱️", "rarity": "Rare",
+     "desc": "Top points-scorer of a matchday."},
+    {"id": "contrarian-king", "name": "Contrarian King", "emoji": "🐴", "rarity": "Rare",
+     "desc": "Won the day while picking against the crowd."},
+    {"id": "on-the-rise", "name": "On the Rise", "emoji": "🧗", "rarity": "Rare",
+     "desc": "Improved your rank three update days in a row."},
+    {"id": "bullseye", "name": "Bullseye", "emoji": "🎯", "rarity": "Rare",
+     "desc": "Two exact scorelines in one matchday."},
+    {"id": "off-the-mark", "name": "Off the Mark", "emoji": "✅", "rarity": "Common",
+     "desc": "Got your first points on the board."},
+    {"id": "first-blood", "name": "First Blood", "emoji": "🩸", "rarity": "Common",
+     "desc": "Landed your first exact scoreline."},
+    {"id": "crowd-surfer", "name": "Crowd Surfer", "emoji": "🐑", "rarity": "Common",
+     "desc": "Cashed in on the people's pick."},
+    {"id": "reading-the-game", "name": "Reading the Game", "emoji": "🧠", "rarity": "Common",
+     "desc": "Three correct results in a single matchday."},
+    {"id": "steady-hand", "name": "Steady Hand", "emoji": "📏", "rarity": "Common",
+     "desc": "Scored points on three matchdays in a row."},
+    {"id": "wooden-spoon", "name": "Wooden Spoon", "emoji": "🥄", "rarity": "Common",
+     "desc": "Propping up the table."},
+    {"id": "snake-eyes", "name": "Snake Eyes", "emoji": "🎲", "rarity": "Common",
+     "desc": "Five matches in a row without a single point."},
+    {"id": "cold-snap", "name": "Cold Snap", "emoji": "🧊", "rarity": "Common",
+     "desc": "Blanked an entire matchday."},
+    {"id": "free-fall", "name": "Free Fall", "emoji": "📉", "rarity": "Common",
+     "desc": "Tumbled 8+ ranks in a single day."},
+]
+ACH_ORDER = {a["id"]: i for i, a in enumerate(ACHIEVEMENTS)}
+
+
+def _run_end(flags, k):
+    """Index at which the first run of >=k consecutive truthy flags completes, else None."""
+    run = 0
+    for i, f in enumerate(flags):
+        run = run + 1 if f else 0
+        if run >= k:
+            return i
+    return None
+
+
+def _gdate(g):
+    return (g.get("kickoff") or "")[:10]
+
+
+def _gmatch(g):
+    return f'{g["home"]} v {g["away"]}'
+
+
+# Worst (highest) rank on the board → Wooden Spoon.
+_ranks = [r["rank"] for r in rows if r.get("rank") is not None]
+worst_rank = max(_ranks) if _ranks else None
+_refresh_date = str(meta.get("lastRefresh") or "")[:10] or None
+
+# Per-player rank trajectory across update days as (date, rank) pairs. Skip days where
+# the whole field is tied at rank 1 (the opening 0-0 day before any game is scored) —
+# drops/climbs measured off that artificial start aren't real movement.
+rank_series = {}
+for _day in sorted(history.get("days", []), key=lambda x: x.get("date") or ""):
+    _standings = _day.get("standings") or {}
+    _dranks = [s.get("rank") for s in _standings.values() if s.get("rank") is not None]
+    if _dranks and max(_dranks) == 1:
+        continue
+    for _pl, _st in _standings.items():
+        if _st.get("rank") is not None:
+            rank_series.setdefault(_pl, []).append((_day.get("date"), _st["rank"]))
+
+# Cross-player matchday points: date -> player -> {pts, scoring_pcts}.
+day_points = {}
+for _p in players:
+    for _g in players_detail[_p]["games"]:
+        if not _g["played"] or _g["pts"] is None:
+            continue
+        _date = (_g.get("kickoff") or "")[:10]
+        if not _date:
+            continue
+        _rec = day_points.setdefault(_date, {}).setdefault(_p, {"pts": 0, "scoring_pcts": []})
+        _rec["pts"] += _g["pts"]
+        if _g["pts"] >= 1 and _g.get("pct") is not None:
+            _rec["scoring_pcts"].append(_g["pct"])
+
+# Sole top scorer of each matchday (must have outscored everyone else, > 0). Ties
+# award no Day Winner — early one-game days produce big ties and would otherwise hand
+# the badge to almost the whole pool, defeating its rarity.
+day_top = {}
+for _date, _plm in day_points.items():
+    _mx = max((v["pts"] for v in _plm.values()), default=0)
+    _leaders = [pl for pl, v in _plm.items() if v["pts"] == _mx]
+    if _mx > 0 and len(_leaders) == 1:
+        day_top[_date] = set(_leaders)
+
+
+def player_badges(p):
+    """Return {badge_id: {"date": iso, "how": text}} — the first time each badge's
+    condition was met, with the triggering evidence for the player profile."""
+    d = players_detail[p]
+    awards = {}
+
+    def give(bid, date, how):
+        if bid not in awards:        # first occurrence wins
+            awards[bid] = {"date": date, "how": how}
+
+    played = [g for g in d["games"] if g["played"] and g["pts"] is not None]
+    chrono = sorted(played, key=lambda g: (g.get("kickoff") or "", g["group"], g["home"]))
+
+    by_day = {}
+    for g in played:
+        dt = _gdate(g)
+        if dt:
+            by_day.setdefault(dt, []).append(g)
+
+    # ── single-game (chronological → first occurrence) ──
+    for g in chrono:
+        if g["pts"] >= 1:
+            give("off-the-mark", _gdate(g), f'First points: {_gmatch(g)} (+{g["pts"]})')
+            break
+    for g in chrono:
+        if g["pts"] == 3:
+            give("first-blood", _gdate(g), f'{g["home"]} {g["ph"]}–{g["pa"]} {g["away"]} — exact!')
+            if g.get("sameCount") == 1:
+                give("crystal-ball", _gdate(g),
+                     f'{g["home"]} {g["ph"]}–{g["pa"]} {g["away"]} — the only exact call')
+        if g["pts"] >= 1:
+            gs = g.get("gameScorers")
+            if gs is not None and gs <= 3:
+                give("giant-slayer", _gdate(g),
+                     f'{_gmatch(g)} — only {gs} player{"" if gs == 1 else "s"} scored')
+            if g.get("isTopPick"):
+                give("crowd-surfer", _gdate(g),
+                     f'{_gmatch(g)} — rode the {g["ph"]}–{g["pa"]} consensus')
+
+    # ── matchday-based (chronological dates → first) ──
+    for dt in sorted(by_day):
+        dg = by_day[dt]
+        if len(dg) >= 2 and all(x["pts"] >= 1 for x in dg):
+            give("perfect-day", dt, f'Scored on all {len(dg)} games that day')
+        n3 = sum(1 for x in dg if x["pts"] == 3)
+        if n3 >= 2:
+            give("bullseye", dt, f'{n3} exact scorelines in a day')
+        nr = sum(1 for x in dg if x["pts"] >= 1)
+        if nr >= 3:
+            give("reading-the-game", dt, f'{nr} correct results in a day')
+        if len(dg) >= 2 and all(x["pts"] == 0 for x in dg):
+            give("cold-snap", dt, f'Blanked all {len(dg)} games that day')
+
+    # ── group sweep: every match of a fully-played group correct ──
+    by_group = {}
+    for g in played:
+        by_group.setdefault(g["group"], []).append(g)
+    for grp, gg in sorted(by_group.items()):
+        if len(gg) >= 6 and all(x["pts"] >= 1 for x in gg):
+            give("the-sweep", max(_gdate(x) for x in gg), f'All 6 Group {grp} results correct')
+
+    # ── streaks (chronological) ──
+    i = _run_end([g["pts"] >= 1 for g in chrono], 5)
+    if i is not None:
+        give("hot-streak", _gdate(chrono[i]), "Points in 5 straight matches")
+    i = _run_end([g["pts"] == 0 for g in chrono], 5)
+    if i is not None:
+        give("snake-eyes", _gdate(chrono[i]), "0 points in 5 straight matches")
+
+    # ── day winner / contrarian (cross-player) ──
+    for dt in sorted(day_top):
+        if p in day_top[dt]:
+            give("day-winner", dt, f'Outright top scorer (+{day_points[dt][p]["pts"]})')
+            pcts = day_points[dt][p]["scoring_pcts"]
+            if pcts and (sum(pcts) / len(pcts)) < 25:
+                give("contrarian-king", dt,
+                     f'Top scorer on a {round(sum(pcts) / len(pcts))}%-popularity card')
+
+    # ── rank movement / consistency (history) ──
+    series = rank_series.get(p, [])
+    for (d0, r0), (d1, r1) in zip(series, series[1:]):
+        if r0 - r1 >= 8:
+            give("the-comeback", d1, f'#{r0} → #{r1} in a day')
+        if r1 - r0 >= 8:
+            give("free-fall", d1, f'#{r0} → #{r1} in a day')
+    for j in range(len(series) - 2):
+        (da, ra), (db, rb), (dc, rc) = series[j], series[j + 1], series[j + 2]
+        if ra == 1 and rb == 1 and rc == 1:
+            give("untouchable", dc, "Held #1 three update days running")
+        if ra > rb > rc:
+            give("on-the-rise", dc, f'#{ra} → #{rb} → #{rc}')
+
+    # ── points on three consecutive matchdays ──
+    dts = sorted(by_day)
+    flags = [sum(x["pts"] for x in by_day[dt]) > 0 for dt in dts]
+    e = _run_end(flags, 3)
+    if e is not None:
+        give("steady-hand", dts[e], "Points on 3 matchdays running")
+
+    # ── wooden spoon (current standing) ──
+    if worst_rank is not None and d.get("rank") == worst_rank:
+        give("wooden-spoon", _refresh_date, f'Last place — rank {d.get("rank")}')
+
+    return awards
+
+
+by_player = {}
+rarity_count = {a["id"]: 0 for a in ACHIEVEMENTS}
+for p in players:
+    awards = player_badges(p)
+    by_player[p] = [{"id": bid, "date": awards[bid]["date"], "how": awards[bid]["how"]}
+                    for bid in sorted(awards, key=lambda bid: ACH_ORDER[bid])]
+    for bid in awards:
+        rarity_count[bid] += 1
+
+with open(ACH_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump({"meta": meta, "catalog": ACHIEVEMENTS,
+               "rarityCount": rarity_count, "byPlayer": by_player},
+              f, ensure_ascii=False, indent=2)
+_total_badges = sum(len(v) for v in by_player.values())
+print(f"Exported {_total_badges} badges across {len(by_player)} players -> {ACH_OUTPUT}")
+
+# ───────────────── bracket.json: knockout bracket ─────────────────
+# Reads the Backend KO match list (M73..M104, cols I-N) — the fixed FIFA 2026
+# bracket. M73-M88 = R32, M89-M96 = R16, M97-M100 = QF, M101-M102 = SF,
+# M103 = third-place (Bronze), M104 = Final. The tree is wired by sequential
+# pairing (winners of M73,M74 -> M89, etc.), which is the standard bracket order.
+# Home/Away are "TBD"/0 until the R32 draw is made, so before the draw this
+# feed is the empty structure (every slot a placeholder) — rendered as such.
+
+# Map each match to its round and its left/right half (Final/Bronze are centre).
+KO_LAYOUT = {}   # num -> (round, side)
+for _n in range(73, 89):  KO_LAYOUT[_n] = ("R32", "L" if _n <= 80 else "R")
+for _n in range(89, 97):  KO_LAYOUT[_n] = ("R16", "L" if _n <= 92 else "R")
+for _n in range(97, 101): KO_LAYOUT[_n] = ("QF",  "L" if _n <= 98 else "R")
+KO_LAYOUT[101] = ("SF", "L"); KO_LAYOUT[102] = ("SF", "R")
+KO_LAYOUT[103] = ("Bronze", "C"); KO_LAYOUT[104] = ("Final", "C")
+
+# Feeder children: which two earlier matches' winners meet in this match.
+KO_FEEDERS = {}
+for _k in range(8):  KO_FEEDERS[89 + _k] = (73 + 2 * _k, 74 + 2 * _k)   # R16 <- R32 pairs
+for _k in range(4):  KO_FEEDERS[97 + _k] = (89 + 2 * _k, 90 + 2 * _k)   # QF  <- R16 pairs
+KO_FEEDERS[101] = (97, 98); KO_FEEDERS[102] = (99, 100)                 # SF  <- QF pairs
+KO_FEEDERS[104] = (101, 102)                                           # Final <- SF winners
+KO_FEEDERS[103] = (101, 102)                                           # Bronze <- SF losers
+
+NEXT_ROUND = {"R32": "R16", "R16": "QF", "QF": "SF", "SF": "Final", "Final": "Champion"}
+
+def real_team(v):
+    """Backend uses 'TBD' or 0 for an unfilled slot; only a known team is real."""
+    return v if (v and v in teams) else None
+
+def advance_pct(team, target):
+    """% of the pool that predicted `team` to reach `target` (the round this
+    match feeds into). For the Final, `target` is winning it (Champion)."""
+    if not team or not n_players:
+        return None
+    if target == "Champion":
+        c = sum(1 for p in players if rounds_by_player[p]["Winner"] == team)
+    else:
+        c = sum(1 for p in players if team in rounds_by_player[p].get(target, set()))
+    return {"pct": round(100 * c / n_players), "count": c}
+
+ko_matches = []
+for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_only=True):
+    mid, rnd, home, away, hg, ag = row
+    if not mid:
+        continue
+    num = as_int(str(mid).lstrip("Mm"))
+    if num not in KO_LAYOUT:
+        continue
+    rnd_key, side = KO_LAYOUT[num]
+    h, a = real_team(home), real_team(away)
+    hg, ag = as_int(hg), as_int(ag)
+    # Winner is taken from the model's authoritative progression sets, not the
+    # raw score (a KO tie is decided on penalties, which the score may not show).
+    winner = None
+    if h and a:
+        if rnd_key == "Final":
+            winner = h if h in champion else (a if a in champion else None)
+        else:
+            nxt = ko_round.get(NEXT_ROUND.get(rnd_key), set())
+            if rnd_key == "SF":   # SF winners are the Final's two participants
+                nxt = ko_round.get("Final", set())
+            winner = h if h in nxt else (a if a in nxt else None)
+    has_score = (hg is not None and ag is not None and (hg or ag))
+    target = NEXT_ROUND.get(rnd_key)
+    ko_matches.append({
+        "id": f"M{num}", "no": num, "round": rnd_key, "side": side,
+        "feeders": [f"M{c}" for c in KO_FEEDERS.get(num, ())],
+        "home": h, "away": a,
+        "hg": hg if (h and a and has_score) else None,
+        "ag": ag if (h and a and has_score) else None,
+        "winner": winner,
+        "homePick": advance_pct(h, target) if h else None,
+        "awayPick": advance_pct(a, target) if a else None,
+    })
+
+drawn = any(m["home"] or m["away"] for m in ko_matches)
+with open(BRACKET_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump({"meta": {**meta, "drawn": drawn}, "matches": ko_matches},
+              f, ensure_ascii=False, indent=2)
+print(f"Exported {len(ko_matches)} knockout matches (drawn={drawn}) -> {BRACKET_OUTPUT}")
 
 # ───────────────── self-check vs official leaderboard ─────────────────
 

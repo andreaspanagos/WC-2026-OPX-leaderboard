@@ -8,9 +8,11 @@
 !index.html
 !leaderboard.json
 !games.json
+!bracket.json
 !stats.json
 !players.json
 !history.json
+!achievements.json
 !results_log.json
 !og-image.png
 !config.json
