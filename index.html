@@ -471,6 +471,19 @@
       font-size:0.78rem; font-weight:700; text-transform:uppercase;
       letter-spacing:.05em; color:var(--text-muted); margin:1rem 0 0.3rem; padding:0;
     }
+    .chrono-section-label {
+      font-size:0.8rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.07em; color:var(--text);
+      background:var(--bg2); border-left:3px solid var(--brand);
+      padding:0.35rem 0.75rem; border-radius:0 4px 4px 0;
+      margin:1.4rem 0 0.4rem;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .chrono-section-label:first-child { margin-top:0; }
+    .chrono-section-label.collapsible { cursor:pointer; user-select:none; }
+    .chrono-section-label.collapsible:hover { background:var(--bg3,var(--bg2)); }
+    .chrono-section-chev { font-size:0.7rem; display:inline-block; transition:transform .2s; }
+    .chrono-section-label.collapsed .chrono-section-chev { transform:rotate(-90deg); }
     .winner-picks {
       font-size: 0.78rem; color: var(--text-muted);
       padding: 0.5rem 0.9rem;
@@ -2117,27 +2130,55 @@
     c.innerHTML = "";
 
     if (gamesView === 'chrono') {
-      // Flatten all games, sort by kickoff
       const all = data.groups.flatMap(g => g.games.filter(gm => gm.kickoff));
       all.sort((a, b) => a.kickoff < b.kickoff ? -1 : a.kickoff > b.kickoff ? 1 : 0);
-      // Group by date (first 10 chars of kickoff "YYYY-MM-DD")
-      let lastDate = null;
-      all.forEach(gm => {
-        const date = gm.kickoff.slice(0, 10);
-        if (date !== lastDate) {
-          lastDate = date;
-          const m = date.match(/(\d{4})-(\d{2})-(\d{2})/);
-          const label = m ? `${MONTHS[+m[2]-1]} ${+m[3]}, ${m[1]}` : date;
-          const h = document.createElement("h3");
-          h.className = "day-header";
-          h.textContent = label;
-          c.appendChild(h);
+
+      const past     = all.filter(gm =>  gm.played);
+      const upcoming = all.filter(gm => !gm.played);
+
+      function appendChronoSection(games, label, collapsible) {
+        if (!games.length) return;
+        const lbl = document.createElement("div");
+        lbl.className = "chrono-section-label" + (collapsible ? " collapsible" : "");
+        const span = document.createElement("span");
+        span.textContent = label;
+        lbl.appendChild(span);
+        const items = [];
+        let lastDate = null;
+        games.forEach(gm => {
+          const date = gm.kickoff.slice(0, 10);
+          if (date !== lastDate) {
+            lastDate = date;
+            const m = date.match(/(\d{4})-(\d{2})-(\d{2})/);
+            const dayLabel = m ? `${MONTHS[+m[2]-1]} ${+m[3]}, ${m[1]}` : date;
+            const h = document.createElement("h3");
+            h.className = "day-header";
+            h.textContent = dayLabel;
+            items.push(h);
+          }
+          const sec = document.createElement("div");
+          sec.className = "section";
+          sec.innerHTML = gameHtml(gm, newGames.has(gameKey(gm)));
+          items.push(sec);
+        });
+        if (collapsible) {
+          const chev = document.createElement("span");
+          chev.className = "chrono-section-chev";
+          chev.textContent = "▼";
+          lbl.appendChild(chev);
+          let collapsed = false;
+          lbl.addEventListener("click", () => {
+            collapsed = !collapsed;
+            lbl.classList.toggle("collapsed", collapsed);
+            items.forEach(el => { el.hidden = collapsed; });
+          });
         }
-        const sec = document.createElement("div");
-        sec.className = "section";
-        sec.innerHTML = gameHtml(gm, newGames.has(gameKey(gm)));
-        c.appendChild(sec);
-      });
+        c.appendChild(lbl);
+        items.forEach(el => c.appendChild(el));
+      }
+
+      appendChronoSection(past,     "Past games",     true);
+      appendChronoSection(upcoming, "Upcoming games", false);
     } else {
       data.groups.forEach(g => {
         const sec = document.createElement("div");
