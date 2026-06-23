@@ -234,6 +234,40 @@
     .shame-name:hover { text-decoration: underline; }
     .shame-total { font-size: 0.85rem; font-weight: 800; color: #ff8a80; flex-shrink: 0; }
 
+    /* ── Ebba-ligan (OPX only; gated by config.showEbbaLiga) ── */
+    .ebba-liga {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      padding: 1.5rem 0.75rem 0.5rem;
+    }
+    .ebba-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      margin-bottom: 0.15rem;
+    }
+    .ebba-cards { display: flex; flex-direction: column; gap: 0.3rem; }
+    .ebba-card {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      width: 190px;
+      border-radius: 7px;
+      padding: 0.4rem 0.6rem;
+      box-shadow: var(--shadow-1);
+      background: var(--brand);
+      border-left: 3px solid var(--brand-dark);
+    }
+    .ebba-pos   { font-size: 0.62rem; color: rgba(255,255,255,0.65); min-width: 1rem; text-align: right; flex-shrink: 0; }
+    .ebba-medal { font-size: 1rem; line-height: 1; flex-shrink: 0; }
+    .ebba-name  { font-size: 0.78rem; font-weight: 700; flex: 1; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #fff; }
+    .ebba-name:hover { text-decoration: underline; }
+    .ebba-total { font-size: 0.85rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+
     /* ── Leaderboard table ── */
     .table-wrap {
       overflow-x: auto;
@@ -1168,6 +1202,7 @@
   <div id="podium-row" class="podium-row" hidden>
     <div id="podium-section" class="podium"></div>
     <div id="shame-section" class="shame-list"></div>
+    <div id="ebba-section" class="ebba-liga" hidden></div>
   </div>
   <div id="movers-section" hidden></div>
   <div id="new-visit-banner" hidden></div>
@@ -1459,6 +1494,7 @@
   }
 
   let lbData = null;             // leaderboard.json, once loaded
+  let poolConfig = {};           // config.json, once loaded (per-pool, not synced)
   let historyData = null;        // history.json, once loaded
   const trendCells = {};         // player name -> the row's sparkline <td>
 
@@ -1579,6 +1615,7 @@
       shameCards.appendChild(card);
     });
     shameEl.appendChild(shameCards);
+    renderEbbaLiga(rows);
     document.getElementById("podium-row").hidden = false;
 
     // FLIP – Step 1: record each row's position before the DOM wipe
@@ -1807,6 +1844,51 @@
       el.onclick = () => showPlayer(el.getAttribute("data-player"));
     });
     heroEl.hidden = false;
+  }
+
+  // ── Ebba-ligan (OPX only) ──
+  // A side-league of every player whose first name is "Ebba". Gated by
+  // config.showEbbaLiga, which lives only in OPX's (un-synced) config.json — so the
+  // section stays dormant on the other pools even though this code is synced to them.
+  function renderEbbaLiga(rows) {
+    const el = document.getElementById("ebba-section");
+    if (!el) return;
+    if (!(poolConfig && poolConfig.showEbbaLiga)) { el.hidden = true; return; }
+    // rows arrive sorted by standing, so the Ebbas keep their best-first order.
+    const ebbas = (rows || []).filter(r => (r.player || "").split(" ")[0] === "Ebba");
+    if (!ebbas.length) { el.hidden = true; return; }   // graceful if names change
+    // Assign mini-ranks with standard tie handling (1,1,3 — not 1,2,3 when tied).
+    const MEDAL_MAP = { 1: "🥇", 2: "🥈", 3: "🥉" };
+    let miniRank = 1;
+    ebbas.forEach((r, i) => {
+      if (i > 0 && r.total === ebbas[i - 1].total) {
+        r._miniRank = ebbas[i - 1]._miniRank;
+      } else {
+        r._miniRank = miniRank;
+      }
+      miniRank = i + 2;
+    });
+    el.innerHTML = "";
+    const label = document.createElement("div");
+    label.className = "ebba-label";
+    label.textContent = "Ebba-ligan";
+    el.appendChild(label);
+    const cards = document.createElement("div");
+    cards.className = "ebba-cards";
+    ebbas.forEach(r => {
+      const card = document.createElement("div");
+      card.className = "ebba-card";
+      card.innerHTML = `
+        <div class="ebba-pos">#${r.rank}</div>
+        <div class="ebba-medal">${MEDAL_MAP[r._miniRank] || ""}</div>
+        <div class="ebba-name">${esc(r.player)}</div>
+        <div class="ebba-total">${fmt(r.total)}</div>
+      `;
+      card.querySelector(".ebba-name").onclick = () => showPlayer(r.player);
+      cards.appendChild(card);
+    });
+    el.appendChild(cards);
+    el.hidden = false;
   }
 
   // ── Biggest movers today ──
@@ -2981,6 +3063,7 @@
       const r = await fetch("config.json");
       if (!r.ok) return;
       const cfg = await r.json();
+      poolConfig = cfg;
       const setMeta = (sel, val) => { const m = document.querySelector(sel); if (m) m.setAttribute('content', val); };
       if (cfg.brandColor) document.documentElement.style.setProperty('--brand', cfg.brandColor);
       if (cfg.brandColorDark) document.documentElement.style.setProperty('--brand-dark', cfg.brandColorDark);
@@ -3001,6 +3084,9 @@
         setMeta('meta[property="og:description"]', cfg.description);
         setMeta('meta[name="twitter:description"]', cfg.description);
       }
+      // Config may resolve after the leaderboard renders; render the Ebba-ligan now
+      // that the flag is known (renderLeaderboard already ran with an empty config).
+      if (lbData) renderEbbaLiga(lbData.rows);
     } catch (e) {}
   }
 
