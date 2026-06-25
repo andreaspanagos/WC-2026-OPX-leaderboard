@@ -1491,7 +1491,7 @@
           "players": [
             "Filippa Rosell"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "220–229",
@@ -1500,7 +1500,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "230–239",
@@ -1512,7 +1512,7 @@
             "Ebba Örtenblad",
             "Felice Gelin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "240–249",
@@ -1521,7 +1521,7 @@
           "players": [
             "Maximilian"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "250–259",
@@ -1532,7 +1532,7 @@
             "Boris",
             "Simon"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "260–269",
@@ -1546,7 +1546,7 @@
             "Alex J",
             "Daniel"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "270–279",
@@ -1562,7 +1562,7 @@
             "Frida Björning Lundqvist",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "280–289",
@@ -1572,7 +1572,7 @@
             "Christoffer",
             "Gustaf L"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "290–299",
@@ -1581,7 +1581,7 @@
           "players": [
             "Ebba Wikström"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "300–309",
@@ -1591,7 +1591,7 @@
             "Matilda",
             "Andreas Panagos"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "340–349",
@@ -1600,7 +1600,7 @@
           "players": [
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "380–389",
@@ -1609,7 +1609,7 @@
           "players": [
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2061,7 +2061,7 @@
             "Oscar Hultefors",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "5",
@@ -2077,7 +2077,7 @@
             "Frida Björning Lundqvist",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "6",
@@ -2090,7 +2090,7 @@
             "Klas",
             "Andreas Panagos"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "7",
@@ -2102,7 +2102,7 @@
             "Lukas Källén",
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "3",
@@ -2112,7 +2112,7 @@
             "Jacob Cederberg",
             "Solveig"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "99",
@@ -2121,7 +2121,7 @@
           "players": [
             "Tim"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2143,7 +2143,7 @@
             "Matilda",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "1",
@@ -2155,7 +2155,7 @@
             "Johan Leijonhielm",
             "Daniel"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "4",
@@ -2167,7 +2167,7 @@
             "Andreas Panagos",
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "8",
@@ -2179,7 +2179,7 @@
             "Simon",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "5",
@@ -2190,7 +2190,7 @@
             "Jakob Hägglund",
             "Elin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "6",
@@ -2201,7 +2201,7 @@
             "Felice Gelin",
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "7",
@@ -2212,7 +2212,7 @@
             "Tim",
             "Boris"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "3",
@@ -2222,7 +2222,7 @@
             "Dani",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "15",
@@ -2231,7 +2231,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "2",
@@ -2240,7 +2240,7 @@
           "players": [
             "Klas"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "9",
@@ -2249,7 +2249,7 @@
           "players": [
             "Frida Björning Lundqvist"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2358,7 +2358,7 @@
             "Petra",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "No",
@@ -2369,7 +2369,7 @@
             "Alex J",
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2409,7 +2409,7 @@
             "Rickard",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Yes",
@@ -2425,7 +2425,7 @@
             "Lukas Källén",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
