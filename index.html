@@ -1199,7 +1199,7 @@
   <button class="tab active" id="tab-leaderboard" onclick="showView('leaderboard')">Leaderboard</button>
   <button class="tab" id="tab-games" onclick="showView('games')">Games</button>
   <button class="tab" id="tab-groups" onclick="showView('groups')">Groups</button>
-  <button class="tab admin-only" id="tab-bracket" onclick="showView('bracket')" hidden>Bracket</button>
+  <button class="tab" id="tab-bracket" onclick="showView('bracket')">Bracket</button>
   <button class="tab" id="tab-teams" onclick="showView('teams')">Team Journeys</button>
   <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus Questions</button>
 <button class="tab" id="tab-h2h" onclick="showView('h2h')">H2H</button>
@@ -2419,7 +2419,8 @@
       nmCls += " tbd";
       const feederId = (m.feeders || [])[side === "home" ? 0 : 1];
       const fed = feederId ? byId[feederId] : null;
-      label = fed ? "Winner " + matchLabel(fed, byId) : "TBD";
+      const advancer = m.round === "Bronze" ? "Loser" : "Winner";
+      label = fed ? advancer + " " + matchLabel(fed, byId) : "TBD";
     }
     const bar = (pick && team && m.winner == null)
       ? `<span class="pickbar" style="width:${pick.pct}%"></span><span class="pickpct">${pick.pct}%</span>`
