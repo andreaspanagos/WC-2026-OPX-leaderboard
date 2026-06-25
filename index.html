@@ -702,6 +702,7 @@
     .ans-val { font-weight: 700; }
     .ans-names { grid-column: 1 / -1; font-size: 0.74rem; color: var(--text-faint); padding-bottom: 0.25rem; }
     .hit-y { color: #1b8a3a; font-weight: 800; }
+    .hit-prov { color: #d9a200; font-weight: 800; }
     .hit-n { color: var(--text-faint); font-weight: 800; }
 
     /* ── Player detail view ── */
@@ -2851,8 +2852,14 @@
       const ans = ba.answer
         ? `<span class="pd-bans">${esc(ba.answer)}</span>`
         : `<span class="pd-bans none">—</span>`;
-      const hit = ba.hit === true ? `<span class="hit-y">✓</span>`
-                : ba.hit === false ? `<span class="hit-n">✗</span>` : "";
+      // Green check = decided & correct; yellow check = points awarded but the
+      // answer isn't final yet (provisional); ✗ = decided & wrong.
+      const hit = ba.hit === true
+                    ? (ba.status === "decided"
+                        ? `<span class="hit-y" title="Correct">✓</span>`
+                        : `<span class="hit-prov" title="Points awarded — not yet final">✓</span>`)
+                : (ba.hit === false && ba.status === "decided")
+                    ? `<span class="hit-n">✗</span>` : "";
       return `<div class="pd-bonus">
         <span class="pd-bq"><span class="pd-bid">${esc(ba.id)}</span>${esc(ba.q)}</span>
         ${ans}${hit}</div>`;

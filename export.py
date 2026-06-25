@@ -723,10 +723,14 @@ for p in players:
         key = answer_key.get(bd["id"], {"status": "tbd", "normSet": set()})
         a = bonus_answer(p, bd["id"])
         a = None if a is None or str(a).strip() == "" else str(a).strip()
+        # Score both decided AND provisional answers (the model credits points the
+        # moment an answer is filled, decided or not), so the UI can show a green
+        # check once final and a yellow check while points are still provisional.
         hit = (answer_hit(bd["id"], a, key)
-               if (a and key["status"] == "decided" and key["normSet"]) else None)
+               if (a and key["status"] in ("decided", "provisional")
+                   and key["normSet"]) else None)
         bonus_ans.append({"id": bd["id"], "q": bd["q"], "answer": a,
-                          "hit": hit, "pts": bd["pts"]})
+                          "hit": hit, "pts": bd["pts"], "status": key["status"]})
 
     players_detail[p] = {
         "rank": lb.get("rank"), "total": lb.get("total"),
