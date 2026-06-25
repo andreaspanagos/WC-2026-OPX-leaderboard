@@ -1791,127 +1791,127 @@
       "standings": {
         "Christoffer": {
           "rank": 1,
-          "total": 69
+          "total": 78
         },
         "Ebba Lindström": {
           "rank": 2,
-          "total": 65
+          "total": 74
         },
         "Jacob Cederberg": {
           "rank": 3,
-          "total": 64
+          "total": 73
         },
         "Anna": {
           "rank": 4,
-          "total": 63
-        },
-        "Erik Engberg": {
-          "rank": 5,
-          "total": 63
+          "total": 72
         },
         "Maximilian": {
-          "rank": 6,
-          "total": 62
+          "rank": 5,
+          "total": 71
         },
         "Ebba Wikström": {
-          "rank": 7,
-          "total": 61
+          "rank": 6,
+          "total": 70
         },
         "Jakob Hägglund": {
-          "rank": 8,
-          "total": 61
+          "rank": 7,
+          "total": 70
         },
         "Klas": {
-          "rank": 9,
-          "total": 61
+          "rank": 8,
+          "total": 70
         },
         "Solveig": {
-          "rank": 10,
-          "total": 61
+          "rank": 9,
+          "total": 70
         },
         "Tim": {
+          "rank": 10,
+          "total": 70
+        },
+        "Erik Engberg": {
           "rank": 11,
-          "total": 61
-        },
-        "Elin": {
-          "rank": 12,
-          "total": 60
-        },
-        "Filippa Rosell": {
-          "rank": 13,
-          "total": 59
+          "total": 69
         },
         "Gustaf L": {
-          "rank": 14,
-          "total": 59
+          "rank": 12,
+          "total": 68
         },
         "Johan Leijonhielm": {
-          "rank": 15,
-          "total": 59
+          "rank": 13,
+          "total": 68
         },
         "Boris": {
-          "rank": 16,
-          "total": 58
+          "rank": 14,
+          "total": 67
         },
         "Matilda": {
+          "rank": 15,
+          "total": 67
+        },
+        "Elin": {
+          "rank": 16,
+          "total": 66
+        },
+        "Filippa Rosell": {
           "rank": 17,
-          "total": 58
-        },
-        "Andreas Panagos": {
-          "rank": 18,
-          "total": 56
-        },
-        "Ebba Örtenblad": {
-          "rank": 19,
-          "total": 56
-        },
-        "Felice Gelin": {
-          "rank": 20,
-          "total": 56
+          "total": 65
         },
         "Alex J": {
-          "rank": 21,
-          "total": 55
+          "rank": 18,
+          "total": 64
         },
         "David": {
-          "rank": 22,
-          "total": 55
-        },
-        "Simon": {
-          "rank": 23,
-          "total": 55
-        },
-        "Dani": {
-          "rank": 24,
-          "total": 54
+          "rank": 19,
+          "total": 64
         },
         "Frida Björning Lundqvist": {
+          "rank": 20,
+          "total": 63
+        },
+        "Andreas Panagos": {
+          "rank": 21,
+          "total": 62
+        },
+        "Ebba Örtenblad": {
+          "rank": 22,
+          "total": 62
+        },
+        "Felice Gelin": {
+          "rank": 23,
+          "total": 62
+        },
+        "Simon": {
+          "rank": 24,
+          "total": 61
+        },
+        "Dani": {
           "rank": 25,
-          "total": 54
+          "total": 60
         },
         "Daniel": {
           "rank": 26,
-          "total": 53
-        },
-        "Lukas Källén": {
-          "rank": 27,
-          "total": 50
+          "total": 59
         },
         "Oscar Hultefors": {
-          "rank": 28,
-          "total": 50
+          "rank": 27,
+          "total": 59
         },
         "Petra": {
-          "rank": 29,
-          "total": 50
+          "rank": 28,
+          "total": 59
         },
         "Rickard": {
-          "rank": 30,
-          "total": 49
+          "rank": 29,
+          "total": 58
         },
         "Ludvig Völcker": {
+          "rank": 30,
+          "total": 57
+        },
+        "Lukas Källén": {
           "rank": 31,
-          "total": 48
+          "total": 56
         }
       }
     }
