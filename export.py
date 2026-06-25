@@ -1083,6 +1083,13 @@ print(f"Exported {len(ko_matches)} knockout matches (drawn={drawn}) -> {BRACKET_
 
 # ───────────────── self-check vs official leaderboard ─────────────────
 
+# The model gates ALL group-winner points (Scoring!S) on Backend!AL11
+# ("group stage complete?") — they stay 0 until every group has finished,
+# then all 12 are credited together. Mirror that here so the self-check
+# doesn't flag the transient window where some groups are done but others
+# aren't (otherwise it warns by 3 pts per correct winner of a finished group).
+group_stage_complete = all(group_complete.get(g) for g in "ABCDEFGHIJKL")
+
 for lbrow in rows:
     p = lbrow["player"]
     if p not in flat:
@@ -1095,9 +1102,10 @@ for lbrow in rows:
         pa = as_int(flat[p].get(f"GS{gi + 1:02d}_A"))
         if ph is not None and pa is not None:
             gpts += game_points(ph, pa, fx["hg"], fx["ag"])
-    for g, w in actual_winner.items():
-        if flat[p].get(f"GW_{g}") == w:
-            gpts += 3
+    if group_stage_complete:
+        for g, w in actual_winner.items():
+            if flat[p].get(f"GW_{g}") == w:
+                gpts += 3
     rs = rounds_by_player[p]
     kpts = sum(len(rs[k] & ko_round[k]) * v for k, v in ko_pts_map.items())
     kpts += 30 if rs["Winner"] in champion else 0
