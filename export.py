@@ -459,6 +459,20 @@ def norm_answer(v):
 # B03 total tournament goals counts as correct within +/- 5.
 NUMERIC_TOLERANCE = {"B03": 5}
 
+# Questions credited ONLY once their answer is "decided". Most bonus questions are
+# scored by direct answer-match, so the model credits a filled (even provisional)
+# answer immediately (the bonus quirk) and we mirror that. B15 ("how far does
+# Sweden go") is the exception: it is derived from the bracket, not a BO-match, so
+# the model does NOT award it until Sweden's stage is final — crediting the
+# provisional "Group stage" key early would over-count players who predicted an
+# early exit. Gating it to decided keeps per-question earned reconciled with the
+# model's bonus total.
+DECIDED_ONLY_BONUS = {"B15"}
+
+def hit_statuses(bid):
+    """Answer-key statuses for which this question may be scored."""
+    return ("decided",) if bid in DECIDED_ONLY_BONUS else ("decided", "provisional")
+
 def answer_hit(bid, ans, key):
     """True if a player's answer matches the key (membership for ties,
     +/- tolerance for the numeric questions that allow a margin)."""
@@ -626,7 +640,8 @@ for bd in bonus_defs:
                 "pct": round(100 * len(ppl) / n_players) if n_players else 0,
                 "players": ppl,
                 "hit": (bucket_hit(g["lo"], size, key, bd["id"])
-                        if g["lo"] is not None and key["status"] == "decided"
+                        if g["lo"] is not None
+                        and key["status"] in hit_statuses(bd["id"])
                         and key["normSet"] else None),
             }))
         tmp.sort(key=lambda t: (t[0] is None, t[0] if t[0] is not None else 0))
@@ -638,7 +653,8 @@ for bd in bonus_defs:
             "pct": round(100 * len(ppl) / n_players) if n_players else 0,
             "players": ppl,
             "hit": answer_hit(bd["id"], a, key)
-                   if (key["status"] == "decided" and key["normSet"]) else None,
+                   if (key["status"] in hit_statuses(bd["id"])
+                       and key["normSet"]) else None,
         } for a, ppl in counts.items()]
         answers.sort(key=lambda x: (-x["count"], x["answer"]))
     bonus_json.append({**bd, "current": key["current"], "status": key["status"],
@@ -723,10 +739,20 @@ for p in players:
         key = answer_key.get(bd["id"], {"status": "tbd", "normSet": set()})
         a = bonus_answer(p, bd["id"])
         a = None if a is None or str(a).strip() == "" else str(a).strip()
+        # Score both decided AND provisional answers (the model credits points the
+        # moment an answer is filled, decided or not), so the UI can show a green
+        # check once final and a yellow check while points are still provisional.
         hit = (answer_hit(bd["id"], a, key)
-               if (a and key["status"] == "decided" and key["normSet"]) else None)
+               if (a and key["status"] in hit_statuses(bd["id"])
+                   and key["normSet"]) else None)
+        # Points this question is currently contributing to the player's bonus
+        # total. The model credits a filled answer on match (decided or not), so
+        # earned == pts whenever the answer hits; summed over a player's
+        # questions it reconciles with their Bonus total.
+        earned = bd["pts"] if hit else 0
         bonus_ans.append({"id": bd["id"], "q": bd["q"], "answer": a,
-                          "hit": hit, "pts": bd["pts"]})
+                          "hit": hit, "pts": bd["pts"], "status": key["status"],
+                          "earned": earned})
 
     players_detail[p] = {
         "rank": lb.get("rank"), "total": lb.get("total"),

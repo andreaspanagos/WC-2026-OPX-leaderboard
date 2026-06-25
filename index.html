@@ -466,6 +466,15 @@
     .lb-breakdown span { display: flex; flex-direction: column; gap: 1px; }
     .lb-breakdown label { font-size: 0.68rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.03em; }
     .lb-breakdown strong { font-size: 0.95rem; color: var(--brand-text); }
+    /* Per-question bonus contributors shown under the Bonus total when a row is open. */
+    .lb-bonus-col { min-width: 0; }
+    .lb-bonus-src { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 2px; }
+    .lb-bonus-chip { font-size: 0.66rem; font-weight: 700; line-height: 1.4;
+      padding: 1px 6px; border-radius: 8px; white-space: nowrap;
+      background: #dcfce7; color: #15803d; }
+    .lb-bonus-chip.prov { background: #fef3c7; color: #b45309; }
+    [data-theme="dark"] .lb-bonus-chip { background: rgba(22,163,74,0.22); color: #7fd99a; }
+    [data-theme="dark"] .lb-bonus-chip.prov { background: rgba(180,83,9,0.28); color: #e6c14d; }
 
     /* ── Shared section/card layout ── */
     .page-wrap { padding: 1rem; max-width: 920px; margin: 0 auto; }
@@ -702,6 +711,7 @@
     .ans-val { font-weight: 700; }
     .ans-names { grid-column: 1 / -1; font-size: 0.74rem; color: var(--text-faint); padding-bottom: 0.25rem; }
     .hit-y { color: #1b8a3a; font-weight: 800; }
+    .hit-prov { color: #d9a200; font-weight: 800; }
     .hit-n { color: var(--text-faint); font-weight: 800; }
 
     /* ── Player detail view ── */
@@ -776,7 +786,7 @@
 
     .pd-bonus {
       display: grid;
-      grid-template-columns: 1fr auto 1.6rem;
+      grid-template-columns: 1fr auto auto 1.6rem;
       align-items: center; gap: 0.6rem;
       padding: 0.45rem 0.9rem; border-bottom: 1px solid var(--border); font-size: 0.85rem;
     }
@@ -785,6 +795,11 @@
     .pd-bq .pd-bid { color: var(--text-faint); font-size: 0.72rem; margin-right: 0.35rem; }
     .pd-bans { font-weight: 700; color: var(--brand-text); white-space: nowrap; }
     .pd-bans.none { color: var(--text-faint); font-weight: 600; }
+    /* Points a bonus question is contributing. Green = banked, amber = "so far". */
+    .pd-bpts { font-weight: 800; font-size: 0.78rem; white-space: nowrap; color: #1b8a3a; text-align: right; }
+    .pd-bpts.prov { color: #d9a200; }
+    .pd-bpts.prov em { font-style: normal; font-weight: 600; font-size: 0.66rem; opacity: 0.85; }
+    .pd-bpts.none { color: transparent; }
 
     /* loading / error */
     #status {
@@ -991,7 +1006,9 @@
     .h2h-b3  { background:#dcfce7; color:#15803d; }
     .h2h-b1  { background:#fef3c7; color:#b45309; }
     .h2h-b0  { background:#fee2e2; color:#b91c1c; }
+    .h2h-prov { background:#fef3c7; color:#b45309; }
     .h2h-bna { background:#eef0f5; color:#8892b0; }
+    [data-theme="dark"] .h2h-prov { background:rgba(180,83,9,0.28); color:#e6c14d; }
     [data-theme="dark"] .h2h-b3  { background:rgba(22,163,74,0.22); color:#7fd99a; }
     [data-theme="dark"] .h2h-b1  { background:rgba(180,83,9,0.28); color:#e6c14d; }
     [data-theme="dark"] .h2h-b0  { background:rgba(185,28,28,0.26); color:#f3a3a3; }
@@ -1182,7 +1199,7 @@
   <button class="tab active" id="tab-leaderboard" onclick="showView('leaderboard')">Leaderboard</button>
   <button class="tab" id="tab-games" onclick="showView('games')">Games</button>
   <button class="tab" id="tab-groups" onclick="showView('groups')">Groups</button>
-  <button class="tab admin-only" id="tab-bracket" onclick="showView('bracket')" hidden>Bracket</button>
+  <button class="tab" id="tab-bracket" onclick="showView('bracket')">Bracket</button>
   <button class="tab" id="tab-teams" onclick="showView('teams')">Team Journeys</button>
   <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus Questions</button>
 <button class="tab" id="tab-h2h" onclick="showView('h2h')">H2H</button>
@@ -1656,7 +1673,8 @@
           <div class="lb-breakdown">
             <span><label>Group</label><strong>${fmt(r.group)}</strong></span>
             <span><label>Knockout</label><strong>${fmt(r.ko)}</strong></span>
-            <span><label>Bonus</label><strong>${fmt(r.bonus)}</strong></span>
+            <span class="lb-bonus-col"><label>Bonus</label><strong>${fmt(r.bonus)}</strong>
+              <span class="lb-bonus-src"></span></span>
           </div>
         </td>
       `;
@@ -1667,6 +1685,20 @@
       tr.onclick = () => {
         detail.hidden = !detail.hidden;
         tr.classList.toggle("open", !detail.hidden);
+        // Lazily list which bonus questions make up this player's Bonus total
+        // (players.json is usually loaded by the time a row is expanded).
+        if (!detail.hidden) {
+          const src = detail.querySelector(".lb-bonus-src");
+          const pd = playersData && playersData.detail && playersData.detail[r.player];
+          if (src && !src.dataset.filled && pd) {
+            const chips = (pd.bonusAns || [])
+              .filter(b => (b.earned || 0) > 0)
+              .map(b => `<span class="lb-bonus-chip${b.status === "provisional" ? " prov" : ""}">`
+                + `${esc(b.id)} +${b.earned}${b.status === "provisional" ? " so far" : ""}</span>`);
+            src.innerHTML = chips.join("");
+            src.dataset.filled = "1";
+          }
+        }
       };
       tr.querySelector(".player-name").onclick = (e) => { e.stopPropagation(); showPlayer(r.player); };
       if (r.player === getMe()) {
@@ -2387,7 +2419,8 @@
       nmCls += " tbd";
       const feederId = (m.feeders || [])[side === "home" ? 0 : 1];
       const fed = feederId ? byId[feederId] : null;
-      label = fed ? "Winner " + matchLabel(fed, byId) : "TBD";
+      const advancer = m.round === "Bronze" ? "Loser" : "Winner";
+      label = fed ? advancer + " " + matchLabel(fed, byId) : "TBD";
     }
     const bar = (pick && team && m.winner == null)
       ? `<span class="pickbar" style="width:${pick.pct}%"></span><span class="pickpct">${pick.pct}%</span>`
@@ -2523,8 +2556,14 @@
           (b.status === "provisional" ? " <em>(may still change)</em>" : "") + `</div>`
         : `<div class="bq-current">Correct answer not yet determinable from results.</div>`;
       const answerRows = b.answers.map(a => {
-        const hit = a.hit === true ? `<span class="hit-y">✓</span>`
-                  : a.hit === false ? `<span class="hit-n">✗</span>` : "";
+        // Amber ✓ while the answer is only provisional; green once decided.
+        // A ✗ is shown only for decided questions (a provisional miss isn't final).
+        const hit = a.hit === true
+                      ? (b.status === "provisional"
+                          ? `<span class="hit-prov" title="Matches the current answer — not yet final">✓</span>`
+                          : `<span class="hit-y">✓</span>`)
+                  : (a.hit === false && b.status === "decided")
+                      ? `<span class="hit-n">✗</span>` : "";
         return `
           <div class="ans-row">
             <span class="ans-val">${esc(a.answer)}</span>
@@ -2685,17 +2724,24 @@
     html += `</div>`;
 
     // ── Bonus Questions ──
-    const bonusBadge = b => b.hit === true
-      ? `<span class="h2h-badge h2h-b3">+${b.pts}</span>`
-      : b.hit === false
-      ? `<span class="h2h-badge h2h-b0">0</span>`
-      : `<span class="h2h-badge h2h-bna">–</span>`;
+    // Amber badge ("so far") while the answer is provisional; green once banked.
+    const bonusBadge = b => {
+      if (b.hit === true) {
+        const earned = (b.earned != null) ? b.earned : b.pts;
+        return b.status === "provisional"
+          ? `<span class="h2h-badge h2h-prov" title="Provisional — not yet final">+${earned}</span>`
+          : `<span class="h2h-badge h2h-b3">+${earned}</span>`;
+      }
+      return (b.hit === false && b.status === "decided")
+        ? `<span class="h2h-badge h2h-b0">0</span>`
+        : `<span class="h2h-badge h2h-bna">–</span>`;
+    };
 
     html += `<div class="section"><div class="section-head">Bonus Questions</div>`;
     (p1.bonusAns || []).forEach(b1 => {
       const b2 = (p2.bonusAns || []).find(x => x.id === b1.id) || {};
-      const mark1 = b1.hit === true ? " ✓" : b1.hit === false ? " ✗" : "";
-      const mark2 = b2.hit === true ? " ✓" : b2.hit === false ? " ✗" : "";
+      const mark1 = b1.hit === true ? " ✓" : (b1.hit === false && b1.status === "decided") ? " ✗" : "";
+      const mark2 = b2.hit === true ? " ✓" : (b2.hit === false && b2.status === "decided") ? " ✗" : "";
       html += `<div class="h2h-bonus-q">
           <span class="h2h-bonus-q-id">${esc(b1.id)}</span>
           <span class="h2h-bonus-q-txt">${esc(b1.q)}</span>
@@ -2846,17 +2892,33 @@
       </div>`;
     }
 
-    // Bonus answers.
+    // Bonus answers — each question shows the points it is currently
+    // contributing (+N), flagged "so far" while the answer is provisional, so
+    // the column sums to the Bonus total shown in the header.
+    let bonusEarned = 0;
     const bonusHtml = (p.bonusAns || []).map(ba => {
+      const earned = (ba.earned != null) ? ba.earned : (ba.hit === true ? ba.pts : 0);
+      bonusEarned += earned || 0;
+      const prov = ba.status === "provisional";
       const ans = ba.answer
         ? `<span class="pd-bans">${esc(ba.answer)}</span>`
         : `<span class="pd-bans none">—</span>`;
-      const hit = ba.hit === true ? `<span class="hit-y">✓</span>`
-                : ba.hit === false ? `<span class="hit-n">✗</span>` : "";
+      // Green check = decided & correct; yellow check = points awarded but the
+      // answer isn't final yet (provisional); ✗ = decided & wrong.
+      const hit = ba.hit === true
+                    ? (prov
+                        ? `<span class="hit-prov" title="Points awarded — not yet final">✓</span>`
+                        : `<span class="hit-y" title="Correct">✓</span>`)
+                : (ba.hit === false && ba.status === "decided")
+                    ? `<span class="hit-n">✗</span>` : "";
+      const pts = earned
+        ? `<span class="pd-bpts${prov ? " prov" : ""}" title="${prov ? "Provisional — not yet final" : "Earned"}">+${earned}${prov ? " <em>so far</em>" : ""}</span>`
+        : `<span class="pd-bpts none"></span>`;
       return `<div class="pd-bonus">
         <span class="pd-bq"><span class="pd-bid">${esc(ba.id)}</span>${esc(ba.q)}</span>
-        ${ans}${hit}</div>`;
+        ${ans}${pts}${hit}</div>`;
     }).join("");
+    const bonusSubtotal = `<span class="head-chip" title="Sum of bonus points awarded so far">+${bonusEarned} pts</span>`;
 
     document.getElementById("player-container").innerHTML = `
       <div class="pd-header">
@@ -2881,7 +2943,7 @@
       ${gwSummaryHtml}
       ${groupsHtml}
       <div class="section" style="margin-top:1rem">
-        <div class="section-head"><span>Bonus answers</span></div>${bonusHtml}</div>`;
+        <div class="section-head"><span>Bonus answers</span>${bonusSubtotal}</div>${bonusHtml}</div>`;
 
     // Wire up badge pills → show when & how each was earned.
     if (achData) {
