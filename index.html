@@ -767,6 +767,31 @@
     .pd-actual { font-size: 0.68rem; color: var(--text-faint); text-align: center; }
     .pd-nopick { color: var(--text-faint); font-weight: 600; }
 
+    /* Group-stage points breakdown (player detail) */
+    .pd-grp-sum {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 0.9rem; border-bottom: 1px solid var(--border);
+      background: var(--surface-2); font-size: 0.8rem;
+    }
+    .pd-gs-chip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 999px; padding: 0.15rem 0.55rem; color: var(--text-faint);
+    }
+    .pd-gs-chip b { color: var(--brand-text); font-weight: 800; margin-left: 0.15rem; }
+    .pd-gs-tot { font-weight: 700; color: var(--text); }
+    .pd-gs-tot b { color: var(--brand-text); font-weight: 800; margin-left: 0.15rem; }
+    .pd-gs-detail { color: var(--text-faint); margin-left: auto; }
+    .pd-gs-detail b { color: var(--text); font-weight: 700; }
+
+    .pd-go-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0.7rem 0.9rem; }
+    .pd-go-tile {
+      flex: 1 1 9rem; background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 9px; padding: 0.5rem 0.7rem;
+    }
+    .pd-go-tile .lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); }
+    .pd-go-tile .val { font-size: 1.25rem; font-weight: 800; color: var(--brand-text); }
+    .pd-go-tile .sub { font-size: 0.74rem; color: var(--text-faint); margin-top: 0.1rem; }
+
     .pd-round { padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--border); }
     .pd-round:last-child { border-bottom: none; }
     .pd-round-head {
@@ -2800,12 +2825,31 @@
     (p.gw || []).forEach(w => gwByGroup[w.group] = w);
 
     let groupsHtml = "";
+    // Running totals for the group-stage breakdown panel.
+    let tExact = 0, t1x = 0, tGwPts = 0, tGwCorrect = 0;
     Object.keys(byGroup).sort().forEach(g => {
       const gw = gwByGroup[g];
       const gwChip = gw
         ? `<span class="head-chip">Winner: ${esc(gw.team)}` +
           (gw.correct === true ? " ✓" : gw.correct === false ? " ✗" : "") + `</span>`
         : "";
+      // Points this group contributes, split by source.
+      let exactN = 0, onexN = 0;
+      byGroup[g].forEach(gm => { if (gm.pts === 3) exactN++; else if (gm.pts === 1) onexN++; });
+      const gamePts = exactN * 3 + onexN;
+      const gwPts = (gw && gw.correct === true) ? 3 : 0;
+      tExact += exactN; t1x += onexN; tGwPts += gwPts;
+      if (gwPts) tGwCorrect++;
+      const detailBits = [];
+      if (exactN) detailBits.push(`${exactN}× exact <b>+${exactN * 3}</b>`);
+      if (onexN) detailBits.push(`${onexN}× correct 1X2 <b>+${onexN}</b>`);
+      const detailStr = detailBits.length ? detailBits.join(" · ") : "no result points yet";
+      const sumLine = `<div class="pd-grp-sum">
+          <span class="pd-gs-chip">Results<b>+${gamePts}</b></span>
+          <span class="pd-gs-chip">Winner<b>+${gwPts}</b></span>
+          <span class="pd-gs-tot">Group total<b>+${gamePts + gwPts}</b></span>
+          <span class="pd-gs-detail">${detailStr}</span>
+        </div>`;
       const rows = byGroup[g].map(gm => {
         const pick = (gm.ph !== null && gm.pa !== null)
           ? `${gm.ph}–${gm.pa}` : `<span class="pd-nopick">no pick</span>`;
@@ -2820,8 +2864,28 @@
       }).join("");
       groupsHtml += `<div class="section">
         <div class="section-head"><span>Group ${esc(g)}</span>${gwChip}</div>
+        ${sumLine}
         ${rows}</div>`;
     });
+
+    // Group-stage breakdown panel: total split into result points (with the
+    // exact-vs-1X2 mix) and group-winner points. Sums to the Group header stat.
+    const resultsPts = tExact * 3 + t1x;
+    const groupOverviewHtml = `<div class="section">
+        <div class="section-head"><span>Group-stage breakdown</span>
+          <span class="head-chip">+${resultsPts + tGwPts} total</span></div>
+        <div class="pd-go-grid">
+          <div class="pd-go-tile">
+            <div class="lbl">From results</div>
+            <div class="val">+${resultsPts}</div>
+            <div class="sub">${tExact}× exact (+3) · ${t1x}× correct 1X2 (+1)</div>
+          </div>
+          <div class="pd-go-tile">
+            <div class="lbl">From group winners</div>
+            <div class="val">+${tGwPts}</div>
+            <div class="sub">${tGwCorrect} correct × 3</div>
+          </div>
+        </div></div>`;
 
     // Compact at-a-glance summary of all 12 group-winner picks.
     const gwChips = (p.gw || []).slice()
@@ -2940,6 +3004,7 @@
       ${achHtml}
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
       <h3 style="margin:1.2rem 0 0.5rem;color:var(--brand)">Group-stage predictions</h3>
+      ${groupOverviewHtml}
       ${gwSummaryHtml}
       ${groupsHtml}
       <div class="section" style="margin-top:1rem">
