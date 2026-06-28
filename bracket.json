@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-25 09:52",
+    "lastRefresh": "2026-06-28 20:33",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 197,
+    "maxAvailable": 261,
     "drawn": true
   },
   "matches": [
@@ -15,6 +15,7 @@
       "feeders": [],
       "home": "South Africa",
       "away": "Canada",
+      "kickoff": "2026-06-28 21:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -33,13 +34,20 @@
       "round": "R32",
       "side": "L",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Germany",
+      "away": "Paraguay",
+      "kickoff": "2026-06-29 22:30",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 13,
+        "count": 4
+      }
     },
     {
       "id": "M75",
@@ -47,12 +55,16 @@
       "round": "R32",
       "side": "L",
       "feeders": [],
-      "home": null,
+      "home": "Netherlands",
       "away": "Morocco",
+      "kickoff": "2026-06-30 03:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
+      "homePick": {
+        "pct": 71,
+        "count": 22
+      },
       "awayPick": {
         "pct": 19,
         "count": 6
@@ -65,7 +77,8 @@
       "side": "L",
       "feeders": [],
       "home": "Brazil",
-      "away": null,
+      "away": "Japan",
+      "kickoff": "2026-06-29 19:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -73,7 +86,10 @@
         "pct": 97,
         "count": 30
       },
-      "awayPick": null
+      "awayPick": {
+        "pct": 3,
+        "count": 1
+      }
     },
     {
       "id": "M77",
@@ -81,13 +97,20 @@
       "round": "R32",
       "side": "L",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "France",
+      "away": "Sweden",
+      "kickoff": "2026-06-30 23:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 6,
+        "count": 2
+      }
     },
     {
       "id": "M78",
@@ -95,13 +118,20 @@
       "round": "R32",
       "side": "L",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Côte d'Ivoire",
+      "away": "Norway",
+      "kickoff": "2026-06-30 19:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 13,
+        "count": 4
+      },
+      "awayPick": {
+        "pct": 71,
+        "count": 22
+      }
     },
     {
       "id": "M79",
@@ -110,7 +140,8 @@
       "side": "L",
       "feeders": [],
       "home": "Mexico",
-      "away": null,
+      "away": "Ecuador",
+      "kickoff": "2026-07-01 03:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -118,7 +149,10 @@
         "pct": 81,
         "count": 25
       },
-      "awayPick": null
+      "awayPick": {
+        "pct": 6,
+        "count": 2
+      }
     },
     {
       "id": "M80",
@@ -126,13 +160,20 @@
       "round": "R32",
       "side": "L",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "England",
+      "away": "Congo DR",
+      "kickoff": "2026-07-01 18:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M81",
@@ -140,13 +181,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "USA",
+      "away": "Bosnia & Herzegovina",
+      "kickoff": "2026-07-02 02:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 74,
+        "count": 23
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M82",
@@ -154,13 +202,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Belgium",
+      "away": "Senegal",
+      "kickoff": "2026-07-01 22:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 23,
+        "count": 7
+      }
     },
     {
       "id": "M83",
@@ -168,13 +223,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Portugal",
+      "away": "Croatia",
+      "kickoff": "2026-07-03 01:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 94,
+        "count": 29
+      },
+      "awayPick": {
+        "pct": 48,
+        "count": 15
+      }
     },
     {
       "id": "M84",
@@ -182,13 +244,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Spain",
+      "away": "Austria",
+      "kickoff": "2026-07-02 21:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M85",
@@ -197,7 +266,8 @@
       "side": "R",
       "feeders": [],
       "home": "Switzerland",
-      "away": null,
+      "away": "Algeria",
+      "kickoff": "2026-07-03 05:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -205,7 +275,10 @@
         "pct": 94,
         "count": 29
       },
-      "awayPick": null
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M86",
@@ -213,13 +286,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Argentina",
+      "away": "Cabo Verde",
+      "kickoff": "2026-07-04 00:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M87",
@@ -227,13 +307,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Colombia",
+      "away": "Ghana",
+      "kickoff": "2026-07-04 03:30",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 55,
+        "count": 17
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      }
     },
     {
       "id": "M88",
@@ -241,13 +328,20 @@
       "round": "R32",
       "side": "R",
       "feeders": [],
-      "home": null,
-      "away": null,
+      "home": "Australia",
+      "away": "Egypt",
+      "kickoff": "2026-07-03 20:00",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
-      "awayPick": null
+      "homePick": {
+        "pct": 6,
+        "count": 2
+      },
+      "awayPick": {
+        "pct": 23,
+        "count": 7
+      }
     },
     {
       "id": "M89",
@@ -260,6 +354,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -277,6 +372,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -294,6 +390,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -311,6 +408,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -328,6 +426,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -345,6 +444,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -362,6 +462,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -379,6 +480,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -396,6 +498,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -413,6 +516,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -430,6 +534,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -447,6 +552,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -464,6 +570,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -481,6 +588,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -498,6 +606,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -515,6 +624,7 @@
       ],
       "home": null,
       "away": null,
+      "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,

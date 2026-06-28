@@ -208,6 +208,26 @@ if tpl is not None:
         if isinstance(b, _dt.datetime) and home and away:
             kickoffs.setdefault((home, away), b.strftime("%Y-%m-%d %H:%M"))
 
+# Knockout kickoff times come from the football-data feed (_ko_schedule.json, in
+# UTC), not the Template sheet. Convert to Europe/Paris so the Games tab + banner
+# show local times like the group games. Keyed by unordered team pair. Degrade
+# gracefully (no kickoffs) if the file is absent — e.g. a pool whose pipeline
+# hasn't written it yet — rather than failing the whole export.
+ko_kickoffs = {}
+try:
+    import datetime as _dt
+    from zoneinfo import ZoneInfo
+    _paris = ZoneInfo("Europe/Paris")
+    with open("_ko_schedule.json", encoding="utf-8") as _f:
+        for _e in json.load(_f):
+            _h, _a, _u = _e.get("home"), _e.get("away"), _e.get("utcDate")
+            if _h and _a and _u:
+                _dt_local = _dt.datetime.fromisoformat(
+                    _u.replace("Z", "+00:00")).astimezone(_paris)
+                ko_kickoffs[frozenset({_h, _a})] = _dt_local.strftime("%Y-%m-%d %H:%M")
+except Exception:
+    ko_kickoffs = {}
+
 # Per-group completeness flags (Backend AO/AP, rows 2-13).
 group_complete = {}
 for row in bk.iter_rows(min_row=2, max_row=13, min_col=41, max_col=42, values_only=True):
@@ -243,6 +263,26 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
 
 champion = {t for t, d in teams.items() if d["flags"]["Winner"]}
 third_team = {t for t, d in teams.items() if d["flags"]["Third"]}
+
+# Teams that are definitively OUT of the tournament — used to red-mark a player's
+# knockout picks the moment they can no longer come true (vs. merely "pending"
+# because the round hasn't been played). A team is eliminated if:
+#   (a) its group is complete but it did NOT reach R32 (group-stage exit), or
+#   (b) it appears in some KO round but not in the (already-populated) next round
+#       — i.e. it lost that tie — including a Final loser once the champion is set.
+# This cascades correctly as each round is played: a round's set only becomes
+# non-empty once the previous round's results are in.
+_ROUND_SEQ = ["R32", "R16", "QF", "SF", "Final"]
+eliminated = set()
+for _t, _d in teams.items():
+    if _d["group"] and group_complete.get(_d["group"]) and _t not in ko_round["R32"]:
+        eliminated.add(_t)
+for _i in range(len(_ROUND_SEQ) - 1):
+    _nxt = ko_round[_ROUND_SEQ[_i + 1]]
+    if _nxt:
+        eliminated |= (ko_round[_ROUND_SEQ[_i]] - _nxt)
+if champion:
+    eliminated |= (ko_round["Final"] - champion)
 
 def actual_stage(team):
     """Deepest stage the team has reached so far, or None before the R32 draw."""
@@ -390,9 +430,11 @@ for g in sorted(groups_out):
         "games": groups_out[g],
     })
 
+# Group games written now; the knockout `ko` feed is appended to this same doc
+# once the bracket is built lower down (it reuses the bracket match list).
+games_doc = {"meta": meta, "players": players, "groups": groups_json}
 with open(GAMES_OUTPUT, "w", encoding="utf-8") as f:
-    json.dump({"meta": meta, "players": players, "groups": groups_json},
-              f, ensure_ascii=False, indent=2)
+    json.dump(games_doc, f, ensure_ascii=False, indent=2)
 ngames = sum(len(g["games"]) for g in groups_json)
 print(f"Exported {ngames} games x {n_players} players -> {GAMES_OUTPUT}")
 
@@ -518,6 +560,22 @@ for krow, bid in KEY_ROW_TO_ID.items():
         "status": status,
         "normSet": {norm_answer(a) for a in ans_str.replace(";", ",").split(",") if a.strip()},
     }
+
+# Promote group-stage-decided bonus questions to "decided" once their outcome is
+# locked, even if the hand-maintained BP status flag hasn't been flipped:
+#   B01 / B02 (most goals scored / conceded, group stage only) — final once all
+#             12 groups have finished;
+#   B12 (does a first-timer reach R32?) — final once the R32 draw exists.
+# These are display-only promotions: the keys are already complete and the points
+# already credited, so only the badge changes (amber "so far" -> green ✓ / red ✗).
+group_stage_done = bool(group_complete) and all(group_complete.get(c, False)
+                                                for c in "ABCDEFGHIJKL")
+r32_drawn = bool(ko_round["R32"])
+for _bid, _ready in (("B01", group_stage_done), ("B02", group_stage_done),
+                     ("B12", r32_drawn)):
+    _k = answer_key.get(_bid)
+    if _k and _ready and _k["current"] and _k["status"] == "provisional":
+        _k["status"] = "decided"
 
 # ───────────── finalise leaderboard.json (now that scoring is known) ─────────────
 # Bonus points don't count until the knockout stage begins. The model credits a
@@ -683,7 +741,9 @@ def bracket_picks(rs, key, actual_set, ptsval):
         if not t:
             continue
         hit = t in actual_set
-        out.append({"team": t, "hit": hit, "pts": ptsval if hit else 0})
+        status = "hit" if hit else ("miss" if t in eliminated else "pending")
+        out.append({"team": t, "hit": hit, "pts": ptsval if hit else 0,
+                    "status": status})
     return sorted(out, key=lambda x: x["team"])
 
 players_detail = {}
@@ -730,9 +790,15 @@ for p in players:
     }
     win, third = rs["Winner"], rs["Third"]
     bracket["winner"] = ({"team": win, "hit": win in champion,
-                          "pts": 30 if win in champion else 0} if win else None)
+                          "pts": 30 if win in champion else 0,
+                          "status": ("hit" if win in champion
+                                     else "miss" if win in eliminated else "pending")}
+                         if win else None)
     bracket["third"] = ({"team": third, "hit": third in third_team,
-                         "pts": 15 if third in third_team else 0} if third else None)
+                         "pts": 15 if third in third_team else 0,
+                         "status": ("hit" if third in third_team
+                                    else "miss" if third in eliminated else "pending")}
+                        if third else None)
 
     bonus_ans = []
     for bd in bonus_defs:
@@ -1040,7 +1106,11 @@ def advance_pct(team, target):
         c = sum(1 for p in players if team in rounds_by_player[p].get(target, set()))
     return {"pct": round(100 * c / n_players), "count": c}
 
-ko_matches = []
+KO_ROUND_LABEL = {"R32": "Round of 32", "R16": "Round of 16", "QF": "Quarter-final",
+                  "SF": "Semi-final", "Bronze": "Third-place", "Final": "Final"}
+
+ko_matches = []     # -> bracket.json (tree view)
+ko_games = []       # -> games.json `ko` (fixture-list view in the Games tab)
 for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_only=True):
     mid, rnd, home, away, hg, ag = row
     if not mid:
@@ -1064,15 +1134,26 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
             winner = h if h in nxt else (a if a in nxt else None)
     has_score = (hg is not None and ag is not None and (hg or ag))
     target = NEXT_ROUND.get(rnd_key)
-    ko_matches.append({
+    kickoff = ko_kickoffs.get(frozenset({h, a}), "") if (h and a) else ""
+    m = {
         "id": f"M{num}", "no": num, "round": rnd_key, "side": side,
         "feeders": [f"M{c}" for c in KO_FEEDERS.get(num, ())],
-        "home": h, "away": a,
+        "home": h, "away": a, "kickoff": kickoff,
         "hg": hg if (h and a and has_score) else None,
         "ag": ag if (h and a and has_score) else None,
         "winner": winner,
         "homePick": advance_pct(h, target) if h else None,
         "awayPick": advance_pct(a, target) if a else None,
+    }
+    ko_matches.append(m)
+    played = m["hg"] is not None and m["ag"] is not None
+    ko_games.append({
+        "id": m["id"], "no": num, "round": rnd_key,
+        "label": KO_ROUND_LABEL.get(rnd_key, rnd_key),
+        "home": h, "away": a, "kickoff": kickoff,
+        "played": played, "hg": m["hg"], "ag": m["ag"], "winner": winner,
+        "homePick": m["homePick"], "awayPick": m["awayPick"],
+        "status": "FT" if played else ("scheduled" if (h and a) else "pending"),
     })
 
 drawn = any(m["home"] or m["away"] for m in ko_matches)
@@ -1080,6 +1161,13 @@ with open(BRACKET_OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": {**meta, "drawn": drawn}, "matches": ko_matches},
               f, ensure_ascii=False, indent=2)
 print(f"Exported {len(ko_matches)} knockout matches (drawn={drawn}) -> {BRACKET_OUTPUT}")
+
+# Append the knockout fixture feed to games.json (group games were written
+# earlier; the Games tab's Knockout sub-view + the Today's-matches banner read it).
+games_doc["ko"] = ko_games
+with open(GAMES_OUTPUT, "w", encoding="utf-8") as f:
+    json.dump(games_doc, f, ensure_ascii=False, indent=2)
+print(f"Appended {len(ko_games)} knockout fixtures -> {GAMES_OUTPUT}")
 
 # ───────────────── self-check vs official leaderboard ─────────────────
 

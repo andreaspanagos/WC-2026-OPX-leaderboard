@@ -1290,7 +1290,7 @@
       "q": "Most goals scored, team (group stage only)",
       "pts": 5,
       "current": "Germany, Netherlands, France",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "Brazil",
@@ -1378,7 +1378,7 @@
       "q": "Most goals conceded, team (group stage only)",
       "pts": 5,
       "current": "Tunisia, Iraq",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "Haiti",
@@ -2378,7 +2378,7 @@
       "q": "First-timer reaches R32? (Yes/No)",
       "pts": 5,
       "current": "Yes",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "No",

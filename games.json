@@ -2,7 +2,8 @@
   "meta": {
     "lastRefresh": "2026-06-28 20:33",
     "maxPoints": 729,
-    "participants": 31
+    "participants": 31,
+    "maxAvailable": 261
   },
   "players": [
     "Christoffer",
@@ -8573,6 +8574,616 @@
           "noPick": 0
         }
       ]
+    }
+  ],
+  "ko": [
+    {
+      "id": "M73",
+      "no": 73,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "South Africa",
+      "away": "Canada",
+      "kickoff": "2026-06-28 21:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 0,
+        "count": 0
+      },
+      "awayPick": {
+        "pct": 55,
+        "count": 17
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M74",
+      "no": 74,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Germany",
+      "away": "Paraguay",
+      "kickoff": "2026-06-29 22:30",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 13,
+        "count": 4
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M75",
+      "no": 75,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "kickoff": "2026-06-30 03:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 71,
+        "count": 22
+      },
+      "awayPick": {
+        "pct": 19,
+        "count": 6
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M76",
+      "no": 76,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Brazil",
+      "away": "Japan",
+      "kickoff": "2026-06-29 19:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 97,
+        "count": 30
+      },
+      "awayPick": {
+        "pct": 3,
+        "count": 1
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M77",
+      "no": 77,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "France",
+      "away": "Sweden",
+      "kickoff": "2026-06-30 23:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 6,
+        "count": 2
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M78",
+      "no": 78,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Côte d'Ivoire",
+      "away": "Norway",
+      "kickoff": "2026-06-30 19:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 13,
+        "count": 4
+      },
+      "awayPick": {
+        "pct": 71,
+        "count": 22
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M79",
+      "no": 79,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Mexico",
+      "away": "Ecuador",
+      "kickoff": "2026-07-01 03:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 81,
+        "count": 25
+      },
+      "awayPick": {
+        "pct": 6,
+        "count": 2
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M80",
+      "no": 80,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "England",
+      "away": "Congo DR",
+      "kickoff": "2026-07-01 18:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M81",
+      "no": 81,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "USA",
+      "away": "Bosnia & Herzegovina",
+      "kickoff": "2026-07-02 02:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 74,
+        "count": 23
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M82",
+      "no": 82,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Belgium",
+      "away": "Senegal",
+      "kickoff": "2026-07-01 22:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 23,
+        "count": 7
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M83",
+      "no": 83,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Portugal",
+      "away": "Croatia",
+      "kickoff": "2026-07-03 01:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 94,
+        "count": 29
+      },
+      "awayPick": {
+        "pct": 48,
+        "count": 15
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M84",
+      "no": 84,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Spain",
+      "away": "Austria",
+      "kickoff": "2026-07-02 21:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M85",
+      "no": 85,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Switzerland",
+      "away": "Algeria",
+      "kickoff": "2026-07-03 05:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 94,
+        "count": 29
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M86",
+      "no": 86,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Argentina",
+      "away": "Cabo Verde",
+      "kickoff": "2026-07-04 00:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M87",
+      "no": 87,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Colombia",
+      "away": "Ghana",
+      "kickoff": "2026-07-04 03:30",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 55,
+        "count": 17
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M88",
+      "no": 88,
+      "round": "R32",
+      "label": "Round of 32",
+      "home": "Australia",
+      "away": "Egypt",
+      "kickoff": "2026-07-03 20:00",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": {
+        "pct": 6,
+        "count": 2
+      },
+      "awayPick": {
+        "pct": 23,
+        "count": 7
+      },
+      "status": "scheduled"
+    },
+    {
+      "id": "M89",
+      "no": 89,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M90",
+      "no": 90,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M91",
+      "no": 91,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M92",
+      "no": 92,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M93",
+      "no": 93,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M94",
+      "no": 94,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M95",
+      "no": 95,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M96",
+      "no": 96,
+      "round": "R16",
+      "label": "Round of 16",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M97",
+      "no": 97,
+      "round": "QF",
+      "label": "Quarter-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M98",
+      "no": 98,
+      "round": "QF",
+      "label": "Quarter-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M99",
+      "no": 99,
+      "round": "QF",
+      "label": "Quarter-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M100",
+      "no": 100,
+      "round": "QF",
+      "label": "Quarter-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M101",
+      "no": 101,
+      "round": "SF",
+      "label": "Semi-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M102",
+      "no": 102,
+      "round": "SF",
+      "label": "Semi-final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M103",
+      "no": 103,
+      "round": "Bronze",
+      "label": "Third-place",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
+    },
+    {
+      "id": "M104",
+      "no": 104,
+      "round": "Final",
+      "label": "Final",
+      "home": null,
+      "away": null,
+      "kickoff": "",
+      "played": false,
+      "hg": null,
+      "ag": null,
+      "winner": null,
+      "homePick": null,
+      "awayPick": null,
+      "status": "pending"
     }
   ]
 }
