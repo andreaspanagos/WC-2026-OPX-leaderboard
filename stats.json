@@ -1,41 +1,41 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-25 09:52",
+    "lastRefresh": "2026-06-28 20:33",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 197
+    "maxAvailable": 261
   },
   "players": [
     "Christoffer",
-    "Ebba Lindström",
-    "Jacob Cederberg",
-    "Anna",
-    "Maximilian",
-    "Ebba Wikström",
-    "Jakob Hägglund",
-    "Klas",
-    "Solveig",
-    "Tim",
-    "Erik Engberg",
-    "Gustaf L",
-    "Johan Leijonhielm",
-    "Boris",
-    "Matilda",
     "Elin",
-    "Filippa Rosell",
-    "Alex J",
-    "David",
-    "Frida Björning Lundqvist",
-    "Andreas Panagos",
+    "Jacob Cederberg",
+    "Ebba Lindström",
+    "Jakob Hägglund",
+    "Anna",
+    "Boris",
+    "Erik Engberg",
+    "Maximilian",
     "Ebba Örtenblad",
     "Felice Gelin",
-    "Simon",
+    "Gustaf L",
+    "Solveig",
+    "Tim",
+    "Ebba Wikström",
+    "Klas",
+    "Alex J",
     "Dani",
     "Daniel",
-    "Oscar Hultefors",
-    "Petra",
+    "Matilda",
     "Rickard",
+    "Simon",
+    "David",
+    "Frida Björning Lundqvist",
+    "Johan Leijonhielm",
+    "Andreas Panagos",
     "Ludvig Völcker",
+    "Petra",
+    "Filippa Rosell",
+    "Oscar Hultefors",
     "Lukas Källén"
   ],
   "stages": [
@@ -151,7 +151,7 @@
     {
       "team": "Bosnia & Herzegovina",
       "group": "B",
-      "actual": "Group stage",
+      "actual": "R32",
       "dist": {
         "Group stage": 13,
         "R32": 18,
@@ -354,7 +354,7 @@
     {
       "team": "Australia",
       "group": "D",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 19,
         "R32": 10,
@@ -379,7 +379,7 @@
     {
       "team": "Paraguay",
       "group": "D",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 15,
         "R32": 12,
@@ -404,7 +404,7 @@
     {
       "team": "Turkey",
       "group": "D",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 3,
         "R32": 5,
@@ -429,7 +429,7 @@
     {
       "team": "USA",
       "group": "D",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 3,
         "R32": 5,
@@ -454,7 +454,7 @@
     {
       "team": "Curaçao",
       "group": "E",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 31,
         "R32": 0,
@@ -479,7 +479,7 @@
     {
       "team": "Côte d'Ivoire",
       "group": "E",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 2,
         "R32": 25,
@@ -504,7 +504,7 @@
     {
       "team": "Ecuador",
       "group": "E",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 29,
@@ -529,7 +529,7 @@
     {
       "team": "Germany",
       "group": "E",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -554,7 +554,7 @@
     {
       "team": "Japan",
       "group": "F",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 4,
         "R32": 26,
@@ -579,7 +579,7 @@
     {
       "team": "Netherlands",
       "group": "F",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 9,
@@ -604,7 +604,7 @@
     {
       "team": "Sweden",
       "group": "F",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 4,
         "R32": 25,
@@ -629,7 +629,7 @@
     {
       "team": "Tunisia",
       "group": "F",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 29,
         "R32": 2,
@@ -654,7 +654,7 @@
     {
       "team": "Belgium",
       "group": "G",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -679,7 +679,7 @@
     {
       "team": "Egypt",
       "group": "G",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 5,
         "R32": 19,
@@ -704,7 +704,7 @@
     {
       "team": "Iran",
       "group": "G",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 12,
         "R32": 18,
@@ -729,7 +729,7 @@
     {
       "team": "New Zealand",
       "group": "G",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 27,
         "R32": 3,
@@ -754,7 +754,7 @@
     {
       "team": "Cabo Verde",
       "group": "H",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 27,
         "R32": 4,
@@ -779,7 +779,7 @@
     {
       "team": "Saudi Arabia",
       "group": "H",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 25,
         "R32": 6,
@@ -804,7 +804,7 @@
     {
       "team": "Spain",
       "group": "H",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -825,30 +825,30 @@
       },
       "championPct": 58,
       "championBy": [
-        "Jacob Cederberg",
-        "Anna",
-        "Ebba Wikström",
-        "Jakob Hägglund",
-        "Tim",
-        "Erik Engberg",
-        "Johan Leijonhielm",
-        "Boris",
-        "Matilda",
         "Elin",
+        "Jacob Cederberg",
+        "Jakob Hägglund",
+        "Anna",
+        "Boris",
+        "Erik Engberg",
         "Ebba Örtenblad",
-        "Simon",
+        "Tim",
+        "Ebba Wikström",
         "Dani",
         "Daniel",
-        "Oscar Hultefors",
-        "Petra",
+        "Matilda",
         "Rickard",
-        "Ludvig Völcker"
+        "Simon",
+        "Johan Leijonhielm",
+        "Ludvig Völcker",
+        "Petra",
+        "Oscar Hultefors"
       ]
     },
     {
       "team": "Uruguay",
       "group": "H",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 0,
         "R32": 30,
@@ -873,7 +873,7 @@
     {
       "team": "France",
       "group": "I",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -897,17 +897,17 @@
         "Christoffer",
         "Ebba Lindström",
         "Klas",
-        "Filippa Rosell",
         "Alex J",
         "David",
         "Frida Björning Lundqvist",
-        "Andreas Panagos"
+        "Andreas Panagos",
+        "Filippa Rosell"
       ]
     },
     {
       "team": "Iraq",
       "group": "I",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 28,
         "R32": 3,
@@ -932,7 +932,7 @@
     {
       "team": "Norway",
       "group": "I",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 9,
@@ -957,7 +957,7 @@
     {
       "team": "Senegal",
       "group": "I",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 10,
         "R32": 14,
@@ -982,7 +982,7 @@
     {
       "team": "Algeria",
       "group": "J",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 18,
         "R32": 13,
@@ -1007,7 +1007,7 @@
     {
       "team": "Argentina",
       "group": "J",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -1028,15 +1028,15 @@
       },
       "championPct": 10,
       "championBy": [
-        "Solveig",
+        "Felice Gelin",
         "Gustaf L",
-        "Felice Gelin"
+        "Solveig"
       ]
     },
     {
       "team": "Austria",
       "group": "J",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 2,
         "R32": 29,
@@ -1061,7 +1061,7 @@
     {
       "team": "Jordan",
       "group": "J",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 29,
         "R32": 2,
@@ -1086,7 +1086,7 @@
     {
       "team": "Colombia",
       "group": "K",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 1,
         "R32": 13,
@@ -1111,7 +1111,7 @@
     {
       "team": "Congo DR",
       "group": "K",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 25,
         "R32": 6,
@@ -1136,7 +1136,7 @@
     {
       "team": "Portugal",
       "group": "K",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 2,
@@ -1161,7 +1161,7 @@
     {
       "team": "Uzbekistan",
       "group": "K",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 26,
         "R32": 5,
@@ -1186,7 +1186,7 @@
     {
       "team": "Croatia",
       "group": "L",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 2,
         "R32": 14,
@@ -1211,7 +1211,7 @@
     {
       "team": "England",
       "group": "L",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 0,
         "R32": 0,
@@ -1236,7 +1236,7 @@
     {
       "team": "Ghana",
       "group": "L",
-      "actual": null,
+      "actual": "R32",
       "dist": {
         "Group stage": 12,
         "R32": 19,
@@ -1261,7 +1261,7 @@
     {
       "team": "Panama",
       "group": "L",
-      "actual": null,
+      "actual": "Group stage",
       "dist": {
         "Group stage": 27,
         "R32": 4,
@@ -1289,45 +1289,45 @@
       "id": "B01",
       "q": "Most goals scored, team (group stage only)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Germany, Netherlands, France",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Brazil",
           "count": 15,
           "pct": 48,
           "players": [
+            "Elin",
             "Jacob Cederberg",
             "Maximilian",
-            "Solveig",
-            "Elin",
-            "Filippa Rosell",
-            "David",
-            "Andreas Panagos",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Solveig",
             "Dani",
             "Daniel",
-            "Oscar Hultefors",
+            "Simon",
+            "David",
+            "Andreas Panagos",
             "Ludvig Völcker",
+            "Filippa Rosell",
+            "Oscar Hultefors",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Spain",
           "count": 6,
           "pct": 19,
           "players": [
+            "Tim",
             "Ebba Wikström",
             "Klas",
-            "Tim",
-            "Matilda",
             "Alex J",
+            "Matilda",
             "Frida Björning Lundqvist"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Germany",
@@ -1340,7 +1340,7 @@
             "Gustaf L",
             "Rickard"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "Argentina",
@@ -1351,7 +1351,7 @@
             "Boris",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "France",
@@ -1360,7 +1360,7 @@
           "players": [
             "Erik Engberg"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "Mexico",
@@ -1369,7 +1369,7 @@
           "players": [
             "Johan Leijonhielm"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -1377,30 +1377,30 @@
       "id": "B02",
       "q": "Most goals conceded, team (group stage only)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Tunisia, Iraq",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Haiti",
           "count": 14,
           "pct": 45,
           "players": [
-            "Maximilian",
-            "Ebba Wikström",
-            "Solveig",
             "Erik Engberg",
-            "Johan Leijonhielm",
-            "Filippa Rosell",
-            "Alex J",
-            "Frida Björning Lundqvist",
-            "Andreas Panagos",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Solveig",
+            "Ebba Wikström",
+            "Alex J",
             "Dani",
-            "Ludvig Völcker"
+            "Simon",
+            "Frida Björning Lundqvist",
+            "Johan Leijonhielm",
+            "Andreas Panagos",
+            "Ludvig Völcker",
+            "Filippa Rosell"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Curaçao",
@@ -1408,17 +1408,17 @@
           "pct": 32,
           "players": [
             "Christoffer",
-            "Ebba Lindström",
             "Jacob Cederberg",
+            "Ebba Lindström",
             "Jakob Hägglund",
-            "Tim",
             "Gustaf L",
-            "Matilda",
-            "David",
+            "Tim",
             "Daniel",
-            "Rickard"
+            "Matilda",
+            "Rickard",
+            "David"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Cabo Verde",
@@ -1428,7 +1428,7 @@
             "Klas",
             "Oscar Hultefors"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Bosnia & Herzegovina",
@@ -1437,7 +1437,7 @@
           "players": [
             "Anna"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Jordan",
@@ -1446,7 +1446,7 @@
           "players": [
             "Boris"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Senegal",
@@ -1455,7 +1455,7 @@
           "players": [
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "South Africa",
@@ -1464,7 +1464,7 @@
           "players": [
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Tunisia",
@@ -1473,7 +1473,7 @@
           "players": [
             "Elin"
           ],
-          "hit": null
+          "hit": true
         }
       ]
     },
@@ -1481,7 +1481,7 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": "161",
+      "current": "215",
       "status": "provisional",
       "answers": [
         {
@@ -1500,7 +1500,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": false
+          "hit": true
         },
         {
           "answer": "230–239",
@@ -1508,9 +1508,9 @@
           "pct": 13,
           "players": [
             "Jacob Cederberg",
-            "Johan Leijonhielm",
             "Ebba Örtenblad",
-            "Felice Gelin"
+            "Felice Gelin",
+            "Johan Leijonhielm"
           ],
           "hit": false
         },
@@ -1528,8 +1528,8 @@
           "count": 3,
           "pct": 10,
           "players": [
-            "Solveig",
             "Boris",
+            "Solveig",
             "Simon"
           ],
           "hit": false
@@ -1539,10 +1539,10 @@
           "count": 6,
           "pct": 19,
           "players": [
-            "Klas",
+            "Elin",
             "Erik Engberg",
             "Petra",
-            "Elin",
+            "Klas",
             "Alex J",
             "Daniel"
           ],
@@ -1557,9 +1557,9 @@
             "Jakob Hägglund",
             "Anna",
             "Tim",
+            "Dani",
             "David",
             "Frida Björning Lundqvist",
-            "Dani",
             "Ludvig Völcker"
           ],
           "hit": false
@@ -1627,18 +1627,18 @@
           "players": [
             "Jacob Cederberg",
             "Anna",
+            "Erik Engberg",
             "Maximilian",
+            "Gustaf L",
+            "Solveig",
             "Ebba Wikström",
             "Klas",
-            "Solveig",
-            "Erik Engberg",
-            "Gustaf L",
-            "Johan Leijonhielm",
-            "Simon",
             "Dani",
             "Daniel",
-            "Oscar Hultefors",
-            "Ludvig Völcker"
+            "Simon",
+            "Johan Leijonhielm",
+            "Ludvig Völcker",
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -1650,8 +1650,8 @@
             "Christoffer",
             "Ebba Lindström",
             "Jakob Hägglund",
-            "Tim",
             "Boris",
+            "Tim",
             "Matilda",
             "David",
             "Andreas Panagos"
@@ -1673,8 +1673,8 @@
           "count": 2,
           "pct": 6,
           "players": [
-            "Frida Björning Lundqvist",
-            "Rickard"
+            "Rickard",
+            "Frida Björning Lundqvist"
           ],
           "hit": null
         },
@@ -1730,24 +1730,24 @@
           "pct": 61,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
-            "Anna",
-            "Maximilian",
-            "Ebba Wikström",
-            "Jakob Hägglund",
-            "Solveig",
-            "Tim",
-            "Erik Engberg",
-            "Johan Leijonhielm",
-            "Boris",
-            "Matilda",
             "Elin",
-            "David",
+            "Jacob Cederberg",
+            "Jakob Hägglund",
+            "Anna",
+            "Boris",
+            "Erik Engberg",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Solveig",
+            "Tim",
+            "Ebba Wikström",
             "Dani",
-            "Daniel"
+            "Daniel",
+            "Matilda",
+            "Simon",
+            "David",
+            "Johan Leijonhielm"
           ],
           "hit": null
         },
@@ -1835,18 +1835,18 @@
           "players": [
             "Jacob Cederberg",
             "Anna",
-            "Klas",
-            "Solveig",
-            "David",
-            "Andreas Panagos",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Solveig",
+            "Klas",
             "Dani",
             "Daniel",
-            "Oscar Hultefors",
+            "Simon",
+            "David",
+            "Andreas Panagos",
+            "Ludvig Völcker",
             "Petra",
-            "Ludvig Völcker"
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -1857,8 +1857,8 @@
           "players": [
             "Ebba Lindström",
             "Jakob Hägglund",
-            "Johan Leijonhielm",
-            "Rickard"
+            "Rickard",
+            "Johan Leijonhielm"
           ],
           "hit": null
         },
@@ -1868,8 +1868,8 @@
           "pct": 10,
           "players": [
             "Christoffer",
-            "Tim",
-            "Boris"
+            "Boris",
+            "Tim"
           ],
           "hit": null
         },
@@ -1962,23 +1962,23 @@
           "pct": 58,
           "players": [
             "Christoffer",
+            "Elin",
             "Jacob Cederberg",
             "Anna",
-            "Maximilian",
-            "Klas",
-            "Solveig",
-            "Tim",
             "Boris",
-            "Matilda",
-            "Elin",
-            "David",
-            "Andreas Panagos",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
+            "Solveig",
+            "Tim",
+            "Klas",
             "Dani",
             "Daniel",
-            "Petra",
-            "Rickard"
+            "Matilda",
+            "Rickard",
+            "David",
+            "Andreas Panagos",
+            "Petra"
           ],
           "hit": null
         },
@@ -2049,17 +2049,17 @@
           "count": 11,
           "pct": 35,
           "players": [
+            "Elin",
             "Anna",
             "Erik Engberg",
-            "Elin",
-            "Filippa Rosell",
-            "Alex J",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Alex J",
             "Daniel",
-            "Oscar Hultefors",
-            "Petra"
+            "Simon",
+            "Petra",
+            "Filippa Rosell",
+            "Oscar Hultefors"
           ],
           "hit": false
         },
@@ -2070,11 +2070,11 @@
           "players": [
             "Jakob Hägglund",
             "Gustaf L",
-            "Johan Leijonhielm",
+            "Dani",
             "Matilda",
             "David",
             "Frida Björning Lundqvist",
-            "Dani",
+            "Johan Leijonhielm",
             "Ludvig Völcker"
           ],
           "hit": false
@@ -2097,8 +2097,8 @@
           "count": 4,
           "pct": 13,
           "players": [
-            "Maximilian",
             "Boris",
+            "Maximilian",
             "Rickard",
             "Lukas Källén"
           ],
@@ -2152,8 +2152,8 @@
           "players": [
             "Anna",
             "Gustaf L",
-            "Johan Leijonhielm",
-            "Daniel"
+            "Daniel",
+            "Johan Leijonhielm"
           ],
           "hit": false
         },
@@ -2175,8 +2175,8 @@
           "pct": 13,
           "players": [
             "Christoffer",
-            "David",
             "Simon",
+            "David",
             "Ludvig Völcker"
           ],
           "hit": false
@@ -2186,9 +2186,9 @@
           "count": 3,
           "pct": 10,
           "players": [
+            "Elin",
             "Ebba Lindström",
-            "Jakob Hägglund",
-            "Elin"
+            "Jakob Hägglund"
           ],
           "hit": false
         },
@@ -2208,9 +2208,9 @@
           "count": 3,
           "pct": 10,
           "players": [
-            "Tim",
+            "Boris",
             "Erik Engberg",
-            "Boris"
+            "Tim"
           ],
           "hit": false
         },
@@ -2266,29 +2266,29 @@
           "pct": 77,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
-            "Anna",
-            "Maximilian",
-            "Ebba Wikström",
-            "Jakob Hägglund",
-            "Klas",
-            "Solveig",
-            "Tim",
-            "Gustaf L",
-            "Johan Leijonhielm",
-            "Boris",
-            "Matilda",
             "Elin",
-            "Alex J",
-            "David",
-            "Andreas Panagos",
+            "Jacob Cederberg",
+            "Jakob Hägglund",
+            "Anna",
+            "Boris",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
+            "Gustaf L",
+            "Solveig",
+            "Tim",
+            "Ebba Wikström",
+            "Klas",
+            "Alex J",
             "Dani",
             "Daniel",
-            "Petra",
+            "Matilda",
             "Rickard",
-            "Ludvig Völcker"
+            "David",
+            "Johan Leijonhielm",
+            "Andreas Panagos",
+            "Ludvig Völcker",
+            "Petra"
           ],
           "hit": null
         },
@@ -2299,8 +2299,8 @@
           "players": [
             "Ebba Lindström",
             "Erik Engberg",
-            "Frida Björning Lundqvist",
             "Simon",
+            "Frida Björning Lundqvist",
             "Oscar Hultefors"
           ],
           "hit": null
@@ -2330,32 +2330,32 @@
           "pct": 90,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
-            "Anna",
-            "Maximilian",
-            "Ebba Wikström",
-            "Jakob Hägglund",
-            "Klas",
-            "Solveig",
-            "Tim",
-            "Erik Engberg",
-            "Gustaf L",
-            "Johan Leijonhielm",
-            "Boris",
-            "Matilda",
             "Elin",
-            "Filippa Rosell",
-            "David",
-            "Frida Björning Lundqvist",
-            "Andreas Panagos",
+            "Jacob Cederberg",
+            "Jakob Hägglund",
+            "Anna",
+            "Boris",
+            "Erik Engberg",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Gustaf L",
+            "Solveig",
+            "Tim",
+            "Ebba Wikström",
+            "Klas",
             "Dani",
             "Daniel",
-            "Oscar Hultefors",
-            "Petra",
+            "Matilda",
+            "Simon",
+            "David",
+            "Frida Björning Lundqvist",
+            "Johan Leijonhielm",
+            "Andreas Panagos",
             "Ludvig Völcker",
+            "Petra",
+            "Filippa Rosell",
+            "Oscar Hultefors",
             "Lukas Källén"
           ],
           "hit": false
@@ -2377,7 +2377,7 @@
       "id": "B12",
       "q": "First-timer reaches R32? (Yes/No)",
       "pts": 5,
-      "current": "TBD",
+      "current": "Yes",
       "status": "provisional",
       "answers": [
         {
@@ -2386,28 +2386,28 @@
           "pct": 74,
           "players": [
             "Christoffer",
-            "Ebba Lindström",
+            "Elin",
             "Jacob Cederberg",
-            "Maximilian",
-            "Ebba Wikström",
+            "Ebba Lindström",
             "Jakob Hägglund",
-            "Klas",
+            "Boris",
+            "Maximilian",
+            "Gustaf L",
             "Solveig",
             "Tim",
-            "Gustaf L",
-            "Boris",
-            "Matilda",
-            "Elin",
-            "Filippa Rosell",
+            "Ebba Wikström",
+            "Klas",
             "Alex J",
+            "Dani",
+            "Matilda",
+            "Rickard",
+            "Simon",
             "David",
             "Frida Björning Lundqvist",
             "Andreas Panagos",
-            "Simon",
-            "Dani",
-            "Oscar Hultefors",
-            "Rickard",
-            "Ludvig Völcker"
+            "Ludvig Völcker",
+            "Filippa Rosell",
+            "Oscar Hultefors"
           ],
           "hit": false
         },
@@ -2418,14 +2418,14 @@
           "players": [
             "Anna",
             "Erik Engberg",
-            "Johan Leijonhielm",
             "Ebba Örtenblad",
             "Felice Gelin",
             "Daniel",
+            "Johan Leijonhielm",
             "Petra",
             "Lukas Källén"
           ],
-          "hit": false
+          "hit": true
         }
       ]
     },
@@ -2442,13 +2442,13 @@
           "pct": 26,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Ebba Wikström",
             "Jakob Hägglund",
+            "Maximilian",
             "Tim",
-            "Johan Leijonhielm",
+            "Ebba Wikström",
             "Matilda",
-            "Frida Björning Lundqvist"
+            "Frida Björning Lundqvist",
+            "Johan Leijonhielm"
           ],
           "hit": null
         },
@@ -2458,11 +2458,11 @@
           "pct": 19,
           "players": [
             "Jacob Cederberg",
-            "Klas",
-            "Gustaf L",
             "Boris",
-            "Petra",
-            "Rickard"
+            "Gustaf L",
+            "Klas",
+            "Rickard",
+            "Petra"
           ],
           "hit": null
         },
@@ -2473,8 +2473,8 @@
           "players": [
             "Anna",
             "Solveig",
-            "Simon",
-            "Daniel"
+            "Daniel",
+            "Simon"
           ],
           "hit": null
         },
@@ -2483,8 +2483,8 @@
           "count": 4,
           "pct": 13,
           "players": [
-            "Ebba Lindström",
             "Elin",
+            "Ebba Lindström",
             "Ebba Örtenblad",
             "Felice Gelin"
           ],
@@ -2545,7 +2545,7 @@
       "id": "B15",
       "q": "How far does Sweden go? (auto from bracket picks)",
       "pts": 10,
-      "current": "Group stage",
+      "current": "Round of 32",
       "status": "provisional",
       "answers": [
         {
@@ -2554,30 +2554,30 @@
           "pct": 81,
           "players": [
             "Christoffer",
-            "Ebba Lindström",
+            "Elin",
             "Jacob Cederberg",
-            "Anna",
-            "Maximilian",
-            "Ebba Wikström",
+            "Ebba Lindström",
             "Jakob Hägglund",
+            "Anna",
+            "Boris",
+            "Erik Engberg",
+            "Maximilian",
+            "Ebba Örtenblad",
+            "Felice Gelin",
             "Solveig",
             "Tim",
-            "Erik Engberg",
-            "Boris",
-            "Matilda",
-            "Elin",
-            "Filippa Rosell",
+            "Ebba Wikström",
             "Alex J",
+            "Dani",
+            "Daniel",
+            "Matilda",
+            "Simon",
             "David",
             "Frida Björning Lundqvist",
             "Andreas Panagos",
-            "Ebba Örtenblad",
-            "Felice Gelin",
-            "Simon",
-            "Dani",
-            "Daniel",
-            "Oscar Hultefors",
-            "Ludvig Völcker"
+            "Ludvig Völcker",
+            "Filippa Rosell",
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -2587,8 +2587,8 @@
           "pct": 13,
           "players": [
             "Klas",
-            "Johan Leijonhielm",
             "Rickard",
+            "Johan Leijonhielm",
             "Lukas Källén"
           ],
           "hit": null
@@ -2626,26 +2626,26 @@
           "pct": 68,
           "players": [
             "Christoffer",
-            "Ebba Lindström",
-            "Maximilian",
-            "Ebba Wikström",
-            "Jakob Hägglund",
-            "Klas",
-            "Erik Engberg",
-            "Gustaf L",
-            "Johan Leijonhielm",
-            "Boris",
             "Elin",
-            "Alex J",
-            "David",
-            "Frida Björning Lundqvist",
+            "Ebba Lindström",
+            "Jakob Hägglund",
+            "Boris",
+            "Erik Engberg",
+            "Maximilian",
             "Ebba Örtenblad",
             "Felice Gelin",
-            "Simon",
+            "Gustaf L",
+            "Ebba Wikström",
+            "Klas",
+            "Alex J",
             "Daniel",
-            "Oscar Hultefors",
             "Rickard",
-            "Ludvig Völcker"
+            "Simon",
+            "David",
+            "Frida Björning Lundqvist",
+            "Johan Leijonhielm",
+            "Ludvig Völcker",
+            "Oscar Hultefors"
           ],
           "hit": null
         },
@@ -2658,9 +2658,9 @@
             "Anna",
             "Solveig",
             "Tim",
+            "Dani",
             "Matilda",
             "Andreas Panagos",
-            "Dani",
             "Petra"
           ],
           "hit": null
