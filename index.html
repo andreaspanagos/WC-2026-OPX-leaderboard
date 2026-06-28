@@ -562,6 +562,11 @@
     }
     .sl-score { font-weight: 800; color: var(--brand-text); }
     .sl-score.ko-team { font-weight: 700; min-width: 7rem; }
+    /* KO advance-stat rows: wide label, then bar + pct */
+    .sl-row.ko-statrow { grid-template-columns: minmax(8.5rem, 1fr) minmax(60px, 110px) 5rem; }
+    .ko-stat { font-weight: 600; font-size: 0.82rem; color: var(--text-muted); }
+    .ko-teamname { font-weight: 800; color: var(--brand-text); font-size: 0.92rem;
+      padding: 0.5rem 0.4rem 0.05rem; border-top: 1px solid var(--border); }
     .t-home.ko-adv, .t-away.ko-adv { color: #1b8a3a; font-weight: 800; }
     [data-theme="dark"] .t-home.ko-adv, [data-theme="dark"] .t-away.ko-adv { color: #7fd99a; }
     .sl-bar-bg { background: var(--surface-2); border-radius: 999px; height: 8px; overflow: hidden; }
@@ -1161,7 +1166,8 @@
     .slot.won { background:var(--surface-3); }
     .slot.lost .nm { color:var(--text-faint); }
     .slot .pickbar { position:absolute; left:0; bottom:0; height:2px; background:var(--brand); opacity:.5; }
-    .slot .pickpct { font-size:.6rem; color:var(--text-faint); font-weight:700; min-width:2.2rem; text-align:right; }
+    .slot .pickpct { font-size:.6rem; color:var(--text-faint); font-weight:700; min-width:3.6rem; text-align:right; white-space:nowrap; }
+    .slot .pickadv { color:var(--text-faint); opacity:.7; font-weight:600; margin-left:.1rem; }
     .match-meta { font-size:.6rem; color:var(--text-faint); text-align:center; padding:.12rem 0;
       background:var(--surface-2); letter-spacing:.04em; }
     .bracket-champ { text-align:center; margin-top:.4rem; font-size:.8rem; font-weight:700; color:var(--text); }
@@ -1310,9 +1316,10 @@
 <div id="view-bracket" hidden>
   <div class="page-wrap">
     <p class="page-intro">
-      The knockout draw, Round of 32 through to the Final. On each match the bar
-      shows the share of the pool that picked that team to advance. Empty slots
-      fill in as the group stage finishes and each round is played.
+      The knockout draw, Round of 32 through to the Final. On each team the bar
+      and first number show the share of the pool that picked them to reach this
+      round; the small &rarr; number is the share that picked them to advance
+      further. Empty slots fill in as the group stage finishes and each round is played.
     </p>
     <div class="round-nav" id="round-nav"></div>
     <div id="bracket-status" class="page-note" hidden></div>
@@ -2244,16 +2251,25 @@
         `<span class="t-away${winAway ? " ko-adv" : ""}">${esc(m.away)}</span>`
       : `<span class="t-home">${esc(m.home)}</span><span class="vs">vs</span>` +
         `<span class="t-away">${esc(m.away)}</span> <span class="badge-upcoming">upcoming</span>`;
-    const hp = m.homePick || { pct: 0, count: 0 };
-    const ap = m.awayPick || { pct: 0, count: 0 };
-    const advRow = (team, pk) => `
-        <div class="sl-row">
-          <span class="sl-score ko-team">${esc(team)}</span>
+    // Two pool %s per team: predicted to REACH this round, and projected to
+    // ADVANCE out of it (win the match / lift the cup / take 3rd place).
+    const reachLbl = { R32: "Round of 32", R16: "Round of 16", QF: "quarter-finals",
+      SF: "semi-finals", Final: "the Final", Bronze: "the semi-finals" }[m.round] || m.round;
+    const advLbl = { R32: "advance to R16", R16: "advance to QF", QF: "advance to SF",
+      SF: "reach the Final", Final: "win the Cup", Bronze: "win 3rd place" }[m.round] || "advance";
+    const statRow = (label, pk) => `
+        <div class="sl-row ko-statrow">
+          <span class="sl-score ko-stat">${label}</span>
           <div class="sl-bar-bg"><div class="sl-bar" style="width:${pk.pct}%"></div></div>
           <span class="sl-pct">${pk.pct}% (${pk.count})</span>
         </div>`;
-    const detail = advRow(m.home, hp) + advRow(m.away, ap) +
-      `<div class="sl-names">% of players who picked each team to advance.</div>`;
+    const teamBlock = (team, reach, adv) =>
+      `<div class="ko-teamname">${esc(team)}</div>` +
+      statRow(`Predicted to reach ${reachLbl}`, reach || { pct: 0, count: 0 }) +
+      statRow(`Projected to ${advLbl}`, adv || { pct: 0, count: 0 });
+    const detail = teamBlock(m.home, m.homeReach, m.homePick) +
+      teamBlock(m.away, m.awayReach, m.awayPick) +
+      `<div class="sl-names">% of the pool that picked each team to reach this round vs. to go further.</div>`;
     return `
       <div class="game">
         <div class="game-summary" onclick="toggleGame(this)">
@@ -2427,7 +2443,8 @@
   function slotHtml(m, side, byId) {
     const team = side === "home" ? m.home : m.away;
     const score = side === "home" ? m.hg : m.ag;
-    const pick = side === "home" ? m.homePick : m.awayPick;
+    const reach = side === "home" ? m.homeReach : m.awayReach;  // % to THIS round
+    const adv   = side === "home" ? m.homePick  : m.awayPick;   // % to NEXT round
     let cls = "slot", label, nmCls = "nm";
     if (team) {
       const decided = m.winner != null;
@@ -2440,8 +2457,12 @@
       const advancer = m.round === "Bronze" ? "Loser" : "Winner";
       label = fed ? advancer + " " + matchLabel(fed, byId) : "TBD";
     }
-    const bar = (pick && team && m.winner == null)
-      ? `<span class="pickbar" style="width:${pick.pct}%"></span><span class="pickpct">${pick.pct}%</span>`
+    // Bar width = % who predicted the team to reach THIS round; the small
+    // arrow number = % who predicted them to advance to the NEXT round.
+    const bar = (team && m.winner == null && (reach || adv))
+      ? `<span class="pickbar" style="width:${(reach || adv).pct}%"></span>` +
+        `<span class="pickpct" title="reached this round → advance further">` +
+        `${reach ? reach.pct : 0}%<span class="pickadv">&rarr;${adv ? adv.pct : 0}%</span></span>`
       : "";
     const sc = (score != null) ? `<span class="sc">${score}</span>` : "";
     return `<div class="${cls}"><span class="${nmCls}">${label}</span>${bar}${sc}</div>`;

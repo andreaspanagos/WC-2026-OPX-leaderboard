@@ -1096,15 +1096,26 @@ def real_team(v):
     return v if (v and v in teams) else None
 
 def advance_pct(team, target):
-    """% of the pool that predicted `team` to reach `target` (the round this
-    match feeds into). For the Final, `target` is winning it (Champion)."""
-    if not team or not n_players:
+    """% of the pool that predicted `team` to reach `target`. `target` is a
+    round key (R32..Final), "Champion" (won the Final), or "Third" (won the
+    bronze match)."""
+    if not team or not n_players or not target:
         return None
     if target == "Champion":
         c = sum(1 for p in players if rounds_by_player[p]["Winner"] == team)
+    elif target == "Third":
+        c = sum(1 for p in players if rounds_by_player[p]["Third"] == team)
     else:
         c = sum(1 for p in players if team in rounds_by_player[p].get(target, set()))
     return {"pct": round(100 * c / n_players), "count": c}
+
+# Two pick %s per slot: "reach THIS round" vs "advance to the NEXT round".
+# Bronze is special — reaching it = losing a semi (so "reached SF"), and
+# "advancing" = winning 3rd place (the player's Third pick).
+THIS_TARGET = {"R32": "R32", "R16": "R16", "QF": "QF", "SF": "SF",
+               "Final": "Final", "Bronze": "SF"}
+NEXT_TARGET = {"R32": "R16", "R16": "QF", "QF": "SF", "SF": "Final",
+               "Final": "Champion", "Bronze": "Third"}
 
 KO_ROUND_LABEL = {"R32": "Round of 32", "R16": "Round of 16", "QF": "Quarter-final",
                   "SF": "Semi-final", "Bronze": "Third-place", "Final": "Final"}
@@ -1133,7 +1144,8 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
                 nxt = ko_round.get("Final", set())
             winner = h if h in nxt else (a if a in nxt else None)
     has_score = (hg is not None and ag is not None and (hg or ag))
-    target = NEXT_ROUND.get(rnd_key)
+    this_t = THIS_TARGET.get(rnd_key)
+    next_t = NEXT_TARGET.get(rnd_key)
     kickoff = ko_kickoffs.get(frozenset({h, a}), "") if (h and a) else ""
     m = {
         "id": f"M{num}", "no": num, "round": rnd_key, "side": side,
@@ -1142,8 +1154,12 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         "hg": hg if (h and a and has_score) else None,
         "ag": ag if (h and a and has_score) else None,
         "winner": winner,
-        "homePick": advance_pct(h, target) if h else None,
-        "awayPick": advance_pct(a, target) if a else None,
+        # homePick/awayPick = % predicted to ADVANCE to the next round (kept for
+        # back-compat); homeReach/awayReach = % predicted to reach THIS round.
+        "homePick": advance_pct(h, next_t) if h else None,
+        "awayPick": advance_pct(a, next_t) if a else None,
+        "homeReach": advance_pct(h, this_t) if h else None,
+        "awayReach": advance_pct(a, this_t) if a else None,
     }
     ko_matches.append(m)
     played = m["hg"] is not None and m["ag"] is not None
@@ -1153,6 +1169,7 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         "home": h, "away": a, "kickoff": kickoff,
         "played": played, "hg": m["hg"], "ag": m["ag"], "winner": winner,
         "homePick": m["homePick"], "awayPick": m["awayPick"],
+        "homeReach": m["homeReach"], "awayReach": m["awayReach"],
         "status": "FT" if played else ("scheduled" if (h and a) else "pending"),
     })
 
