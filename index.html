@@ -510,23 +510,6 @@
     .vt-btn:first-child { border-radius:6px 0 0 6px; }
     .vt-btn:last-child  { border-radius:0 6px 6px 0; }
     .vt-btn.active { background:var(--brand); color:#fff; }
-    .day-header {
-      font-size:0.78rem; font-weight:700; text-transform:uppercase;
-      letter-spacing:.05em; color:var(--text-muted); margin:1rem 0 0.3rem; padding:0;
-    }
-    .chrono-section-label {
-      font-size:0.8rem; font-weight:700; text-transform:uppercase;
-      letter-spacing:.07em; color:var(--text);
-      background:var(--bg2); border-left:3px solid var(--brand);
-      padding:0.35rem 0.75rem; border-radius:0 4px 4px 0;
-      margin:1.4rem 0 0.4rem;
-      display:flex; align-items:center; justify-content:space-between;
-    }
-    .chrono-section-label:first-child { margin-top:0; }
-    .chrono-section-label.collapsible { cursor:pointer; user-select:none; }
-    .chrono-section-label.collapsible:hover { background:var(--bg3,var(--bg2)); }
-    .chrono-section-chev { font-size:0.7rem; display:inline-block; transition:transform .2s; }
-    .chrono-section-label.collapsed .chrono-section-chev { transform:rotate(-90deg); }
     .winner-picks {
       font-size: 0.78rem; color: var(--text-muted);
       padding: 0.5rem 0.9rem;
@@ -578,6 +561,9 @@
       font-size: 0.9rem;
     }
     .sl-score { font-weight: 800; color: var(--brand-text); }
+    .sl-score.ko-team { font-weight: 700; min-width: 7rem; }
+    .t-home.ko-adv, .t-away.ko-adv { color: #1b8a3a; font-weight: 800; }
+    [data-theme="dark"] .t-home.ko-adv, [data-theme="dark"] .t-away.ko-adv { color: #7fd99a; }
     .sl-bar-bg { background: var(--surface-2); border-radius: 999px; height: 8px; overflow: hidden; }
     .sl-bar { height: 100%; background: linear-gradient(90deg, var(--brand), #5b6fcc); border-radius: 999px; }
     .sl-pct { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
@@ -807,6 +793,11 @@
     .pd-pill.hit { border-color: #1b8a3a; background: #ecf9f0; color: #1b8a3a; }
     [data-theme="dark"] .pd-pill.hit { background: rgba(27,138,58,0.18); color: #7fd99a; }
     .pd-pill.hit::after { content: " ✓"; font-weight: 800; }
+    /* Eliminated pick (team can no longer reach this round) — red ✗. Teams still
+       alive in a round that hasn't been played stay neutral (no class). */
+    .pd-pill.miss { border-color: #f5c6cb; background: #fdecea; color: #a93226; }
+    [data-theme="dark"] .pd-pill.miss { background: rgba(192,57,43,0.18); color: #f3a39a; }
+    .pd-pill.miss::after { content: " ✗"; font-weight: 800; }
     .pd-empty { color: var(--text-faint); font-size: 0.8rem; }
 
     .pd-bonus {
@@ -1276,7 +1267,7 @@
     </p>
     <div class="view-toggle">
       <button class="vt-btn active" id="vt-group" onclick="setGamesView('group')">Group view</button>
-      <button class="vt-btn" id="vt-chrono" onclick="setGamesView('chrono')">Chronological</button>
+      <button class="vt-btn" id="vt-ko" onclick="setGamesView('ko')">Knockout</button>
     </div>
     <div id="games-container"></div>
   </div>
@@ -1419,7 +1410,7 @@
   let prevSnap       = null;   // snapshot loaded from the previous visit
   let isNewVisit     = false;  // true only on the first page-open of a browser session
   let cachedGamesData = null;  // held so maybeSaveSnapshot can access both datasets
-  let gamesView = 'group'; // 'group' | 'chrono'
+  let gamesView = 'group'; // 'group' | 'ko'
   let newGamesCount  = 0;      // how many games became played since last visit
 
   function gameKey(gm) { return gm.home + "__" + gm.away; }
@@ -2240,10 +2231,45 @@
       </div>`;
   }
 
+  // A knockout fixture row: like a group game, but the expandable detail shows
+  // the % of the pool who picked each team to ADVANCE (knockout picks are
+  // team-to-advance, not scorelines). Winner (incl. on penalties) is highlighted
+  // once the tie is decided.
+  function koGameHtml(m) {
+    const winHome = m.played && m.winner && m.winner === m.home;
+    const winAway = m.played && m.winner && m.winner === m.away;
+    const center = m.played
+      ? `<span class="t-home${winHome ? " ko-adv" : ""}">${esc(m.home)}</span>` +
+        `<span class="game-score">${m.hg}&ndash;${m.ag}</span>` +
+        `<span class="t-away${winAway ? " ko-adv" : ""}">${esc(m.away)}</span>`
+      : `<span class="t-home">${esc(m.home)}</span><span class="vs">vs</span>` +
+        `<span class="t-away">${esc(m.away)}</span> <span class="badge-upcoming">upcoming</span>`;
+    const hp = m.homePick || { pct: 0, count: 0 };
+    const ap = m.awayPick || { pct: 0, count: 0 };
+    const advRow = (team, pk) => `
+        <div class="sl-row">
+          <span class="sl-score ko-team">${esc(team)}</span>
+          <div class="sl-bar-bg"><div class="sl-bar" style="width:${pk.pct}%"></div></div>
+          <span class="sl-pct">${pk.pct}% (${pk.count})</span>
+        </div>`;
+    const detail = advRow(m.home, hp) + advRow(m.away, ap) +
+      `<div class="sl-names">% of players who picked each team to advance.</div>`;
+    return `
+      <div class="game">
+        <div class="game-summary" onclick="toggleGame(this)">
+          <span class="game-date">${shortDate(m.kickoff)}</span>
+          <span class="game-teams">${center}</span>
+          <span class="chev">&#9660;</span>
+        </div>
+        <div class="game-detail" hidden>${detail}</div>
+      </div>`;
+  }
+
   function setGamesView(mode) {
     gamesView = mode;
     document.getElementById('vt-group').classList.toggle('active', mode === 'group');
-    document.getElementById('vt-chrono').classList.toggle('active', mode === 'chrono');
+    const koBtn = document.getElementById('vt-ko');
+    if (koBtn) koBtn.classList.toggle('active', mode === 'ko');
     if (cachedGamesData) renderGames(cachedGamesData);
   }
 
@@ -2268,56 +2294,23 @@
     const c = document.getElementById("games-container");
     c.innerHTML = "";
 
-    if (gamesView === 'chrono') {
-      const all = data.groups.flatMap(g => g.games.filter(gm => gm.kickoff));
-      all.sort((a, b) => a.kickoff < b.kickoff ? -1 : a.kickoff > b.kickoff ? 1 : 0);
-
-      const past     = all.filter(gm =>  gm.played);
-      const upcoming = all.filter(gm => !gm.played);
-
-      function appendChronoSection(games, label, collapsible) {
-        if (!games.length) return;
-        const lbl = document.createElement("div");
-        lbl.className = "chrono-section-label" + (collapsible ? " collapsible" : "");
-        const span = document.createElement("span");
-        span.textContent = label;
-        lbl.appendChild(span);
-        const items = [];
-        let lastDate = null;
-        games.forEach(gm => {
-          const date = gm.kickoff.slice(0, 10);
-          if (date !== lastDate) {
-            lastDate = date;
-            const m = date.match(/(\d{4})-(\d{2})-(\d{2})/);
-            const dayLabel = m ? `${MONTHS[+m[2]-1]} ${+m[3]}, ${m[1]}` : date;
-            const h = document.createElement("h3");
-            h.className = "day-header";
-            h.textContent = dayLabel;
-            items.push(h);
-          }
+    if (gamesView === 'ko') {
+      // Knockout fixtures, grouped by round (only rounds whose teams are known).
+      const drawn = (data.ko || []).filter(m => m.home && m.away);
+      if (!drawn.length) {
+        c.innerHTML = `<p class="page-intro">The knockout bracket hasn't been drawn yet — ` +
+          `knockout fixtures appear here once the group stage finishes.</p>`;
+      } else {
+        ["R32", "R16", "QF", "SF", "Bronze", "Final"].forEach(rk => {
+          const ms = drawn.filter(m => m.round === rk).sort((a, b) => a.no - b.no);
+          if (!ms.length) return;
           const sec = document.createElement("div");
           sec.className = "section";
-          sec.innerHTML = gameHtml(gm, newGames.has(gameKey(gm)));
-          items.push(sec);
+          sec.innerHTML = `<div class="section-head"><span>${esc(ms[0].label)}</span></div>` +
+            ms.map(m => koGameHtml(m)).join("");
+          c.appendChild(sec);
         });
-        if (collapsible) {
-          const chev = document.createElement("span");
-          chev.className = "chrono-section-chev";
-          chev.textContent = "▼";
-          lbl.appendChild(chev);
-          let collapsed = false;
-          lbl.addEventListener("click", () => {
-            collapsed = !collapsed;
-            lbl.classList.toggle("collapsed", collapsed);
-            items.forEach(el => { el.hidden = collapsed; });
-          });
-        }
-        c.appendChild(lbl);
-        items.forEach(el => c.appendChild(el));
       }
-
-      appendChronoSection(past,     "Past games",     true);
-      appendChronoSection(upcoming, "Upcoming games", false);
     } else {
       data.groups.forEach(g => {
         const sec = document.createElement("div");
@@ -2900,14 +2893,18 @@
            <div class="gw-summary">${gwChips}</div></div>`
       : "";
 
-    // Knockout bracket.
+    // Knockout bracket. Pick chip: green ✓ if the team reached the round, red ✗
+    // if it's eliminated (can no longer get there), neutral if still pending.
+    const koPillCls = o =>
+      (o && o.status === "miss") ? " miss"
+        : (o && (o.status === "hit" || o.hit)) ? " hit" : "";
     const b = p.bracket || {};
     let koHtml = "";
     KO_ROUNDS.forEach(r => {
       const picks = b[r.key] || [];
       const earned = picks.reduce((s, x) => s + (x.pts || 0), 0);
       const pills = picks.length
-        ? picks.map(x => `<span class="pd-pill${x.hit ? " hit" : ""}">${esc(x.team)}</span>`).join("")
+        ? picks.map(x => `<span class="pd-pill${koPillCls(x)}">${esc(x.team)}</span>`).join("")
         : `<span class="pd-empty">No picks</span>`;
       koHtml += `<div class="pd-round">
         <div class="pd-round-head">
@@ -2930,7 +2927,7 @@
           ${s.o.pts ? `<span class="pd-round-pts">+${s.o.pts}</span>` : ""}
         </div>
         <div class="pd-pills">
-          <span class="pd-pill${s.o.hit ? " hit" : ""}">${esc(s.o.team)}</span></div></div>`;
+          <span class="pd-pill${koPillCls(s.o)}">${esc(s.o.team)}</span></div></div>`;
     });
 
     // Achievements / badges earned by this player (+ a collapsed locked remainder).
@@ -3067,6 +3064,16 @@
       const ko = parseKO(gm.kickoff);
       if (ko) all.push({ ...gm, group: g.group, ko });
     }));
+    // Knockout fixtures (only those whose teams are known) feed the banner too,
+    // tagged with their round (R32/R16/…) instead of a group letter.
+    (data.ko || []).forEach(m => {
+      const ko = parseKO(m.kickoff);
+      if (ko && m.home && m.away) all.push({
+        home: m.home, away: m.away, kickoff: m.kickoff, ko,
+        played: m.played, actual: m.played ? { hg: m.hg, ag: m.ag } : null,
+        group: m.round, isKO: true,
+      });
+    });
     if (!all.length) { el.hidden = true; return; }
 
     const now = new Date();
@@ -3088,8 +3095,9 @@
           status = `<span class="tb-status tb-live">awaiting result</span>`;
         else
           status = `<span class="tb-status tb-soon">kicks off ${hhmm(gm.ko)}</span>`;
+        const tag = gm.isKO ? esc(gm.group) : `Grp ${esc(gm.group)}`;
         return `<div class="tb-game">
-          <div class="tb-time">Grp ${esc(gm.group)} · ${dayLabel(gm.ko)} ${hhmm(gm.ko)}</div>
+          <div class="tb-time">${tag} · ${dayLabel(gm.ko)} ${hhmm(gm.ko)}</div>
           <div class="tb-teams">${esc(gm.home)}<br>v ${esc(gm.away)}</div>
           ${status}
         </div>`;
