@@ -252,6 +252,7 @@ for row in bk.iter_rows(min_row=3, max_row=50, min_col=16, max_col=26, values_on
 # NOTE: the team table's "Quarter" flag column is broken in the model, so
 # round membership is derived from the KO match list instead (validated).
 ko_round = {"R32": set(), "R16": set(), "QF": set(), "SF": set(), "Final": set()}
+ko_pairs = []      # (round_key, home, away) for matches whose BOTH teams are known
 round_map = {"R32": "R32", "R16": "R16", "QF": "QF", "SF": "SF", "Final": "Final"}
 for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_only=True):
     m, rnd, home, away, hg, ag = row
@@ -260,6 +261,8 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         for t in (home, away):
             if t in teams:
                 ko_round[key].add(t)
+        if home in teams and away in teams:
+            ko_pairs.append((key, home, away))
 
 champion = {t for t, d in teams.items() if d["flags"]["Winner"]}
 third_team = {t for t, d in teams.items() if d["flags"]["Third"]}
@@ -267,22 +270,25 @@ third_team = {t for t, d in teams.items() if d["flags"]["Third"]}
 # Teams that are definitively OUT of the tournament — used to red-mark a player's
 # knockout picks the moment they can no longer come true (vs. merely "pending"
 # because the round hasn't been played). A team is eliminated if:
-#   (a) its group is complete but it did NOT reach R32 (group-stage exit), or
-#   (b) it appears in some KO round but not in the (already-populated) next round
-#       — i.e. it lost that tie — including a Final loser once the champion is set.
-# This cascades correctly as each round is played: a round's set only becomes
-# non-empty once the previous round's results are in.
-_ROUND_SEQ = ["R32", "R16", "QF", "SF", "Final"]
+#   (a) its group is complete and it did NOT make the (already-drawn) R32, or
+#   (b) it played a KO tie that is now DECIDED and lost it. A tie counts as
+#       decided once one of its two teams has advanced to the next round (or, for
+#       the Final, is champion); the other team is then out. A tie with no result
+#       yet leaves BOTH teams alive — so a team still waiting to play (e.g. its
+#       R32 game) is never crossed out early.
+# (b) replaces an older round-vs-next-round cascade that wrongly eliminated every
+# R32 team not yet in R16 the instant the FIRST R16 slot filled.
+_NEXT_OF = {"R32": "R16", "R16": "QF", "QF": "SF", "SF": "Final"}
 eliminated = set()
 for _t, _d in teams.items():
-    if _d["group"] and group_complete.get(_d["group"]) and _t not in ko_round["R32"]:
+    if _d["group"] and group_complete.get(_d["group"]) and ko_round["R32"] and _t not in ko_round["R32"]:
         eliminated.add(_t)
-for _i in range(len(_ROUND_SEQ) - 1):
-    _nxt = ko_round[_ROUND_SEQ[_i + 1]]
-    if _nxt:
-        eliminated |= (ko_round[_ROUND_SEQ[_i]] - _nxt)
-if champion:
-    eliminated |= (ko_round["Final"] - champion)
+for _rnd, _h, _a in ko_pairs:
+    _nxt = champion if _rnd == "Final" else ko_round.get(_NEXT_OF.get(_rnd), set())
+    if _h in _nxt and _a not in _nxt:
+        eliminated.add(_a)
+    elif _a in _nxt and _h not in _nxt:
+        eliminated.add(_h)
 
 def actual_stage(team):
     """Deepest stage the team has reached so far, or None before the R32 draw."""
@@ -1073,21 +1079,56 @@ print(f"Exported {_total_badges} badges across {len(by_player)} players -> {ACH_
 # Home/Away are "TBD"/0 until the R32 draw is made, so before the draw this
 # feed is the empty structure (every slot a placeholder) — rendered as such.
 
-# Map each match to its round and its left/right half (Final/Bronze are centre).
-KO_LAYOUT = {}   # num -> (round, side)
-for _n in range(73, 89):  KO_LAYOUT[_n] = ("R32", "L" if _n <= 80 else "R")
-for _n in range(89, 97):  KO_LAYOUT[_n] = ("R16", "L" if _n <= 92 else "R")
-for _n in range(97, 101): KO_LAYOUT[_n] = ("QF",  "L" if _n <= 98 else "R")
-KO_LAYOUT[101] = ("SF", "L"); KO_LAYOUT[102] = ("SF", "R")
-KO_LAYOUT[103] = ("Bronze", "C"); KO_LAYOUT[104] = ("Final", "C")
+# Round of each knockout match (M73-88 R32, M89-96 R16, M97-100 QF,
+# M101-102 SF, M103 Bronze, M104 Final).
+KO_ROUND_OF = {}
+for _n in range(73, 89):  KO_ROUND_OF[_n] = "R32"
+for _n in range(89, 97):  KO_ROUND_OF[_n] = "R16"
+for _n in range(97, 101): KO_ROUND_OF[_n] = "QF"
+KO_ROUND_OF[101] = KO_ROUND_OF[102] = "SF"
+KO_ROUND_OF[103] = "Bronze"; KO_ROUND_OF[104] = "Final"
 
-# Feeder children: which two earlier matches' winners meet in this match.
-KO_FEEDERS = {}
-for _k in range(8):  KO_FEEDERS[89 + _k] = (73 + 2 * _k, 74 + 2 * _k)   # R16 <- R32 pairs
-for _k in range(4):  KO_FEEDERS[97 + _k] = (89 + 2 * _k, 90 + 2 * _k)   # QF  <- R16 pairs
-KO_FEEDERS[101] = (97, 98); KO_FEEDERS[102] = (99, 100)                 # SF  <- QF pairs
-KO_FEEDERS[104] = (101, 102)                                           # Final <- SF winners
-KO_FEEDERS[103] = (101, 102)                                           # Bronze <- SF losers
+# Feeder children: which two earlier matches' winners meet in this match. This is
+# the model's ACTUAL bracket wiring, read from the Results-sheet advancement
+# formulas (e.g. M89 = winner(M74) v winner(M77)). The 2026 bracket is NOT a
+# sequential pairing — the M73 winner is routed into M90, not M89 — so the old
+# `73+2k -> 89+k` map drew a tree that didn't match reality.
+KO_FEEDERS = {
+    89: (74, 77), 90: (73, 75), 91: (76, 78), 92: (79, 80),
+    93: (83, 84), 94: (81, 82), 95: (86, 88), 96: (85, 87),    # R16 <- R32
+    97: (89, 90), 98: (93, 94), 99: (91, 92), 100: (95, 96),   # QF  <- R16
+    101: (97, 98), 102: (99, 100),                             # SF  <- QF
+    104: (101, 102),                                           # Final  <- SF winners
+    103: (101, 102),                                           # Bronze <- SF losers
+}
+
+# Left/right half + vertical order, derived from the feeder tree so the rendered
+# bracket nests like the real one (a parent centres between its two children).
+# The Final's two feeders root the halves; R32 leaves are numbered top->bottom by
+# an in-order walk and each parent gets the mean of its descendant leaves.
+_LEFT_ROOT, _RIGHT_ROOT = KO_FEEDERS[104]
+ko_order = {}
+_leaf_pos = [0]
+def _ko_layout(n):
+    fe = KO_FEEDERS.get(n)
+    if not fe:                                  # R32 leaf
+        ko_order[n] = _leaf_pos[0]; _leaf_pos[0] += 1
+        return [ko_order[n]]
+    leaves = []
+    for c in fe:
+        leaves += _ko_layout(c)
+    ko_order[n] = sum(leaves) / len(leaves)
+    return leaves
+_ko_layout(_LEFT_ROOT)
+_LEFT_SET = set(ko_order)                       # everything numbered so far = left half
+_ko_layout(_RIGHT_ROOT)
+ko_order[104] = (ko_order[_LEFT_ROOT] + ko_order[_RIGHT_ROOT]) / 2
+ko_order[103] = ko_order[104] + 0.1             # Bronze sits just below the Final
+
+def ko_side(n):
+    if n in (103, 104):
+        return "C"
+    return "L" if n in _LEFT_SET else "R"
 
 NEXT_ROUND = {"R32": "R16", "R16": "QF", "QF": "SF", "SF": "Final", "Final": "Champion"}
 
@@ -1127,9 +1168,9 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
     if not mid:
         continue
     num = as_int(str(mid).lstrip("Mm"))
-    if num not in KO_LAYOUT:
+    if num not in KO_ROUND_OF:
         continue
-    rnd_key, side = KO_LAYOUT[num]
+    rnd_key, side = KO_ROUND_OF[num], ko_side(num)
     h, a = real_team(home), real_team(away)
     hg, ag = as_int(hg), as_int(ag)
     # Winner is taken from the model's authoritative progression sets, not the
@@ -1149,6 +1190,7 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
     kickoff = ko_kickoffs.get(frozenset({h, a}), "") if (h and a) else ""
     m = {
         "id": f"M{num}", "no": num, "round": rnd_key, "side": side,
+        "order": ko_order.get(num),
         "feeders": [f"M{c}" for c in KO_FEEDERS.get(num, ())],
         "home": h, "away": a, "kickoff": kickoff,
         "hg": hg if (h and a and has_score) else None,

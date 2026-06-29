@@ -2498,9 +2498,13 @@
         + `${BR_ROUND_LABEL[r]}</button>`).join("");
     }
 
+    // Vertical order within a column follows the bracket tree (m.order, the mean
+    // of a match's descendant leaves) so each match centres between its feeders;
+    // fall back to match number for older data without an order field.
+    const ord = m => (m.order != null ? m.order : m.no);
     const byRoundSide = (round, side) =>
       (data.matches || []).filter(m => m.round === round && m.side === side)
-                          .sort((a, b) => a.no - b.no);
+                          .sort((a, b) => ord(a) - ord(b));
 
     const col = (round, side, label) => {
       const ms = byRoundSide(round, side);

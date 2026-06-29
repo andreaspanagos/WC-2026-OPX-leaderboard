@@ -1463,19 +1463,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -1487,61 +1487,61 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -1553,7 +1553,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -1561,49 +1561,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -1611,25 +1611,25 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -1637,26 +1637,26 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -3221,19 +3221,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -3245,61 +3245,61 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -3311,7 +3311,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -3319,49 +3319,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -3369,25 +3369,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -3395,26 +3395,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -4979,19 +4979,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -5003,25 +5003,25 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Iran",
@@ -5033,43 +5033,43 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -5077,49 +5077,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -5127,25 +5127,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -5153,26 +5153,26 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -6737,25 +6737,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Australia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -6767,67 +6767,67 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -6835,49 +6835,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -6885,25 +6885,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -6911,26 +6911,26 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Brazil",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -8495,67 +8495,67 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -8567,13 +8567,13 @@
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -8585,7 +8585,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -8593,49 +8593,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -8643,25 +8643,25 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -8669,26 +8669,26 @@
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -10253,25 +10253,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -10283,55 +10283,55 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -10343,7 +10343,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -10351,49 +10351,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -10401,25 +10401,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -10427,26 +10427,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -12011,19 +12011,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -12035,25 +12035,25 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -12065,13 +12065,13 @@
             "team": "Paraguay",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -12083,19 +12083,19 @@
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -12109,37 +12109,37 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -12151,7 +12151,7 @@
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -12159,25 +12159,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -12185,26 +12185,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -13769,19 +13769,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -13793,25 +13793,25 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -13823,13 +13823,13 @@
             "team": "Paraguay",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -13841,19 +13841,19 @@
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -13867,37 +13867,37 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -13909,7 +13909,7 @@
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -13917,25 +13917,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -13943,26 +13943,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Argentina",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -15527,19 +15527,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -15551,61 +15551,61 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -15617,7 +15617,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -15625,49 +15625,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -15675,25 +15675,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -15701,26 +15701,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Argentina",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Brazil",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -17285,25 +17285,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -17315,55 +17315,55 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -17375,7 +17375,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -17383,49 +17383,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -17433,25 +17433,25 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -17459,26 +17459,26 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -19043,43 +19043,43 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -19091,37 +19091,37 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -19133,7 +19133,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -19141,49 +19141,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -19191,25 +19191,25 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -19217,26 +19217,26 @@
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -20801,19 +20801,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -20825,73 +20825,73 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -20899,49 +20899,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -20949,25 +20949,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -20975,26 +20975,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -22559,55 +22559,55 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Côte d'Ivoire",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -22619,31 +22619,31 @@
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -22657,49 +22657,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -22707,25 +22707,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -22733,26 +22733,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -24317,43 +24317,43 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -24365,49 +24365,49 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Paraguay",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -24415,49 +24415,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -24465,25 +24465,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -24491,26 +24491,26 @@
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Germany",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -26075,43 +26075,43 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -26123,37 +26123,37 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -26165,7 +26165,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -26173,49 +26173,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -26223,25 +26223,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -26249,26 +26249,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -27833,19 +27833,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -27857,61 +27857,61 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -27923,7 +27923,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -27931,49 +27931,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -27981,25 +27981,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -28007,26 +28007,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Brazil",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -29591,19 +29591,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -29615,61 +29615,61 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Ecuador",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -29681,7 +29681,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -29689,49 +29689,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -29739,25 +29739,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -29765,26 +29765,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -31349,19 +31349,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -31373,61 +31373,61 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -31439,7 +31439,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -31447,49 +31447,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -31497,25 +31497,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -31523,26 +31523,26 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -33107,19 +33107,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -33131,61 +33131,61 @@
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -33197,7 +33197,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -33205,49 +33205,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -33255,25 +33255,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -33281,26 +33281,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -34865,19 +34865,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -34889,61 +34889,61 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Sweden",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -34955,7 +34955,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -34963,49 +34963,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Sweden",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -35013,25 +35013,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -35039,26 +35039,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Argentina",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Brazil",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -36623,19 +36623,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -36647,73 +36647,73 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -36721,49 +36721,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -36771,25 +36771,25 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -36797,26 +36797,26 @@
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -38381,85 +38381,85 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -38471,7 +38471,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -38479,43 +38479,43 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -38529,25 +38529,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -38555,26 +38555,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -40139,25 +40139,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -40169,43 +40169,43 @@
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Scotland",
@@ -40217,19 +40217,19 @@
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -40237,49 +40237,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -40287,25 +40287,25 @@
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -40313,26 +40313,26 @@
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Belgium",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -41897,19 +41897,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -41921,7 +41921,7 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -41933,49 +41933,49 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -41987,7 +41987,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -41995,49 +41995,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Morocco",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -42045,25 +42045,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -42071,26 +42071,26 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -43655,55 +43655,55 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Australia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Côte d'Ivoire",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -43715,37 +43715,37 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -43753,49 +43753,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -43803,25 +43803,25 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -43829,26 +43829,26 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -45413,55 +45413,55 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Japan",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -45473,31 +45473,31 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -45511,49 +45511,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Japan",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -45561,25 +45561,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -45587,26 +45587,26 @@
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Norway",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -47171,31 +47171,31 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -47207,49 +47207,49 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -47261,7 +47261,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -47269,19 +47269,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -47293,25 +47293,25 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -47319,25 +47319,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -47345,26 +47345,26 @@
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -48929,25 +48929,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Czechia",
@@ -48959,61 +48959,61 @@
             "team": "Côte d'Ivoire",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Egypt",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Norway",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -49027,49 +49027,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Côte d'Ivoire",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -49077,25 +49077,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -49103,26 +49103,26 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -50687,19 +50687,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -50711,61 +50711,61 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Côte d'Ivoire",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -50777,7 +50777,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -50785,49 +50785,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -50835,25 +50835,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -50861,26 +50861,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "France",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -52445,19 +52445,19 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -52469,31 +52469,31 @@
             "team": "Colombia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Ecuador",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -52505,7 +52505,7 @@
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "New Zealand",
@@ -52517,19 +52517,19 @@
             "team": "Paraguay",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Uruguay",
@@ -52543,13 +52543,13 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Canada",
@@ -52561,25 +52561,25 @@
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Uruguay",
@@ -52593,25 +52593,25 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -52619,26 +52619,26 @@
             "team": "Brazil",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Brazil",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Germany",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
@@ -54203,37 +54203,37 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Croatia",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "France",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Korea Republic",
@@ -54245,43 +54245,43 @@
             "team": "Mexico",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Senegal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Sweden",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Switzerland",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Turkey",
@@ -54293,7 +54293,7 @@
             "team": "USA",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "QF": [
@@ -54301,49 +54301,49 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Belgium",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "England",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Netherlands",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Portugal",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Sweden",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "SF": [
@@ -54351,25 +54351,25 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Germany",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Sweden",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "Final": [
@@ -54377,26 +54377,26 @@
             "team": "Argentina",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           },
           {
             "team": "Spain",
             "hit": false,
             "pts": 0,
-            "status": "miss"
+            "status": "pending"
           }
         ],
         "winner": {
           "team": "Spain",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         },
         "third": {
           "team": "Germany",
           "hit": false,
           "pts": 0,
-          "status": "miss"
+          "status": "pending"
         }
       },
       "bonusAns": [
