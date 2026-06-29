@@ -157,7 +157,7 @@
     "the-comeback": 19,
     "day-winner": 7,
     "contrarian-king": 4,
-    "on-the-rise": 24,
+    "on-the-rise": 25,
     "bullseye": 16,
     "off-the-mark": 31,
     "first-blood": 31,
@@ -167,7 +167,7 @@
     "wooden-spoon": 1,
     "snake-eyes": 7,
     "cold-snap": 23,
-    "free-fall": 20
+    "free-fall": 19
   },
   "byPlayer": {
     "Christoffer": [
@@ -613,7 +613,7 @@
       {
         "id": "on-the-rise",
         "date": "2026-06-29",
-        "how": "#23 → #11 → #8"
+        "how": "#23 → #11 → #7"
       },
       {
         "id": "off-the-mark",
@@ -943,7 +943,7 @@
       {
         "id": "free-fall",
         "date": "2026-06-29",
-        "how": "#4 → #13 in a day"
+        "how": "#4 → #14 in a day"
       }
     ],
     "Tim": [
@@ -1084,7 +1084,7 @@
       {
         "id": "on-the-rise",
         "date": "2026-06-29",
-        "how": "#25 → #18 → #16"
+        "how": "#25 → #18 → #17"
       },
       {
         "id": "bullseye",
@@ -1388,11 +1388,6 @@
         "id": "cold-snap",
         "date": "2026-06-12",
         "how": "Blanked all 2 games that day"
-      },
-      {
-        "id": "free-fall",
-        "date": "2026-06-29",
-        "how": "#12 → #20 in a day"
       }
     ],
     "Frida Björning Lundqvist": [
@@ -1804,6 +1799,11 @@
         "how": "#27 → #13 in a day"
       },
       {
+        "id": "on-the-rise",
+        "date": "2026-06-29",
+        "how": "#30 → #27 → #26"
+      },
+      {
         "id": "off-the-mark",
         "date": "2026-06-11",
         "how": "First points: Mexico v South Africa (+1)"
@@ -1995,6 +1995,11 @@
         "how": "Points on 3 matchdays running"
       },
       {
+        "id": "wooden-spoon",
+        "date": "2026-06-29",
+        "how": "Last place — rank 31"
+      },
+      {
         "id": "snake-eyes",
         "date": "2026-06-14",
         "how": "0 points in 5 straight matches"
@@ -2055,11 +2060,6 @@
         "id": "steady-hand",
         "date": "2026-06-15",
         "how": "Points on 3 matchdays running"
-      },
-      {
-        "id": "wooden-spoon",
-        "date": "2026-06-29",
-        "how": "Last place — rank 31"
       },
       {
         "id": "cold-snap",

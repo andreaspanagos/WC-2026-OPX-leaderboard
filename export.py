@@ -583,33 +583,71 @@ for _bid, _ready in (("B01", group_stage_done), ("B02", group_stage_done),
     if _k and _ready and _k["current"] and _k["status"] == "provisional":
         _k["status"] = "decided"
 
+
+# Per-player answers per question.
+def bonus_answer(p, bid):
+    if bid == "B15":
+        return predicted_stage(p, "Sweden")
+    if bid == "B16":
+        return flat[p].get("B16_TopScorer")
+    return flat[p].get(bid)
+
+
+def reconciled_bonus(p):
+    """Bonus points that actually reconcile per-question for player p — i.e. the sum
+    the site's per-player bonus breakdown shows. Mirrors the per-question 'earned'
+    logic further down, so the leaderboard Bonus column matches the player-detail
+    panel. Crucially this EXCLUDES the model's premature awards: the model credits a
+    bonus the instant its answer matches, ignoring BP status (the bonus quirk), and
+    B15 "how far does Sweden go" pays out the moment Sweden merely *reaches* the R32
+    (its actual-stage code goes to 1, so everyone who didn't pick Sweden to advance
+    collects it), long before Sweden's run is decided. hit_statuses() gates B15 to
+    'decided' only, so it contributes 0 here until Sweden is actually out."""
+    if p not in flat:
+        return 0
+    total = 0
+    for bd in bonus_defs:
+        key = answer_key.get(bd["id"], {"status": "tbd", "normSet": set()})
+        a = bonus_answer(p, bd["id"])
+        a = None if a is None or str(a).strip() == "" else str(a).strip()
+        if (a and key["status"] in hit_statuses(bd["id"]) and key["normSet"]
+                and answer_hit(bd["id"], a, key)):
+            total += (bd["pts"] or 0)
+    return total
+
+
 # ───────────── finalise leaderboard.json (now that scoring is known) ─────────────
-# Bonus points don't count until the knockout stage begins. The model credits a
-# filled bonus answer immediately (see the bonus scoring quirk), which would leak
-# bonus points into the group-stage standings, so until the R32 draw exists we
-# strip every player's bonus from their total, re-rank on the bonus-free totals,
-# and exclude the bonus pool from "available". ko_round["R32"] is populated only
-# once the knockout bracket has been set.
+# Replace the model's bonus with the value that actually reconciles per-question
+# (reconciled_bonus), then rebuild total/rank/movement around it. WHY: the model
+# credits a bonus the instant its answer matches and IGNORES the BP Decided/TBD
+# status (the bonus quirk), so it over-pays. The worst offender is B15 "how far does
+# Sweden go", worth 10pts: the model pays it the moment Sweden merely *reaches* the
+# R32 — and since most players didn't pick Sweden to advance, nearly everyone
+# collected 10 free points before Sweden's run was decided. Pre-knockout we strip
+# bonus entirely (it shouldn't colour the group-stage race at all); from the
+# knockout stage on we credit only the reconciled sum (decided + provisional
+# answer-matches, but NOT decided-only questions like B15 that aren't yet final).
+# This also makes the Bonus column match the site's per-player bonus breakdown.
 ko_started = any(ko_round[k] for k in ko_round)
-if not ko_started:
-    for r in rows:
-        b = r.get("bonus") or 0
-        if b and r.get("total") is not None:
-            r["total"] = r["total"] - b
-        r["bonus"] = 0
-    # Re-rank (standard competition ranking — ties share a rank) and re-sort so
-    # the array order matches the bonus-free standings.
-    rows.sort(key=lambda x: (x["total"] is None, -(x["total"] or 0), str(x["player"])))
-    last_total, last_rank = object(), 0
-    for i, r in enumerate(rows, start=1):
-        if r["total"] != last_total:
-            last_rank, last_total = i, r["total"]
-        r["rank"] = last_rank
-    # Re-measure the day's movement against the (bonus-free) daily baseline.
-    for r in rows:
-        bse = base.get(r["player"])
-        r["pointsToday"] = (r["total"] - bse["total"]) \
-            if (bse and bse.get("total") is not None and r["total"] is not None) else 0
+for r in rows:
+    model_bonus = r.get("bonus") or 0
+    new_bonus = reconciled_bonus(r["player"]) if ko_started else 0
+    if r.get("total") is not None:
+        r["total"] = r["total"] - model_bonus + new_bonus
+    r["bonus"] = new_bonus
+# Re-rank (standard competition ranking — ties share a rank) and re-sort so the
+# array order matches the corrected standings.
+rows.sort(key=lambda x: (x["total"] is None, -(x["total"] or 0), str(x["player"])))
+last_total, last_rank = object(), 0
+for i, r in enumerate(rows, start=1):
+    if r["total"] != last_total:
+        last_rank, last_total = i, r["total"]
+    r["rank"] = last_rank
+# Re-measure the day's movement against the (corrected) daily baseline.
+for r in rows:
+    bse = base.get(r["player"])
+    r["pointsToday"] = (r["total"] - bse["total"]) \
+        if (bse and bse.get("total") is not None and r["total"] is not None) else 0
 
 # "Available" points = the max anyone could have earned from results decided so
 # far, so % Max reflects share of what was actually up for grabs (not the full
@@ -665,14 +703,6 @@ with open(HISTORY_OUTPUT, "w", encoding="utf-8") as f:
     json.dump(history, f, ensure_ascii=False, indent=2)
 print(f"Exported {len(history['days'])} day(s) of standings -> {HISTORY_OUTPUT}")
 
-
-# Per-player answers per question.
-def bonus_answer(p, bid):
-    if bid == "B15":
-        return predicted_stage(p, "Sweden")
-    if bid == "B16":
-        return flat[p].get("B16_TopScorer")
-    return flat[p].get(bid)
 
 bonus_json = []
 for bd in bonus_defs:
