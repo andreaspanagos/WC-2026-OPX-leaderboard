@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-06-29 06:37",
+    "lastRefresh": "2026-06-30 09:10",
     "maxPoints": 729,
     "participants": 31,
     "maxAvailable": 261,
@@ -47,9 +47,9 @@
       "home": "Germany",
       "away": "Paraguay",
       "kickoff": "2026-06-29 22:30",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 4,
+      "ag": 5,
+      "winner": "Paraguay",
       "homePick": {
         "pct": 100,
         "count": 31
@@ -77,9 +77,9 @@
       "home": "Netherlands",
       "away": "Morocco",
       "kickoff": "2026-06-30 03:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 3,
+      "ag": 4,
+      "winner": "Morocco",
       "homePick": {
         "pct": 71,
         "count": 22
@@ -107,9 +107,9 @@
       "home": "Brazil",
       "away": "Japan",
       "kickoff": "2026-06-29 19:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 2,
+      "ag": 1,
+      "winner": "Brazil",
       "homePick": {
         "pct": 97,
         "count": 30
@@ -497,15 +497,21 @@
         "M74",
         "M77"
       ],
-      "home": null,
+      "home": "Paraguay",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
+      "homePick": {
+        "pct": 0,
+        "count": 0
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 13,
+        "count": 4
+      },
       "awayReach": null
     },
     {
@@ -519,8 +525,8 @@
         "M75"
       ],
       "home": "Canada",
-      "away": null,
-      "kickoff": "",
+      "away": "Morocco",
+      "kickoff": "2026-07-04 19:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -528,12 +534,18 @@
         "pct": 3,
         "count": 1
       },
-      "awayPick": null,
+      "awayPick": {
+        "pct": 19,
+        "count": 6
+      },
       "homeReach": {
         "pct": 55,
         "count": 17
       },
-      "awayReach": null
+      "awayReach": {
+        "pct": 19,
+        "count": 6
+      }
     },
     {
       "id": "M91",
@@ -545,15 +557,21 @@
         "M76",
         "M78"
       ],
-      "home": null,
+      "home": "Brazil",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
-      "homePick": null,
+      "homePick": {
+        "pct": 81,
+        "count": 25
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 97,
+        "count": 30
+      },
       "awayReach": null
     },
     {
