@@ -2313,40 +2313,40 @@
           "rank": 2,
           "total": 226
         },
-        "Maximilian": {
-          "rank": 2,
-          "total": 226
-        },
         "Anna": {
-          "rank": 4,
+          "rank": 3,
           "total": 221
         },
         "Boris": {
-          "rank": 4,
+          "rank": 3,
+          "total": 221
+        },
+        "Maximilian": {
+          "rank": 3,
           "total": 221
         },
         "Elin": {
           "rank": 6,
           "total": 220
         },
-        "Solveig": {
-          "rank": 7,
-          "total": 218
-        },
         "Tim": {
           "rank": 7,
           "total": 218
         },
         "Erik Engberg": {
-          "rank": 9,
+          "rank": 8,
           "total": 215
         },
         "Ebba Örtenblad": {
-          "rank": 10,
+          "rank": 9,
           "total": 213
         },
         "Felice Gelin": {
-          "rank": 10,
+          "rank": 9,
+          "total": 213
+        },
+        "Solveig": {
+          "rank": 9,
           "total": 213
         },
         "Ebba Lindström": {
@@ -2373,49 +2373,49 @@
           "rank": 15,
           "total": 210
         },
+        "Klas": {
+          "rank": 15,
+          "total": 210
+        },
         "Simon": {
-          "rank": 18,
+          "rank": 19,
           "total": 209
         },
         "David": {
-          "rank": 19,
+          "rank": 20,
           "total": 208
         },
         "Gustaf L": {
-          "rank": 19,
+          "rank": 20,
           "total": 208
         },
         "Filippa Rosell": {
-          "rank": 21,
-          "total": 205
-        },
-        "Klas": {
-          "rank": 21,
-          "total": 205
-        },
-        "Matilda": {
-          "rank": 23,
-          "total": 203
+          "rank": 22,
+          "total": 200
         },
         "Andreas Panagos": {
-          "rank": 24,
+          "rank": 23,
           "total": 198
         },
         "Ludvig Völcker": {
-          "rank": 24,
+          "rank": 23,
           "total": 198
         },
-        "Alex J": {
-          "rank": 26,
-          "total": 195
+        "Matilda": {
+          "rank": 23,
+          "total": 198
         },
         "Oscar Hultefors": {
+          "rank": 26,
+          "total": 196
+        },
+        "Alex J": {
           "rank": 27,
-          "total": 191
+          "total": 195
         },
         "Johan Leijonhielm": {
           "rank": 28,
-          "total": 183
+          "total": 188
         },
         "Rickard": {
           "rank": 29,
@@ -2427,7 +2427,7 @@
         },
         "Lukas Källén": {
           "rank": 31,
-          "total": 173
+          "total": 168
         }
       }
     }

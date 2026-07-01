@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 10:45",
+    "lastRefresh": "2026-07-01 15:15",
     "maxPoints": 729,
     "participants": 31,
     "maxAvailable": 261,
@@ -48,10 +48,10 @@
       "home": "Germany",
       "away": "Paraguay",
       "kickoff": "2026-06-29 22:30",
-      "hg": 4,
-      "ag": 5,
+      "hg": 1,
+      "ag": 1,
       "winner": "Paraguay",
-      "pens": false,
+      "pens": true,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -79,10 +79,10 @@
       "home": "Netherlands",
       "away": "Morocco",
       "kickoff": "2026-06-30 03:00",
-      "hg": 3,
-      "ag": 4,
+      "hg": 1,
+      "ag": 1,
       "winner": "Morocco",
-      "pens": false,
+      "pens": true,
       "homePick": {
         "pct": 71,
         "count": 22
