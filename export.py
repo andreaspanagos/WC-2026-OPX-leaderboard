@@ -588,6 +588,27 @@ for _bid, _ready in (("B01", group_stage_done), ("B02", group_stage_done),
     if _k and _ready and _k["current"] and _k["status"] == "provisional":
         _k["status"] = "decided"
 
+# Bonus B09 = "extra-time or penalty shoot-outs in knockout stage". The model's
+# formula counts LEVEL knockout scores, which only catches shoot-outs (a penalty
+# game ends level) and MISSES games decided in extra time (their score is decisive,
+# e.g. 2-1 a.e.t.). The authoritative signal is football-data's `duration` per KO
+# match, carried in _ko_schedule.json; count finished games that went to ET or pens
+# and override B09's answer with it. Guarded on the feed actually carrying durations,
+# so an old schedule file (no duration field) leaves the model's value untouched.
+_b09 = answer_key.get("B09")
+if _b09 and _b09["status"] != "tbd":
+    try:
+        with open("_ko_schedule.json", encoding="utf-8") as _f:
+            _sched = json.load(_f)
+    except (json.JSONDecodeError, OSError):
+        _sched = []
+    if any("duration" in _e for _e in _sched):
+        _etp = sum(1 for _e in _sched
+                   if (_e.get("status") or "").upper() == "FINISHED"
+                   and (_e.get("duration") or "").upper() in ("EXTRA_TIME", "PENALTY_SHOOTOUT"))
+        _b09["current"] = str(_etp)
+        _b09["normSet"] = {norm_answer(str(_etp))}
+
 # If we created today's baseline this run, snapshot which results were already
 # resolved at the start of the day. Each player's "since yesterday" breakdown then
 # lists only the items that resolved AFTER this point. (Snapshot is taken at the
