@@ -776,17 +776,6 @@
     .mi-name { cursor: pointer; color: var(--brand-text); font-weight: 600; }
     .mi-name:hover { text-decoration: underline; }
 
-    /* ── Recent form strip (player detail) ── */
-    .form-body { padding: 0.7rem 0.9rem; }
-    .form-dots { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.55rem; }
-    .form-dot { width: 17px; height: 17px; border-radius: 5px; display: inline-block; flex: none; }
-    .form-dot.f-exact  { background: #1b8a3a; }
-    .form-dot.f-result { background: #e0a92e; }
-    .form-dot.f-miss   { background: #d9534f; opacity: 0.55; }
-    .form-legend { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.72rem; color: var(--text-muted); }
-    .form-legend span { display: inline-flex; align-items: center; }
-    .form-legend i { width: 11px; height: 11px; border-radius: 3px; margin-right: 0.32rem; display: inline-block; }
-
     /* ── Achievements / badges ── */
     .ach-rar-head { margin: 1.3rem 0 0.6rem; font-size: 1rem; }
     .ach-rar-head:first-child { margin-top: 0.3rem; }
@@ -2618,7 +2607,7 @@
         <div class="mi-impact">${through}${called}</div></div>`;
     }).join("");
     return `<div class="mi-section">
-      <div class="section-head"><span>🎯 Latest results</span><span class="head-chip">who they moved</span></div>
+      <div class="section-head"><span>🎯 Latest results</span><span class="head-chip">who got points</span></div>
       <div class="mi-list">${rows}</div></div>`;
   }
 
@@ -3308,37 +3297,6 @@
     const rankClass = p.rank >= 1 && p.rank <= 3 ? ` rank-${p.rank}` : "";
     const today = (p.pointsToday || 0) > 0 ? `+${p.pointsToday} today` : "no points today";
 
-    // Recent form: last played group games as exact / result / miss, plus current streak.
-    const playedGames = (p.games || []).filter(g => g.played)
-      .slice().sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
-    let formHtml = "";
-    if (playedGames.length) {
-      const dots = playedGames.slice(-12).map(g => {
-        const cls = (g.pts >= 3) ? "f-exact" : (g.pts === 1) ? "f-result" : "f-miss";
-        const t = `${g.home} ${g.hg}–${g.ag} ${g.away} · you ${g.ph ?? "–"}–${g.pa ?? "–"} · +${g.pts || 0}`;
-        return `<span class="form-dot ${cls}" title="${esc(t)}"></span>`;
-      }).join("");
-      let streak = 0, kind = null;
-      for (let i = playedGames.length - 1; i >= 0; i--) {
-        const hit = (playedGames[i].pts || 0) >= 1;
-        if (kind === null) { kind = hit; streak = 1; }
-        else if (hit === kind) streak++;
-        else break;
-      }
-      const chip = (kind === true && streak >= 3) ? `<span class="head-chip">🔥 ${streak} in a row</span>`
-        : (kind === false && streak >= 3) ? `<span class="head-chip">❄️ ${streak} cold</span>` : "";
-      formHtml = `<div class="section">
-        <div class="section-head"><span>Recent form</span>${chip}</div>
-        <div class="form-body">
-          <div class="form-dots">${dots}</div>
-          <div class="form-legend">
-            <span><i style="background:#1b8a3a"></i>Exact (+3)</span>
-            <span><i style="background:#e0a92e"></i>Result (+1)</span>
-            <span><i style="background:#d9534f;opacity:.55"></i>Missed</span>
-          </div>
-        </div></div>`;
-    }
-
     // "Since yesterday": the day's point delta + exactly which results produced it.
     const td = p.today || {};
     const tItems = td.items || [];
@@ -3551,7 +3509,6 @@
           <div class="pd-stat"><div class="lbl">Bonus</div><div class="val">${fmt(p.bonus)}</div></div>
         </div>
       </div>
-      ${formHtml}
       ${todayHtml}
       ${achHtml}
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
