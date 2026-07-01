@@ -378,6 +378,25 @@
     .lb-search input:focus-visible { border-color: var(--brand); box-shadow: var(--ring); }
     .lb-search input::-webkit-search-cancel-button { cursor: pointer; }
     .lb-count { font-size: 0.78rem; color: var(--text-faint); font-weight: 600; white-space: nowrap; }
+
+    /* ── Category sub-leaderboard lens chips ── */
+    .lb-lens { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; flex-basis: 100%; margin-top: 0.15rem; }
+    .lb-lens-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--text-faint); margin-right: 0.1rem; }
+    .lens-chip {
+      font: inherit; font-size: 0.8rem; font-weight: 700; padding: 0.32rem 0.75rem;
+      border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface);
+      color: var(--text-muted); cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .lens-chip:hover { color: var(--brand-text); border-color: var(--brand); }
+    .lens-chip.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+    /* When a category lens is active, the metric column carries the value —
+       hide the total-only extras (Today / Trend / % Max) and overall-rank movement. */
+    table.lens-cat thead th:nth-child(n+4),
+    table.lens-cat tbody tr.lb-row td:nth-child(n+4) { display: none; }
+    table.lens-cat .move { display: none; }
+
     #lb-noresults {
       text-align: center; color: var(--text-faint); font-size: 0.9rem;
       padding: 1.5rem 1rem; font-weight: 600;
@@ -731,6 +750,43 @@
     [data-theme="dark"] .pts-1 { background: rgba(154,115,0,0.24); color: #e6c14d; }
     [data-theme="dark"] .pts-0 { background: rgba(255,255,255,0.06); color: var(--text-faint); }
 
+    /* ── Match Impact ("Latest results" on the Games tab) ── */
+    .mi-section {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      box-shadow: var(--shadow-2); margin-bottom: 1rem; overflow: hidden;
+    }
+    .mi-list { padding: 0.15rem 0.9rem 0.6rem; }
+    .mi-row { padding: 0.6rem 0; border-top: 1px solid var(--border); }
+    .mi-row:first-child { border-top: none; }
+    .mi-ghead { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+    .mi-teams { font-weight: 700; font-size: 0.9rem; }
+    .mi-teams b { color: var(--brand-text); background: var(--surface-2); border-radius: 6px;
+      padding: 0.02rem 0.42rem; margin: 0 0.18rem; font-variant-numeric: tabular-nums; }
+    .mi-when { font-size: 0.72rem; color: var(--text-faint); white-space: nowrap; }
+    .mi-impact { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.45rem; }
+    .mi-chip { font-size: 0.72rem; font-weight: 700; padding: 0.14rem 0.55rem; border-radius: 999px; white-space: nowrap; }
+    .mi-chip.mi-exact  { background: #d6f5df; color: #1b8a3a; }
+    .mi-chip.mi-result { background: #fdf0d2; color: #9a7300; }
+    .mi-chip.mi-miss   { background: var(--surface-2); color: var(--text-faint); }
+    .mi-chip.mi-info   { background: #eef0f8; color: var(--brand-text); }
+    [data-theme="dark"] .mi-chip.mi-exact  { background: rgba(27,138,58,0.22); color: #7fd99a; }
+    [data-theme="dark"] .mi-chip.mi-result { background: rgba(154,115,0,0.24); color: #e6c14d; }
+    [data-theme="dark"] .mi-chip.mi-info   { background: var(--surface-2); color: var(--brand-text); }
+    .mi-names { font-size: 0.74rem; color: var(--text-muted); margin-top: 0.35rem; }
+    .mi-name { cursor: pointer; color: var(--brand-text); font-weight: 600; }
+    .mi-name:hover { text-decoration: underline; }
+
+    /* ── Recent form strip (player detail) ── */
+    .form-body { padding: 0.7rem 0.9rem; }
+    .form-dots { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.55rem; }
+    .form-dot { width: 17px; height: 17px; border-radius: 5px; display: inline-block; flex: none; }
+    .form-dot.f-exact  { background: #1b8a3a; }
+    .form-dot.f-result { background: #e0a92e; }
+    .form-dot.f-miss   { background: #d9534f; opacity: 0.55; }
+    .form-legend { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.72rem; color: var(--text-muted); }
+    .form-legend span { display: inline-flex; align-items: center; }
+    .form-legend i { width: 11px; height: 11px; border-radius: 3px; margin-right: 0.32rem; display: inline-block; }
+
     /* ── Achievements / badges ── */
     .ach-rar-head { margin: 1.3rem 0 0.6rem; font-size: 1rem; }
     .ach-rar-head:first-child { margin-top: 0.3rem; }
@@ -799,6 +855,31 @@
     .ach-locked-wrap summary { font-size: 0.78rem; color: var(--text-faint); cursor: pointer; }
     .podium-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.15rem; margin-top: 0.35rem; }
     .ach-mini { font-size: 0.95rem; line-height: 1; cursor: default; }
+
+    /* ── Champion Watch (Teams view) ── */
+    .cw-note { padding: 0 0.85rem; margin: 0.5rem 0 0.2rem; color: var(--text-muted); font-size: 0.82rem; }
+    .cw-grid { display: grid; gap: 0.6rem; padding: 0.7rem 0.85rem 0.9rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+    .cw-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 0.65rem 0.8rem; }
+    .cw-card.cw-out { opacity: 0.7; }
+    .cw-top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+    .cw-team { font-weight: 800; font-size: 0.95rem; }
+    .cw-team .team-grp { font-size: 0.68rem; color: var(--text-faint); margin-left: 0.25rem; font-weight: 600; }
+    .cw-count { font-size: 0.8rem; font-weight: 800; color: var(--brand-text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .cw-status { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;
+      padding: 0.12rem 0.5rem; border-radius: 999px; white-space: nowrap; }
+    .cw-status.stage { background: var(--surface); border: 1px solid var(--border-strong); color: var(--text-muted); }
+    .cw-status.out { background: #fee2e2; color: #b91c1c; }
+    .cw-status.champ { background: #fff7df; color: #8a6400; }
+    [data-theme="dark"] .cw-status.out { background: rgba(185,28,28,0.26); color: #f3a3a3; }
+    [data-theme="dark"] .cw-status.champ { background: rgba(240,212,128,0.18); color: #e6c14d; }
+    .cw-bar { height: 6px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border);
+      margin: 0.5rem 0 0.45rem; overflow: hidden; }
+    .cw-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), #5b6fcc); border-radius: 999px; }
+    .cw-backers { font-size: 0.76rem; color: var(--text-muted); line-height: 1.55; }
+    .cw-name { cursor: pointer; color: var(--brand-text); font-weight: 600; }
+    .cw-name:hover { text-decoration: underline; }
 
     /* ── Teams view ── */
     .legend { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.75rem; }
@@ -1417,6 +1498,14 @@
         oninput="filterLeaderboard(this.value)" />
     </div>
     <span id="lb-count" class="lb-count"></span>
+    <div id="lb-lens" class="lb-lens">
+      <span class="lb-lens-label">Rank by</span>
+      <button type="button" class="lens-chip active" data-lens="total"  onclick="setLbLens('total')">Overall</button>
+      <button type="button" class="lens-chip"        data-lens="group"  onclick="setLbLens('group')">Group</button>
+      <button type="button" class="lens-chip"        data-lens="ko"     onclick="setLbLens('ko')">Knockout</button>
+      <button type="button" class="lens-chip"        data-lens="bonus"  onclick="setLbLens('bonus')">Bonus</button>
+      <button type="button" class="lens-chip"        data-lens="today"  onclick="setLbLens('today')">Today</button>
+    </div>
   </div>
 
   <div class="table-wrap" hidden id="table-section">
@@ -1425,7 +1514,7 @@
         <tr>
           <th>#</th>
           <th>Player</th>
-          <th>Total</th>
+          <th id="th-metric">Total</th>
           <th>Today</th>
           <th class="trend-col">Trend</th>
           <th>% Max</th>
@@ -1504,6 +1593,7 @@
 <!-- ── Team journeys view ── -->
 <div id="view-teams" hidden>
   <div class="page-wrap">
+    <div id="champ-watch"></div>
     <p class="page-intro">
       How far is each nation predicted to go? Each bar splits the pool's predictions by
       final stage reached. Tap a team for the numbers.
@@ -1806,6 +1896,23 @@
     if (nr) nr.hidden = !(query && shown === 0);
   }
 
+  // ── Category sub-leaderboards: rank the table by any scoring category ──
+  const LB_LENS = {
+    total: { chip: "Overall",  col: "Total",    val: r => r.total || 0 },
+    group: { chip: "Group",    col: "Group",    val: r => r.group || 0 },
+    ko:    { chip: "Knockout", col: "Knockout", val: r => r.ko || 0 },
+    bonus: { chip: "Bonus",    col: "Bonus",    val: r => r.bonus || 0 },
+    today: { chip: "Today",    col: "Today",    val: r => r.pointsToday || 0 },
+  };
+  let lbLens = "total";
+  function setLbLens(lens) {
+    if (!LB_LENS[lens]) return;
+    lbLens = lens;
+    document.querySelectorAll("#lb-lens .lens-chip").forEach(b =>
+      b.classList.toggle("active", b.getAttribute("data-lens") === lens));
+    if (lbData) renderLeaderboard(lbData);   // re-render animates rows into their new order
+  }
+
   // ── Pool snapshot: a few headline numbers derived from the standings ──
   function renderInsights(rows) {
     const el = document.getElementById("pool-insights");
@@ -1892,6 +1999,27 @@
     renderEbbaLiga(rows);
     document.getElementById("podium-row").hidden = false;
 
+    // ── Category lens: which metric ranks the table (Overall/Group/KO/Bonus/Today) ──
+    const lens = LB_LENS[lbLens] || LB_LENS.total;
+    const orderedRows = (lbLens === "total")
+      ? rows
+      : rows.slice().sort((a, b) => lens.val(b) - lens.val(a));
+    const lensRank = {};
+    if (lbLens === "total") {
+      rows.forEach(r => { lensRank[r.player] = r.rank; });
+    } else {
+      let pv = null, pr = 0;   // standard competition ranking (ties share a rank)
+      orderedRows.forEach((r, i) => {
+        const v = lens.val(r);
+        const rk = (v === pv) ? pr : i + 1;
+        lensRank[r.player] = rk; pv = v; pr = rk;
+      });
+    }
+    const thMetric = document.getElementById("th-metric");
+    if (thMetric) thMetric.textContent = lens.col;
+    const lbTable = document.querySelector("#table-section table");
+    if (lbTable) lbTable.classList.toggle("lens-cat", lbLens !== "total");
+
     // FLIP – Step 1: record each row's position before the DOM wipe
     const tbody = document.getElementById("tbody");
     const flipFirst = {};
@@ -1901,19 +2029,20 @@
     });
     tbody.innerHTML = "";
     for (const k in trendCells) delete trendCells[k];
-    rows.forEach(r => {
-      const rankClass = r.rank <= 3 ? ` rank-${r.rank}` : "";
+    orderedRows.forEach(r => {
+      const dispRank = lensRank[r.player];
+      const rankClass = dispRank <= 3 ? ` rank-${dispRank}` : "";
       const tr = document.createElement("tr");
       tr.className = "lb-row";
       tr.innerHTML = `
         <td>
-          <span class="rank-badge${rankClass}">${r.rank}</span>
-          <div>${movement(r)}</div>
+          <span class="rank-badge${rankClass}">${dispRank}</span>
+          <div>${lbLens === "total" ? movement(r) : ""}</div>
         </td>
         <td class="player-cell">
           <span class="lb-chev">&#9656;</span><span class="player-name">${esc(r.player)}</span>
         </td>
-        <td><strong>${fmt(r.total)}</strong></td>
+        <td><strong>${fmt(lens.val(r))}</strong></td>
         <td>${ptsToday(r)}</td>
         <td class="trend-cell"></td>
         <td class="bar-cell">
@@ -2436,6 +2565,63 @@
   }
 
   // ── Games ──
+  function shortDateInline(s) {
+    const m = String(s || "").match(/(\d{4})-(\d{2})-(\d{2})/);
+    return m ? `${MONTHS[+m[2] - 1]} ${+m[3]}` : esc(s);
+  }
+
+  // ── Match Impact: recap the most recent results and who they rewarded ──
+  function buildMatchImpact(data) {
+    const recent = [];
+    (data.groups || []).forEach(g => (g.games || []).forEach(gm => {
+      const ko = parseKO(gm.kickoff);
+      if (gm.played && ko) recent.push({ ko, kind: "group", gm });
+    }));
+    (data.ko || []).forEach(m => {
+      const ko = parseKO(m.kickoff);
+      if (m.played && m.home && m.away && ko) recent.push({ ko, kind: "ko", m });
+    });
+    if (!recent.length) return "";
+    recent.sort((a, b) => b.ko - a.ko);
+    const rows = recent.slice(0, 5).map(item => {
+      if (item.kind === "group") {
+        const gm = item.gm;
+        let ex = 0, re = 0, mi = 0; const exNames = [];
+        (gm.scorelines || []).forEach(sl => {
+          if (sl.pts >= 3) { ex += sl.count; exNames.push(...(sl.players || [])); }
+          else if (sl.pts === 1) re += sl.count;
+          else if (sl.pts === 0) mi += sl.count;
+        });
+        const chips = `<span class="mi-chip mi-exact">${ex} exact +3</span>`
+          + `<span class="mi-chip mi-result">${re} result +1</span>`
+          + `<span class="mi-chip mi-miss">${mi} missed</span>`;
+        const shown = exNames.slice(0, 8)
+          .map(p => `<span class="mi-name" data-player="${esc(p)}">${esc(p)}</span>`).join(", ");
+        const more = exNames.length > 8 ? ` +${exNames.length - 8} more` : "";
+        const namesLine = exNames.length ? `<div class="mi-names">Nailed it: ${shown}${more}</div>` : "";
+        return `<div class="mi-row">
+          <div class="mi-ghead">
+            <span class="mi-teams">${esc(gm.home)} <b>${gm.actual.hg}&ndash;${gm.actual.ag}</b> ${esc(gm.away)}</span>
+            <span class="mi-when">${shortDateInline(gm.kickoff)}</span></div>
+          <div class="mi-impact">${chips}</div>${namesLine}</div>`;
+      }
+      const m = item.m;
+      const wpk = (m.winner === m.home ? m.homePick : m.awayPick) || { pct: 0, count: 0 };
+      const pens = m.pens ? " (pens)" : "";
+      const called = m.winner
+        ? `<span class="mi-chip mi-result">${wpk.count} (${wpk.pct}%) had them advancing</span>` : "";
+      const through = m.winner ? `<span class="mi-chip mi-info">🏆 ${esc(m.winner)} through${pens}</span>` : "";
+      return `<div class="mi-row">
+        <div class="mi-ghead">
+          <span class="mi-teams">${esc(m.home)} <b>${m.hg}&ndash;${m.ag}</b> ${esc(m.away)}</span>
+          <span class="mi-when">${esc(m.round)} &middot; ${shortDateInline(m.kickoff)}</span></div>
+        <div class="mi-impact">${through}${called}</div></div>`;
+    }).join("");
+    return `<div class="mi-section">
+      <div class="section-head"><span>🎯 Latest results</span><span class="head-chip">who they moved</span></div>
+      <div class="mi-list">${rows}</div></div>`;
+  }
+
   function scorelineRows(gm) {
     let html = gm.scorelines.map(sl => {
       let ptsHtml;
@@ -2585,6 +2771,12 @@
         c.appendChild(sec);
       });
     }
+
+    // Prepend the "Latest results" impact recap above the fixture lists.
+    const miHtml = buildMatchImpact(data);
+    if (miHtml) c.insertAdjacentHTML("afterbegin", miHtml);
+    c.querySelectorAll(".mi-name[data-player]").forEach(s =>
+      s.onclick = () => showPlayer(s.getAttribute("data-player")));
 
     maybeSaveSnapshot();
     showNewVisitBadge();
@@ -2788,8 +2980,45 @@
     if (bracketData) renderBracket(bracketData);
   }
 
+  // ── Champion Watch: who's backing whom to win it all (stats.teams.championBy) ──
+  function renderChampionWatch(data) {
+    const el = document.getElementById("champ-watch");
+    if (!el) return;
+    const picked = (data.teams || [])
+      .filter(t => (t.championBy || []).length > 0)
+      .sort((a, b) => (b.championBy.length - a.championBy.length) || (b.championPct - a.championPct));
+    if (!picked.length) { el.innerHTML = ""; return; }
+    const cards = picked.map(t => {
+      let st;
+      if (t.actual === "Champion") st = { cls: "champ", label: "🏆 Champion" };
+      else if (t.actual === "Group stage") st = { cls: "out", label: "Out · groups" };
+      else st = { cls: "stage", label: esc(t.actual || "—") };
+      const n = t.championBy.length;
+      const backers = t.championBy
+        .map(p => `<span class="cw-name" data-player="${esc(p)}">${esc(p)}</span>`).join(", ");
+      return `<div class="cw-card${st.cls === "out" ? " cw-out" : ""}">
+          <div class="cw-top">
+            <span class="cw-team">${esc(t.team)}<span class="team-grp">(${esc(t.group)})</span></span>
+            <span class="cw-status ${st.cls}">${st.label}</span>
+          </div>
+          <div class="cw-bar"><span style="width:${t.championPct}%"></span></div>
+          <div class="cw-count">${n} ${n === 1 ? "backer" : "backers"} &middot; ${t.championPct}%</div>
+          <div class="cw-backers">${backers}</div>
+        </div>`;
+    }).join("");
+    el.innerHTML = `<div class="section cw-section">
+        <div class="section-head"><span>🏆 Champion Watch</span>
+          <span class="head-chip">${picked.length} team${picked.length === 1 ? "" : "s"} backed</span></div>
+        <div class="cw-note">Who the pool is backing to lift the trophy — most-backed first.</div>
+        <div class="cw-grid">${cards}</div>
+      </div>`;
+    el.querySelectorAll(".cw-name[data-player]").forEach(s =>
+      s.onclick = () => showPlayer(s.getAttribute("data-player")));
+  }
+
   // ── Team journeys ──
   function renderTeams(data) {
+    renderChampionWatch(data);
     const legend = document.getElementById("stage-legend");
     legend.innerHTML = data.stages.map(s =>
       `<span><span class="swatch" style="background:${STAGE_COLORS[s]}"></span>${STAGE_LABEL[s]}</span>`
@@ -3079,6 +3308,37 @@
     const rankClass = p.rank >= 1 && p.rank <= 3 ? ` rank-${p.rank}` : "";
     const today = (p.pointsToday || 0) > 0 ? `+${p.pointsToday} today` : "no points today";
 
+    // Recent form: last played group games as exact / result / miss, plus current streak.
+    const playedGames = (p.games || []).filter(g => g.played)
+      .slice().sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
+    let formHtml = "";
+    if (playedGames.length) {
+      const dots = playedGames.slice(-12).map(g => {
+        const cls = (g.pts >= 3) ? "f-exact" : (g.pts === 1) ? "f-result" : "f-miss";
+        const t = `${g.home} ${g.hg}–${g.ag} ${g.away} · you ${g.ph ?? "–"}–${g.pa ?? "–"} · +${g.pts || 0}`;
+        return `<span class="form-dot ${cls}" title="${esc(t)}"></span>`;
+      }).join("");
+      let streak = 0, kind = null;
+      for (let i = playedGames.length - 1; i >= 0; i--) {
+        const hit = (playedGames[i].pts || 0) >= 1;
+        if (kind === null) { kind = hit; streak = 1; }
+        else if (hit === kind) streak++;
+        else break;
+      }
+      const chip = (kind === true && streak >= 3) ? `<span class="head-chip">🔥 ${streak} in a row</span>`
+        : (kind === false && streak >= 3) ? `<span class="head-chip">❄️ ${streak} cold</span>` : "";
+      formHtml = `<div class="section">
+        <div class="section-head"><span>Recent form</span>${chip}</div>
+        <div class="form-body">
+          <div class="form-dots">${dots}</div>
+          <div class="form-legend">
+            <span><i style="background:#1b8a3a"></i>Exact (+3)</span>
+            <span><i style="background:#e0a92e"></i>Result (+1)</span>
+            <span><i style="background:#d9534f;opacity:.55"></i>Missed</span>
+          </div>
+        </div></div>`;
+    }
+
     // "Since yesterday": the day's point delta + exactly which results produced it.
     const td = p.today || {};
     const tItems = td.items || [];
@@ -3291,6 +3551,7 @@
           <div class="pd-stat"><div class="lbl">Bonus</div><div class="val">${fmt(p.bonus)}</div></div>
         </div>
       </div>
+      ${formHtml}
       ${todayHtml}
       ${achHtml}
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
