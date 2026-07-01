@@ -84,7 +84,9 @@ if os.path.exists(OUTPUT):
         with open(OUTPUT, encoding="utf-8") as f:
             for r in json.load(f).get("rows", []):
                 if r.get("player") is not None:
-                    prev_state[r["player"]] = {"rank": r.get("rank"), "total": r.get("total")}
+                    prev_state[r["player"]] = {"rank": r.get("rank"), "total": r.get("total"),
+                                               "group": r.get("group"), "ko": r.get("ko"),
+                                               "bonus": r.get("bonus")}
     except (json.JSONDecodeError, OSError):
         prev_state = {}
 
@@ -125,8 +127,11 @@ if os.path.exists(BASELINE_FILE):
     except (json.JSONDecodeError, OSError):
         baseline = None
 
-if not baseline or baseline.get("date") != today:
-    seed = prev_state or {r["player"]: {"rank": r["rank"], "total": r["total"]} for r in rows}
+baseline_created = not baseline or baseline.get("date") != today
+if baseline_created:
+    seed = prev_state or {r["player"]: {"rank": r["rank"], "total": r["total"],
+                                        "group": r["group"], "ko": r["ko"], "bonus": r["bonus"]}
+                          for r in rows}
     baseline = {"date": today, "players": seed}
     with open(BASELINE_FILE, "w", encoding="utf-8") as f:
         json.dump(baseline, f, ensure_ascii=False, indent=2)
@@ -583,6 +588,23 @@ for _bid, _ready in (("B01", group_stage_done), ("B02", group_stage_done),
     if _k and _ready and _k["current"] and _k["status"] == "provisional":
         _k["status"] = "decided"
 
+# If we created today's baseline this run, snapshot which results were already
+# resolved at the start of the day. Each player's "since yesterday" breakdown then
+# lists only the items that resolved AFTER this point. (Snapshot is taken at the
+# first export of the day, not exactly at end-of-yesterday — a game finishing in the
+# few minutes between yesterday's last sync and today's first would be dropped from
+# the item list; the category-delta headline, off the seeded totals, stays correct.)
+if baseline_created:
+    baseline["resolved"] = {
+        "games": sorted(f"{fx['home']}__{fx['away']}" for fx in fixtures if fx["played"]),
+        "ko": sorted({f"{rnd}|{t}" for rnd, ts in ko_round.items() for t in ts}
+                     | {f"WIN|{t}" for t in champion} | {f"3RD|{t}" for t in third_team}),
+        "gw": sorted(f"GW|{g}" for g in actual_winner),
+        "bonus": sorted(f"B|{bid}" for bid, k in answer_key.items() if k["normSet"]),
+    }
+    with open(BASELINE_FILE, "w", encoding="utf-8") as f:
+        json.dump(baseline, f, ensure_ascii=False, indent=2)
+
 
 # Per-player answers per question.
 def bonus_answer(p, bid):
@@ -769,6 +791,12 @@ ko_pts_map = {"R32": 3, "R16": 6, "QF": 9, "SF": 12, "Final": 15}
 lb_by_player = {r["player"]: r for r in rows}
 groups_present = sorted(groups_out)
 
+# Start-of-day resolved snapshot → drives each player's "since yesterday" breakdown.
+_bres = (baseline.get("resolved") or {}) if baseline else {}
+_res0 = {k: set(_bres.get(k) or []) for k in ("games", "ko", "gw", "bonus")}
+_KO_LABELS = {"R32": "Round of 32", "R16": "Round of 16", "QF": "Quarter-final",
+              "SF": "Semi-final", "Final": "Final"}
+
 def bracket_picks(rs, key, actual_set, ptsval):
     """A player's picks for one KO round: team, whether it actually reached the
     round, and the points that pick is worth (0 until the team gets there)."""
@@ -856,12 +884,60 @@ for p in players:
                           "hit": hit, "pts": bd["pts"], "status": key["status"],
                           "earned": earned})
 
+    # "Since yesterday": items that resolved today (i.e. not in the start-of-day
+    # snapshot) on which this player scored, plus the per-category point delta.
+    base_p = base.get(p) or {}
+    today_items = []
+    for gm in games:
+        if gm["played"] and (gm["pts"] or 0) > 0 \
+                and f'{gm["home"]}__{gm["away"]}' not in _res0["games"]:
+            today_items.append({"type": "game", "label": f'{gm["home"]} v {gm["away"]}',
+                                "pick": f'{gm["ph"]}–{gm["pa"]}',
+                                "result": f'{gm["hg"]}–{gm["ag"]}', "pts": gm["pts"]})
+    for rk, lbl in _KO_LABELS.items():
+        for x in bracket.get(rk, []):
+            if x["hit"] and x["pts"] and f'{rk}|{x["team"]}' not in _res0["ko"]:
+                today_items.append({"type": "ko", "label": f'{x["team"]} → {lbl}',
+                                    "pts": x["pts"]})
+    for sp, tag, lbl in ((bracket.get("winner"), "WIN", "Champion"),
+                         (bracket.get("third"), "3RD", "3rd place")):
+        if sp and sp["hit"] and sp["pts"] and f'{tag}|{sp["team"]}' not in _res0["ko"]:
+            today_items.append({"type": "ko", "label": f'{sp["team"]} → {lbl}',
+                                "pts": sp["pts"]})
+    for w in gw:
+        if w["correct"] and f'GW|{w["group"]}' not in _res0["gw"]:
+            today_items.append({"type": "gw",
+                                "label": f'Group {w["group"]} winner: {w["team"]}', "pts": 3})
+    for ba in bonus_ans:
+        if ba["hit"] and (ba["pts"] or 0) and f'B|{ba["id"]}' not in _res0["bonus"]:
+            today_items.append({"type": "bonus", "label": f'{ba["id"]}: {ba["q"]}',
+                                "pts": ba["pts"]})
+    today_items.sort(key=lambda x: -x["pts"])
+
+    def _delta(cat, _bp=base_p, _lb=lb):
+        bv, nv = _bp.get(cat), _lb.get(cat)
+        return (nv - bv) if (bv is not None and nv is not None) else None
+
+    today_bd = {"total": lb.get("pointsToday"), "group": _delta("group"),
+                "ko": _delta("ko"), "bonus": _delta("bonus"), "items": today_items}
+
     players_detail[p] = {
         "rank": lb.get("rank"), "total": lb.get("total"),
         "group": lb.get("group"), "ko": lb.get("ko"), "bonus": lb.get("bonus"),
         "pctMax": lb.get("pctMax"), "pointsToday": lb.get("pointsToday"),
         "games": games, "gw": gw, "bracket": bracket, "bonusAns": bonus_ans,
+        "today": today_bd,
     }
+
+# Sanity net — while only group games score (pre-KO), a player's itemised
+# today-points must equal pointsToday. A mismatch flags a silent gap (e.g. a
+# corrected past result) so the breakdown never lies about where points came from.
+if not ko_started:
+    for _p in players:
+        _t = players_detail[_p]["today"]
+        _s = sum(i["pts"] for i in _t["items"])
+        if _t["total"] and _s != _t["total"]:
+            print(f"WARNING: {_p} today-items sum {_s} != pointsToday {_t['total']}")
 
 with open(PLAYERS_OUTPUT, "w", encoding="utf-8") as f:
     json.dump({"meta": meta, "players": players, "detail": players_detail},
@@ -1226,6 +1302,11 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         "hg": hg if (h and a and has_score) else None,
         "ag": ag if (h and a and has_score) else None,
         "winner": winner,
+        # A level in-game score with a winner ⇒ decided on penalties (the shootout
+        # is never added to the score). Keyed to has_score, so a 0-0 pens game isn't
+        # flagged — that's the pre-existing Backend blank→0 played-detection gap, not
+        # this flag; revisit if a 0-0 KO tie occurs.
+        "pens": bool(h and a and has_score and hg == ag and winner),
         # homePick/awayPick = % predicted to ADVANCE to the next round (kept for
         # back-compat); homeReach/awayReach = % predicted to reach THIS round.
         "homePick": advance_pct(h, next_t) if h else None,

@@ -805,6 +805,21 @@
     .pd-pill.miss::after { content: " ✗"; font-weight: 800; }
     .pd-empty { color: var(--text-faint); font-size: 0.8rem; }
 
+    /* "Since yesterday" breakdown */
+    .pd-today-sec { border: 1px solid var(--brand); }
+    .pd-today-sec .section-head { background: var(--brand); }
+    .pd-td-total { font-weight: 800; }
+    .pd-td-body { padding: 0.5rem 0.9rem 0.7rem; }
+    .pd-td-cats { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .pd-td-cat { font-size: 0.7rem; font-weight: 700; color: var(--brand-text);
+      background: var(--hover); border-radius: 999px; padding: 0.12rem 0.55rem; }
+    .pd-td-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem;
+      padding: 0.32rem 0; border-top: 1px solid var(--border); }
+    .pd-td-item:first-child { border-top: 0; }
+    .pd-td-label { font-weight: 700; }
+    .pd-td-detail { color: var(--text-muted); font-size: 0.76rem; }
+    .pd-td-item .pts { margin-left: auto; min-width: 2.2rem; padding: 0.1rem 0.4rem; }
+
     .pd-bonus {
       display: grid;
       grid-template-columns: 1fr auto auto 1.6rem;
@@ -1170,6 +1185,7 @@
     .slot .pickadv { color:var(--text-faint); opacity:.7; font-weight:600; margin-left:.1rem; }
     .match-meta { font-size:.6rem; color:var(--text-faint); text-align:center; padding:.12rem 0;
       background:var(--surface-2); letter-spacing:.04em; }
+    .pens-tag { color:var(--brand-text); font-weight:700; margin-left:.25rem; }
     .bracket-champ { text-align:center; margin-top:.4rem; font-size:.8rem; font-weight:700; color:var(--text); }
 
     @media (max-width:760px) {
@@ -2472,8 +2488,10 @@
     const cls = "match" + (m.round === "Final" ? " is-final" : "")
               + (m.round === "Bronze" ? " is-bronze" : "");
     const metaTxt = m.round === "Bronze" ? "Third place" : matchLabel(m, byId);
+    // Level in-game score decided on penalties — the shootout is not part of the score.
+    const pens = m.pens ? `<span class="pens-tag">· won on pens</span>` : "";
     return `<div class="${cls}">${slotHtml(m, "home", byId)}${slotHtml(m, "away", byId)}` +
-           `<div class="match-meta">${metaTxt}</div></div>`;
+           `<div class="match-meta">${metaTxt}${pens}</div></div>`;
   }
 
   function renderBracket(data) {
@@ -2836,6 +2854,31 @@
     const rankClass = p.rank >= 1 && p.rank <= 3 ? ` rank-${p.rank}` : "";
     const today = (p.pointsToday || 0) > 0 ? `+${p.pointsToday} today` : "no points today";
 
+    // "Since yesterday": the day's point delta + exactly which results produced it.
+    const td = p.today || {};
+    const tItems = td.items || [];
+    const catChip = (lbl, v) => (v ? `<span class="pd-td-cat">${lbl} +${v}</span>` : "");
+    const cats = catChip("Group", td.group) + catChip("Knockout", td.ko) + catChip("Bonus", td.bonus);
+    const tItemsHtml = tItems.map(it => `
+        <div class="pd-td-item">
+          <span class="pd-td-label">${esc(it.label)}</span>
+          ${it.type === "game" ? `<span class="pd-td-detail">you ${esc(it.pick)} · FT ${esc(it.result)}</span>` : ""}
+          <span class="pts pts-${it.pts >= 3 ? 3 : it.pts}">+${it.pts}</span>
+        </div>`).join("");
+    const tTotal = td.total || 0;
+    const todayHtml = (tTotal || tItems.length)
+      ? `<div class="section pd-today-sec">
+          <div class="section-head"><span>Since yesterday</span>
+            <span class="pd-td-total">${tTotal > 0 ? "+" : ""}${tTotal} pts</span></div>
+          <div class="pd-td-body">
+            ${cats ? `<div class="pd-td-cats">${cats}</div>` : ""}
+            ${tItems.length ? tItemsHtml
+              : `<div class="pd-empty">Total moved but no individual pick resolved today.</div>`}
+          </div></div>`
+      : `<div class="section pd-today-sec">
+          <div class="section-head"><span>Since yesterday</span></div>
+          <div class="pd-td-body"><div class="pd-empty">No change since yesterday.</div></div></div>`;
+
     // Group predictions, grouped by group letter.
     const byGroup = {};
     (p.games || []).forEach(g => (byGroup[g.group] = byGroup[g.group] || []).push(g));
@@ -3023,6 +3066,7 @@
           <div class="pd-stat"><div class="lbl">Bonus</div><div class="val">${fmt(p.bonus)}</div></div>
         </div>
       </div>
+      ${todayHtml}
       ${achHtml}
       <div class="section"><div class="section-head"><span>Knockout bracket picks</span></div>${koHtml}</div>
       <h3 style="margin:1.2rem 0 0.5rem;color:var(--brand)">Group-stage predictions</h3>
