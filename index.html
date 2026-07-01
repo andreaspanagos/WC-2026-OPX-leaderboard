@@ -17,25 +17,38 @@
   <meta name="twitter:title"       content="FIFA World Cup 2026 — OPX Live Leaderboard" />
   <meta name="twitter:description" content="Live prediction pool standings for the OPX World Cup 2026 office pool." />
   <meta name="twitter:image"       content="https://andreaspanagos.github.io/WC-2026-OPX-leaderboard/og-image.png" />
+  <!-- Typeface: Inter for a crisp, modern product feel; system stack fallback if it fails to load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
   <style>
     :root {
       --brand: #2A398D;
       --brand-dark: #1f2c6e;
 
+      /* ── Design primitives (theme-independent) ── */
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius-sm: 9px;
+      --radius: 14px;
+      --radius-lg: 18px;
+      --gold: #f6c243;          /* refined amber accent (active tab, highlights) */
+      --gold-strong: #e0a92e;
+      --ring: 0 0 0 3px color-mix(in srgb, var(--brand) 35%, transparent);  /* focus ring */
+
       /* ── Theme tokens (light) ── */
-      --bg: #f5f7fa;
-      --surface: #fff;
+      --bg: #eef1f8;
+      --surface: #ffffff;
       --surface-2: #eef1fb;   /* pills, tinted panels */
       --surface-3: #f0f4ff;   /* raised / hover panels */
-      --text: #222;
-      --text-muted: #555;
-      --text-faint: #999;
-      --border: #eee;
-      --border-strong: #dfe3f2;
-      --hover: #f0f4ff;       /* table-row hover */
-      --shadow-color: 0,0,0;
-      --shadow-1: 0 1px 2px rgba(var(--shadow-color), 0.04), 0 2px 8px rgba(var(--shadow-color), 0.07);
-      --shadow-2: 0 1px 3px rgba(var(--shadow-color), 0.05), 0 6px 16px rgba(var(--shadow-color), 0.08);
+      --text: #1a1d2b;
+      --text-muted: #5a6172;
+      --text-faint: #949bb0;
+      --border: #e8ebf3;
+      --border-strong: #d6dcec;
+      --hover: #f2f5ff;       /* table-row hover */
+      --shadow-color: 30,41,89;
+      --shadow-1: 0 1px 2px rgba(var(--shadow-color), 0.05), 0 1px 3px rgba(var(--shadow-color), 0.06);
+      --shadow-2: 0 1px 2px rgba(var(--shadow-color), 0.04), 0 4px 12px rgba(var(--shadow-color), 0.06), 0 14px 32px rgba(var(--shadow-color), 0.05);
       /* chrome derives from the (per-pool) brand so each pool keeps its identity */
       --chrome: var(--brand);
       --chrome-2: var(--brand-dark);
@@ -65,31 +78,84 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     [hidden] { display: none !important; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: var(--font-sans);
       background: var(--bg);
       color: var(--text);
       font-size: 15px;
       line-height: 1.5;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
       transition: background 0.2s ease, color 0.2s ease;
     }
 
+    /* Numeric alignment: totals, percentages, times read cleaner with tabular figures */
+    .podium-total, .podium-pct, td strong, .bar-cell, .pct-label, .rank-badge,
+    .pd-stat .val, .me-stat .val, .pd-go-tile .val, .h2h-sum-score, .tb-count,
+    .sl-pct, .gc-pts, .pill strong, .head-chip { font-variant-numeric: tabular-nums; }
+
+    /* Accessible keyboard focus — visible ring only for keyboard users */
+    a:focus-visible, button:focus-visible, select:focus-visible,
+    input:focus-visible, [tabindex]:focus-visible {
+      outline: none;
+      box-shadow: var(--ring);
+      border-radius: var(--radius-sm);
+    }
+
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    /* Slim, unobtrusive scrollbars for horizontal scrollers (light surfaces) */
+    .bracket-board, .table-wrap, .trend-chips {
+      scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent;
+    }
+    .bracket-board::-webkit-scrollbar, .table-wrap::-webkit-scrollbar { height: 8px; }
+    .bracket-board::-webkit-scrollbar-thumb, .table-wrap::-webkit-scrollbar-thumb {
+      background: var(--border-strong); border-radius: 999px;
+    }
+    .bracket-board::-webkit-scrollbar-track, .table-wrap::-webkit-scrollbar-track { background: transparent; }
+    /* fixtures strip sits on the dark banner — use a translucent white thumb */
+    .tb-games { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.35) transparent; }
+    .tb-games::-webkit-scrollbar { height: 6px; }
+    .tb-games::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 999px; }
+    .tb-games::-webkit-scrollbar-track { background: transparent; }
+
     /* ── Header ── */
     header {
-      background: var(--chrome);
+      background:
+        radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--brand) 78%, #fff) 0%, transparent 55%),
+        linear-gradient(180deg, var(--chrome), var(--chrome-2));
       color: var(--on-brand);
-      padding: 1.25rem 1.5rem;
+      padding: 1.15rem 1.5rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 0.5rem;
+      gap: 0.75rem;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, var(--shadow-1);
+      position: relative;
+    }
+    /* thin gold accent line under the header */
+    header::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+      opacity: 0.85;
     }
     header h1 {
-      font-size: clamp(1.1rem, 3vw, 1.6rem);
-      font-weight: 700;
-      letter-spacing: -0.005em;
+      font-size: clamp(1.1rem, 3vw, 1.55rem);
+      font-weight: 800;
+      letter-spacing: -0.015em;
     }
     /* Smooth the surface/chrome cross-fade when switching themes */
     header, .tabs, thead, .section-head, .gc-head,
@@ -103,12 +169,15 @@
       font-size: 0.82rem;
     }
     .pill {
-      background: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
       border-radius: 999px;
-      padding: 0.25rem 0.75rem;
+      padding: 0.28rem 0.8rem;
       white-space: nowrap;
+      color: rgba(255,255,255,0.82);
+      backdrop-filter: blur(4px);
     }
-    .pill strong { font-weight: 600; }
+    .pill strong { font-weight: 700; color: #fff; }
     .header-right { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
     .theme-toggle {
       flex: none;
@@ -126,28 +195,43 @@
     /* ── Tabs ── */
     .tabs {
       display: flex;
-      gap: 0.25rem;
+      gap: 0.15rem;
       background: var(--chrome-2);
-      padding: 0 0.75rem;
+      padding: 0 0.65rem;
       position: sticky;
       top: 0;
       z-index: 10;
       overflow-x: auto;
+      box-shadow: 0 6px 16px -8px rgba(var(--shadow-color), 0.5);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.25) transparent;
     }
+    .tabs::-webkit-scrollbar { height: 4px; }
+    .tabs::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.22); border-radius: 999px; }
+    .tabs::-webkit-scrollbar-track { background: transparent; }
     .tab {
       background: none;
       border: none;
-      color: #c7cdf0;
-      font-size: 0.92rem;
+      color: #c3caee;
+      font-size: 0.9rem;
       font-weight: 600;
-      padding: 0.8rem 0.9rem;
+      padding: 0.85rem 0.95rem 0.7rem;
+      margin-bottom: 0;
       cursor: pointer;
+      position: relative;
       border-bottom: 3px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
+      transition: color 0.15s ease, background 0.15s ease;
       white-space: nowrap;
+      border-radius: 8px 8px 0 0;
     }
-    .tab:hover { color: #fff; }
-    .tab.active { color: #fff; border-bottom-color: #FFD700; }
+    .tab:hover { color: #fff; background: rgba(255,255,255,0.07); }
+    .tab.active { color: #fff; }
+    /* rounded pill-style active underline via pseudo-element */
+    .tab.active::after {
+      content: ""; position: absolute; left: 0.6rem; right: 0.6rem; bottom: 0; height: 3px;
+      background: var(--gold); border-radius: 3px 3px 0 0;
+      box-shadow: 0 0 10px -1px color-mix(in srgb, var(--gold) 70%, transparent);
+    }
     .admin-badge { align-self: center; margin-left: auto; flex: none; font-size: 0.6rem;
       font-weight: 800; letter-spacing: 0.07em; color: #1f2c6e; background: #FFD700;
       padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
@@ -166,25 +250,30 @@
       flex: 1 1 170px;
       min-width: 170px;
       max-width: 320px;
-      border-radius: 12px;
-      padding: 1.25rem 1rem;
+      border-radius: var(--radius);
+      padding: 1.35rem 1rem 1.25rem;
       text-align: center;
       box-shadow: var(--shadow-1);
+      border: 1px solid var(--border);
+      border-top: 4px solid transparent;
+      transition: box-shadow 0.18s ease, transform 0.18s ease;
     }
-    .podium-card:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
-    .podium-card.gold   { background: #FFF8E1; border-top: 4px solid #FFD700; }
-    .podium-card.silver { background: #E8EAF6; border-top: 4px solid #9E9E9E; }
-    .podium-card.bronze { background: #FBE9E7; border-top: 4px solid #BF6A3F; }
-    [data-theme="dark"] .podium-card.gold   { background: #2c2716; }
-    [data-theme="dark"] .podium-card.silver { background: #232838; }
-    [data-theme="dark"] .podium-card.bronze { background: #2e2018; }
-    [data-theme="dark"] .podium-card { color: var(--text); }
+    .podium-card:hover { box-shadow: var(--shadow-2); transform: translateY(-3px); }
+    .podium-card.gold   { background: linear-gradient(180deg,#fffaeb,#fffdf6); border-top-color: #f1c40f;
+      box-shadow: var(--shadow-2), 0 0 0 1px rgba(241,196,15,0.35); }
+    .podium-card.silver { background: linear-gradient(180deg,#eef0f7,#f8f9fc); border-top-color: #aab0c0; }
+    .podium-card.bronze { background: linear-gradient(180deg,#fbeee7,#fdf7f3); border-top-color: #c07a4b; }
+    [data-theme="dark"] .podium-card.gold   { background: linear-gradient(180deg,#2c2716,#211d12); box-shadow: var(--shadow-2), 0 0 0 1px rgba(241,196,15,0.28); }
+    [data-theme="dark"] .podium-card.silver { background: linear-gradient(180deg,#232838,#1c2130); }
+    [data-theme="dark"] .podium-card.bronze { background: linear-gradient(180deg,#2e2018,#241812); }
+    [data-theme="dark"] .podium-card { color: var(--text); border-color: var(--border-strong); }
 
-    .podium-medal { font-size: 2rem; line-height: 1; margin-bottom: 0.25rem; }
-    .podium-rank  { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
-    .podium-name  { font-size: 1rem; font-weight: 700; margin: 0.3rem 0 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .podium-total { font-size: 1.8rem; font-weight: 800; color: var(--brand-text); }
-    .podium-pct   { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem; }
+    .podium-medal { font-size: 2.1rem; line-height: 1; margin-bottom: 0.2rem;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.12)); }
+    .podium-rank  { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); }
+    .podium-name  { font-size: 1.02rem; font-weight: 700; margin: 0.3rem 0 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .podium-total { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-text); }
+    .podium-pct   { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
 
     /* ── Podium row wrapper ── */
     .podium-row {
@@ -268,54 +357,85 @@
     .ebba-name:hover { text-decoration: underline; }
     .ebba-total { font-size: 0.85rem; font-weight: 800; color: #fff; flex-shrink: 0; }
 
+    /* ── Leaderboard search toolbar ── */
+    #lb-toolbar {
+      display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+      margin: 0.75rem 1rem 0;
+    }
+    .lb-search { position: relative; flex: 1 1 240px; max-width: 360px; }
+    .lb-search-ico {
+      position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%);
+      font-size: 0.82rem; opacity: 0.55; pointer-events: none;
+    }
+    .lb-search input {
+      width: 100%; font: inherit; font-size: 0.9rem;
+      padding: 0.55rem 0.85rem 0.55rem 2.1rem;
+      border-radius: 999px; border: 1px solid var(--border-strong);
+      background: var(--surface); color: var(--text); box-shadow: var(--shadow-1);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .lb-search input::placeholder { color: var(--text-faint); }
+    .lb-search input:focus-visible { border-color: var(--brand); box-shadow: var(--ring); }
+    .lb-search input::-webkit-search-cancel-button { cursor: pointer; }
+    .lb-count { font-size: 0.78rem; color: var(--text-faint); font-weight: 600; white-space: nowrap; }
+    #lb-noresults {
+      text-align: center; color: var(--text-faint); font-size: 0.9rem;
+      padding: 1.5rem 1rem; font-weight: 600;
+    }
+
     /* ── Leaderboard table ── */
     .table-wrap {
       overflow-x: auto;
-      padding: 1.25rem 1rem 2rem;
+      padding: 0.9rem 1rem 2rem;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       background: var(--surface);
-      border-radius: 10px;
+      border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-2);
       min-width: 560px;
     }
     thead {
-      background: var(--chrome);
+      background: linear-gradient(180deg, var(--chrome), var(--chrome-2));
       color: var(--on-brand);
     }
     th {
-      padding: 0.7rem 0.9rem;
+      padding: 0.75rem 0.9rem;
       text-align: left;
-      font-size: 0.82rem;
+      font-size: 0.72rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       white-space: nowrap;
+      color: rgba(255,255,255,0.82);
     }
     th:first-child, td:first-child { text-align: center; width: 4.25rem; }
     th:last-child, td:last-child   { width: 180px; }
 
     tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
     tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: var(--hover); }
+    tbody tr.lb-row:hover { background: var(--hover); }
 
-    td { padding: 0.65rem 0.9rem; font-size: 0.92rem; }
+    td { padding: 0.7rem 0.9rem; font-size: 0.92rem; }
+    td strong { font-weight: 800; letter-spacing: -0.01em; }
 
     .rank-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.85rem;
+      height: 1.85rem;
       border-radius: 50%;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.85rem;
+      background: var(--surface-2);
+      color: var(--text-muted);
     }
-    .rank-1 { background: #FFD700; color: #333; }
-    .rank-2 { background: #C0C0C0; color: #333; }
-    .rank-3 { background: #CD7F32; color: #fff; }
+    .rank-1 { background: linear-gradient(145deg,#ffe066,#f1c40f); color: #4a3a00; box-shadow: 0 2px 6px rgba(241,196,15,0.4); }
+    .rank-2 { background: linear-gradient(145deg,#e2e6ef,#b9c0cf); color: #3a4051; box-shadow: 0 2px 5px rgba(150,160,180,0.35); }
+    .rank-3 { background: linear-gradient(145deg,#e0a074,#c07a4b); color: #fff; box-shadow: 0 2px 5px rgba(192,122,75,0.4); }
 
     .player-name { font-weight: 600; }
 
@@ -339,9 +459,13 @@
 
     /* today's matches banner */
     #today-banner {
-      background: linear-gradient(180deg, var(--brand), var(--grad-2));
-      color: #fff; border-radius: 12px; padding: 0.7rem 0.9rem;
-      margin: 0 0 1rem;
+      background:
+        radial-gradient(120% 160% at 0% 0%, color-mix(in srgb, var(--brand) 82%, #fff) 0%, transparent 45%),
+        linear-gradient(180deg, var(--brand), var(--grad-2));
+      color: #fff; border-radius: var(--radius); padding: 0.8rem 0.95rem;
+      margin: 0 1rem 1rem;
+      box-shadow: var(--shadow-2);
+      border: 1px solid rgba(255,255,255,0.08);
     }
     .tb-head {
       display: flex; align-items: baseline; justify-content: space-between;
@@ -364,10 +488,28 @@
     .tb-soon { color: #9fe0a6; }
     .tb-empty { font-size: 0.85rem; color: #d7ddf4; }
 
+    /* pool snapshot (headline numbers) */
+    .pool-insights { display: flex; gap: 0.6rem; margin: 0 1rem 1rem; flex-wrap: wrap; }
+    .pi-card {
+      flex: 1 1 150px; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-1); padding: 0.7rem 0.9rem;
+    }
+    .pi-label {
+      font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-faint); font-weight: 700;
+    }
+    .pi-value {
+      font-size: 1.5rem; font-weight: 800; color: var(--brand-text);
+      letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; margin-top: 0.12rem;
+    }
+    .pi-value .pi-unit { font-size: 0.8rem; font-weight: 700; color: var(--text-faint); margin-left: 0.15rem; }
+    .pi-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
     /* biggest movers this week */
     #movers-section {
-      background: var(--surface); border-radius: 12px; padding: 0.75rem 0.9rem;
-      margin: 0 0 1rem; box-shadow: var(--shadow-2);
+      background: var(--surface); border-radius: var(--radius); padding: 0.85rem 0.95rem;
+      margin: 0 1rem 1rem; box-shadow: var(--shadow-2); border: 1px solid var(--border);
     }
     .mv-head {
       display: flex; align-items: baseline; justify-content: space-between;
@@ -481,35 +623,39 @@
     .page-intro { color: var(--text-muted); font-size: 0.9rem; margin: 0.25rem 0 1rem; }
     .section {
       background: var(--surface);
-      border-radius: 10px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow-2);
+      border: 1px solid var(--border);
       margin-bottom: 1rem;
       overflow: hidden;
     }
     .section-head {
-      background: var(--chrome);
+      background: linear-gradient(180deg, var(--chrome), var(--chrome-2));
       color: var(--on-brand);
-      padding: 0.6rem 0.9rem;
+      padding: 0.65rem 0.95rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       flex-wrap: wrap;
     }
-    .head-chip { font-size: 0.8rem; font-weight: 600; background: rgba(255,255,255,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; }
+    .head-chip { font-size: 0.8rem; font-weight: 600; background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.14); padding: 0.2rem 0.62rem; border-radius: 999px; }
 
     /* ── Games view ── */
-    .view-toggle { display:flex; gap:0; margin-bottom:1rem; }
-    .vt-btn {
-      flex:1; padding:0.45rem 0.9rem; border:1px solid var(--brand);
-      background:var(--surface); color:var(--brand-text); font-size:0.82rem; font-weight:600;
-      cursor:pointer; transition:background 0.15s, color 0.15s;
+    .view-toggle {
+      display:flex; gap:0.3rem; margin-bottom:1rem; padding:0.28rem;
+      background:var(--surface-2); border:1px solid var(--border-strong); border-radius:999px;
     }
-    .vt-btn:first-child { border-radius:6px 0 0 6px; }
-    .vt-btn:last-child  { border-radius:0 6px 6px 0; }
-    .vt-btn.active { background:var(--brand); color:#fff; }
+    .vt-btn {
+      flex:1; padding:0.5rem 0.9rem; border:none; border-radius:999px;
+      background:transparent; color:var(--text-muted); font-size:0.85rem; font-weight:700;
+      cursor:pointer; transition:background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .vt-btn:hover:not(.active) { color:var(--brand-text); }
+    .vt-btn.active { background:var(--surface); color:var(--brand-text); box-shadow:var(--shadow-1); }
     .winner-picks {
       font-size: 0.78rem; color: var(--text-muted);
       padding: 0.5rem 0.9rem;
@@ -1094,12 +1240,12 @@
       display:grid; gap:1rem;
       grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
     }
-    .group-card { background:var(--surface); border-radius:10px; overflow:hidden;
-      box-shadow:var(--shadow-2); }
+    .group-card { background:var(--surface); border-radius:var(--radius); overflow:hidden;
+      box-shadow:var(--shadow-2); border:1px solid var(--border); }
     .group-card .gc-head {
-      background:var(--chrome); color:var(--on-brand); padding:.5rem .8rem;
+      background:linear-gradient(180deg, var(--chrome), var(--chrome-2)); color:var(--on-brand); padding:.55rem .85rem;
       display:flex; align-items:center; justify-content:space-between; gap:.5rem;
-      font-weight:700; letter-spacing:.04em; }
+      font-weight:700; letter-spacing:.02em; }
     .gc-head .gc-pick { font-size:.72rem; font-weight:600; background:rgba(255,255,255,.18);
       border-radius:999px; padding:.12rem .55rem; white-space:nowrap; }
     table.gc-table { width:100%; border-collapse:collapse; font-size:.82rem; }
@@ -1238,10 +1384,10 @@
   <button class="tab" id="tab-games" onclick="showView('games')">Games</button>
   <button class="tab" id="tab-groups" onclick="showView('groups')">Groups</button>
   <button class="tab" id="tab-bracket" onclick="showView('bracket')">Bracket</button>
-  <button class="tab" id="tab-teams" onclick="showView('teams')">Team Journeys</button>
-  <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus Questions</button>
+  <button class="tab" id="tab-teams" onclick="showView('teams')">Teams</button>
+  <button class="tab" id="tab-bonus" onclick="showView('bonus')">Bonus</button>
 <button class="tab" id="tab-h2h" onclick="showView('h2h')">H2H</button>
-<button class="tab admin-only" id="tab-trend" onclick="showView('trend')" hidden>Rank Trend</button>
+<button class="tab admin-only" id="tab-trend" onclick="showView('trend')" hidden>Trends</button>
 <button class="tab admin-only" id="tab-achievements" onclick="showView('achievements')" hidden>Badges</button>
 <span class="admin-badge admin-only" id="admin-badge" hidden
   title="Admin preview mode — these features are hidden from the public. Add ?admin=0 to the URL to exit.">ADMIN PREVIEW</span>
@@ -1259,8 +1405,19 @@
     <div id="shame-section" class="shame-list"></div>
     <div id="ebba-section" class="ebba-liga" hidden></div>
   </div>
+  <div id="pool-insights" class="pool-insights" hidden></div>
   <div id="movers-section" hidden></div>
   <div id="new-visit-banner" hidden></div>
+
+  <div id="lb-toolbar" hidden>
+    <div class="lb-search">
+      <span class="lb-search-ico" aria-hidden="true">&#128269;</span>
+      <input id="lb-search-input" type="search" autocomplete="off" spellcheck="false"
+        placeholder="Search players…" aria-label="Search players"
+        oninput="filterLeaderboard(this.value)" />
+    </div>
+    <span id="lb-count" class="lb-count"></span>
+  </div>
 
   <div class="table-wrap" hidden id="table-section">
     <table>
@@ -1276,6 +1433,7 @@
       </thead>
       <tbody id="tbody"></tbody>
     </table>
+    <div id="lb-noresults" hidden>No players match your search.</div>
   </div>
 </div>
 
@@ -1619,6 +1777,66 @@
     decoratePodiumBadges();
   }
 
+  // ── Leaderboard player search/filter ──
+  // Filters the rendered rows in place; re-applied automatically after each 60s
+  // refresh (the input keeps its value since it lives outside the rebuilt <tbody>).
+  function filterLeaderboard(q) {
+    const query = String(q == null ? "" : q).trim().toLowerCase();
+    const tbody = document.getElementById("tbody");
+    if (!tbody) return;
+    let shown = 0, total = 0;
+    tbody.querySelectorAll("tr.lb-row").forEach(tr => {
+      const nameEl = tr.querySelector(".player-name");
+      const name = nameEl ? nameEl.textContent.toLowerCase() : "";
+      total++;
+      const match = !query || name.indexOf(query) !== -1;
+      tr.hidden = !match;
+      const det = tr.nextElementSibling;
+      if (det && det.classList.contains("lb-detail") && !match) {
+        det.hidden = true;
+        tr.classList.remove("open");
+      }
+      if (match) shown++;
+    });
+    const countEl = document.getElementById("lb-count");
+    if (countEl) countEl.textContent = query
+      ? `${shown} of ${total} shown`
+      : `${total} player${total === 1 ? "" : "s"}`;
+    const nr = document.getElementById("lb-noresults");
+    if (nr) nr.hidden = !(query && shown === 0);
+  }
+
+  // ── Pool snapshot: a few headline numbers derived from the standings ──
+  function renderInsights(rows) {
+    const el = document.getElementById("pool-insights");
+    if (!el || !rows || !rows.length) return;
+    const totals = rows.map(r => r.total || 0);
+    const avg = Math.round(totals.reduce((a, b) => a + b, 0) / totals.length);
+    const leader = rows[0];
+    const runnerUp = rows[1];
+    const last = rows[rows.length - 1];
+    const cards = [];
+    cards.push({ label: "Average score", value: fmt(avg),
+      sub: `across ${rows.length} players` });
+    if (runnerUp) {
+      const gap = (leader.total || 0) - (runnerUp.total || 0);
+      cards.push(gap > 0
+        ? { label: "Leader's margin", value: `+${gap}`, unit: "pts", sub: `${esc(leader.player)} out front` }
+        : { label: "At the top", value: "Tied", sub: `level on ${fmt(leader.total)}` });
+    }
+    if (last && last !== leader) {
+      cards.push({ label: "Field spread", value: fmt((leader.total || 0) - (last.total || 0)),
+        unit: "pts", sub: "1st to last" });
+    }
+    el.innerHTML = cards.map(c =>
+      `<div class="pi-card">` +
+      `<div class="pi-label">${c.label}</div>` +
+      `<div class="pi-value">${c.value}${c.unit ? `<span class="pi-unit">${c.unit}</span>` : ""}</div>` +
+      `<div class="pi-sub">${c.sub}</div>` +
+      `</div>`).join("");
+    el.hidden = false;
+  }
+
   function renderLeaderboard(data) {
     lbData = data;
     const { meta, rows } = data;
@@ -1769,9 +1987,13 @@
       });
     });
 
+    renderInsights(rows);
     renderMovers(rows);
     document.getElementById("status").hidden      = true;
     document.getElementById("table-section").hidden = false;
+    document.getElementById("lb-toolbar").hidden    = false;
+    // Re-apply any active search filter to the freshly rendered rows.
+    filterLeaderboard(document.getElementById("lb-search-input").value);
     renderHistory();
     buildTrendControls();
     renderTrend();
