@@ -2301,6 +2301,135 @@
           "total": 163
         }
       }
+    },
+    {
+      "date": "2026-07-01",
+      "standings": {
+        "Christoffer": {
+          "rank": 1,
+          "total": 231
+        },
+        "Jacob Cederberg": {
+          "rank": 2,
+          "total": 226
+        },
+        "Maximilian": {
+          "rank": 2,
+          "total": 226
+        },
+        "Anna": {
+          "rank": 4,
+          "total": 221
+        },
+        "Boris": {
+          "rank": 4,
+          "total": 221
+        },
+        "Elin": {
+          "rank": 6,
+          "total": 220
+        },
+        "Solveig": {
+          "rank": 7,
+          "total": 218
+        },
+        "Tim": {
+          "rank": 7,
+          "total": 218
+        },
+        "Erik Engberg": {
+          "rank": 9,
+          "total": 215
+        },
+        "Ebba Örtenblad": {
+          "rank": 10,
+          "total": 213
+        },
+        "Felice Gelin": {
+          "rank": 10,
+          "total": 213
+        },
+        "Ebba Lindström": {
+          "rank": 12,
+          "total": 212
+        },
+        "Ebba Wikström": {
+          "rank": 13,
+          "total": 211
+        },
+        "Frida Björning Lundqvist": {
+          "rank": 13,
+          "total": 211
+        },
+        "Dani": {
+          "rank": 15,
+          "total": 210
+        },
+        "Daniel": {
+          "rank": 15,
+          "total": 210
+        },
+        "Jakob Hägglund": {
+          "rank": 15,
+          "total": 210
+        },
+        "Simon": {
+          "rank": 18,
+          "total": 209
+        },
+        "David": {
+          "rank": 19,
+          "total": 208
+        },
+        "Gustaf L": {
+          "rank": 19,
+          "total": 208
+        },
+        "Filippa Rosell": {
+          "rank": 21,
+          "total": 205
+        },
+        "Klas": {
+          "rank": 21,
+          "total": 205
+        },
+        "Matilda": {
+          "rank": 23,
+          "total": 203
+        },
+        "Andreas Panagos": {
+          "rank": 24,
+          "total": 198
+        },
+        "Ludvig Völcker": {
+          "rank": 24,
+          "total": 198
+        },
+        "Alex J": {
+          "rank": 26,
+          "total": 195
+        },
+        "Oscar Hultefors": {
+          "rank": 27,
+          "total": 191
+        },
+        "Johan Leijonhielm": {
+          "rank": 28,
+          "total": 183
+        },
+        "Rickard": {
+          "rank": 29,
+          "total": 182
+        },
+        "Petra": {
+          "rank": 30,
+          "total": 175
+        },
+        "Lukas Källén": {
+          "rank": 31,
+          "total": 173
+        }
+      }
     }
   ]
 }
