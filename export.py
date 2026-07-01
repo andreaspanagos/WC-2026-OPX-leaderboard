@@ -694,15 +694,25 @@ for r in rows:
 
 # "Available" points = the max anyone could have earned from results decided so
 # far, so % Max reflects share of what was actually up for grabs (not the full
-# 729-point tournament). Group games are worth 3 each once played; a bonus
-# question's max counts once its answer is filled (the model credits filled
-# answers immediately, decided or not) — but only from the knockout stage on.
-# Knockouts are added in Phase 2.
+# 729-point tournament). Every point a player can bank must have a matching slot
+# in this denominator, or % Max balloons past 100% once later stages start:
+#   - group games: 3 each once played;
+#   - group winners: 3 per COMPLETED group (paid the moment a group finishes);
+#   - knockouts: for each team that has reached a round, that round's value
+#     (R32=3 R16=6 QF=9 SF=12 Final=15), + 30 champion / 15 third once decided;
+#   - bonus: a question's value once its answer is filled — but only from the
+#     knockout stage on (bonus doesn't colour the group-stage race). Recomputed
+#     from live fixtures/ko_round on every export, so it tracks each refresh.
+_KO_AVAIL_PTS = {"R32": 3, "R16": 6, "QF": 9, "SF": 12, "Final": 15}
 games_played = sum(1 for fx in fixtures if fx["played"])
 bonus_open = 0 if not ko_started else sum(
     (bd["pts"] or 0) for bd in bonus_defs
     if answer_key.get(bd["id"], {}).get("status", "tbd") != "tbd")
-available = 3 * games_played + bonus_open
+gw_available = 3 * len(actual_winner)
+ko_available = sum(len(ko_round[k]) * v for k, v in _KO_AVAIL_PTS.items())
+ko_available += 30 if champion else 0
+ko_available += 15 if third_team else 0
+available = 3 * games_played + gw_available + ko_available + bonus_open
 if isinstance(available, float) and available.is_integer():
     available = int(available)
 meta["maxAvailable"] = available
@@ -1342,6 +1352,7 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         "label": KO_ROUND_LABEL.get(rnd_key, rnd_key),
         "home": h, "away": a, "kickoff": kickoff,
         "played": played, "hg": m["hg"], "ag": m["ag"], "winner": winner,
+        "pens": m["pens"],
         "homePick": m["homePick"], "awayPick": m["awayPick"],
         "homeReach": m["homeReach"], "awayReach": m["awayReach"],
         "status": "FT" if played else ("scheduled" if (h and a) else "pending"),

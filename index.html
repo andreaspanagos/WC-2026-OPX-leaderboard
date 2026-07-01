@@ -2261,10 +2261,13 @@
   function koGameHtml(m) {
     const winHome = m.played && m.winner && m.winner === m.home;
     const winAway = m.played && m.winner && m.winner === m.away;
+    // A level score with a winner ⇒ decided on penalties; name who went through.
+    const pens = m.played && m.pens && m.winner
+      ? `<span class="pens-tag">· ${esc(m.winner)} won on pens</span>` : "";
     const center = m.played
       ? `<span class="t-home${winHome ? " ko-adv" : ""}">${esc(m.home)}</span>` +
         `<span class="game-score">${m.hg}&ndash;${m.ag}</span>` +
-        `<span class="t-away${winAway ? " ko-adv" : ""}">${esc(m.away)}</span>`
+        `<span class="t-away${winAway ? " ko-adv" : ""}">${esc(m.away)}</span>${pens}`
       : `<span class="t-home">${esc(m.home)}</span><span class="vs">vs</span>` +
         `<span class="t-away">${esc(m.away)}</span> <span class="badge-upcoming">upcoming</span>`;
     // Two pool %s per team: predicted to REACH this round, and projected to

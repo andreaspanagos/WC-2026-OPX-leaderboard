@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 21:36",
+    "lastRefresh": "2026-07-01 21:49",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 261
+    "maxAvailable": 446
   },
   "players": [
     "Christoffer",
@@ -2617,8 +2617,8 @@
       "id": "B16",
       "q": "Sweden's top scorer (manual)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Anthony Elanga, Yasin Ayari",
+      "status": "decided",
       "answers": [
         {
           "answer": "Viktor Gyökeres",
@@ -2647,7 +2647,7 @@
             "Alex J",
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Alexander Isak",
@@ -2663,7 +2663,7 @@
             "Matilda",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "0",
@@ -2673,7 +2673,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     }

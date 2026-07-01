@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 21:36",
+    "lastRefresh": "2026-07-01 21:49",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 261
+    "maxAvailable": 446
   },
   "players": [
     "Christoffer",
@@ -45,7 +45,7 @@
       "group": 103,
       "ko": 114,
       "bonus": 20,
-      "pctMax": 0.908,
+      "pctMax": 0.5314,
       "pointsToday": 6,
       "games": [
         {
@@ -1790,9 +1790,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -1816,7 +1816,7 @@
       "group": 95,
       "ko": 117,
       "bonus": 20,
-      "pctMax": 0.8889,
+      "pctMax": 0.5202,
       "pointsToday": 6,
       "games": [
         {
@@ -3561,9 +3561,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -3587,7 +3587,7 @@
       "group": 93,
       "ko": 114,
       "bonus": 20,
-      "pctMax": 0.8697,
+      "pctMax": 0.509,
       "pointsToday": 6,
       "games": [
         {
@@ -5332,9 +5332,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -5358,7 +5358,7 @@
       "group": 98,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.8697,
+      "pctMax": 0.509,
       "pointsToday": 6,
       "games": [
         {
@@ -7103,9 +7103,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -7129,7 +7129,7 @@
       "group": 95,
       "ko": 117,
       "bonus": 15,
-      "pctMax": 0.8697,
+      "pctMax": 0.509,
       "pointsToday": 6,
       "games": [
         {
@@ -8874,9 +8874,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -8900,7 +8900,7 @@
       "group": 95,
       "ko": 111,
       "bonus": 20,
-      "pctMax": 0.8659,
+      "pctMax": 0.5067,
       "pointsToday": 6,
       "games": [
         {
@@ -10645,9 +10645,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -10671,7 +10671,7 @@
       "group": 92,
       "ko": 114,
       "bonus": 10,
-      "pctMax": 0.8276,
+      "pctMax": 0.4843,
       "pointsToday": 6,
       "games": [
         {
@@ -12416,9 +12416,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -12442,7 +12442,7 @@
       "group": 88,
       "ko": 111,
       "bonus": 25,
-      "pctMax": 0.8582,
+      "pctMax": 0.5022,
       "pointsToday": 11,
       "games": [
         {
@@ -14187,9 +14187,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -14213,7 +14213,7 @@
       "group": 88,
       "ko": 111,
       "bonus": 25,
-      "pctMax": 0.8582,
+      "pctMax": 0.5022,
       "pointsToday": 11,
       "games": [
         {
@@ -15958,9 +15958,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -15984,7 +15984,7 @@
       "group": 89,
       "ko": 120,
       "bonus": 15,
-      "pctMax": 0.8582,
+      "pctMax": 0.5022,
       "pointsToday": 6,
       "games": [
         {
@@ -17729,9 +17729,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -17755,7 +17755,7 @@
       "group": 88,
       "ko": 108,
       "bonus": 25,
-      "pctMax": 0.8467,
+      "pctMax": 0.4955,
       "pointsToday": 6,
       "games": [
         {
@@ -19500,9 +19500,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -19526,7 +19526,7 @@
       "group": 90,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.8391,
+      "pctMax": 0.491,
       "pointsToday": 6,
       "games": [
         {
@@ -21271,9 +21271,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -21297,7 +21297,7 @@
       "group": 95,
       "ko": 108,
       "bonus": 15,
-      "pctMax": 0.8352,
+      "pctMax": 0.4888,
       "pointsToday": 6,
       "games": [
         {
@@ -23042,9 +23042,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -23068,7 +23068,7 @@
       "group": 94,
       "ko": 108,
       "bonus": 15,
-      "pctMax": 0.8314,
+      "pctMax": 0.4865,
       "pointsToday": 6,
       "games": [
         {
@@ -24813,9 +24813,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -24839,7 +24839,7 @@
       "group": 82,
       "ko": 120,
       "bonus": 15,
-      "pctMax": 0.8314,
+      "pctMax": 0.4865,
       "pointsToday": 6,
       "games": [
         {
@@ -26584,9 +26584,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -26610,7 +26610,7 @@
       "group": 87,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.8276,
+      "pctMax": 0.4843,
       "pointsToday": 6,
       "games": [
         {
@@ -28355,9 +28355,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -28381,7 +28381,7 @@
       "group": 85,
       "ko": 111,
       "bonus": 20,
-      "pctMax": 0.8276,
+      "pctMax": 0.4843,
       "pointsToday": 6,
       "games": [
         {
@@ -30126,9 +30126,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -30152,7 +30152,7 @@
       "group": 91,
       "ko": 105,
       "bonus": 20,
-      "pctMax": 0.8276,
+      "pctMax": 0.4843,
       "pointsToday": 6,
       "games": [
         {
@@ -31897,9 +31897,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -31923,7 +31923,7 @@
       "group": 86,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.8238,
+      "pctMax": 0.4821,
       "pointsToday": 6,
       "games": [
         {
@@ -33668,9 +33668,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -33694,7 +33694,7 @@
       "group": 85,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.8199,
+      "pctMax": 0.4798,
       "pointsToday": 6,
       "games": [
         {
@@ -35439,9 +35439,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -35465,7 +35465,7 @@
       "group": 93,
       "ko": 111,
       "bonus": 10,
-      "pctMax": 0.8199,
+      "pctMax": 0.4798,
       "pointsToday": 6,
       "games": [
         {
@@ -37210,9 +37210,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -37236,7 +37236,7 @@
       "group": 77,
       "ko": 114,
       "bonus": 15,
-      "pctMax": 0.7893,
+      "pctMax": 0.4619,
       "pointsToday": 6,
       "games": [
         {
@@ -38981,9 +38981,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "0",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -39007,7 +39007,7 @@
       "group": 78,
       "ko": 111,
       "bonus": 15,
-      "pctMax": 0.7816,
+      "pctMax": 0.4574,
       "pointsToday": 6,
       "games": [
         {
@@ -40752,9 +40752,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -40778,7 +40778,7 @@
       "group": 92,
       "ko": 87,
       "bonus": 15,
-      "pctMax": 0.7433,
+      "pctMax": 0.435,
       "pointsToday": 6,
       "games": [
         {
@@ -42523,9 +42523,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -42549,7 +42549,7 @@
       "group": 87,
       "ko": 102,
       "bonus": 15,
-      "pctMax": 0.7816,
+      "pctMax": 0.4574,
       "pointsToday": 6,
       "games": [
         {
@@ -44294,9 +44294,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -44320,7 +44320,7 @@
       "group": 84,
       "ko": 105,
       "bonus": 15,
-      "pctMax": 0.7816,
+      "pctMax": 0.4574,
       "pointsToday": 6,
       "games": [
         {
@@ -46065,9 +46065,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -46091,7 +46091,7 @@
       "group": 83,
       "ko": 99,
       "bonus": 20,
-      "pctMax": 0.7739,
+      "pctMax": 0.4529,
       "pointsToday": 6,
       "games": [
         {
@@ -47836,9 +47836,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -47862,7 +47862,7 @@
       "group": 86,
       "ko": 105,
       "bonus": 10,
-      "pctMax": 0.7701,
+      "pctMax": 0.4507,
       "pointsToday": 6,
       "games": [
         {
@@ -49607,9 +49607,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -49633,7 +49633,7 @@
       "group": 81,
       "ko": 102,
       "bonus": 5,
-      "pctMax": 0.7203,
+      "pctMax": 0.4215,
       "pointsToday": 6,
       "games": [
         {
@@ -51378,9 +51378,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Viktor Gyökeres",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -51404,7 +51404,7 @@
       "group": 65,
       "ko": 99,
       "bonus": 10,
-      "pctMax": 0.6667,
+      "pctMax": 0.3901,
       "pointsToday": 6,
       "games": [
         {
@@ -53149,9 +53149,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "0",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],
@@ -53175,7 +53175,7 @@
       "group": 81,
       "ko": 90,
       "bonus": 10,
-      "pctMax": 0.6935,
+      "pctMax": 0.4058,
       "pointsToday": 6,
       "games": [
         {
@@ -54920,9 +54920,9 @@
           "id": "B16",
           "q": "Sweden's top scorer (manual)",
           "answer": "Alexander Isak",
-          "hit": null,
+          "hit": false,
           "pts": 5,
-          "status": "tbd",
+          "status": "decided",
           "earned": 0
         }
       ],

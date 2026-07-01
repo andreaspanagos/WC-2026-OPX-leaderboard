@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 21:36",
+    "lastRefresh": "2026-07-01 21:49",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 261
+    "maxAvailable": 446
   },
   "players": [
     "Christoffer",
@@ -8589,6 +8589,7 @@
       "hg": 0,
       "ag": 1,
       "winner": "Canada",
+      "pens": false,
       "homePick": {
         "pct": 0,
         "count": 0
@@ -8619,6 +8620,7 @@
       "hg": 1,
       "ag": 1,
       "winner": "Paraguay",
+      "pens": true,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -8649,6 +8651,7 @@
       "hg": 1,
       "ag": 1,
       "winner": "Morocco",
+      "pens": true,
       "homePick": {
         "pct": 71,
         "count": 22
@@ -8679,6 +8682,7 @@
       "hg": 2,
       "ag": 1,
       "winner": "Brazil",
+      "pens": false,
       "homePick": {
         "pct": 97,
         "count": 30
@@ -8709,6 +8713,7 @@
       "hg": 3,
       "ag": 0,
       "winner": "France",
+      "pens": false,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -8739,6 +8744,7 @@
       "hg": 1,
       "ag": 2,
       "winner": "Norway",
+      "pens": false,
       "homePick": {
         "pct": 13,
         "count": 4
@@ -8769,6 +8775,7 @@
       "hg": 2,
       "ag": 0,
       "winner": "Mexico",
+      "pens": false,
       "homePick": {
         "pct": 81,
         "count": 25
@@ -8799,6 +8806,7 @@
       "hg": 2,
       "ag": 1,
       "winner": "England",
+      "pens": false,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -8829,6 +8837,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 74,
         "count": 23
@@ -8859,6 +8868,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -8889,6 +8899,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 94,
         "count": 29
@@ -8919,6 +8930,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -8949,6 +8961,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 94,
         "count": 29
@@ -8979,6 +8992,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 100,
         "count": 31
@@ -9009,6 +9023,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 55,
         "count": 17
@@ -9039,6 +9054,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 6,
         "count": 2
@@ -9069,6 +9085,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 0,
         "count": 0
@@ -9099,6 +9116,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 3,
         "count": 1
@@ -9129,6 +9147,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 81,
         "count": 25
@@ -9159,6 +9178,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": {
         "pct": 0,
         "count": 0
@@ -9189,6 +9209,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9207,6 +9228,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9225,6 +9247,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9243,6 +9266,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9261,6 +9285,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9279,6 +9304,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9297,6 +9323,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9315,6 +9342,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9333,6 +9361,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9351,6 +9380,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9369,6 +9399,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
@@ -9387,6 +9418,7 @@
       "hg": null,
       "ag": null,
       "winner": null,
+      "pens": false,
       "homePick": null,
       "awayPick": null,
       "homeReach": null,
