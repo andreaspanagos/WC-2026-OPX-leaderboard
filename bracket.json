@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-02 07:24",
+    "lastRefresh": "2026-07-02 08:30",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 452,
+    "maxAvailable": 458,
     "drawn": true
   },
   "matches": [
@@ -202,7 +202,7 @@
       "feeders": [],
       "home": "Mexico",
       "away": "Ecuador",
-      "kickoff": "2026-07-01 03:00",
+      "kickoff": "2026-07-01 04:00",
       "hg": 2,
       "ag": 0,
       "winner": "Mexico",
@@ -265,9 +265,9 @@
       "home": "USA",
       "away": "Bosnia & Herzegovina",
       "kickoff": "2026-07-02 02:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 2,
+      "ag": 0,
+      "winner": "USA",
       "pens": false,
       "homePick": {
         "pct": 74,
@@ -617,7 +617,7 @@
       ],
       "home": "Mexico",
       "away": "England",
-      "kickoff": "",
+      "kickoff": "2026-07-06 02:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -671,19 +671,25 @@
         "M81",
         "M82"
       ],
-      "home": null,
+      "home": "USA",
       "away": "Belgium",
-      "kickoff": "",
+      "kickoff": "2026-07-07 02:00",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
+      "homePick": {
+        "pct": 10,
+        "count": 3
+      },
       "awayPick": {
         "pct": 84,
         "count": 26
       },
-      "homeReach": null,
+      "homeReach": {
+        "pct": 74,
+        "count": 23
+      },
       "awayReach": {
         "pct": 100,
         "count": 31
