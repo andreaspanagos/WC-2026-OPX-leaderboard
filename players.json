@@ -1801,7 +1801,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Maximilian": {
@@ -3566,7 +3572,18 @@
         "group": 0,
         "ko": 6,
         "bonus": 5,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          },
+          {
+            "type": "bonus",
+            "label": "B03: Total number of goals (all tournament)",
+            "pts": 5
+          }
+        ]
       }
     },
     "Anna": {
@@ -5331,7 +5348,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Boris": {
@@ -7096,7 +7119,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Jacob Cederberg": {
@@ -8861,7 +8890,18 @@
         "group": 0,
         "ko": 6,
         "bonus": -5,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          },
+          {
+            "type": "bonus",
+            "label": "B03: Total number of goals (all tournament)",
+            "pts": -5
+          }
+        ]
       }
     },
     "Elin": {
@@ -10626,7 +10666,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Klas": {
@@ -12391,7 +12437,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Ebba Örtenblad": {
@@ -14156,7 +14208,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Felice Gelin": {
@@ -15921,7 +15979,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Tim": {
@@ -17686,7 +17750,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Erik Engberg": {
@@ -19451,7 +19521,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Solveig": {
@@ -21216,7 +21292,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Ebba Lindström": {
@@ -22981,7 +23063,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Ebba Wikström": {
@@ -24746,7 +24834,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Frida Björning Lundqvist": {
@@ -26511,7 +26605,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Dani": {
@@ -28276,7 +28376,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Daniel": {
@@ -30041,7 +30147,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Jakob Hägglund": {
@@ -31806,7 +31918,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Simon": {
@@ -33571,7 +33689,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "David": {
@@ -35336,7 +35460,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Gustaf L": {
@@ -37101,7 +37231,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Filippa Rosell": {
@@ -38866,7 +39002,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Andreas Panagos": {
@@ -40631,7 +40773,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Ludvig Völcker": {
@@ -42396,7 +42544,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Matilda": {
@@ -44161,7 +44315,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Alex J": {
@@ -45926,7 +46086,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Johan Leijonhielm": {
@@ -47691,7 +47857,18 @@
         "group": 0,
         "ko": 6,
         "bonus": -5,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          },
+          {
+            "type": "bonus",
+            "label": "B03: Total number of goals (all tournament)",
+            "pts": -5
+          }
+        ]
       }
     },
     "Rickard": {
@@ -49456,7 +49633,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Oscar Hultefors": {
@@ -51221,7 +51404,18 @@
         "group": 0,
         "ko": 6,
         "bonus": -5,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          },
+          {
+            "type": "bonus",
+            "label": "B03: Total number of goals (all tournament)",
+            "pts": -5
+          }
+        ]
       }
     },
     "Lukas Källén": {
@@ -52986,7 +53180,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     },
     "Petra": {
@@ -54751,7 +54951,13 @@
         "group": 0,
         "ko": 6,
         "bonus": 0,
-        "items": []
+        "items": [
+          {
+            "type": "ko",
+            "label": "Belgium → Round of 16",
+            "pts": 6
+          }
+        ]
       }
     }
   }

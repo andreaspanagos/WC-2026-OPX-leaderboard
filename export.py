@@ -128,6 +128,10 @@ if os.path.exists(BASELINE_FILE):
         baseline = None
 
 baseline_created = not baseline or baseline.get("date") != today
+# End-of-yesterday resolved snapshot, persisted as "resolvedLatest" by the
+# previous run (see the resolved-snapshot block below). Grab it before the
+# rollover replaces the baseline object.
+prev_resolved = (baseline or {}).get("resolvedLatest")
 if baseline_created:
     seed = prev_state or {r["player"]: {"rank": r["rank"], "total": r["total"],
                                         "group": r["group"], "ko": r["ko"], "bonus": r["bonus"]}
@@ -609,22 +613,27 @@ if _b09 and _b09["status"] != "tbd":
         _b09["current"] = str(_etp)
         _b09["normSet"] = {norm_answer(str(_etp))}
 
-# If we created today's baseline this run, snapshot which results were already
-# resolved at the start of the day. Each player's "since yesterday" breakdown then
-# lists only the items that resolved AFTER this point. (Snapshot is taken at the
-# first export of the day, not exactly at end-of-yesterday — a game finishing in the
-# few minutes between yesterday's last sync and today's first would be dropped from
-# the item list; the category-delta headline, off the seeded totals, stays correct.)
+# Snapshot which results are resolved as of THIS export, persisted every run as
+# "resolvedLatest". At the next day's rollover the new baseline's start-of-day
+# "resolved" set is seeded from yesterday's LAST export, so each player's "since
+# yesterday" breakdown lists exactly the items that resolved after that point.
+# (Seeding from the current state instead — the old behaviour — silently ate any
+# result applied by the same run that rolled the day over, e.g. an overnight KO
+# game picked up by the first morning sync: the category deltas moved but no
+# items were listed.)
+resolved_now = {
+    "games": sorted(f"{fx['home']}__{fx['away']}" for fx in fixtures if fx["played"]),
+    "ko": sorted({f"{rnd}|{t}" for rnd, ts in ko_round.items() for t in ts}
+                 | {f"WIN|{t}" for t in champion} | {f"3RD|{t}" for t in third_team}),
+    "gw": sorted(f"GW|{g}" for g in actual_winner),
+    "bonus": sorted(f"B|{bid}" for bid, k in answer_key.items() if k["normSet"]),
+}
 if baseline_created:
-    baseline["resolved"] = {
-        "games": sorted(f"{fx['home']}__{fx['away']}" for fx in fixtures if fx["played"]),
-        "ko": sorted({f"{rnd}|{t}" for rnd, ts in ko_round.items() for t in ts}
-                     | {f"WIN|{t}" for t in champion} | {f"3RD|{t}" for t in third_team}),
-        "gw": sorted(f"GW|{g}" for g in actual_winner),
-        "bonus": sorted(f"B|{bid}" for bid, k in answer_key.items() if k["normSet"]),
-    }
-    with open(BASELINE_FILE, "w", encoding="utf-8") as f:
-        json.dump(baseline, f, ensure_ascii=False, indent=2)
+    # Fall back to the current state on the first-ever run (or a pre-upgrade
+    # baseline file with no resolvedLatest yet).
+    baseline["resolved"] = prev_resolved or resolved_now
+# (resolvedLatest — including per-player bonusHits — is persisted after the
+# players_detail loop below, once per-player bonus earning state is known.)
 
 
 # Per-player answers per question.
@@ -825,6 +834,9 @@ groups_present = sorted(groups_out)
 # Start-of-day resolved snapshot → drives each player's "since yesterday" breakdown.
 _bres = (baseline.get("resolved") or {}) if baseline else {}
 _res0 = {k: set(_bres.get(k) or []) for k in ("games", "ko", "gw", "bonus")}
+# Per-player bonus earning state at start of day (player -> [question ids]).
+# None on a pre-upgrade baseline file — the id-level set is the fallback then.
+_bhits0 = _bres.get("bonusHits")
 _KO_LABELS = {"R32": "Round of 32", "R16": "Round of 16", "QF": "Quarter-final",
               "SF": "Semi-final", "Final": "Final"}
 
@@ -940,7 +952,22 @@ for p in players:
             today_items.append({"type": "gw",
                                 "label": f'Group {w["group"]} winner: {w["team"]}', "pts": 3})
     for ba in bonus_ans:
-        if ba["hit"] and (ba["pts"] or 0) and f'B|{ba["id"]}' not in _res0["bonus"]:
+        if not (ba["pts"] or 0):
+            continue
+        # A question scored "today" if this player wasn't earning it at start of
+        # day — catches value drift on an already-filled key (e.g. the B03
+        # running goal total moving into a player's bucket), not just newly
+        # answered questions like the id-level set does. Drift also LOSES
+        # provisional credit, so that emits a negative item — the item list
+        # must always explain the headline delta.
+        earning = bool(ba["hit"])
+        if _bhits0 is not None:
+            was_earning = ba["id"] in (_bhits0.get(p) or ())
+            if earning != was_earning:
+                today_items.append({"type": "bonus",
+                                    "label": f'{ba["id"]}: {ba["q"]}',
+                                    "pts": ba["pts"] if earning else -ba["pts"]})
+        elif earning and f'B|{ba["id"]}' not in _res0["bonus"]:
             today_items.append({"type": "bonus", "label": f'{ba["id"]}: {ba["q"]}',
                                 "pts": ba["pts"]})
     today_items.sort(key=lambda x: -x["pts"])
@@ -959,6 +986,17 @@ for p in players:
         "games": games, "gw": gw, "bracket": bracket, "bonusAns": bonus_ans,
         "today": today_bd,
     }
+
+# Persist the end-of-run resolved snapshot (see the resolved_now block above):
+# the id sets plus each player's currently-earning bonus questions, so
+# tomorrow's rollover can attribute per-player bonus movement.
+resolved_now["bonusHits"] = {
+    p: sorted(ba["id"] for ba in players_detail[p]["bonusAns"] if ba["earned"])
+    for p in players
+}
+baseline["resolvedLatest"] = resolved_now
+with open(BASELINE_FILE, "w", encoding="utf-8") as f:
+    json.dump(baseline, f, ensure_ascii=False, indent=2)
 
 # Sanity net — while only group games score (pre-KO), a player's itemised
 # today-points must equal pointsToday. A mismatch flags a silent gap (e.g. a
