@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 21:49",
+    "lastRefresh": "2026-07-02 07:24",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 446,
+    "maxAvailable": 452,
     "drawn": true
   },
   "matches": [
@@ -296,9 +296,9 @@
       "home": "Belgium",
       "away": "Senegal",
       "kickoff": "2026-07-01 22:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 3,
+      "ag": 2,
+      "winner": "Belgium",
       "pens": false,
       "homePick": {
         "pct": 100,
@@ -672,16 +672,22 @@
         "M82"
       ],
       "home": null,
-      "away": null,
+      "away": "Belgium",
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
       "homePick": null,
-      "awayPick": null,
+      "awayPick": {
+        "pct": 84,
+        "count": 26
+      },
       "homeReach": null,
-      "awayReach": null
+      "awayReach": {
+        "pct": 100,
+        "count": 31
+      }
     },
     {
       "id": "M95",

@@ -1,16 +1,16 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-01 21:49",
+    "lastRefresh": "2026-07-02 07:24",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 446
+    "maxAvailable": 452
   },
   "players": [
     "Christoffer",
-    "Jacob Cederberg",
+    "Maximilian",
     "Anna",
     "Boris",
-    "Maximilian",
+    "Jacob Cederberg",
     "Elin",
     "Klas",
     "Ebba Örtenblad",
@@ -29,12 +29,12 @@
     "Gustaf L",
     "Filippa Rosell",
     "Andreas Panagos",
-    "Johan Leijonhielm",
     "Ludvig Völcker",
     "Matilda",
-    "Oscar Hultefors",
     "Alex J",
+    "Johan Leijonhielm",
     "Rickard",
+    "Oscar Hultefors",
     "Lukas Källén",
     "Petra"
   ],
@@ -50,10 +50,10 @@
           "pct": 84,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Klas",
             "Tim",
             "Solveig",
@@ -67,12 +67,12 @@
             "David",
             "Gustaf L",
             "Filippa Rosell",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -160,9 +160,9 @@
               "pts": 3,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Solveig",
                 "Ebba Lindström",
@@ -172,10 +172,10 @@
                 "Jakob Hägglund",
                 "Gustaf L",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
-                "Oscar Hultefors",
                 "Alex J",
+                "Johan Leijonhielm",
                 "Rickard",
+                "Oscar Hultefors",
                 "Lukas Källén"
               ]
             },
@@ -245,11 +245,11 @@
                 "Simon",
                 "David",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
                 "Matilda",
-                "Oscar Hultefors",
                 "Alex J",
+                "Johan Leijonhielm",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -359,8 +359,8 @@
               "pct": 26,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Simon",
                 "Gustaf L",
@@ -443,8 +443,8 @@
               "pct": 42,
               "pts": 1,
               "players": [
-                "Anna",
                 "Maximilian",
+                "Anna",
                 "Klas",
                 "Solveig",
                 "Ebba Lindström",
@@ -509,8 +509,8 @@
               "pct": 6,
               "pts": 1,
               "players": [
-                "Johan Leijonhielm",
-                "Matilda"
+                "Matilda",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -560,8 +560,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Anna",
                 "Maximilian",
+                "Anna",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Tim",
@@ -577,16 +577,16 @@
               "pct": 32,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
                 "Solveig",
                 "Dani",
                 "Daniel",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -597,8 +597,8 @@
               "players": [
                 "Filippa Rosell",
                 "Andreas Panagos",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Lukas Källén"
               ]
             },
@@ -643,8 +643,8 @@
               "pct": 42,
               "pts": 0,
               "players": [
-                "Boris",
                 "Maximilian",
+                "Boris",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Erik Engberg",
@@ -680,9 +680,9 @@
               "players": [
                 "Anna",
                 "Simon",
+                "Alex J",
                 "Johan Leijonhielm",
-                "Oscar Hultefors",
-                "Alex J"
+                "Oscar Hultefors"
               ]
             },
             {
@@ -740,10 +740,10 @@
           "pct": 84,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -758,12 +758,12 @@
             "David",
             "Gustaf L",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Petra"
           ],
           "correct": true
@@ -857,8 +857,8 @@
               "pct": 29,
               "pts": 0,
               "players": [
-                "Anna",
                 "Maximilian",
+                "Anna",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Ebba Wikström",
@@ -874,8 +874,8 @@
               "pct": 26,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Erik Engberg",
                 "Dani",
@@ -893,8 +893,8 @@
                 "Solveig",
                 "Jakob Hägglund",
                 "Johan Leijonhielm",
-                "Oscar Hultefors",
-                "Rickard"
+                "Rickard",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -965,10 +965,10 @@
               "pct": 48,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -977,8 +977,8 @@
                 "Ebba Lindström",
                 "Dani",
                 "Simon",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Petra"
               ]
             },
@@ -1066,9 +1066,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
-                "Boris",
                 "Maximilian",
+                "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -1091,8 +1091,8 @@
                 "Daniel",
                 "Gustaf L",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -1174,8 +1174,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Erik Engberg",
                 "Solveig",
@@ -1316,8 +1316,8 @@
               "pct": 23,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Elin",
                 "Tim",
                 "Solveig",
@@ -1331,9 +1331,9 @@
               "pct": 13,
               "pts": 1,
               "players": [
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
                 "Alex J",
+                "Johan Leijonhielm",
                 "Rickard"
               ]
             },
@@ -1365,12 +1365,12 @@
               "pct": 23,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Gustaf L",
                 "Andreas Panagos",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Rickard"
               ]
             },
@@ -1478,10 +1478,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -1500,12 +1500,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -1579,9 +1579,9 @@
               "pct": 42,
               "pts": 0,
               "players": [
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
                 "Elin",
                 "Klas",
                 "Tim",
@@ -1790,8 +1790,8 @@
               "pct": 23,
               "pts": 3,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Tim",
                 "Erik Engberg",
                 "Simon",
@@ -1808,8 +1808,8 @@
                 "Solveig",
                 "Dani",
                 "Matilda",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -1979,9 +1979,9 @@
               "pct": 61,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Erik Engberg",
                 "Solveig",
@@ -1994,8 +1994,8 @@
                 "Simon",
                 "David",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Oscar Hultefors",
                 "Petra"
               ]
@@ -2071,9 +2071,9 @@
               "pct": 52,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -2160,10 +2160,10 @@
           "pct": 61,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Klas",
             "Tim",
             "Erik Engberg",
@@ -2174,8 +2174,8 @@
             "David",
             "Gustaf L",
             "Filippa Rosell",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
+            "Johan Leijonhielm",
             "Oscar Hultefors",
             "Petra"
           ],
@@ -2278,8 +2278,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -2288,8 +2288,8 @@
                 "Daniel",
                 "Simon",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
@@ -2378,8 +2378,8 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -2403,8 +2403,8 @@
                 "Frida Björning Lundqvist",
                 "Gustaf L",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
@@ -2486,9 +2486,9 @@
               "pts": 3,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Wikström",
                 "Dani",
@@ -2701,9 +2701,9 @@
               "pct": 45,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Erik Engberg",
                 "Solveig",
@@ -2817,8 +2817,8 @@
                 "Daniel",
                 "Simon",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Oscar Hultefors",
                 "Petra"
               ]
@@ -2906,10 +2906,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -2928,12 +2928,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -3017,8 +3017,8 @@
                 "Solveig",
                 "Dani",
                 "Daniel",
-                "Oscar Hultefors",
                 "Alex J",
+                "Oscar Hultefors",
                 "Lukas Källén",
                 "Petra"
               ]
@@ -3100,9 +3100,9 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Solveig",
@@ -3114,8 +3114,8 @@
                 "David",
                 "Gustaf L",
                 "Johan Leijonhielm",
-                "Oscar Hultefors",
                 "Rickard",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -3216,8 +3216,8 @@
                 "Daniel",
                 "Jakob Hägglund",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
                 "Alex J",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -3299,10 +3299,10 @@
               "pct": 45,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Tim",
                 "Erik Engberg",
@@ -3399,8 +3399,8 @@
               "pct": 48,
               "pts": 3,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -3510,8 +3510,8 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Simon",
@@ -3596,10 +3596,10 @@
           "pct": 87,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -3614,12 +3614,12 @@
             "Jakob Hägglund",
             "Simon",
             "David",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -3713,9 +3713,9 @@
               "pct": 52,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -3727,8 +3727,8 @@
                 "Simon",
                 "Gustaf L",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -3741,8 +3741,8 @@
                 "Ebba Lindström",
                 "David",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
-                "Matilda"
+                "Matilda",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -3813,8 +3813,8 @@
               "pct": 29,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Tim",
                 "Ebba Lindström",
                 "Filippa Rosell",
@@ -3914,9 +3914,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Erik Engberg",
@@ -4022,8 +4022,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Boris",
                 "Maximilian",
+                "Boris",
                 "Tim",
                 "Erik Engberg",
                 "Ebba Lindström",
@@ -4043,8 +4043,8 @@
                 "Frida Björning Lundqvist",
                 "Dani",
                 "Gustaf L",
-                "Johan Leijonhielm",
-                "Alex J"
+                "Alex J",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -4121,8 +4121,8 @@
               "pct": 26,
               "pts": 3,
               "players": [
-                "Boris",
                 "Maximilian",
+                "Boris",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Ebba Wikström",
@@ -4168,8 +4168,8 @@
               "pts": 0,
               "players": [
                 "Elin",
-                "Johan Leijonhielm",
-                "Matilda"
+                "Matilda",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -4230,10 +4230,10 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -4242,9 +4242,9 @@
                 "Ebba Lindström",
                 "Daniel",
                 "Simon",
+                "Alex J",
                 "Johan Leijonhielm",
                 "Oscar Hultefors",
-                "Alex J",
                 "Petra"
               ]
             },
@@ -4310,10 +4310,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -4332,12 +4332,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -4411,16 +4411,16 @@
               "pct": 39,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
-                "Boris",
                 "Maximilian",
+                "Boris",
+                "Jacob Cederberg",
                 "Erik Engberg",
                 "Solveig",
                 "Daniel",
                 "Jakob Hägglund",
                 "Andreas Panagos",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Oscar Hultefors",
                 "Petra"
               ]
@@ -4503,10 +4503,10 @@
               "pct": 48,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Tim",
                 "Erik Engberg",
                 "Solveig",
@@ -4544,8 +4544,8 @@
                 "Frida Björning Lundqvist",
                 "David",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
@@ -4595,9 +4595,9 @@
               "pct": 45,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -4605,9 +4605,9 @@
                 "Jakob Hägglund",
                 "Simon",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
                 "Alex J",
+                "Johan Leijonhielm",
                 "Lukas Källén"
               ]
             },
@@ -4680,8 +4680,8 @@
               "pct": 23,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Tim",
                 "Ebba Lindström",
                 "Ebba Wikström",
@@ -4710,8 +4710,8 @@
               "pts": 0,
               "players": [
                 "Solveig",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Oscar Hultefors",
                 "Petra"
               ]
@@ -4764,15 +4764,15 @@
               "pts": 3,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Ebba Wikström",
                 "Dani",
                 "Daniel",
                 "Simon",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Oscar Hultefors"
               ]
             },
@@ -4887,10 +4887,10 @@
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Johan Leijonhielm",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -4968,10 +4968,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -4990,12 +4990,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -5178,10 +5178,10 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -5285,9 +5285,9 @@
               "pct": 61,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
-                "Anna",
                 "Maximilian",
+                "Anna",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -5378,8 +5378,8 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -5391,8 +5391,8 @@
                 "Gustaf L",
                 "Andreas Panagos",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -5478,8 +5478,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Solveig",
                 "Ebba Lindström",
@@ -5488,10 +5488,10 @@
                 "Daniel",
                 "Simon",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Matilda",
-                "Oscar Hultefors",
                 "Alex J",
+                "Johan Leijonhielm",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -5594,9 +5594,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
-                "Anna",
                 "Maximilian",
+                "Anna",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -5608,8 +5608,8 @@
                 "Simon",
                 "David",
                 "Filippa Rosell",
-                "Oscar Hultefors",
-                "Alex J"
+                "Alex J",
+                "Oscar Hultefors"
               ]
             },
             {
@@ -5621,8 +5621,8 @@
                 "Boris",
                 "Frida Björning Lundqvist",
                 "Dani",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Petra"
               ]
             },
@@ -5698,10 +5698,10 @@
           "pct": 94,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -5718,12 +5718,12 @@
             "David",
             "Gustaf L",
             "Filippa Rosell",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -5807,9 +5807,9 @@
               "pct": 39,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Solveig",
@@ -5833,8 +5833,8 @@
                 "Ebba Wikström",
                 "Daniel",
                 "David",
-                "Johan Leijonhielm",
-                "Matilda"
+                "Matilda",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -5899,9 +5899,9 @@
               "pct": 52,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -6008,9 +6008,9 @@
               "pts": 3,
               "players": [
                 "Christoffer",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -6033,8 +6033,8 @@
                 "Jacob Cederberg",
                 "Filippa Rosell",
                 "Andreas Panagos",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
+                "Johan Leijonhielm",
                 "Lukas Källén",
                 "Petra"
               ]
@@ -6106,9 +6106,9 @@
                 "Felice Gelin",
                 "Frida Björning Lundqvist",
                 "Jakob Hägglund",
-                "Johan Leijonhielm",
                 "Matilda",
-                "Alex J"
+                "Alex J",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -6224,8 +6224,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -6248,8 +6248,8 @@
                 "Anna",
                 "Ebba Örtenblad",
                 "Felice Gelin",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Rickard",
                 "Petra"
               ]
@@ -6340,9 +6340,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Solveig",
@@ -6365,8 +6365,8 @@
               "players": [
                 "Simon",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
-                "Ludvig Völcker"
+                "Ludvig Völcker",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -6436,10 +6436,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -6458,12 +6458,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -6547,8 +6547,8 @@
                 "Filippa Rosell",
                 "Andreas Panagos",
                 "Matilda",
-                "Oscar Hultefors",
                 "Alex J",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -6558,17 +6558,17 @@
               "pct": 35,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
-                "Boris",
                 "Maximilian",
+                "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Solveig",
                 "Dani",
                 "Jakob Hägglund",
                 "Simon",
-                "Johan Leijonhielm",
-                "Ludvig Völcker"
+                "Ludvig Völcker",
+                "Johan Leijonhielm"
               ]
             },
             {
@@ -6630,8 +6630,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -6714,9 +6714,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -6729,8 +6729,8 @@
                 "Simon",
                 "Filippa Rosell",
                 "Andreas Panagos",
-                "Oscar Hultefors",
                 "Alex J",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -6797,8 +6797,8 @@
               "pct": 35,
               "pts": 1,
               "players": [
-                "Boris",
                 "Maximilian",
+                "Boris",
                 "Elin",
                 "Klas",
                 "Tim",
@@ -7045,8 +7045,8 @@
               "pct": 26,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -7158,10 +7158,10 @@
           "pct": 90,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Tim",
@@ -7178,11 +7178,11 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -7267,9 +7267,9 @@
               "pct": 48,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
-                "Boris",
                 "Maximilian",
+                "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Erik Engberg",
@@ -7277,10 +7277,10 @@
                 "Dani",
                 "Daniel",
                 "Jakob Hägglund",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
-                "Oscar Hultefors",
                 "Alex J",
+                "Johan Leijonhielm",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -7352,8 +7352,8 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Erik Engberg",
                 "Solveig",
                 "Ebba Lindström",
@@ -7451,8 +7451,8 @@
               "pct": 39,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -7543,10 +7543,10 @@
               "pct": 32,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Ebba Örtenblad",
                 "Felice Gelin",
@@ -7643,8 +7643,8 @@
               "pct": 39,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Anna",
+                "Jacob Cederberg",
                 "Klas",
                 "Erik Engberg",
                 "Dani",
@@ -7652,8 +7652,8 @@
                 "Jakob Hägglund",
                 "Simon",
                 "David",
-                "Oscar Hultefors",
                 "Rickard",
+                "Oscar Hultefors",
                 "Petra"
               ]
             },
@@ -7743,8 +7743,8 @@
               "pct": 52,
               "pts": 0,
               "players": [
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Erik Engberg",
@@ -7755,8 +7755,8 @@
                 "Simon",
                 "Gustaf L",
                 "Filippa Rosell",
-                "Johan Leijonhielm",
                 "Matilda",
+                "Johan Leijonhielm",
                 "Oscar Hultefors",
                 "Petra"
               ]
@@ -7848,10 +7848,10 @@
           "pct": 100,
           "players": [
             "Christoffer",
-            "Jacob Cederberg",
+            "Maximilian",
             "Anna",
             "Boris",
-            "Maximilian",
+            "Jacob Cederberg",
             "Elin",
             "Klas",
             "Ebba Örtenblad",
@@ -7870,12 +7870,12 @@
             "Gustaf L",
             "Filippa Rosell",
             "Andreas Panagos",
-            "Johan Leijonhielm",
             "Ludvig Völcker",
             "Matilda",
-            "Oscar Hultefors",
             "Alex J",
+            "Johan Leijonhielm",
             "Rickard",
+            "Oscar Hultefors",
             "Lukas Källén",
             "Petra"
           ],
@@ -7950,10 +7950,10 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
+                "Maximilian",
                 "Anna",
                 "Boris",
-                "Maximilian",
+                "Jacob Cederberg",
                 "Klas",
                 "Erik Engberg",
                 "Solveig",
@@ -8067,8 +8067,8 @@
               "pts": 3,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Elin",
                 "Tim",
                 "Solveig",
@@ -8158,8 +8158,8 @@
               "pts": 0,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Ebba Örtenblad",
@@ -8274,9 +8274,9 @@
               "pts": 1,
               "players": [
                 "Christoffer",
-                "Jacob Cederberg",
                 "Anna",
                 "Boris",
+                "Jacob Cederberg",
                 "Elin",
                 "Klas",
                 "Erik Engberg",
@@ -8287,10 +8287,10 @@
                 "Simon",
                 "David",
                 "Gustaf L",
-                "Johan Leijonhielm",
                 "Ludvig Völcker",
                 "Matilda",
                 "Alex J",
+                "Johan Leijonhielm",
                 "Petra"
               ]
             },
@@ -8400,8 +8400,8 @@
               "pct": 32,
               "pts": 3,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Ebba Örtenblad",
                 "Felice Gelin",
                 "Tim",
@@ -8523,8 +8523,8 @@
               "pct": 19,
               "pts": 1,
               "players": [
-                "Jacob Cederberg",
                 "Maximilian",
+                "Jacob Cederberg",
                 "Erik Engberg",
                 "Frida Björning Lundqvist",
                 "Andreas Panagos",
@@ -8864,10 +8864,10 @@
       "home": "Belgium",
       "away": "Senegal",
       "kickoff": "2026-07-01 22:00",
-      "played": false,
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "played": true,
+      "hg": 3,
+      "ag": 2,
+      "winner": "Belgium",
       "pens": false,
       "homePick": {
         "pct": 100,
@@ -8885,7 +8885,7 @@
         "pct": 68,
         "count": 21
       },
-      "status": "scheduled"
+      "status": "FT"
     },
     {
       "id": "M83",
@@ -9222,7 +9222,7 @@
       "round": "R16",
       "label": "Round of 16",
       "home": null,
-      "away": null,
+      "away": "Belgium",
       "kickoff": "",
       "played": false,
       "hg": null,
@@ -9230,9 +9230,15 @@
       "winner": null,
       "pens": false,
       "homePick": null,
-      "awayPick": null,
+      "awayPick": {
+        "pct": 84,
+        "count": 26
+      },
       "homeReach": null,
-      "awayReach": null,
+      "awayReach": {
+        "pct": 100,
+        "count": 31
+      },
       "status": "pending"
     },
     {
