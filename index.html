@@ -746,9 +746,11 @@
     .pts-1 { background: #fdf0d2; color: #9a7300; }
     .pts-0 { background: #eee; color: #999; }
     .pts-na { color: var(--text-faint); text-align: center; }
+    .pts-loss { background: #fdecea; color: #a93226; }
     [data-theme="dark"] .pts-3 { background: rgba(27,138,58,0.22); color: #7fd99a; }
     [data-theme="dark"] .pts-1 { background: rgba(154,115,0,0.24); color: #e6c14d; }
     [data-theme="dark"] .pts-0 { background: rgba(255,255,255,0.06); color: var(--text-faint); }
+    [data-theme="dark"] .pts-loss { background: rgba(192,57,43,0.18); color: #f3a39a; }
 
     /* ── Match Impact ("Latest results" on the Games tab) ── */
     .mi-section {
@@ -3300,13 +3302,13 @@
     // "Since yesterday": the day's point delta + exactly which results produced it.
     const td = p.today || {};
     const tItems = td.items || [];
-    const catChip = (lbl, v) => (v ? `<span class="pd-td-cat">${lbl} +${v}</span>` : "");
+    const catChip = (lbl, v) => (v ? `<span class="pd-td-cat">${lbl} ${v > 0 ? "+" : ""}${v}</span>` : "");
     const cats = catChip("Group", td.group) + catChip("Knockout", td.ko) + catChip("Bonus", td.bonus);
     const tItemsHtml = tItems.map(it => `
         <div class="pd-td-item">
           <span class="pd-td-label">${esc(it.label)}</span>
           ${it.type === "game" ? `<span class="pd-td-detail">you ${esc(it.pick)} · FT ${esc(it.result)}</span>` : ""}
-          <span class="pts pts-${it.pts >= 3 ? 3 : it.pts}">+${it.pts}</span>
+          <span class="pts ${it.pts < 0 ? "pts-loss" : `pts-${it.pts >= 3 ? 3 : it.pts}`}">${it.pts > 0 ? "+" : ""}${it.pts}</span>
         </div>`).join("");
     const tTotal = td.total || 0;
     const todayHtml = (tTotal || tItems.length)
