@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-02 08:30",
+    "lastRefresh": "2026-07-02 23:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 458,
+    "maxAvailable": 464,
     "drawn": true
   },
   "matches": [
@@ -358,9 +358,9 @@
       "home": "Spain",
       "away": "Austria",
       "kickoff": "2026-07-02 21:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 3,
+      "ag": 0,
+      "winner": "Spain",
       "pens": false,
       "homePick": {
         "pct": 100,
@@ -650,16 +650,22 @@
         "M84"
       ],
       "home": null,
-      "away": null,
+      "away": "Spain",
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
       "homePick": null,
-      "awayPick": null,
+      "awayPick": {
+        "pct": 100,
+        "count": 31
+      },
       "homeReach": null,
-      "awayReach": null
+      "awayReach": {
+        "pct": 100,
+        "count": 31
+      }
     },
     {
       "id": "M94",
