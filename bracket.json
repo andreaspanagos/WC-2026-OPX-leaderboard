@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-03 03:50",
+    "lastRefresh": "2026-07-03 07:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 470,
+    "maxAvailable": 476,
     "drawn": true
   },
   "matches": [
@@ -389,9 +389,9 @@
       "home": "Switzerland",
       "away": "Algeria",
       "kickoff": "2026-07-03 05:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 2,
+      "ag": 0,
+      "winner": "Switzerland",
       "pens": false,
       "homePick": {
         "pct": 94,
@@ -739,16 +739,22 @@
         "M85",
         "M87"
       ],
-      "home": null,
+      "home": "Switzerland",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
+      "homePick": {
+        "pct": 10,
+        "count": 3
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 94,
+        "count": 29
+      },
       "awayReach": null
     },
     {

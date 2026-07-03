@@ -1,16 +1,16 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-03 03:50",
+    "lastRefresh": "2026-07-03 07:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 470
+    "maxAvailable": 476
   },
   "players": [
     "Christoffer",
-    "Maximilian",
-    "Anna",
     "Boris",
+    "Anna",
     "Jacob Cederberg",
+    "Maximilian",
     "Elin",
     "Klas",
     "Solveig",
@@ -27,8 +27,8 @@
     "Felice Gelin",
     "Frida Björning Lundqvist",
     "Ebba Lindström",
-    "Filippa Rosell",
     "Matilda",
+    "Filippa Rosell",
     "Johan Leijonhielm",
     "Andreas Panagos",
     "Ludvig Völcker",
@@ -226,7 +226,7 @@
     {
       "team": "Switzerland",
       "group": "B",
-      "actual": "R32",
+      "actual": "R16",
       "dist": {
         "Group stage": 1,
         "R32": 1,
@@ -825,8 +825,8 @@
       },
       "championPct": 58,
       "championBy": [
-        "Anna",
         "Boris",
+        "Anna",
         "Jacob Cederberg",
         "Elin",
         "Tim",
@@ -1297,8 +1297,8 @@
           "count": 15,
           "pct": 48,
           "players": [
-            "Maximilian",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Solveig",
             "Dani",
@@ -1347,8 +1347,8 @@
           "count": 3,
           "pct": 10,
           "players": [
-            "Anna",
             "Boris",
+            "Anna",
             "Petra"
           ],
           "hit": false
@@ -1481,7 +1481,7 @@
       "id": "B03",
       "q": "Total number of goals (all tournament)",
       "pts": 5,
-      "current": "247",
+      "current": "249",
       "status": "provisional",
       "answers": [
         {
@@ -1625,9 +1625,9 @@
           "count": 14,
           "pct": 45,
           "players": [
-            "Maximilian",
             "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Klas",
             "Solveig",
             "Erik Engberg",
@@ -1730,10 +1730,10 @@
           "pct": 61,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Anna",
             "Boris",
+            "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Solveig",
             "Tim",
@@ -1962,10 +1962,10 @@
           "pct": 58,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Anna",
             "Boris",
+            "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Klas",
             "Solveig",
@@ -2097,8 +2097,8 @@
           "count": 4,
           "pct": 13,
           "players": [
-            "Maximilian",
             "Boris",
+            "Maximilian",
             "Rickard",
             "Lukas Källén"
           ],
@@ -2139,8 +2139,8 @@
           "players": [
             "Jacob Cederberg",
             "Solveig",
-            "Filippa Rosell",
             "Matilda",
+            "Filippa Rosell",
             "Lukas Källén"
           ],
           "hit": false
@@ -2266,10 +2266,10 @@
           "pct": 77,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Anna",
             "Boris",
+            "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Klas",
             "Solveig",
@@ -2330,10 +2330,10 @@
           "pct": 90,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Anna",
             "Boris",
+            "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Klas",
             "Solveig",
@@ -2349,8 +2349,8 @@
             "Ebba Örtenblad",
             "Felice Gelin",
             "Frida Björning Lundqvist",
-            "Filippa Rosell",
             "Matilda",
+            "Filippa Rosell",
             "Johan Leijonhielm",
             "Andreas Panagos",
             "Ludvig Völcker",
@@ -2386,9 +2386,9 @@
           "pct": 74,
           "players": [
             "Christoffer",
-            "Maximilian",
             "Boris",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Klas",
             "Solveig",
@@ -2401,8 +2401,8 @@
             "Gustaf L",
             "Frida Björning Lundqvist",
             "Ebba Lindström",
-            "Filippa Rosell",
             "Matilda",
+            "Filippa Rosell",
             "Andreas Panagos",
             "Ludvig Völcker",
             "Oscar Hultefors",
@@ -2554,10 +2554,10 @@
           "pct": 81,
           "players": [
             "Christoffer",
-            "Maximilian",
-            "Anna",
             "Boris",
+            "Anna",
             "Jacob Cederberg",
+            "Maximilian",
             "Elin",
             "Solveig",
             "Tim",
@@ -2572,8 +2572,8 @@
             "Felice Gelin",
             "Frida Björning Lundqvist",
             "Ebba Lindström",
-            "Filippa Rosell",
             "Matilda",
+            "Filippa Rosell",
             "Andreas Panagos",
             "Ludvig Völcker",
             "Oscar Hultefors",
@@ -2626,8 +2626,8 @@
           "pct": 68,
           "players": [
             "Christoffer",
-            "Maximilian",
             "Boris",
+            "Maximilian",
             "Elin",
             "Klas",
             "Erik Engberg",
