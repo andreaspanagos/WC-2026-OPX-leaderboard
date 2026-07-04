@@ -1,6 +1,94 @@
 {
-  "lastRun": "2026-07-04T08:38:43",
+  "lastRun": "2026-07-04T09:05:48",
   "applied": [
+    {
+      "round": "R32",
+      "label": "M82",
+      "home": "Belgium",
+      "away": "Senegal",
+      "hg": 3,
+      "ag": 2,
+      "winner": "Belgium",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M81",
+      "home": "USA",
+      "away": "Bosnia & Herzegovina",
+      "hg": 2,
+      "ag": 0,
+      "winner": "USA",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M84",
+      "home": "Spain",
+      "away": "Austria",
+      "hg": 3,
+      "ag": 0,
+      "winner": "Spain",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M83",
+      "home": "Portugal",
+      "away": "Croatia",
+      "hg": 2,
+      "ag": 1,
+      "winner": "Portugal",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M85",
+      "home": "Switzerland",
+      "away": "Algeria",
+      "hg": 2,
+      "ag": 0,
+      "winner": "Switzerland",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M88",
+      "home": "Australia",
+      "away": "Egypt",
+      "hg": 1,
+      "ag": 1,
+      "winner": "Egypt",
+      "pens": true,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M86",
+      "home": "Argentina",
+      "away": "Cabo Verde",
+      "hg": 3,
+      "ag": 2,
+      "winner": "Argentina",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
+    {
+      "round": "R32",
+      "label": "M87",
+      "home": "Colombia",
+      "away": "Ghana",
+      "hg": 1,
+      "ag": 0,
+      "winner": "Colombia",
+      "pens": false,
+      "when": "2026-07-04T09:05:48"
+    },
     {
       "group": "A",
       "row": 5,
