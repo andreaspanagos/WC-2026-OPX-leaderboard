@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-03 07:20",
+    "lastRefresh": "2026-07-04 08:38",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 476,
+    "maxAvailable": 494,
     "drawn": true
   },
   "matches": [
@@ -420,9 +420,9 @@
       "home": "Argentina",
       "away": "Cabo Verde",
       "kickoff": "2026-07-04 00:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 3,
+      "ag": 2,
+      "winner": "Argentina",
       "pens": false,
       "homePick": {
         "pct": 100,
@@ -451,9 +451,9 @@
       "home": "Colombia",
       "away": "Ghana",
       "kickoff": "2026-07-04 03:30",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 1,
+      "ag": 0,
+      "winner": "Colombia",
       "pens": false,
       "homePick": {
         "pct": 55,
@@ -482,10 +482,10 @@
       "home": "Australia",
       "away": "Egypt",
       "kickoff": "2026-07-03 20:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
-      "pens": false,
+      "hg": 1,
+      "ag": 1,
+      "winner": "Egypt",
+      "pens": true,
       "homePick": {
         "pct": 6,
         "count": 2
@@ -651,7 +651,7 @@
       ],
       "home": "Portugal",
       "away": "Spain",
-      "kickoff": "",
+      "kickoff": "2026-07-06 21:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -717,17 +717,29 @@
         "M86",
         "M88"
       ],
-      "home": null,
-      "away": null,
-      "kickoff": "",
+      "home": "Argentina",
+      "away": "Egypt",
+      "kickoff": "2026-07-07 18:00",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
-      "awayPick": null,
-      "homeReach": null,
-      "awayReach": null
+      "homePick": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
+      "homeReach": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayReach": {
+        "pct": 23,
+        "count": 7
+      }
     },
     {
       "id": "M96",
@@ -740,8 +752,8 @@
         "M87"
       ],
       "home": "Switzerland",
-      "away": null,
-      "kickoff": "",
+      "away": "Colombia",
+      "kickoff": "2026-07-07 22:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -750,12 +762,18 @@
         "pct": 10,
         "count": 3
       },
-      "awayPick": null,
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
       "homeReach": {
         "pct": 94,
         "count": 29
       },
-      "awayReach": null
+      "awayReach": {
+        "pct": 55,
+        "count": 17
+      }
     },
     {
       "id": "M97",
