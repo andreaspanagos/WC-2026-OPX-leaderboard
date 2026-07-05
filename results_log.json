@@ -1,6 +1,28 @@
 {
-  "lastRun": "2026-07-04T09:05:48",
+  "lastRun": "2026-07-05T15:41:41",
   "applied": [
+    {
+      "round": "R16",
+      "label": "M90",
+      "home": "Canada",
+      "away": "Morocco",
+      "hg": 0,
+      "ag": 3,
+      "winner": "Morocco",
+      "pens": false,
+      "when": "2026-07-05T15:41:41"
+    },
+    {
+      "round": "R16",
+      "label": "M89",
+      "home": "Paraguay",
+      "away": "France",
+      "hg": 0,
+      "ag": 1,
+      "winner": "France",
+      "pens": false,
+      "when": "2026-07-05T15:41:41"
+    },
     {
       "round": "R32",
       "label": "M82",
