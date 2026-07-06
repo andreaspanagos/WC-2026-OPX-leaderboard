@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-05 15:41",
+    "lastRefresh": "2026-07-06 11:30",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 512,
+    "maxAvailable": 530,
     "drawn": true
   },
   "matches": [
@@ -584,9 +584,9 @@
       "home": "Brazil",
       "away": "Norway",
       "kickoff": "2026-07-05 22:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 1,
+      "ag": 2,
+      "winner": "Norway",
       "pens": false,
       "homePick": {
         "pct": 81,
@@ -617,10 +617,10 @@
       ],
       "home": "Mexico",
       "away": "England",
-      "kickoff": "2026-07-06 02:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "kickoff": "2026-07-06 03:00",
+      "hg": 2,
+      "ag": 3,
+      "winner": "England",
       "pens": false,
       "homePick": {
         "pct": 0,
@@ -841,17 +841,29 @@
         "M91",
         "M92"
       ],
-      "home": null,
-      "away": null,
-      "kickoff": "",
+      "home": "Norway",
+      "away": "England",
+      "kickoff": "2026-07-11 23:00",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
-      "awayPick": null,
-      "homeReach": null,
-      "awayReach": null
+      "homePick": {
+        "pct": 6,
+        "count": 2
+      },
+      "awayPick": {
+        "pct": 35,
+        "count": 11
+      },
+      "homeReach": {
+        "pct": 13,
+        "count": 4
+      },
+      "awayReach": {
+        "pct": 94,
+        "count": 29
+      }
     },
     {
       "id": "M100",
