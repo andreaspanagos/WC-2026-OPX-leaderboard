@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-07 11:43",
+    "lastRefresh": "2026-07-07 20:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 548,
+    "maxAvailable": 557,
     "drawn": true
   },
   "matches": [
@@ -720,9 +720,9 @@
       "home": "Argentina",
       "away": "Egypt",
       "kickoff": "2026-07-07 18:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 3,
+      "ag": 2,
+      "winner": "Argentina",
       "pens": false,
       "homePick": {
         "pct": 100,
@@ -887,16 +887,22 @@
         "M95",
         "M96"
       ],
-      "home": null,
+      "home": "Argentina",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
+      "homePick": {
+        "pct": 74,
+        "count": 23
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 100,
+        "count": 31
+      },
       "awayReach": null
     },
     {
