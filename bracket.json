@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-06 11:30",
+    "lastRefresh": "2026-07-07 11:43",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 530,
+    "maxAvailable": 548,
     "drawn": true
   },
   "matches": [
@@ -652,9 +652,9 @@
       "home": "Portugal",
       "away": "Spain",
       "kickoff": "2026-07-06 21:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 0,
+      "ag": 1,
+      "winner": "Spain",
       "pens": false,
       "homePick": {
         "pct": 81,
@@ -686,9 +686,9 @@
       "home": "USA",
       "away": "Belgium",
       "kickoff": "2026-07-07 02:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 1,
+      "ag": 4,
+      "winner": "Belgium",
       "pens": false,
       "homePick": {
         "pct": 10,
@@ -819,17 +819,29 @@
         "M93",
         "M94"
       ],
-      "home": null,
-      "away": null,
-      "kickoff": "",
+      "home": "Spain",
+      "away": "Belgium",
+      "kickoff": "2026-07-10 21:00",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
-      "awayPick": null,
-      "homeReach": null,
-      "awayReach": null
+      "homePick": {
+        "pct": 97,
+        "count": 30
+      },
+      "awayPick": {
+        "pct": 3,
+        "count": 1
+      },
+      "homeReach": {
+        "pct": 100,
+        "count": 31
+      },
+      "awayReach": {
+        "pct": 84,
+        "count": 26
+      }
     },
     {
       "id": "M99",

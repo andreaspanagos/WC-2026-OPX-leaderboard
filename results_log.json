@@ -1,6 +1,28 @@
 {
-  "lastRun": "2026-07-06T11:31:05",
+  "lastRun": "2026-07-07T11:43:55",
   "applied": [
+    {
+      "round": "R16",
+      "label": "M93",
+      "home": "Portugal",
+      "away": "Spain",
+      "hg": 0,
+      "ag": 1,
+      "winner": "Spain",
+      "pens": false,
+      "when": "2026-07-07T11:43:55"
+    },
+    {
+      "round": "R16",
+      "label": "M94",
+      "home": "USA",
+      "away": "Belgium",
+      "hg": 1,
+      "ag": 4,
+      "winner": "Belgium",
+      "pens": false,
+      "when": "2026-07-07T11:43:55"
+    },
     {
       "round": "R16",
       "label": "M91",
