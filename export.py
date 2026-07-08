@@ -1359,7 +1359,11 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
             if rnd_key == "SF":   # SF winners are the Final's two participants
                 nxt = ko_round.get("Final", set())
             winner = h if h in nxt else (a if a in nxt else None)
-    has_score = (hg is not None and ag is not None and (hg or ag))
+    # The Backend KO score cells are formulas that read blank -> 0, so an unplayed
+    # slot is indistinguishable from a real 0-0 by score alone. `winner` is derived
+    # from the model's authoritative progression sets, so it's the reliable played
+    # signal for a goalless tie: a non-zero score OR a decided winner means played.
+    has_score = (hg is not None and ag is not None and (bool(hg or ag) or winner is not None))
     this_t = THIS_TARGET.get(rnd_key)
     next_t = NEXT_TARGET.get(rnd_key)
     kickoff = ko_kickoffs.get(frozenset({h, a}), "") if (h and a) else ""
@@ -1371,10 +1375,9 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
         "hg": hg if (h and a and has_score) else None,
         "ag": ag if (h and a and has_score) else None,
         "winner": winner,
-        # A level in-game score with a winner ⇒ decided on penalties (the shootout
-        # is never added to the score). Keyed to has_score, so a 0-0 pens game isn't
-        # flagged — that's the pre-existing Backend blank→0 played-detection gap, not
-        # this flag; revisit if a 0-0 KO tie occurs.
+        # A level in-game score with a winner => decided on penalties (the shootout
+        # is never added to the score). has_score now treats a 0-0-with-winner as
+        # played, so a goalless KO tie is correctly flagged as pens.
         "pens": bool(h and a and has_score and hg == ag and winner),
         # homePick/awayPick = % predicted to ADVANCE to the next round (kept for
         # back-compat); homeReach/awayReach = % predicted to reach THIS round.

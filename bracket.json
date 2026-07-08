@@ -754,10 +754,10 @@
       "home": "Switzerland",
       "away": "Colombia",
       "kickoff": "2026-07-07 22:00",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 0,
       "winner": "Switzerland",
-      "pens": false,
+      "pens": true,
       "homePick": {
         "pct": 10,
         "count": 3
