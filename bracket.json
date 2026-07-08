@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-07 20:20",
+    "lastRefresh": "2026-07-08 09:45",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 557,
+    "maxAvailable": 566,
     "drawn": true
   },
   "matches": [
@@ -756,7 +756,7 @@
       "kickoff": "2026-07-07 22:00",
       "hg": null,
       "ag": null,
-      "winner": null,
+      "winner": "Switzerland",
       "pens": false,
       "homePick": {
         "pct": 10,
@@ -888,8 +888,8 @@
         "M96"
       ],
       "home": "Argentina",
-      "away": null,
-      "kickoff": "",
+      "away": "Switzerland",
+      "kickoff": "2026-07-12 03:00",
       "hg": null,
       "ag": null,
       "winner": null,
@@ -898,12 +898,18 @@
         "pct": 74,
         "count": 23
       },
-      "awayPick": null,
+      "awayPick": {
+        "pct": 0,
+        "count": 0
+      },
       "homeReach": {
         "pct": 100,
         "count": 31
       },
-      "awayReach": null
+      "awayReach": {
+        "pct": 10,
+        "count": 3
+      }
     },
     {
       "id": "M101",

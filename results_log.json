@@ -1,6 +1,17 @@
 {
-  "lastRun": "2026-07-07T20:20:18",
+  "lastRun": "2026-07-08T09:45:43",
   "applied": [
+    {
+      "round": "R16",
+      "label": "M96",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "hg": 0,
+      "ag": 0,
+      "winner": "Switzerland",
+      "pens": true,
+      "when": "2026-07-08T09:45:43"
+    },
     {
       "round": "R16",
       "label": "M95",
