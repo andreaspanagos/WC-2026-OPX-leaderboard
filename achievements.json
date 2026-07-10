@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-10 10:28",
+    "lastRefresh": "2026-07-10 23:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 578
+    "maxAvailable": 590
   },
   "catalog": [
     {
@@ -1048,63 +1048,6 @@
         "how": "#7 → #15 in a day"
       }
     ],
-    "Ludvig Völcker": [
-      {
-        "id": "crystal-ball",
-        "date": "2026-06-28",
-        "how": "Jordan 1–3 Argentina — the only exact call"
-      },
-      {
-        "id": "perfect-day",
-        "date": "2026-06-16",
-        "how": "Scored on all 3 games that day"
-      },
-      {
-        "id": "hot-streak",
-        "date": "2026-06-17",
-        "how": "Points in 5 straight matches"
-      },
-      {
-        "id": "the-comeback",
-        "date": "2026-06-16",
-        "how": "#27 → #13 in a day"
-      },
-      {
-        "id": "on-the-rise",
-        "date": "2026-06-29",
-        "how": "#30 → #27 → #26"
-      },
-      {
-        "id": "off-the-mark",
-        "date": "2026-06-11",
-        "how": "First points: Mexico v South Africa (+1)"
-      },
-      {
-        "id": "first-blood",
-        "date": "2026-06-20",
-        "how": "Germany 2–1 Côte d'Ivoire — exact!"
-      },
-      {
-        "id": "crowd-surfer",
-        "date": "2026-06-13",
-        "how": "USA v Paraguay — rode the 2–0 consensus"
-      },
-      {
-        "id": "reading-the-game",
-        "date": "2026-06-16",
-        "how": "3 correct results in a day"
-      },
-      {
-        "id": "steady-hand",
-        "date": "2026-06-15",
-        "how": "Points on 3 matchdays running"
-      },
-      {
-        "id": "cold-snap",
-        "date": "2026-06-12",
-        "how": "Blanked all 2 games that day"
-      }
-    ],
     "Dani": [
       {
         "id": "the-sweep",
@@ -1519,92 +1462,15 @@
         "how": "#7 → #17 in a day"
       }
     ],
-    "Alex J": [
+    "Ludvig Völcker": [
       {
         "id": "crystal-ball",
-        "date": "2026-06-24",
-        "how": "Bosnia & Herzegovina 3–1 Qatar — the only exact call"
-      },
-      {
-        "id": "the-sweep",
-        "date": "2026-06-27",
-        "how": "All 6 Group L results correct"
+        "date": "2026-06-28",
+        "how": "Jordan 1–3 Argentina — the only exact call"
       },
       {
         "id": "perfect-day",
-        "date": "2026-06-24",
-        "how": "Scored on all 4 games that day"
-      },
-      {
-        "id": "giant-slayer",
-        "date": "2026-06-23",
-        "how": "England v Ghana — only 2 players scored"
-      },
-      {
-        "id": "hot-streak",
-        "date": "2026-06-24",
-        "how": "Points in 5 straight matches"
-      },
-      {
-        "id": "the-comeback",
-        "date": "2026-06-17",
-        "how": "#25 → #7 in a day"
-      },
-      {
-        "id": "on-the-rise",
-        "date": "2026-06-22",
-        "how": "#21 → #16 → #9"
-      },
-      {
-        "id": "off-the-mark",
-        "date": "2026-06-11",
-        "how": "First points: Mexico v South Africa (+3)"
-      },
-      {
-        "id": "first-blood",
-        "date": "2026-06-11",
-        "how": "Mexico 2–0 South Africa — exact!"
-      },
-      {
-        "id": "crowd-surfer",
-        "date": "2026-06-11",
-        "how": "Mexico v South Africa — rode the 2–0 consensus"
-      },
-      {
-        "id": "reading-the-game",
-        "date": "2026-06-17",
-        "how": "4 correct results in a day"
-      },
-      {
-        "id": "steady-hand",
         "date": "2026-06-16",
-        "how": "Points on 3 matchdays running"
-      },
-      {
-        "id": "snake-eyes",
-        "date": "2026-06-14",
-        "how": "0 points in 5 straight matches"
-      },
-      {
-        "id": "cold-snap",
-        "date": "2026-06-12",
-        "how": "Blanked all 2 games that day"
-      },
-      {
-        "id": "free-fall",
-        "date": "2026-06-13",
-        "how": "#13 → #21 in a day"
-      }
-    ],
-    "David": [
-      {
-        "id": "the-sweep",
-        "date": "2026-06-26",
-        "how": "All 6 Group I results correct"
-      },
-      {
-        "id": "perfect-day",
-        "date": "2026-06-19",
         "how": "Scored on all 3 games that day"
       },
       {
@@ -1615,12 +1481,12 @@
       {
         "id": "the-comeback",
         "date": "2026-06-16",
-        "how": "#23 → #13 in a day"
+        "how": "#27 → #13 in a day"
       },
       {
         "id": "on-the-rise",
-        "date": "2026-06-16",
-        "how": "#25 → #23 → #13"
+        "date": "2026-06-29",
+        "how": "#30 → #27 → #26"
       },
       {
         "id": "off-the-mark",
@@ -1629,17 +1495,17 @@
       },
       {
         "id": "first-blood",
-        "date": "2026-06-17",
-        "how": "Argentina 3–0 Algeria — exact!"
+        "date": "2026-06-20",
+        "how": "Germany 2–1 Côte d'Ivoire — exact!"
       },
       {
         "id": "crowd-surfer",
-        "date": "2026-06-15",
-        "how": "Sweden v Tunisia — rode the 2–1 consensus"
+        "date": "2026-06-13",
+        "how": "USA v Paraguay — rode the 2–0 consensus"
       },
       {
         "id": "reading-the-game",
-        "date": "2026-06-14",
+        "date": "2026-06-16",
         "how": "3 correct results in a day"
       },
       {
@@ -1651,11 +1517,6 @@
         "id": "cold-snap",
         "date": "2026-06-12",
         "how": "Blanked all 2 games that day"
-      },
-      {
-        "id": "free-fall",
-        "date": "2026-06-19",
-        "how": "#15 → #23 in a day"
       }
     ],
     "Matilda": [
@@ -1725,6 +1586,68 @@
         "how": "#15 → #23 in a day"
       }
     ],
+    "David": [
+      {
+        "id": "the-sweep",
+        "date": "2026-06-26",
+        "how": "All 6 Group I results correct"
+      },
+      {
+        "id": "perfect-day",
+        "date": "2026-06-19",
+        "how": "Scored on all 3 games that day"
+      },
+      {
+        "id": "hot-streak",
+        "date": "2026-06-17",
+        "how": "Points in 5 straight matches"
+      },
+      {
+        "id": "the-comeback",
+        "date": "2026-06-16",
+        "how": "#23 → #13 in a day"
+      },
+      {
+        "id": "on-the-rise",
+        "date": "2026-06-16",
+        "how": "#25 → #23 → #13"
+      },
+      {
+        "id": "off-the-mark",
+        "date": "2026-06-11",
+        "how": "First points: Mexico v South Africa (+1)"
+      },
+      {
+        "id": "first-blood",
+        "date": "2026-06-17",
+        "how": "Argentina 3–0 Algeria — exact!"
+      },
+      {
+        "id": "crowd-surfer",
+        "date": "2026-06-15",
+        "how": "Sweden v Tunisia — rode the 2–1 consensus"
+      },
+      {
+        "id": "reading-the-game",
+        "date": "2026-06-14",
+        "how": "3 correct results in a day"
+      },
+      {
+        "id": "steady-hand",
+        "date": "2026-06-15",
+        "how": "Points on 3 matchdays running"
+      },
+      {
+        "id": "cold-snap",
+        "date": "2026-06-12",
+        "how": "Blanked all 2 games that day"
+      },
+      {
+        "id": "free-fall",
+        "date": "2026-06-19",
+        "how": "#15 → #23 in a day"
+      }
+    ],
     "Rickard": [
       {
         "id": "giant-slayer",
@@ -1744,7 +1667,7 @@
       {
         "id": "on-the-rise",
         "date": "2026-07-10",
-        "how": "#29 → #28 → #27"
+        "how": "#29 → #28 → #26"
       },
       {
         "id": "off-the-mark",
@@ -1842,6 +1765,83 @@
         "id": "free-fall",
         "date": "2026-06-18",
         "how": "#7 → #15 in a day"
+      }
+    ],
+    "Alex J": [
+      {
+        "id": "crystal-ball",
+        "date": "2026-06-24",
+        "how": "Bosnia & Herzegovina 3–1 Qatar — the only exact call"
+      },
+      {
+        "id": "the-sweep",
+        "date": "2026-06-27",
+        "how": "All 6 Group L results correct"
+      },
+      {
+        "id": "perfect-day",
+        "date": "2026-06-24",
+        "how": "Scored on all 4 games that day"
+      },
+      {
+        "id": "giant-slayer",
+        "date": "2026-06-23",
+        "how": "England v Ghana — only 2 players scored"
+      },
+      {
+        "id": "hot-streak",
+        "date": "2026-06-24",
+        "how": "Points in 5 straight matches"
+      },
+      {
+        "id": "the-comeback",
+        "date": "2026-06-17",
+        "how": "#25 → #7 in a day"
+      },
+      {
+        "id": "on-the-rise",
+        "date": "2026-06-22",
+        "how": "#21 → #16 → #9"
+      },
+      {
+        "id": "off-the-mark",
+        "date": "2026-06-11",
+        "how": "First points: Mexico v South Africa (+3)"
+      },
+      {
+        "id": "first-blood",
+        "date": "2026-06-11",
+        "how": "Mexico 2–0 South Africa — exact!"
+      },
+      {
+        "id": "crowd-surfer",
+        "date": "2026-06-11",
+        "how": "Mexico v South Africa — rode the 2–0 consensus"
+      },
+      {
+        "id": "reading-the-game",
+        "date": "2026-06-17",
+        "how": "4 correct results in a day"
+      },
+      {
+        "id": "steady-hand",
+        "date": "2026-06-16",
+        "how": "Points on 3 matchdays running"
+      },
+      {
+        "id": "snake-eyes",
+        "date": "2026-06-14",
+        "how": "0 points in 5 straight matches"
+      },
+      {
+        "id": "cold-snap",
+        "date": "2026-06-12",
+        "how": "Blanked all 2 games that day"
+      },
+      {
+        "id": "free-fall",
+        "date": "2026-06-13",
+        "how": "#13 → #21 in a day"
       }
     ],
     "Johan Leijonhielm": [
