@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-08 09:45",
+    "lastRefresh": "2026-07-10 10:28",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 566,
+    "maxAvailable": 578,
     "drawn": true
   },
   "matches": [
@@ -788,9 +788,9 @@
       "home": "France",
       "away": "Morocco",
       "kickoff": "2026-07-09 22:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 2,
+      "ag": 0,
+      "winner": "France",
       "pens": false,
       "homePick": {
         "pct": 90,
@@ -921,16 +921,22 @@
         "M97",
         "M98"
       ],
-      "home": null,
+      "home": "France",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
+      "homePick": {
+        "pct": 29,
+        "count": 9
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 90,
+        "count": 28
+      },
       "awayReach": null
     },
     {
@@ -965,16 +971,22 @@
         "M101",
         "M102"
       ],
-      "home": null,
+      "home": "France",
       "away": null,
       "kickoff": "",
       "hg": null,
       "ag": null,
       "winner": null,
       "pens": false,
-      "homePick": null,
+      "homePick": {
+        "pct": 52,
+        "count": 16
+      },
       "awayPick": null,
-      "homeReach": null,
+      "homeReach": {
+        "pct": 90,
+        "count": 28
+      },
       "awayReach": null
     },
     {
