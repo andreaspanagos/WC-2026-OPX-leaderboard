@@ -3,7 +3,7 @@
     "lastRefresh": "2026-07-10 23:20",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 590
+    "maxAvailable": 605
   },
   "players": [
     "Jacob Cederberg",
@@ -1825,8 +1825,8 @@
       "id": "B06",
       "q": "Most yellow cards, team",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Egypt",
+      "status": "provisional",
       "answers": [
         {
           "answer": "Argentina",
@@ -1848,7 +1848,7 @@
             "Oscar Hultefors",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Brazil",
@@ -1860,7 +1860,7 @@
             "Rickard",
             "Johan Leijonhielm"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Germany",
@@ -1871,7 +1871,7 @@
             "Boris",
             "Tim"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "0",
@@ -1881,7 +1881,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Portugal",
@@ -1891,7 +1891,7 @@
             "Erik Engberg",
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Egypt",
@@ -1900,7 +1900,7 @@
           "players": [
             "Frida Björning Lundqvist"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "England",
@@ -1909,7 +1909,7 @@
           "players": [
             "Elin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "France",
@@ -1918,7 +1918,7 @@
           "players": [
             "Gustaf L"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Saudi Arabia",
@@ -1927,7 +1927,7 @@
           "players": [
             "Matilda"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Sweden",
@@ -1936,7 +1936,7 @@
           "players": [
             "Maximilian"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Turkey",
@@ -1945,7 +1945,7 @@
           "players": [
             "Ebba Wikström"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -1953,8 +1953,8 @@
       "id": "B07",
       "q": "Fastest goal, minute",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "2",
+      "status": "provisional",
       "answers": [
         {
           "answer": "2",
@@ -1980,7 +1980,7 @@
             "Rickard",
             "Petra"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "3",
@@ -1992,7 +1992,7 @@
             "Ebba Lindström",
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "4",
@@ -2003,7 +2003,7 @@
             "Ludvig Völcker",
             "Gustaf L"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "6",
@@ -2014,7 +2014,7 @@
             "Oscar Hultefors",
             "Johan Leijonhielm"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "0",
@@ -2024,7 +2024,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "1",
@@ -2033,7 +2033,7 @@
           "players": [
             "Simon"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2433,8 +2433,8 @@
       "id": "B13",
       "q": "Most yellow cards, single match",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "8",
+      "status": "provisional",
       "answers": [
         {
           "answer": "7",
@@ -2450,7 +2450,7 @@
             "Matilda",
             "Johan Leijonhielm"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "9",
@@ -2464,7 +2464,7 @@
             "Gustaf L",
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "10",
@@ -2476,7 +2476,7 @@
             "Solveig",
             "Simon"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "5",
@@ -2488,7 +2488,7 @@
             "Ebba Örtenblad",
             "Felice Gelin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "8",
@@ -2499,7 +2499,7 @@
             "David",
             "Oscar Hultefors"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "0",
@@ -2509,7 +2509,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "6",
@@ -2519,7 +2519,7 @@
             "Erik Engberg",
             "Ludvig Völcker"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "11",
@@ -2528,7 +2528,7 @@
           "players": [
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "12",
@@ -2537,7 +2537,7 @@
           "players": [
             "Dani"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },

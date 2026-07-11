@@ -613,6 +613,27 @@ if _b09 and _b09["status"] != "tbd":
         _b09["current"] = str(_etp)
         _b09["normSet"] = {norm_answer(str(_etp))}
 
+# Bonus B06 / B07 / B13 = most yellow cards by team / fastest goal minute / most
+# yellow cards in a single match. football-data.org's free tier carries no goals or
+# bookings, so fetch_events.py derives these from ESPN match events into
+# _bonus_stats.json; read it and fill each as a "so far" provisional answer — but
+# ONLY while the hand-maintained key is still empty (tbd). The moment Andreas types
+# a value in Results!BO (marking it Decided or otherwise), the human answer wins and
+# the auto value backs off, exactly like every other hand-maintained bonus.
+try:
+    with open("_bonus_stats.json", encoding="utf-8") as _f:
+        _bstats = json.load(_f)
+except (json.JSONDecodeError, OSError):
+    _bstats = {}
+for _bid in ("B06", "B07", "B13"):
+    _cur = (_bstats.get(_bid) or {}).get("current")
+    _bk = answer_key.get(_bid)
+    if _bk and _cur and _bk["status"] == "tbd":
+        _bk["current"] = str(_cur)
+        _bk["status"] = "provisional"
+        _bk["normSet"] = {norm_answer(a) for a in
+                          str(_cur).replace(";", ",").split(",") if a.strip()}
+
 # Snapshot which results are resolved as of THIS export, persisted every run as
 # "resolvedLatest". At the next day's rollover the new baseline's start-of-day
 # "resolved" set is seeded from yesterday's LAST export, so each player's "since
