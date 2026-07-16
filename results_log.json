@@ -1,6 +1,17 @@
 {
-  "lastRun": "2026-07-15T21:28:33",
+  "lastRun": "2026-07-16T16:29:06",
   "applied": [
+    {
+      "round": "SF",
+      "label": "M102",
+      "home": "England",
+      "away": "Argentina",
+      "hg": 1,
+      "ag": 2,
+      "winner": "Argentina",
+      "pens": false,
+      "when": "2026-07-16T16:29:06"
+    },
     {
       "round": "SF",
       "label": "M101",
