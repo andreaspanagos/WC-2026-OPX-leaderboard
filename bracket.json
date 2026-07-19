@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-16 16:29",
+    "lastRefresh": "2026-07-19 10:39",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 659,
+    "maxAvailable": 674,
     "drawn": true
   },
   "matches": [
@@ -992,8 +992,8 @@
       "home": "France",
       "away": "England",
       "kickoff": "2026-07-18 23:00",
-      "hg": null,
-      "ag": null,
+      "hg": 4,
+      "ag": 6,
       "winner": null,
       "pens": false,
       "homePick": {

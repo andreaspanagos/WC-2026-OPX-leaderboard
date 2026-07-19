@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-16 16:29",
+    "lastRefresh": "2026-07-19 10:39",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 659
+    "maxAvailable": 674
   },
   "rows": [
     {
@@ -14,19 +14,19 @@
       "bonus": 20,
       "total": 415,
       "prevRank": 1,
-      "pointsToday": 15,
-      "pctMax": 0.6297
+      "pointsToday": 0,
+      "pctMax": 0.6157
     },
     {
       "rank": 2,
       "player": "Ebba Wikström",
       "group": 94,
       "ko": 282,
-      "bonus": 20,
-      "total": 396,
+      "bonus": 15,
+      "total": 391,
       "prevRank": 2,
-      "pointsToday": 15,
-      "pctMax": 0.6009
+      "pointsToday": -5,
+      "pctMax": 0.5801
     },
     {
       "rank": 3,
@@ -35,9 +35,9 @@
       "ko": 270,
       "bonus": 25,
       "total": 388,
-      "prevRank": 5,
-      "pointsToday": 15,
-      "pctMax": 0.5888
+      "prevRank": 3,
+      "pointsToday": 0,
+      "pctMax": 0.5757
     },
     {
       "rank": 4,
@@ -46,9 +46,20 @@
       "ko": 270,
       "bonus": 25,
       "total": 380,
+      "prevRank": 4,
+      "pointsToday": 0,
+      "pctMax": 0.5638
+    },
+    {
+      "rank": 5,
+      "player": "Matilda",
+      "group": 84,
+      "ko": 270,
+      "bonus": 25,
+      "total": 379,
       "prevRank": 7,
-      "pointsToday": 15,
-      "pctMax": 0.5766
+      "pointsToday": 5,
+      "pctMax": 0.5623
     },
     {
       "rank": 5,
@@ -57,31 +68,20 @@
       "ko": 264,
       "bonus": 20,
       "total": 379,
-      "prevRank": 3,
+      "prevRank": 5,
       "pointsToday": 0,
-      "pctMax": 0.5751
+      "pctMax": 0.5623
     },
     {
-      "rank": 6,
+      "rank": 7,
       "player": "Boris",
       "group": 98,
       "ko": 258,
       "bonus": 20,
       "total": 376,
-      "prevRank": 4,
+      "prevRank": 6,
       "pointsToday": 0,
-      "pctMax": 0.5706
-    },
-    {
-      "rank": 7,
-      "player": "Matilda",
-      "group": 84,
-      "ko": 270,
-      "bonus": 20,
-      "total": 374,
-      "prevRank": 12,
-      "pointsToday": 15,
-      "pctMax": 0.5675
+      "pctMax": 0.5579
     },
     {
       "rank": 8,
@@ -90,9 +90,9 @@
       "ko": 261,
       "bonus": 20,
       "total": 371,
-      "prevRank": 13,
-      "pointsToday": 15,
-      "pctMax": 0.563
+      "prevRank": 8,
+      "pointsToday": 0,
+      "pctMax": 0.5504
     },
     {
       "rank": 9,
@@ -101,9 +101,9 @@
       "ko": 237,
       "bonus": 30,
       "total": 370,
-      "prevRank": 6,
+      "prevRank": 9,
       "pointsToday": 0,
-      "pctMax": 0.5615
+      "pctMax": 0.549
     },
     {
       "rank": 10,
@@ -112,9 +112,9 @@
       "ko": 267,
       "bonus": 10,
       "total": 369,
-      "prevRank": 14,
-      "pointsToday": 15,
-      "pctMax": 0.5599
+      "prevRank": 10,
+      "pointsToday": 0,
+      "pctMax": 0.5475
     },
     {
       "rank": 11,
@@ -123,86 +123,86 @@
       "ko": 261,
       "bonus": 20,
       "total": 368,
-      "prevRank": 15,
-      "pointsToday": 15,
-      "pctMax": 0.5584
+      "prevRank": 11,
+      "pointsToday": 0,
+      "pctMax": 0.546
     },
     {
       "rank": 12,
+      "player": "Andreas Panagos",
+      "group": 78,
+      "ko": 258,
+      "bonus": 30,
+      "total": 366,
+      "prevRank": 18,
+      "pointsToday": 5,
+      "pctMax": 0.543
+    },
+    {
+      "rank": 13,
       "player": "Ebba Örtenblad",
       "group": 88,
       "ko": 252,
       "bonus": 25,
       "total": 365,
-      "prevRank": 17,
-      "pointsToday": 15,
-      "pctMax": 0.5539
+      "prevRank": 12,
+      "pointsToday": 0,
+      "pctMax": 0.5415
     },
     {
-      "rank": 12,
+      "rank": 13,
       "player": "Felice Gelin",
       "group": 88,
       "ko": 252,
       "bonus": 25,
       "total": 365,
-      "prevRank": 17,
-      "pointsToday": 15,
-      "pctMax": 0.5539
+      "prevRank": 12,
+      "pointsToday": 0,
+      "pctMax": 0.5415
     },
     {
-      "rank": 14,
+      "rank": 15,
       "player": "David",
       "group": 85,
       "ko": 249,
       "bonus": 30,
       "total": 364,
-      "prevRank": 19,
-      "pointsToday": 15,
-      "pctMax": 0.5524
+      "prevRank": 14,
+      "pointsToday": 0,
+      "pctMax": 0.5401
     },
     {
-      "rank": 14,
+      "rank": 15,
       "player": "Simon",
       "group": 86,
       "ko": 258,
       "bonus": 20,
       "total": 364,
-      "prevRank": 8,
+      "prevRank": 14,
       "pointsToday": 0,
-      "pctMax": 0.5524
+      "pctMax": 0.5401
     },
     {
-      "rank": 16,
+      "rank": 17,
       "player": "Elin",
       "group": 95,
       "ko": 243,
       "bonus": 25,
       "total": 363,
-      "prevRank": 9,
+      "prevRank": 16,
       "pointsToday": 0,
-      "pctMax": 0.5508
+      "pctMax": 0.5386
     },
     {
-      "rank": 17,
+      "rank": 18,
       "player": "Ludvig Völcker",
       "group": 87,
       "ko": 255,
       "bonus": 20,
       "total": 362,
-      "prevRank": 10,
+      "prevRank": 17,
       "pointsToday": 0,
-      "pctMax": 0.5493
-    },
-    {
-      "rank": 18,
-      "player": "Andreas Panagos",
-      "group": 78,
-      "ko": 258,
-      "bonus": 25,
-      "total": 361,
-      "prevRank": 11,
-      "pointsToday": 0,
-      "pctMax": 0.5478
+      "pctMax": 0.5371
     },
     {
       "rank": 19,
@@ -211,9 +211,9 @@
       "ko": 249,
       "bonus": 15,
       "total": 359,
-      "prevRank": 20,
-      "pointsToday": 15,
-      "pctMax": 0.5448
+      "prevRank": 19,
+      "pointsToday": 0,
+      "pctMax": 0.5326
     },
     {
       "rank": 20,
@@ -222,9 +222,9 @@
       "ko": 252,
       "bonus": 20,
       "total": 355,
-      "prevRank": 24,
-      "pointsToday": 15,
-      "pctMax": 0.5387
+      "prevRank": 20,
+      "pointsToday": 0,
+      "pctMax": 0.5267
     },
     {
       "rank": 21,
@@ -233,9 +233,9 @@
       "ko": 243,
       "bonus": 20,
       "total": 352,
-      "prevRank": 16,
+      "prevRank": 21,
       "pointsToday": 0,
-      "pctMax": 0.5341
+      "pctMax": 0.5223
     },
     {
       "rank": 22,
@@ -244,9 +244,9 @@
       "ko": 252,
       "bonus": 15,
       "total": 344,
-      "prevRank": 20,
+      "prevRank": 22,
       "pointsToday": 0,
-      "pctMax": 0.522
+      "pctMax": 0.5104
     },
     {
       "rank": 23,
@@ -255,9 +255,9 @@
       "ko": 240,
       "bonus": 20,
       "total": 342,
-      "prevRank": 22,
+      "prevRank": 23,
       "pointsToday": 0,
-      "pctMax": 0.519
+      "pctMax": 0.5074
     },
     {
       "rank": 24,
@@ -266,9 +266,9 @@
       "ko": 228,
       "bonus": 25,
       "total": 341,
-      "prevRank": 23,
+      "prevRank": 24,
       "pointsToday": 0,
-      "pctMax": 0.5175
+      "pctMax": 0.5059
     },
     {
       "rank": 25,
@@ -277,9 +277,9 @@
       "ko": 234,
       "bonus": 10,
       "total": 337,
-      "prevRank": 27,
-      "pointsToday": 15,
-      "pctMax": 0.5114
+      "prevRank": 25,
+      "pointsToday": 0,
+      "pctMax": 0.5
     },
     {
       "rank": 26,
@@ -288,9 +288,9 @@
       "ko": 225,
       "bonus": 20,
       "total": 336,
-      "prevRank": 25,
+      "prevRank": 26,
       "pointsToday": 0,
-      "pctMax": 0.5099
+      "pctMax": 0.4985
     },
     {
       "rank": 27,
@@ -299,9 +299,9 @@
       "ko": 240,
       "bonus": 10,
       "total": 331,
-      "prevRank": 26,
+      "prevRank": 27,
       "pointsToday": 0,
-      "pctMax": 0.5023
+      "pctMax": 0.4911
     },
     {
       "rank": 28,
@@ -312,7 +312,7 @@
       "total": 312,
       "prevRank": 28,
       "pointsToday": 0,
-      "pctMax": 0.4734
+      "pctMax": 0.4629
     },
     {
       "rank": 28,
@@ -321,9 +321,9 @@
       "ko": 216,
       "bonus": 15,
       "total": 312,
-      "prevRank": 30,
-      "pointsToday": 15,
-      "pctMax": 0.4734
+      "prevRank": 28,
+      "pointsToday": 0,
+      "pctMax": 0.4629
     },
     {
       "rank": 30,
@@ -332,9 +332,9 @@
       "ko": 207,
       "bonus": 10,
       "total": 309,
-      "prevRank": 29,
+      "prevRank": 30,
       "pointsToday": 0,
-      "pctMax": 0.4689
+      "pctMax": 0.4585
     },
     {
       "rank": 31,
@@ -345,7 +345,7 @@
       "total": 249,
       "prevRank": 31,
       "pointsToday": 0,
-      "pctMax": 0.3778
+      "pctMax": 0.3694
     }
   ]
 }

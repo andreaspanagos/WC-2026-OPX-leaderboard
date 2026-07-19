@@ -1,6 +1,17 @@
 {
-  "lastRun": "2026-07-16T16:29:06",
+  "lastRun": "2026-07-19T10:40:02",
   "applied": [
+    {
+      "round": "Bronze",
+      "label": "M103",
+      "home": "France",
+      "away": "England",
+      "hg": 4,
+      "ag": 6,
+      "winner": "England",
+      "pens": false,
+      "when": "2026-07-19T10:40:02"
+    },
     {
       "round": "SF",
       "label": "M102",
