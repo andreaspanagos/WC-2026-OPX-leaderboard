@@ -507,6 +507,20 @@
     .tb-soon { color: #9fe0a6; }
     .tb-empty { font-size: 0.85rem; color: #d7ddf4; }
 
+    /* tournament-complete champion hero (reuses the #today-banner container) */
+    .champ-hero { display: flex; align-items: center; gap: 0.9rem; }
+    .champ-trophy { font-size: 2.6rem; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25)); }
+    .champ-body { flex: 1 1 auto; min-width: 0; }
+    .champ-kicker { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #ffd700; }
+    .champ-title { font-size: 1.25rem; font-weight: 800; margin: 0.1rem 0; }
+    .champ-title b { color: #ffd700; }
+    .champ-sub { font-size: 0.85rem; color: #d7ddf4; font-weight: 600; }
+    .champ-pool { font-size: 0.95rem; font-weight: 700; margin-top: 0.45rem; padding-top: 0.45rem; border-top: 1px solid rgba(255,255,255,0.15); }
+    .champ-pool b { color: #fff; }
+    .champ-pool-pts { color: #ffd700; font-weight: 800; margin-left: 0.35rem; }
+    .final-standings-title { width: 100%; text-align: center; font-weight: 800;
+      font-size: 0.95rem; letter-spacing: .3px; color: var(--brand-text); margin: 0.25rem 0 -0.35rem; }
+
     /* pool snapshot (headline numbers) */
     .pool-insights { display: flex; gap: 0.6rem; margin: 0 1rem 1rem; flex-wrap: wrap; }
     .pi-card {
@@ -1938,6 +1952,7 @@
   function renderLeaderboard(data) {
     lbData = data;
     const { meta, rows } = data;
+    const complete = !!(meta && meta.tournamentComplete);
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
     document.getElementById("hdr-maxpoints").textContent    = meta.maxAvailable ?? meta.maxPoints ?? "—";
@@ -1951,7 +1966,7 @@
       card.className = `podium-card ${MEDAL_CLASS[ri]}`;
       card.innerHTML = `
         <div class="podium-medal">${MEDALS[ri]}</div>
-        <div class="podium-rank">Rank ${r.rank}</div>
+        <div class="podium-rank">${complete && r.rank === 1 ? "🏆 Champion" : "Rank " + r.rank}</div>
         <div class="podium-move">${movement(r)}</div>
         <div class="podium-name">${esc(r.player)}</div>
         <div class="podium-total">${fmt(r.total)}</div>
@@ -1988,7 +2003,19 @@
     });
     shameEl.appendChild(shameCards);
     renderEbbaLiga(rows);
-    document.getElementById("podium-row").hidden = false;
+    // Final-standings caption above the players' podium once the tournament is over.
+    const rowEl = document.getElementById("podium-row");
+    let cap = document.getElementById("final-standings-title");
+    if (complete) {
+      if (!cap) {
+        cap = document.createElement("div");
+        cap.id = "final-standings-title";
+        cap.className = "final-standings-title";
+        cap.textContent = "🏁 Final standings";
+        rowEl.insertBefore(cap, rowEl.firstChild);
+      }
+    } else if (cap) { cap.remove(); }
+    rowEl.hidden = false;
 
     // ── Category lens: which metric ranks the table (Overall/Group/KO/Bonus/Today) ──
     const lens = LB_LENS[lbLens] || LB_LENS.total;
@@ -3573,6 +3600,35 @@
   function renderTodayBanner(data) {
     const el = document.getElementById("today-banner");
     if (!el) return;
+    // Tournament complete → a celebratory champion hero replaces the fixtures banner.
+    if (data.meta && data.meta.tournamentComplete) {
+      bannerNextKO = null;
+      const finalM = (data.ko || []).find(m => m.round === "Final") || {};
+      const champ = data.meta.champion || finalM.winner || "";
+      const third = data.meta.third || "";
+      const scoreTxt = (finalM.hg != null && finalM.ag != null)
+        ? `${esc(finalM.home)} ${finalM.hg}–${finalM.ag} ${esc(finalM.away)}` : "";
+      const pw = (lbData && lbData.rows && lbData.rows.length) ? lbData.rows[0] : null;
+      const poolLine = pw
+        ? `<div class="champ-pool">🏆 Pool champion: <b>${esc(pw.player)}</b>` +
+          `<span class="champ-pool-pts">${fmt(pw.total)} pts</span></div>` : "";
+      el.innerHTML =
+        `<div class="champ-hero">` +
+          `<div class="champ-trophy">🏆</div>` +
+          `<div class="champ-body">` +
+            `<div class="champ-kicker">Tournament complete · final standings</div>` +
+            `<div class="champ-title">World Champion: <b>${esc(champ)}</b></div>` +
+            ((scoreTxt || third)
+              ? `<div class="champ-sub">` +
+                (scoreTxt ? `Final: ${scoreTxt}` : "") +
+                (third ? ` · 🥉 ${esc(third)} (3rd)` : "") +
+                `</div>` : "") +
+            poolLine +
+          `</div>` +
+        `</div>`;
+      el.hidden = false;
+      return;
+    }
     const all = [];
     (data.groups || []).forEach(g => (g.games || []).forEach(gm => {
       const ko = parseKO(gm.kickoff);

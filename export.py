@@ -746,6 +746,12 @@ available = 3 * games_played + gw_available + ko_available + bonus_open
 if isinstance(available, float) and available.is_integer():
     available = int(available)
 meta["maxAvailable"] = available
+# Tournament-complete signal for the site's end-of-tournament presentation:
+# a champion is only crowned once the Final is played, and every group game is
+# in. `champion`/`third_team` are single-element sets by that point.
+meta["tournamentComplete"] = bool(champion) and games_played == len(fixtures)
+meta["champion"] = sorted(champion)[0] if len(champion) == 1 else (", ".join(sorted(champion)) or None)
+meta["third"] = sorted(third_team)[0] if len(third_team) == 1 else (", ".join(sorted(third_team)) or None)
 for r in rows:
     t = r.get("total")
     r["pctMax"] = round(t / available, 4) if (available and t is not None) else 0.0
@@ -1375,6 +1381,10 @@ for row in bk.iter_rows(min_row=3, max_row=40, min_col=9, max_col=14, values_onl
     if h and a:
         if rnd_key == "Final":
             winner = h if h in champion else (a if a in champion else None)
+        elif rnd_key == "Bronze":
+            # Bronze winner = the 3rd-place team; it isn't a member of any
+            # NEXT_ROUND set, so mirror the Final/champion special-case.
+            winner = h if h in third_team else (a if a in third_team else None)
         else:
             nxt = ko_round.get(NEXT_ROUND.get(rnd_key), set())
             if rnd_key == "SF":   # SF winners are the Final's two participants
