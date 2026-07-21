@@ -1953,6 +1953,10 @@
     lbData = data;
     const { meta, rows } = data;
     const complete = !!(meta && meta.tournamentComplete);
+    // The champion hero (built in renderTodayBanner from games.json) shows the pool
+    // champion from lbData. Feeds load in parallel, so if games arrived first the hero
+    // rendered without it — re-render now that lbData is set.
+    if (complete && cachedGamesData) renderTodayBanner(cachedGamesData);
     document.getElementById("hdr-refresh").textContent      = meta.lastRefresh  || "—";
     document.getElementById("hdr-participants").textContent = meta.participants  ?? "—";
     document.getElementById("hdr-maxpoints").textContent    = meta.maxAvailable ?? meta.maxPoints ?? "—";
