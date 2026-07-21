@@ -1,9 +1,12 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-21 17:27",
+    "lastRefresh": "2026-07-21 18:22",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 704,
+    "maxAvailable": 729,
+    "tournamentComplete": true,
+    "champion": "Spain",
+    "third": "England",
     "drawn": true
   },
   "matches": [
@@ -994,7 +997,7 @@
       "kickoff": "2026-07-18 23:00",
       "hg": 4,
       "ag": 6,
-      "winner": null,
+      "winner": "England",
       "pens": false,
       "homePick": {
         "pct": 52,

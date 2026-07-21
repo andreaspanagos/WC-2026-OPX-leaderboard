@@ -1,14 +1,17 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-21 17:27",
+    "lastRefresh": "2026-07-21 18:22",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 704
+    "maxAvailable": 729,
+    "tournamentComplete": true,
+    "champion": "Spain",
+    "third": "England"
   },
   "players": [
     "Jacob Cederberg",
-    "Ebba Wikström",
     "Anna",
+    "Ebba Wikström",
     "Daniel",
     "Matilda",
     "Boris",
@@ -16,25 +19,25 @@
     "Ebba Örtenblad",
     "Simon",
     "Elin",
-    "Ludvig Völcker",
     "Oscar Hultefors",
-    "Maximilian",
+    "Ludvig Völcker",
     "Tim",
-    "Klas",
+    "Maximilian",
     "Erik Engberg",
-    "Jakob Hägglund",
-    "Rickard",
     "Solveig",
-    "Andreas Panagos",
-    "Christoffer",
+    "Klas",
     "Felice Gelin",
-    "Ebba Lindström",
+    "Jakob Hägglund",
+    "Christoffer",
     "David",
+    "Andreas Panagos",
+    "Rickard",
+    "Ebba Lindström",
     "Johan Leijonhielm",
-    "Filippa Rosell",
     "Frida Björning Lundqvist",
-    "Gustaf L",
     "Petra",
+    "Filippa Rosell",
+    "Gustaf L",
     "Alex J",
     "Lukas Källén"
   ],
@@ -826,8 +829,8 @@
       "championPct": 58,
       "championBy": [
         "Jacob Cederberg",
-        "Ebba Wikström",
         "Anna",
+        "Ebba Wikström",
         "Daniel",
         "Matilda",
         "Boris",
@@ -835,8 +838,8 @@
         "Ebba Örtenblad",
         "Simon",
         "Elin",
-        "Ludvig Völcker",
         "Oscar Hultefors",
+        "Ludvig Völcker",
         "Tim",
         "Erik Engberg",
         "Jakob Hägglund",
@@ -895,12 +898,12 @@
       "championPct": 26,
       "championBy": [
         "Klas",
-        "Andreas Panagos",
         "Christoffer",
-        "Ebba Lindström",
         "David",
-        "Filippa Rosell",
+        "Andreas Panagos",
+        "Ebba Lindström",
         "Frida Björning Lundqvist",
+        "Filippa Rosell",
         "Alex J"
       ]
     },
@@ -1303,13 +1306,13 @@
             "Ebba Örtenblad",
             "Simon",
             "Elin",
-            "Ludvig Völcker",
             "Oscar Hultefors",
+            "Ludvig Völcker",
             "Maximilian",
             "Solveig",
-            "Andreas Panagos",
             "Felice Gelin",
             "David",
+            "Andreas Panagos",
             "Filippa Rosell",
             "Lukas Källén"
           ],
@@ -1335,8 +1338,8 @@
           "pct": 16,
           "players": [
             "Jakob Hägglund",
-            "Rickard",
             "Christoffer",
+            "Rickard",
             "Ebba Lindström",
             "Gustaf L"
           ],
@@ -1393,11 +1396,11 @@
             "Maximilian",
             "Erik Engberg",
             "Solveig",
-            "Andreas Panagos",
             "Felice Gelin",
+            "Andreas Panagos",
             "Johan Leijonhielm",
-            "Filippa Rosell",
             "Frida Björning Lundqvist",
+            "Filippa Rosell",
             "Alex J"
           ],
           "hit": false
@@ -1412,10 +1415,10 @@
             "Matilda",
             "Tim",
             "Jakob Hägglund",
-            "Rickard",
             "Christoffer",
-            "Ebba Lindström",
             "David",
+            "Rickard",
+            "Ebba Lindström",
             "Gustaf L"
           ],
           "hit": false
@@ -1482,7 +1485,7 @@
       "q": "Total number of goals (all tournament)",
       "pts": 5,
       "current": "308",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "190–199",
@@ -1541,9 +1544,9 @@
           "players": [
             "Daniel",
             "Elin",
-            "Klas",
             "Erik Engberg",
             "Petra",
+            "Klas",
             "Alex J"
           ],
           "hit": false
@@ -1617,8 +1620,8 @@
       "id": "B04",
       "q": "Golden Ball (Player of the tournament)",
       "pts": 10,
-      "current": null,
-      "status": "tbd",
+      "current": "Rodri",
+      "status": "decided",
       "answers": [
         {
           "answer": "Lamine Yamal",
@@ -1626,21 +1629,21 @@
           "pct": 45,
           "players": [
             "Jacob Cederberg",
-            "Ebba Wikström",
             "Anna",
+            "Ebba Wikström",
             "Daniel",
             "Dani",
             "Simon",
-            "Ludvig Völcker",
             "Oscar Hultefors",
+            "Ludvig Völcker",
             "Maximilian",
-            "Klas",
             "Erik Engberg",
             "Solveig",
+            "Klas",
             "Johan Leijonhielm",
             "Gustaf L"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Kylian Mbappé",
@@ -1651,12 +1654,12 @@
             "Boris",
             "Tim",
             "Jakob Hägglund",
-            "Andreas Panagos",
             "Christoffer",
-            "Ebba Lindström",
-            "David"
+            "David",
+            "Andreas Panagos",
+            "Ebba Lindström"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "0",
@@ -1666,7 +1669,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Michael Olise",
@@ -1676,7 +1679,7 @@
             "Rickard",
             "Frida Björning Lundqvist"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Oyarzabal",
@@ -1686,7 +1689,7 @@
             "Ebba Örtenblad",
             "Felice Gelin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Bruno Fernandes",
@@ -1695,7 +1698,7 @@
           "players": [
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Harry Kane",
@@ -1704,7 +1707,7 @@
           "players": [
             "Elin"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Pedri",
@@ -1713,7 +1716,7 @@
           "players": [
             "Petra"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -1721,8 +1724,8 @@
       "id": "B05",
       "q": "Golden Boot (Most goals, player)",
       "pts": 10,
-      "current": null,
-      "status": "tbd",
+      "current": "Kylian Mbappé",
+      "status": "decided",
       "answers": [
         {
           "answer": "Kylian Mbappé",
@@ -1730,8 +1733,8 @@
           "pct": 61,
           "players": [
             "Jacob Cederberg",
-            "Ebba Wikström",
             "Anna",
+            "Ebba Wikström",
             "Daniel",
             "Matilda",
             "Boris",
@@ -1739,17 +1742,17 @@
             "Ebba Örtenblad",
             "Simon",
             "Elin",
-            "Maximilian",
             "Tim",
+            "Maximilian",
             "Erik Engberg",
-            "Jakob Hägglund",
             "Solveig",
-            "Christoffer",
             "Felice Gelin",
+            "Jakob Hägglund",
+            "Christoffer",
             "David",
             "Johan Leijonhielm"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "Harry Kane",
@@ -1761,7 +1764,7 @@
             "Frida Björning Lundqvist",
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "0",
@@ -1771,7 +1774,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Erling Haaland",
@@ -1781,7 +1784,7 @@
             "Klas",
             "Andreas Panagos"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Cristiano Ronaldo",
@@ -1790,7 +1793,7 @@
           "players": [
             "Petra"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Julián Álvarez",
@@ -1799,7 +1802,7 @@
           "players": [
             "Oscar Hultefors"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Viktor Gyökeres",
@@ -1808,7 +1811,7 @@
           "players": [
             "Gustaf L"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Vinícius Júnior",
@@ -1817,7 +1820,7 @@
           "players": [
             "Rickard"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -1826,7 +1829,7 @@
       "q": "Most yellow cards, team",
       "pts": 5,
       "current": "Argentina",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "Argentina",
@@ -1839,13 +1842,13 @@
             "Dani",
             "Ebba Örtenblad",
             "Simon",
-            "Ludvig Völcker",
             "Oscar Hultefors",
-            "Klas",
+            "Ludvig Völcker",
             "Solveig",
-            "Andreas Panagos",
+            "Klas",
             "Felice Gelin",
             "David",
+            "Andreas Panagos",
             "Petra"
           ],
           "hit": true
@@ -1954,7 +1957,7 @@
       "q": "Fastest goal, minute",
       "pts": 5,
       "current": "2",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "2",
@@ -1969,15 +1972,15 @@
             "Dani",
             "Ebba Örtenblad",
             "Elin",
-            "Maximilian",
             "Tim",
-            "Klas",
-            "Rickard",
+            "Maximilian",
             "Solveig",
-            "Andreas Panagos",
-            "Christoffer",
+            "Klas",
             "Felice Gelin",
+            "Christoffer",
             "David",
+            "Andreas Panagos",
+            "Rickard",
             "Petra"
           ],
           "hit": true
@@ -2042,7 +2045,7 @@
       "q": "Highest scoring single match (goals)",
       "pts": 5,
       "current": "10",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "4",
@@ -2057,8 +2060,8 @@
             "Oscar Hultefors",
             "Erik Engberg",
             "Felice Gelin",
-            "Filippa Rosell",
             "Petra",
+            "Filippa Rosell",
             "Alex J"
           ],
           "hit": false
@@ -2086,8 +2089,8 @@
           "players": [
             "Ebba Wikström",
             "Klas",
-            "Andreas Panagos",
             "Christoffer",
+            "Andreas Panagos",
             "Ebba Lindström"
           ],
           "hit": false
@@ -2130,7 +2133,7 @@
       "q": "Number of extra-time or penalty shoot-outs in knockout stage",
       "pts": 5,
       "current": "9",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "0",
@@ -2198,8 +2201,8 @@
           "pct": 10,
           "players": [
             "Ebba Örtenblad",
-            "Rickard",
-            "Felice Gelin"
+            "Felice Gelin",
+            "Rickard"
           ],
           "hit": false
         },
@@ -2257,8 +2260,8 @@
       "id": "B10",
       "q": "Final goes to extra time? (Yes/No)",
       "pts": 5,
-      "current": null,
-      "status": "tbd",
+      "current": "Yes",
+      "status": "decided",
       "answers": [
         {
           "answer": "No",
@@ -2266,8 +2269,8 @@
           "pct": 77,
           "players": [
             "Jacob Cederberg",
-            "Ebba Wikström",
             "Anna",
+            "Ebba Wikström",
             "Daniel",
             "Matilda",
             "Boris",
@@ -2275,22 +2278,22 @@
             "Ebba Örtenblad",
             "Elin",
             "Ludvig Völcker",
-            "Maximilian",
             "Tim",
-            "Klas",
-            "Jakob Hägglund",
-            "Rickard",
+            "Maximilian",
             "Solveig",
-            "Andreas Panagos",
-            "Christoffer",
+            "Klas",
             "Felice Gelin",
+            "Jakob Hägglund",
+            "Christoffer",
             "David",
+            "Andreas Panagos",
+            "Rickard",
             "Johan Leijonhielm",
-            "Gustaf L",
             "Petra",
+            "Gustaf L",
             "Alex J"
           ],
-          "hit": null
+          "hit": false
         },
         {
           "answer": "Yes",
@@ -2303,7 +2306,7 @@
             "Ebba Lindström",
             "Frida Björning Lundqvist"
           ],
-          "hit": null
+          "hit": true
         },
         {
           "answer": "0",
@@ -2313,7 +2316,7 @@
             "Filippa Rosell",
             "Lukas Källén"
           ],
-          "hit": null
+          "hit": false
         }
       ]
     },
@@ -2330,8 +2333,8 @@
           "pct": 90,
           "players": [
             "Jacob Cederberg",
-            "Ebba Wikström",
             "Anna",
+            "Ebba Wikström",
             "Daniel",
             "Matilda",
             "Boris",
@@ -2339,23 +2342,23 @@
             "Ebba Örtenblad",
             "Simon",
             "Elin",
-            "Ludvig Völcker",
             "Oscar Hultefors",
-            "Maximilian",
+            "Ludvig Völcker",
             "Tim",
-            "Klas",
+            "Maximilian",
             "Erik Engberg",
-            "Jakob Hägglund",
             "Solveig",
-            "Andreas Panagos",
-            "Christoffer",
+            "Klas",
             "Felice Gelin",
+            "Jakob Hägglund",
+            "Christoffer",
             "David",
+            "Andreas Panagos",
             "Johan Leijonhielm",
-            "Filippa Rosell",
             "Frida Björning Lundqvist",
-            "Gustaf L",
             "Petra",
+            "Filippa Rosell",
+            "Gustaf L",
             "Lukas Källén"
           ],
           "hit": true
@@ -2392,20 +2395,20 @@
             "Dani",
             "Simon",
             "Elin",
-            "Ludvig Völcker",
             "Oscar Hultefors",
-            "Maximilian",
+            "Ludvig Völcker",
             "Tim",
+            "Maximilian",
+            "Solveig",
             "Klas",
             "Jakob Hägglund",
-            "Rickard",
-            "Solveig",
-            "Andreas Panagos",
             "Christoffer",
-            "Ebba Lindström",
             "David",
-            "Filippa Rosell",
+            "Andreas Panagos",
+            "Rickard",
+            "Ebba Lindström",
             "Frida Björning Lundqvist",
+            "Filippa Rosell",
             "Gustaf L",
             "Alex J"
           ],
@@ -2434,7 +2437,7 @@
       "q": "Most yellow cards, single match",
       "pts": 5,
       "current": "8",
-      "status": "provisional",
+      "status": "decided",
       "answers": [
         {
           "answer": "7",
@@ -2443,8 +2446,8 @@
           "players": [
             "Ebba Wikström",
             "Matilda",
-            "Maximilian",
             "Tim",
+            "Maximilian",
             "Jakob Hägglund",
             "Christoffer",
             "Johan Leijonhielm",
@@ -2461,8 +2464,8 @@
             "Boris",
             "Klas",
             "Rickard",
-            "Gustaf L",
-            "Petra"
+            "Petra",
+            "Gustaf L"
           ],
           "hit": false
         },
@@ -2496,8 +2499,8 @@
           "pct": 10,
           "players": [
             "Oscar Hultefors",
-            "Andreas Panagos",
-            "David"
+            "David",
+            "Andreas Panagos"
           ],
           "hit": true
         },
@@ -2554,8 +2557,8 @@
           "pct": 81,
           "players": [
             "Jacob Cederberg",
-            "Ebba Wikström",
             "Anna",
+            "Ebba Wikström",
             "Daniel",
             "Matilda",
             "Boris",
@@ -2563,20 +2566,20 @@
             "Ebba Örtenblad",
             "Simon",
             "Elin",
-            "Ludvig Völcker",
             "Oscar Hultefors",
-            "Maximilian",
+            "Ludvig Völcker",
             "Tim",
+            "Maximilian",
             "Erik Engberg",
-            "Jakob Hägglund",
             "Solveig",
-            "Andreas Panagos",
-            "Christoffer",
             "Felice Gelin",
-            "Ebba Lindström",
+            "Jakob Hägglund",
+            "Christoffer",
             "David",
-            "Filippa Rosell",
+            "Andreas Panagos",
+            "Ebba Lindström",
             "Frida Björning Lundqvist",
+            "Filippa Rosell",
             "Alex J"
           ],
           "hit": true
@@ -2631,17 +2634,17 @@
             "Ebba Örtenblad",
             "Simon",
             "Elin",
-            "Ludvig Völcker",
             "Oscar Hultefors",
+            "Ludvig Völcker",
             "Maximilian",
-            "Klas",
             "Erik Engberg",
-            "Jakob Hägglund",
-            "Rickard",
-            "Christoffer",
+            "Klas",
             "Felice Gelin",
-            "Ebba Lindström",
+            "Jakob Hägglund",
+            "Christoffer",
             "David",
+            "Rickard",
+            "Ebba Lindström",
             "Johan Leijonhielm",
             "Frida Björning Lundqvist",
             "Gustaf L",

@@ -1,9 +1,12 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-21 17:27",
+    "lastRefresh": "2026-07-21 18:22",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 704
+    "maxAvailable": 729,
+    "tournamentComplete": true,
+    "champion": "Spain",
+    "third": "England"
   },
   "rows": [
     {
@@ -11,113 +14,124 @@
       "player": "Jacob Cederberg",
       "group": 95,
       "ko": 330,
-      "bonus": 25,
-      "total": 450,
+      "bonus": 35,
+      "total": 460,
       "prevRank": 1,
-      "pointsToday": 35,
-      "pctMax": 0.6392
+      "pointsToday": 45,
+      "pctMax": 0.631
     },
     {
       "rank": 2,
       "player": "Anna",
       "group": 93,
       "ko": 300,
-      "bonus": 30,
-      "total": 423,
+      "bonus": 40,
+      "total": 433,
       "prevRank": 3,
-      "pointsToday": 35,
-      "pctMax": 0.6009
+      "pointsToday": 45,
+      "pctMax": 0.594
     },
     {
       "rank": 3,
       "player": "Ebba Wikström",
       "group": 94,
       "ko": 312,
-      "bonus": 15,
-      "total": 421,
+      "bonus": 25,
+      "total": 431,
       "prevRank": 2,
-      "pointsToday": 30,
-      "pctMax": 0.598
+      "pointsToday": 40,
+      "pctMax": 0.5912
     },
     {
       "rank": 4,
       "player": "Daniel",
       "group": 85,
       "ko": 300,
-      "bonus": 30,
-      "total": 415,
+      "bonus": 40,
+      "total": 425,
       "prevRank": 4,
-      "pointsToday": 35,
-      "pctMax": 0.5895
+      "pointsToday": 45,
+      "pctMax": 0.583
     },
     {
       "rank": 5,
       "player": "Matilda",
       "group": 84,
       "ko": 300,
-      "bonus": 25,
-      "total": 409,
+      "bonus": 35,
+      "total": 419,
       "prevRank": 5,
-      "pointsToday": 30,
-      "pctMax": 0.581
+      "pointsToday": 40,
+      "pctMax": 0.5748
     },
     {
       "rank": 6,
       "player": "Boris",
       "group": 98,
       "ko": 288,
-      "bonus": 20,
-      "total": 406,
+      "bonus": 30,
+      "total": 416,
       "prevRank": 7,
-      "pointsToday": 30,
-      "pctMax": 0.5767
+      "pointsToday": 40,
+      "pctMax": 0.5706
     },
     {
       "rank": 7,
       "player": "Dani",
       "group": 87,
       "ko": 291,
-      "bonus": 25,
-      "total": 403,
+      "bonus": 35,
+      "total": 413,
       "prevRank": 11,
-      "pointsToday": 35,
-      "pctMax": 0.5724
+      "pointsToday": 45,
+      "pctMax": 0.5665
     },
     {
       "rank": 8,
       "player": "Ebba Örtenblad",
       "group": 88,
       "ko": 282,
-      "bonus": 30,
-      "total": 400,
+      "bonus": 40,
+      "total": 410,
       "prevRank": 13,
-      "pointsToday": 35,
-      "pctMax": 0.5682
+      "pointsToday": 45,
+      "pctMax": 0.5624
     },
     {
       "rank": 9,
       "player": "Simon",
       "group": 86,
       "ko": 288,
-      "bonus": 20,
-      "total": 394,
+      "bonus": 35,
+      "total": 409,
       "prevRank": 15,
-      "pointsToday": 30,
-      "pctMax": 0.5597
+      "pointsToday": 45,
+      "pctMax": 0.561
     },
     {
       "rank": 10,
       "player": "Elin",
       "group": 95,
       "ko": 273,
-      "bonus": 25,
-      "total": 393,
+      "bonus": 35,
+      "total": 403,
       "prevRank": 17,
-      "pointsToday": 30,
-      "pctMax": 0.5582
+      "pointsToday": 40,
+      "pctMax": 0.5528
     },
     {
       "rank": 11,
+      "player": "Oscar Hultefors",
+      "group": 83,
+      "ko": 282,
+      "bonus": 30,
+      "total": 395,
+      "prevRank": 20,
+      "pointsToday": 40,
+      "pctMax": 0.5418
+    },
+    {
+      "rank": 12,
       "player": "Ludvig Völcker",
       "group": 87,
       "ko": 285,
@@ -125,54 +139,98 @@
       "total": 392,
       "prevRank": 18,
       "pointsToday": 30,
-      "pctMax": 0.5568
+      "pctMax": 0.5377
     },
     {
       "rank": 12,
-      "player": "Oscar Hultefors",
-      "group": 83,
-      "ko": 282,
-      "bonus": 25,
-      "total": 390,
-      "prevRank": 20,
-      "pointsToday": 35,
-      "pctMax": 0.554
-    },
-    {
-      "rank": 13,
       "player": "Tim",
       "group": 89,
       "ko": 273,
-      "bonus": 20,
-      "total": 382,
+      "bonus": 30,
+      "total": 392,
       "prevRank": 21,
-      "pointsToday": 30,
-      "pctMax": 0.5426
+      "pointsToday": 40,
+      "pctMax": 0.5377
     },
     {
       "rank": 14,
       "player": "Maximilian",
       "group": 95,
       "ko": 264,
-      "bonus": 20,
-      "total": 379,
+      "bonus": 30,
+      "total": 389,
       "prevRank": 5,
-      "pointsToday": 0,
-      "pctMax": 0.5384
+      "pointsToday": 10,
+      "pctMax": 0.5336
+    },
+    {
+      "rank": 15,
+      "player": "Erik Engberg",
+      "group": 88,
+      "ko": 258,
+      "bonus": 40,
+      "total": 386,
+      "prevRank": 24,
+      "pointsToday": 45,
+      "pctMax": 0.5295
     },
     {
       "rank": 15,
       "player": "Solveig",
       "group": 90,
       "ko": 261,
-      "bonus": 25,
-      "total": 376,
+      "bonus": 35,
+      "total": 386,
       "prevRank": 8,
-      "pointsToday": 5,
-      "pctMax": 0.5341
+      "pointsToday": 15,
+      "pctMax": 0.5295
     },
     {
-      "rank": 16,
+      "rank": 17,
+      "player": "Felice Gelin",
+      "group": 88,
+      "ko": 252,
+      "bonus": 40,
+      "total": 380,
+      "prevRank": 13,
+      "pointsToday": 15,
+      "pctMax": 0.5213
+    },
+    {
+      "rank": 18,
+      "player": "Jakob Hägglund",
+      "group": 91,
+      "ko": 255,
+      "bonus": 30,
+      "total": 376,
+      "prevRank": 26,
+      "pointsToday": 40,
+      "pctMax": 0.5158
+    },
+    {
+      "rank": 19,
+      "player": "Christoffer",
+      "group": 103,
+      "ko": 237,
+      "bonus": 35,
+      "total": 375,
+      "prevRank": 9,
+      "pointsToday": 5,
+      "pctMax": 0.5144
+    },
+    {
+      "rank": 20,
+      "player": "David",
+      "group": 85,
+      "ko": 249,
+      "bonus": 40,
+      "total": 374,
+      "prevRank": 15,
+      "pointsToday": 10,
+      "pctMax": 0.513
+    },
+    {
+      "rank": 20,
       "player": "Klas",
       "group": 92,
       "ko": 267,
@@ -180,10 +238,10 @@
       "total": 374,
       "prevRank": 10,
       "pointsToday": 5,
-      "pctMax": 0.5312
+      "pctMax": 0.513
     },
     {
-      "rank": 17,
+      "rank": 22,
       "player": "Andreas Panagos",
       "group": 78,
       "ko": 258,
@@ -191,65 +249,21 @@
       "total": 371,
       "prevRank": 12,
       "pointsToday": 5,
-      "pctMax": 0.527
-    },
-    {
-      "rank": 17,
-      "player": "Erik Engberg",
-      "group": 88,
-      "ko": 258,
-      "bonus": 25,
-      "total": 371,
-      "prevRank": 24,
-      "pointsToday": 30,
-      "pctMax": 0.527
-    },
-    {
-      "rank": 19,
-      "player": "Felice Gelin",
-      "group": 88,
-      "ko": 252,
-      "bonus": 30,
-      "total": 370,
-      "prevRank": 13,
-      "pointsToday": 5,
-      "pctMax": 0.5256
-    },
-    {
-      "rank": 20,
-      "player": "Jakob Hägglund",
-      "group": 91,
-      "ko": 255,
-      "bonus": 20,
-      "total": 366,
-      "prevRank": 26,
-      "pointsToday": 30,
-      "pctMax": 0.5199
-    },
-    {
-      "rank": 21,
-      "player": "Christoffer",
-      "group": 103,
-      "ko": 237,
-      "bonus": 25,
-      "total": 365,
-      "prevRank": 9,
-      "pointsToday": -5,
-      "pctMax": 0.5185
-    },
-    {
-      "rank": 22,
-      "player": "David",
-      "group": 85,
-      "ko": 249,
-      "bonus": 30,
-      "total": 364,
-      "prevRank": 15,
-      "pointsToday": 0,
-      "pctMax": 0.517
+      "pctMax": 0.5089
     },
     {
       "rank": 23,
+      "player": "Ebba Lindström",
+      "group": 95,
+      "ko": 249,
+      "bonus": 20,
+      "total": 364,
+      "prevRank": 19,
+      "pointsToday": 5,
+      "pctMax": 0.4993
+    },
+    {
+      "rank": 24,
       "player": "Rickard",
       "group": 81,
       "ko": 270,
@@ -257,21 +271,32 @@
       "total": 361,
       "prevRank": 27,
       "pointsToday": 30,
-      "pctMax": 0.5128
-    },
-    {
-      "rank": 24,
-      "player": "Ebba Lindström",
-      "group": 95,
-      "ko": 249,
-      "bonus": 15,
-      "total": 359,
-      "prevRank": 19,
-      "pointsToday": 0,
-      "pctMax": 0.5099
+      "pctMax": 0.4952
     },
     {
       "rank": 25,
+      "player": "Johan Leijonhielm",
+      "group": 92,
+      "ko": 237,
+      "bonus": 20,
+      "total": 349,
+      "prevRank": 30,
+      "pointsToday": 40,
+      "pctMax": 0.4787
+    },
+    {
+      "rank": 26,
+      "player": "Frida Björning Lundqvist",
+      "group": 82,
+      "ko": 240,
+      "bonus": 25,
+      "total": 347,
+      "prevRank": 23,
+      "pointsToday": 5,
+      "pctMax": 0.476
+    },
+    {
+      "rank": 26,
       "player": "Petra",
       "group": 81,
       "ko": 246,
@@ -279,10 +304,10 @@
       "total": 347,
       "prevRank": 28,
       "pointsToday": 35,
-      "pctMax": 0.4929
+      "pctMax": 0.476
     },
     {
-      "rank": 26,
+      "rank": 28,
       "player": "Filippa Rosell",
       "group": 77,
       "ko": 252,
@@ -290,29 +315,7 @@
       "total": 344,
       "prevRank": 22,
       "pointsToday": 0,
-      "pctMax": 0.4886
-    },
-    {
-      "rank": 27,
-      "player": "Frida Björning Lundqvist",
-      "group": 82,
-      "ko": 240,
-      "bonus": 20,
-      "total": 342,
-      "prevRank": 23,
-      "pointsToday": 0,
-      "pctMax": 0.4858
-    },
-    {
-      "rank": 28,
-      "player": "Johan Leijonhielm",
-      "group": 92,
-      "ko": 237,
-      "bonus": 10,
-      "total": 339,
-      "prevRank": 30,
-      "pointsToday": 30,
-      "pctMax": 0.4815
+      "pctMax": 0.4719
     },
     {
       "rank": 29,
@@ -323,7 +326,7 @@
       "total": 337,
       "prevRank": 25,
       "pointsToday": 0,
-      "pctMax": 0.4787
+      "pctMax": 0.4623
     },
     {
       "rank": 30,
@@ -334,7 +337,7 @@
       "total": 312,
       "prevRank": 28,
       "pointsToday": 0,
-      "pctMax": 0.4432
+      "pctMax": 0.428
     },
     {
       "rank": 31,
@@ -345,7 +348,7 @@
       "total": 249,
       "prevRank": 31,
       "pointsToday": 0,
-      "pctMax": 0.3537
+      "pctMax": 0.3416
     }
   ]
 }
