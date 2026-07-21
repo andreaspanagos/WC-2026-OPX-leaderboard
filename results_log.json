@@ -1,6 +1,17 @@
 {
-  "lastRun": "2026-07-19T10:40:02",
+  "lastRun": "2026-07-21T17:27:53",
   "applied": [
+    {
+      "round": "Final",
+      "label": "M104",
+      "home": "Spain",
+      "away": "Argentina",
+      "hg": 1,
+      "ag": 0,
+      "winner": "Spain",
+      "pens": false,
+      "when": "2026-07-21T17:27:53"
+    },
     {
       "round": "Bronze",
       "label": "M103",

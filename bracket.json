@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRefresh": "2026-07-19 10:39",
+    "lastRefresh": "2026-07-21 17:27",
     "maxPoints": 729,
     "participants": 31,
-    "maxAvailable": 674,
+    "maxAvailable": 704,
     "drawn": true
   },
   "matches": [
@@ -1026,9 +1026,9 @@
       "home": "Spain",
       "away": "Argentina",
       "kickoff": "2026-07-19 21:00",
-      "hg": null,
-      "ag": null,
-      "winner": null,
+      "hg": 1,
+      "ag": 0,
+      "winner": "Spain",
       "pens": false,
       "homePick": {
         "pct": 58,
