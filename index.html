@@ -1430,6 +1430,73 @@
       /* group tables: hide secondary columns on phones */
       table.gc-table th.opt, table.gc-table td.opt { display:none; }
     }
+
+    /* ─────────── World Cup Wrapped (Spotify-Wrapped-style story) ─────────── */
+    .wr-cta { margin: 0 1rem 1rem; padding: 0.95rem 1.1rem; border-radius: var(--radius);
+      background: linear-gradient(110deg,#7b2ff7,#f72585 55%,#ff8c42); color:#fff;
+      display:flex; align-items:center; justify-content:space-between; gap:0.8rem; cursor:pointer;
+      border:none; width:calc(100% - 2rem); text-align:left; box-shadow: var(--shadow-2);
+      transition: transform .15s ease, box-shadow .15s ease; }
+    .wr-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.28); }
+    .wr-cta-l { display:flex; align-items:center; gap:0.75rem; min-width:0; }
+    .wr-cta-emoji { font-size:2rem; flex:0 0 auto; }
+    .wr-cta-t { font-weight:800; font-size:1.03rem; line-height:1.15; }
+    .wr-cta-s { font-size:0.8rem; opacity:.92; font-weight:600; }
+    .wr-cta-go { font-weight:800; font-size:1.5rem; flex:0 0 auto; }
+
+    .wr-overlay { position:fixed; inset:0; z-index:9999; background:#0b0b12;
+      display:none; align-items:center; justify-content:center; }
+    .wr-overlay.open { display:flex; }
+    .wr-close { position:absolute; top:14px; right:16px; z-index:20; background:rgba(255,255,255,.16);
+      border:none; color:#fff; width:38px; height:38px; border-radius:50%; font-size:1.1rem; cursor:pointer; line-height:1; }
+    .wr-close:hover { background:rgba(255,255,255,.3); }
+    .wr-body { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+
+    .wr-picker { width:100%; max-width:540px; padding:2rem 1.4rem; color:#fff; max-height:100%; overflow:auto; }
+    .wr-picker h2 { font-size:1.7rem; font-weight:800; margin:0 0 .3rem; }
+    .wr-picker p { opacity:.8; margin:0 0 1.1rem; font-size:.9rem; }
+    .wr-search { width:100%; padding:.7rem .9rem; border-radius:10px; border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08); color:#fff; font-size:1rem; margin-bottom:1rem; box-sizing:border-box; }
+    .wr-search::placeholder { color:rgba(255,255,255,.5); }
+    .wr-names { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
+    .wr-name { padding:.7rem .8rem; border-radius:10px; border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.07); color:#fff; font-weight:700; font-size:.92rem; cursor:pointer;
+      text-align:left; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; transition: background .12s; }
+    .wr-name:hover { background:rgba(255,255,255,.22); }
+    .wr-name-rank { opacity:.55; font-weight:600; font-size:.8rem; margin-right:.35rem; }
+
+    .wr-story { position:relative; width:100%; height:100%; max-width:540px; overflow:hidden; background:#111; }
+    .wr-progress { position:absolute; top:10px; left:10px; right:10px; z-index:15; display:flex; gap:4px; }
+    .wr-seg { flex:1; height:3px; border-radius:3px; background:rgba(255,255,255,.32); overflow:hidden; }
+    .wr-seg-fill { display:block; height:100%; width:0; background:#fff; }
+    .wr-slidewrap { position:absolute; inset:0; }
+    .wr-slide { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center;
+      padding:3.4rem 1.8rem 2rem; color:#fff; }
+    .wr-slide.show { animation: wrIn .5s cubic-bezier(.2,.7,.3,1) both; }
+    @keyframes wrIn { from { opacity:0; transform:translateY(16px) scale(.98); } to { opacity:1; transform:none; } }
+    .wr-tap { position:absolute; inset:0; z-index:10; display:flex; }
+    .wr-tap-prev { flex:0 0 32%; cursor:pointer; } .wr-tap-next { flex:1; cursor:pointer; }
+    .wr-kicker { font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; opacity:.85; margin-bottom:.7rem; }
+    .wr-headline { font-size:1.8rem; font-weight:800; line-height:1.18; margin:0; }
+    .wr-big { font-size:5rem; font-weight:900; line-height:.95; letter-spacing:-.03em; margin:.35rem 0; }
+    .wr-big.sm { font-size:3.2rem; line-height:1.05; }
+    .wr-sub { font-size:1.02rem; font-weight:600; opacity:.94; margin-top:.75rem; line-height:1.42; }
+    .wr-scoreline { font-size:2.3rem; font-weight:900; margin:.5rem 0; }
+    .wr-chips { margin-top:.9rem; }
+    .wr-chip { display:inline-block; background:rgba(255,255,255,.18); border-radius:999px;
+      padding:.32rem .8rem; font-weight:800; margin:.25rem .35rem .25rem 0; font-size:.9rem; }
+    .wr-bars { margin-top:1.1rem; position:relative; z-index:12; }
+    .wr-bar { display:flex; align-items:center; gap:.6rem; margin:.5rem 0; font-weight:700; font-size:.92rem; }
+    .wr-bar-name { width:5.6rem; flex:0 0 auto; }
+    .wr-bar-track { flex:1; height:14px; border-radius:7px; background:rgba(255,255,255,.22); overflow:hidden; }
+    .wr-bar-fill { height:100%; border-radius:7px; background:#fff; width:0; animation: wrBar 1s cubic-bezier(.2,.7,.3,1) forwards; }
+    @keyframes wrBar { from { width:0; } }
+    .wr-bar-val { width:2.6rem; text-align:right; flex:0 0 auto; }
+    .wr-foot { position:absolute; left:1.8rem; right:1.8rem; bottom:1.4rem; font-size:.78rem; opacity:.65; z-index:12; }
+    .wr-btn { position:relative; z-index:14; margin-top:1.3rem; background:#fff; color:#111; border:none;
+      border-radius:999px; padding:.62rem 1.25rem; font-weight:800; cursor:pointer; font-size:.95rem; }
+    .wr-btn.ghost { background:rgba(255,255,255,.2); color:#fff; margin-left:.5rem; }
+    @media (max-width:400px){ .wr-big{font-size:4rem;} .wr-names{grid-template-columns:1fr;} .wr-headline{font-size:1.55rem;} }
   </style>
   <!-- Resolve theme before first paint to avoid a flash of the wrong theme -->
   <script>
@@ -1486,6 +1553,7 @@
   <div id="me-prompt" hidden></div>
   <div id="me-hero" hidden></div>
   <div id="today-banner" hidden></div>
+  <div id="wrapped-cta" hidden></div>
   <div id="podium-row" class="podium-row" hidden>
     <div id="podium-section" class="podium"></div>
     <div id="shame-section" class="shame-list"></div>
@@ -2020,6 +2088,21 @@
       }
     } else if (cap) { cap.remove(); }
     rowEl.hidden = false;
+    // "Your World Cup Wrapped" entry point — only once the tournament is complete.
+    const wrCta = document.getElementById("wrapped-cta");
+    if (wrCta) {
+      if (complete) {
+        wrCta.innerHTML =
+          `<button class="wr-cta" type="button">` +
+            `<span class="wr-cta-l"><span class="wr-cta-emoji">🎁</span>` +
+            `<span><span class="wr-cta-t">Your World Cup Wrapped</span><br>` +
+            `<span class="wr-cta-s">A personal recap of your tournament — tap to pick your name</span></span></span>` +
+            `<span class="wr-cta-go">→</span>` +
+          `</button>`;
+        wrCta.querySelector(".wr-cta").onclick = openWrappedPicker;
+        wrCta.hidden = false;
+      } else { wrCta.hidden = true; }
+    }
 
     // ── Category lens: which metric ranks the table (Overall/Group/KO/Bonus/Today) ──
     const lens = LB_LENS[lbLens] || LB_LENS.total;
@@ -3848,6 +3931,262 @@
   }
 
   applyAdmin();
+  // ───────────────────────── World Cup Wrapped ─────────────────────────
+  // Spotify-Wrapped-style personal recap. All slides are computed client-side
+  // from players.json (per-player detail) + leaderboard.json — no new feed.
+  const WR_THEMES = [
+    "linear-gradient(155deg,#7b2ff7,#f72585)", "linear-gradient(155deg,#0575e6,#021b79)",
+    "linear-gradient(155deg,#f7971e,#ff5858)", "linear-gradient(155deg,#11998e,#38ef7d)",
+    "linear-gradient(155deg,#ee0979,#ff6a00)", "linear-gradient(155deg,#8e2de2,#4a00e0)",
+    "linear-gradient(155deg,#e65c00,#f9d423)", "linear-gradient(155deg,#c31432,#240b36)",
+    "linear-gradient(155deg,#1a2980,#26d0ce)", "linear-gradient(155deg,#f953c6,#b91d73)",
+    "linear-gradient(155deg,#2193b0,#6dd5ed)", "linear-gradient(155deg,#3a1c71,#d76d77,#ffaf7b)",
+  ];
+  const WR_DUR = 7000;
+  let wrState = null;   // { name, slides, idx, raf, start }
+
+  function wrOrdinal(n){ const s=["th","st","nd","rd"], v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); }
+  function wrPoolName(){ const e=document.getElementById("pool-name-heading"); return (e&&e.textContent||"").trim(); }
+
+  function wrArchetype(exactRate, avgPct){
+    if (exactRate >= 0.22) return { emoji:"🔮", title:"The Oracle", desc:"Exact scorelines bend to your will." };
+    if (avgPct <= 45)      return { emoji:"🎲", title:"The Maverick", desc:"You back your gut over the crowd." };
+    if (avgPct >= 66)      return { emoji:"🛡️", title:"The Chalk-Eater", desc:"Why fight the odds? You ride the favourites." };
+    return { emoji:"⚖️", title:"The Tactician", desc:"A cool balance of safe and bold." };
+  }
+
+  function wrEnsureOverlay(){
+    let ov = document.getElementById("wr-overlay");
+    if (ov) return ov;
+    ov = document.createElement("div");
+    ov.id = "wr-overlay"; ov.className = "wr-overlay";
+    ov.innerHTML = `<button class="wr-close" aria-label="Close Wrapped">✕</button><div class="wr-body"></div>`;
+    ov.querySelector(".wr-close").onclick = wrClose;
+    document.body.appendChild(ov);
+    document.addEventListener("keydown", e => {
+      if (!ov.classList.contains("open")) return;
+      if (e.key === "Escape") wrClose();
+      else if (e.key === "ArrowRight" && wrState) wrGo(wrState.idx + 1);
+      else if (e.key === "ArrowLeft" && wrState) wrGo(wrState.idx - 1);
+    });
+    return ov;
+  }
+
+  function openWrappedPicker(){
+    const ov = wrEnsureOverlay();
+    const rows = (lbData && lbData.rows) ? lbData.rows.slice() : [];
+    const body = ov.querySelector(".wr-body");
+    body.innerHTML =
+      `<div class="wr-picker"><h2>🎁 Your World Cup Wrapped</h2>` +
+      `<p>Pick your name to rewind your 2026 tournament, ${wrPoolName()}-style.</p>` +
+      `<input class="wr-search" placeholder="Search your name…" autocomplete="off"><div class="wr-names"></div></div>`;
+    const namesEl = body.querySelector(".wr-names");
+    const search = body.querySelector(".wr-search");
+    function draw(f){
+      const q = (f || "").toLowerCase();
+      namesEl.innerHTML = "";
+      rows.filter(r => r.player.toLowerCase().includes(q)).forEach(r => {
+        const b = document.createElement("button");
+        b.className = "wr-name"; b.type = "button";
+        b.innerHTML = `<span class="wr-name-rank">#${r.rank}</span>${esc(r.player)}`;
+        b.onclick = () => startWrapped(r.player);
+        namesEl.appendChild(b);
+      });
+      if (!namesEl.children.length) namesEl.innerHTML = `<div style="opacity:.6">No match.</div>`;
+    }
+    draw("");
+    search.oninput = () => draw(search.value);
+    ov.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function wrClose(){
+    const ov = document.getElementById("wr-overlay");
+    if (ov){ ov.classList.remove("open"); ov.querySelector(".wr-body").innerHTML = ""; }
+    if (wrState && wrState.raf) cancelAnimationFrame(wrState.raf);
+    wrState = null;
+    document.body.style.overflow = "";
+  }
+
+  function startWrapped(name){
+    const p = playersData && playersData.detail && playersData.detail[name];
+    if (!p) return;
+    const slides = buildWrappedSlides(name, p);
+    wrState = { name, slides, idx:0, raf:null, start:null };
+    const ov = wrEnsureOverlay();
+    ov.querySelector(".wr-body").innerHTML =
+      `<div class="wr-story"><div class="wr-progress">` +
+        slides.map(() => `<div class="wr-seg"><span class="wr-seg-fill"></span></div>`).join("") +
+      `</div><div class="wr-slidewrap"></div>` +
+      `<div class="wr-tap"><div class="wr-tap-prev"></div><div class="wr-tap-next"></div></div></div>`;
+    ov.querySelector(".wr-tap-prev").onclick = () => wrGo(wrState.idx - 1);
+    ov.querySelector(".wr-tap-next").onclick = () => wrGo(wrState.idx + 1);
+    ov.classList.add("open");
+    document.body.style.overflow = "hidden";
+    wrGo(0);
+  }
+
+  function wrGo(i){
+    if (!wrState) return;
+    const n = wrState.slides.length;
+    i = Math.max(0, Math.min(i, n - 1));
+    wrState.idx = i;
+    const ov = document.getElementById("wr-overlay");
+    const story = ov.querySelector(".wr-story");
+    const wrap = ov.querySelector(".wr-slidewrap");
+    const s = wrState.slides[i];
+    story.style.background = s.theme;
+    wrap.innerHTML = `<div class="wr-slide show">${s.html}</div>`;
+    const rb = wrap.querySelector("[data-wr-restart]"); if (rb) rb.onclick = () => wrGo(0);
+    const cb = wrap.querySelector("[data-wr-close]");   if (cb) cb.onclick = wrClose;
+    const segs = Array.from(ov.querySelectorAll(".wr-seg-fill"));
+    segs.forEach((f, k) => { f.style.width = k < i ? "100%" : "0%"; });
+    if (wrState.raf) cancelAnimationFrame(wrState.raf);
+    wrState.start = null;
+    if (i === n - 1){ if (segs[i]) segs[i].style.width = "100%"; return; }  // finale: no auto-advance
+    const fill = segs[i];
+    function step(ts){
+      if (!wrState || wrState.idx !== i) return;
+      if (wrState.start == null) wrState.start = ts;
+      const pct = Math.min(1, (ts - wrState.start) / WR_DUR);
+      if (fill) fill.style.width = (pct * 100) + "%";
+      if (pct >= 1){ wrGo(i + 1); return; }
+      wrState.raf = requestAnimationFrame(step);
+    }
+    wrState.raf = requestAnimationFrame(step);
+  }
+
+  function buildWrappedSlides(name, p){
+    const rows = (lbData && lbData.rows) || [];
+    const N = rows.length || 1;
+    const champTeam = (lbData && lbData.meta && lbData.meta.champion) || "the champions";
+    const pool = wrPoolName();
+    const games = (p.games || []).filter(g => g.played);
+    const exact = games.filter(g => g.pts === 3);
+    const results = games.filter(g => g.pts === 1);
+    const avgPct = games.length ? Math.round(games.reduce((s,g)=>s+(g.pct||0),0)/games.length) : 0;
+    const exactRate = games.length ? exact.length/games.length : 0;
+    const arche = wrArchetype(exactRate, avgPct);
+    // signature call: most contrarian exact score (fewest others), else best paid pick
+    let sig = exact.slice().sort((a,b)=>(a.pct-b.pct)||(a.sameCount-b.sameCount))[0];
+    if (!sig) sig = games.filter(g=>g.pts>0).sort((a,b)=>(b.pts-a.pts)||(a.pct-b.pct))[0];
+    const br = p.bracket || {};
+    const winner = br.winner || {}; const third = br.third || {};
+    const rh = k => { const a = br[k]||[]; return { hit:a.filter(x=>x.hit).length, tot:a.length }; };
+    const koRounds = [["R32",rh("R32")],["R16",rh("R16")],["QF",rh("QF")],["SF",rh("SF")],["Final",rh("Final")]];
+    const koHits = koRounds.reduce((s,[,v])=>s+v.hit,0);
+    const bonus = p.bonusAns || [];
+    const bonusHits = bonus.filter(b => (b.earned||0) > 0);
+    const rank = p.rank, total = p.total;
+    const below = rows.filter(r => r.total < total).length;
+    const beat = N > 1 ? Math.round(below/(N-1)*100) : 100;
+    // rival by table position
+    const idx = rows.findIndex(r => r.player === name);
+    let rivalHtml = "";
+    if (idx > 0){
+      const up = rows[idx-1], d = up.total - total;
+      rivalHtml = d === 0
+        ? `You finished level on points with <b>${esc(up.player)}</b> — separated only by tie-breaks.`
+        : `You were just <b>${d}</b> point${d===1?"":"s"} behind <b>${esc(up.player)}</b>. So close.`;
+    } else if (rows[1]){
+      const dn = rows[1], d = total - dn.total;
+      rivalHtml = `You <b>topped the pool</b> — ${d} point${d===1?"":"s"} clear of <b>${esc(dn.player)}</b>. 👑`;
+    } else {
+      rivalHtml = `You <b>topped the pool</b>. 👑`;
+    }
+    const T = WR_THEMES;
+    const slides = [];
+    // 1 · intro
+    slides.push({ theme:T[0], html:
+      `<div class="wr-kicker">World Cup 2026${pool?" · "+esc(pool):""}</div>` +
+      `<div class="wr-headline">${esc(name)},<br>here's your tournament, Wrapped 🎁</div>` +
+      `<div class="wr-sub">72 group games. 32 knockouts. 15 bonus calls. Let's rewind how you played it.</div>` +
+      `<div class="wr-foot">Tap the right side to continue →</div>` });
+    // 2 · exact scores
+    slides.push({ theme:T[1], html:
+      `<div class="wr-kicker">Your predictions</div>` +
+      `<div class="wr-headline">You called the exact score</div>` +
+      `<div class="wr-big">${exact.length}<span style="font-size:2rem;font-weight:800"> ×</span></div>` +
+      `<div class="wr-sub">And got the result right in <b>${results.length}</b> more — that's <b>${exact.length+results.length}</b> of ${games.length} group games where you banked points.</div>` });
+    // 3 · rank
+    slides.push({ theme:T[2], html:
+      `<div class="wr-kicker">The final table</div>` +
+      `<div class="wr-headline">You finished</div>` +
+      `<div class="wr-big">${wrOrdinal(rank)}</div>` +
+      `<div class="wr-sub">of ${N} players with <b>${total}</b> points — ahead of <b>${beat}%</b> of the pool.${rank<=3?" 🏅 Podium finish!":""}</div>` });
+    // 4 · points DNA
+    const parts = [["Group",p.group||0],["Knockouts",p.ko||0],["Bonus",p.bonus||0]];
+    const mx = Math.max(1, ...parts.map(x=>x[1]));
+    const koShare = total ? Math.round((p.ko||0)/total*100) : 0;
+    slides.push({ theme:T[3], html:
+      `<div class="wr-kicker">Your points DNA</div>` +
+      `<div class="wr-headline">Where it all came from</div>` +
+      `<div class="wr-bars">` + parts.map(([lab,val]) =>
+        `<div class="wr-bar"><span class="wr-bar-name">${lab}</span>` +
+        `<span class="wr-bar-track"><span class="wr-bar-fill" style="width:${Math.round(val/mx*100)}%"></span></span>` +
+        `<span class="wr-bar-val">${val}</span></div>`).join("") + `</div>` +
+      `<div class="wr-sub">The knockouts were your engine — <b>${koShare}%</b> of your haul came from the bracket.</div>` });
+    // 5 · signature call
+    if (sig){
+      const same = sig.sameCount || 0;
+      const exactCall = sig.pts === 3;
+      slides.push({ theme:T[4], html:
+        `<div class="wr-kicker">Your signature call</div>` +
+        `<div class="wr-headline">${exactCall ? "You saw it coming" : "Your sharpest read"}</div>` +
+        `<div class="wr-scoreline">${esc(sig.home)} ${sig.hg}–${sig.ag} ${esc(sig.away)}</div>` +
+        `<div class="wr-sub">You predicted <b>${esc(sig.home)} ${sig.ph}–${sig.pa} ${esc(sig.away)}</b>` +
+        (exactCall ? ` — spot on, and only <b>${same}</b> of ${N} players nailed it. Ice cold. 🧊` : ` and took the points.`) + `</div>` });
+    }
+    // 6 · archetype
+    slides.push({ theme:T[5], html:
+      `<div class="wr-kicker">Your prediction personality</div>` +
+      `<div class="wr-big sm">${arche.emoji}</div>` +
+      `<div class="wr-headline">${arche.title}</div>` +
+      `<div class="wr-sub">${arche.desc} Your average pick was backed by <b>${avgPct}%</b> of the pool.</div>` });
+    // 7 · champion pick
+    const wt = winner.team && winner.team !== "0" ? winner.team : null;
+    slides.push({ theme:T[6], html:
+      `<div class="wr-kicker">Your champion pick</div>` +
+      `<div class="wr-headline">You crowned</div>` +
+      `<div class="wr-big sm">${wt ? esc(wt) : "—"}</div>` +
+      `<div class="wr-sub">` + (wt
+        ? (winner.hit ? `And ${esc(champTeam)} lifted the trophy — <b>+30 points</b>. You called it. 🏆`
+                      : `${esc(champTeam)} won it instead. That one got away.`)
+        : `You left the crown empty this time.`) + `</div>` });
+    // 8 · bracket run
+    slides.push({ theme:T[7], html:
+      `<div class="wr-kicker">Your bracket</div>` +
+      `<div class="wr-headline">Knockout vision</div>` +
+      `<div class="wr-big sm">${koHits}<span style="font-size:1.6rem;font-weight:800"> right</span></div>` +
+      `<div class="wr-chips">` + koRounds.map(([lab,v]) =>
+        `<span class="wr-chip">${lab} ${v.hit}/${v.tot}</span>`).join("") + `</div>` +
+      `<div class="wr-sub">You correctly placed <b>${koHits}</b> teams across the knockout rounds${third.hit?`, and nailed <b>${esc(third.team)}</b> in third`:""}.</div>` });
+    // 9 · bonus
+    slides.push({ theme:T[8], html:
+      `<div class="wr-kicker">Bonus brain</div>` +
+      `<div class="wr-headline">You aced ${bonusHits.length} of 15 bonus calls</div>` +
+      (bonusHits.length
+        ? `<div class="wr-chips">` + bonusHits.slice(0,5).map(b =>
+            `<span class="wr-chip">${esc((b.q||"").split("(")[0].trim())}: ${esc(String(b.answer))}</span>`).join("") + `</div>`
+        : `<div class="wr-sub">The bonus round wasn't kind this year — better luck in 2030.</div>`) +
+      (bonusHits.length ? `<div class="wr-sub">Worth <b>${bonusHits.reduce((s,b)=>s+(b.earned||0),0)}</b> bonus points.</div>` : "") });
+    // 10 · rival
+    slides.push({ theme:T[9], html:
+      `<div class="wr-kicker">Your pool rivalry</div>` +
+      `<div class="wr-headline">The margins</div>` +
+      `<div class="wr-sub" style="font-size:1.2rem;margin-top:1rem">${rivalHtml}</div>` });
+    // 11 · finale
+    slides.push({ theme:T[11], html:
+      `<div class="wr-kicker">That's a wrap 🎁</div>` +
+      `<div class="wr-headline">${esc(name)} · ${wrOrdinal(rank)} place</div>` +
+      `<div class="wr-big sm">${total} pts</div>` +
+      `<div class="wr-sub">Champion pick: <b>${wt?esc(wt):"—"}</b> ${wt?(winner.hit?"✓":"✗"):""} · ${arche.title} ${arche.emoji}<br>` +
+      `Thanks for playing${pool?" the "+esc(pool):""} World Cup 2026 pool.</div>` +
+      `<div><button class="wr-btn" type="button" data-wr-restart>↻ Replay</button>` +
+      `<button class="wr-btn ghost" type="button" data-wr-close>Done</button></div>` });
+    return slides;
+  }
+
   applyConfig();
   initVisitTracking();
   load();
